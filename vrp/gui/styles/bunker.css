@@ -1,0 +1,626 @@
+.main-bunker, .bunker-flex, .main-bunkerinfo, .bunkerinfo-flex {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.main-bunker, .main-bunkerinfo {
+    position: absolute;
+    inset: 0;
+
+
+    background: url(https://cdn.armylegends.ro/bg/bunker.webp) no-repeat;
+    background-size: 100% 100%;
+    font-family: "TT Norms";
+    z-index: 999;
+}
+
+.bunker-flex .buttons-list {
+    position: absolute;
+    bottom: 51px;
+    left: 103px;
+    display: flex;
+    gap: 20px;
+}
+
+.bunker-flex .buttons-list > div {
+    width: 155px;
+    height: 155px;
+    border-radius: 14px;
+    background: linear-gradient(38deg, rgba(96, 96, 96, 0.00) 47.34%, rgba(164, 143, 114, 0.20) 48.19%), conic-gradient(from 180deg at 50% 50%, rgba(164, 143, 114, 0.30) 0.176256000995636deg, rgba(164, 143, 114, 0.25) 360deg);
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(2px);
+    cursor: pointer;
+    transition: .232323s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: rgba(255, 255, 255, 0.40);
+    text-align: center;
+    font-family: TT Norms;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.bunker-flex .buttons-list > div:hover {
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.10), 0 0 0 10px rgba(164, 143, 114, 0.10);
+}
+
+
+.bunker-flex .buttons-list > div i {
+    font-size: 55px;
+    color: rgba(255, 255, 255, 0.40);
+    opacity: .8;
+}
+
+
+.bunker-flex .price {
+    position: absolute;
+    left: 133px;
+    top: 544px;
+    font-family: "Akrobat Black";
+    font-size: 150px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom right, #FFD283 0%, rgba(255, 210, 131, 0.35) 50%) bottom right / 50% 50% no-repeat, linear-gradient(to bottom left, #FFD283 0%, rgba(255, 210, 131, 0.35) 50%) bottom left / 50% 50% no-repeat, linear-gradient(to top left, #FFD283 0%, rgba(255, 210, 131, 0.35) 50%) top left / 50% 50% no-repeat, linear-gradient(to top right, #FFD283 0%, rgba(255, 210, 131, 0.35) 50%) top right / 50% 50% no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: rotate(-5.25deg);
+}
+
+
+.bunker-flex .owner-list {
+    position: absolute;
+    right: 116px;
+    bottom: 118px;
+    width: 430px;
+    height: 410px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.bunker-flex .owner-list > div {
+    width: 405px;
+    height: 60px;
+    border-radius: 20px;
+    background: rgba(157, 157, 158, 0.10);
+    position: relative;
+    padding-left: 30px;
+    padding-right: 55px;
+    display: flex;
+    align-items: center;
+}
+
+.bunker-flex .owner-list > div::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%);
+    background-image: url(https://cdn.armylegends.ro/elements/Group_9.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 50px;
+    height: 52px;
+}
+
+.bunker-flex .owner-list > div.locked::after {
+    background-image: url(https://cdn.armylegends.ro/elements/Group_8.webp);
+}
+
+.bunker-flex .owner-list > div > .owner-name {
+    color: rgba(255, 255, 255, 0.60);
+    font-family: "TT Norms";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2px;
+}
+
+.bunker-flex .owner-list div > .owner-name > div {
+    display: flex;
+    align-items: center;
+    color: #A97657;
+    font-family: "TT Norms";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.bunker-flex .owner-list div > .owner-name div span {
+    min-width: 40px;
+    height: 16px;
+    padding: 0 10px;
+    width: 40px;
+    height: 16px;
+    display: grid;
+    place-items: center;
+    border-radius: 4px;
+    border: 1px solid #A97657;
+    color: #A97657;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-right: 5px;
+}
+
+.bunker-flex .owner-list > div .visit-bunker {
+    color: #FFBA83;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: auto;
+    cursor: pointer;
+    transition: .232323s ease-in-out;
+    text-align: right;
+}
+
+.bunker-flex .owner-list > div .visit-bunker:hover {
+    text-decoration: underline;
+    color: #FFBA8390;
+}
+
+
+/* bunker info */
+
+.main-bunkerinfo {
+    background: url(https://cdn.armylegends.ro/bg/bunkerinfo_bg.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.bunkerinfo-flex .esc {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    width: 165px;
+    height: 40px;
+    background: url(https://cdn.armylegends.ro/elements/esc.webp) no-repeat;
+    background-size: 100% 100%;
+    transition: .232323s ease-in-out;
+}
+.bunkerinfo-flex .esc:hover {
+    opacity: .6;
+}
+
+.bunkerinfo-flex .pay-wrapper {
+    position: absolute;
+    top: 147px;
+    right: 50px;
+    min-width: 544px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.bunkerinfo-flex .pay-wrapper > div {
+    width: 225px;
+    height: 48px;
+    margin-left: 25px;
+    background-image: url(https://cdn.armylegends.ro/elements/paybunker.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.bunkerinfo-flex .pay-wrapper > div:hover {
+    background-image: url(https://cdn.armylegends.ro/elements/paybunker_selected.webp);
+}
+
+.bunkerinfo-flex .pay-wrapper p {
+    color: rgba(255, 255, 255, 0.50);
+    text-align: right;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+.bunkerinfo-flex .pay-wrapper p>span {
+    display: block;
+    color: #FFF;
+    text-align: right;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+
+.bunkerinfo-flex .mission-list {
+    position: absolute;
+    bottom: 91px;
+    left: 151px;
+
+    width: 1230px;
+    height: 455px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bunkerinfo-flex .mission-list > div {
+    --box-1: url(https://cdn.armylegends.ro/elements/blue_box.webp);
+    --box-2: url(https://cdn.armylegends.ro/elements/yellow_box.webp);
+    --box-3: url(https://cdn.armylegends.ro/elements/pink_box.webp);
+
+    position: relative;
+    width: 400px;
+    height: 455px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: var(--box-1);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.bunkerinfo-flex .mission-list > div:nth-of-type(2) {
+    background-image: var(--box-2);
+}
+.bunkerinfo-flex .mission-list > div:nth-of-type(3) {
+    background-image: var(--box-3);
+}
+
+.bunkerinfo-flex .mission-list > div .cooldown {
+    position: absolute;
+    top: 118px;
+    text-align: center;
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.00) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    mix-blend-mode: overlay;
+}
+
+.bunkerinfo-flex .mission-list > div .play {
+    position: absolute;
+    bottom: -44px;
+    right: -9px;
+    width: 120px;
+    height: 120px;
+    background-image: url(https://cdn.armylegends.ro/elements/Group_1000002758.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* cursor: pointer; */
+    transition: .131313s ease-in-out;
+}
+
+.bunkerinfo-flex .mission-list > div .play:hover {
+    scale: 1.1;
+}
+
+.bunkerinfo-flex .mission-list > div:nth-of-type(2) .play {
+    background-image: url(https://cdn.armylegends.ro/elements/Group_1000002761.webp);
+}
+
+.bunkerinfo-flex .mission-list > div:nth-of-type(3) .play {
+    background-image: url(https://cdn.armylegends.ro/elements/Group_10000027582.webp);
+}
+
+.bunkerinfo-flex .unlock-facilities {
+    position: absolute;
+    bottom: 129px;
+    right: 50px;
+    width: 370px;
+    max-height: 546px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-left: 20px;
+    direction: rtl;
+}
+
+.bunkerinfo-flex .unlock-facilities::-webkit-scrollbar {
+    width: 4px;
+}
+
+.bunkerinfo-flex .unlock-facilities::-webkit-scrollbar-track {
+    border-radius: 0.25vw;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.bunkerinfo-flex .unlock-facilities::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.bunkerinfo-flex .unlock-facilities > div {
+    margin-bottom: 10px;
+    position: relative;
+    direction: ltr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    height: 100px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2px);
+    padding-left: 30px;
+}
+.bunkerinfo-flex .unlock-facilities > div:last-of-type {
+    margin-bottom: 0;
+}
+
+.bunkerinfo-flex .unlock-facilities > div > p {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+}
+
+.bunkerinfo-flex .unlock-facilities > div span {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    background: linear-gradient(270deg, #5691A0 0%, rgba(131, 159, 166, 0.00) 107.38%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bunkerinfo-flex .unlock-facilities > div:not(.unlocked) span {
+    background: linear-gradient(270deg, #FFBA83 0%, rgba(201, 171, 90, 0.00) 107.38%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bunkerinfo-flex .unlock-facilities > div .buy {
+    position: absolute;
+    bottom: -4px;
+    right: 26px;
+    width: 50px;
+    height: 52px;
+    background-image: url(https://cdn.armylegends.ro/elements/Group_1000002763.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.bunkerinfo-flex .unlock-facilities > div:not(.unlocked) .buy {
+    background-image: url(https://cdn.armylegends.ro/elements/Group_10000027623.png);
+}
+
+.bunkerinfo-flex .unlock-facilities > div .buy:hover {
+    filter: drop-shadow(0 0 5px red);
+}
+
+.main-bunkercraft, .bunkercraft-flex {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.main-bunkercraft {
+    position: absolute;
+    font-family: "TT Norms";
+    z-index: 998;
+
+    width: 100%;
+    height: 100%;
+    inset: 0;
+
+    background: url(https://cdn.armylegends.ro/bg/craft2.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.main-bunkercraft * {
+    z-index: 999;
+}
+
+.bunkercraft-flex {
+    align-items: center;
+    justify-content: center;
+}
+
+.bunkercraft-flex .add-materials {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    width: 350px;
+    height: 70px;
+    border-radius: 100px;
+    background: #FFCD14;
+    display: grid;
+    place-items: center;
+    color: #232323;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    /* transition: .232323s ease-in-out; */
+    outline: 3px solid transparent;
+    outline-offset: 6px;
+}
+
+.bunkercraft-flex .add-materials:hover {
+    padding-bottom: 5px;
+    outline: 3px solid #FFCD14;
+}
+
+
+.bunkercraft-flex .title {
+    position: absolute;
+    top: 50px;
+    color: #FFF;
+    text-align: center;
+    font-family: TT Norms;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.bunkercraft-flex .title span {
+    display: block;
+    color: #FFCD14;
+    text-align: center;
+    font-family: TT Norms;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.bunkercraft-flex .material-list {
+    position: absolute;
+    left: 50px;
+    bottom: 140px;
+    width: fit-content;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bunkercraft-flex .material-list > div {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    display: grid;
+    place-items: center;
+}
+
+.bunkercraft-flex .material-list > div .required {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    min-width: 55px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    background: rgba(255, 205, 20, 0.45);
+    padding: 0 10px;
+    color: #FFF;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.bunkercraft-flex .material-list > div img {
+    width: 83px;
+    height: 65px;
+}
+
+.bunkercraft-flex .weapon-thumbnail {
+    position: absolute;
+}
+
+.bunkercraft-flex .remaining-time {
+    position: absolute;
+    right: 50.36px;
+    bottom: 145.06px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.bunkercraft-flex .remaining-time svg {
+    margin-left: 10px;
+}
+
+.bunkercraft-flex .remaining-time > p {
+    color: rgba(255, 205, 20, 0.50);
+    text-align: right;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.bunkercraft-flex .remaining-time > p span {
+    display: block;
+    color: #FFF;
+    text-align: right;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.bunkercraft-flex .remaining-progress {
+    width: 350px;
+    height: 70px;
+    border-radius: 100px;
+    background: rgb(255 255 255);
+    background-blend-mode: soft-light;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.bunkercraft-flex .remaining-progress .fill {
+    position: absolute;
+    width: 50%;
+    height: 70px;
+    border-radius: 100px;
+    background: #ffcc14;
+}
+
+
+.bunkercraft-flex .remaining-progress-percentage {
+    position: absolute;
+    left: 1549px;
+    bottom: 62px;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: linear-gradient(180deg, #644F00 0%, rgba(255, 201, 0, 0.45) 93.23%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.bunkercraft-flex .remaining-progress-percentage svg {
+    width: 36px;
+    height: 26px;
+    fill: linear-gradient(180deg, #644F00 0%, rgba(255, 201, 0, 0.00) 100%);
+    margin-left: 10px;
+}
+
+.bunkercraft-flex .remaining-progress-wrap {
+    position: absolute;
+    bottom: 42px;
+    right: 50px;
+    width: 350px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    mix-blend-mode: color;
+}

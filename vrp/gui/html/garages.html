@@ -1,0 +1,91 @@
+
+<div class="main-garages" v-if="active">
+    <div class="garages-flex" :style="{zoom: zoom}">
+
+        <div class="garages-header">
+            <div class="title">
+                <i class="fas fa-warehouse"></i>
+                Garaj {{gtype}}
+            </div>
+
+            <div class="search-box">
+                <input type="text" @keyup="refreshSearch" v-model="search" placeholder="Cauta dupa numele vehiculului">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div class="tabs">
+                <div :class="{tab: true, active: tab == 1}" @click="setTab(1)">
+                    <i class="fa-solid fa-car-mirrors"></i>
+                </div>
+                <div :class="{tab: true, active: tab == 2}" @click="setTab(2)">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div :class="{tab: true, active: tab == 3}" @click="setTab(3)">
+                    <i class="fa-solid fa-tire"></i>
+                    <div class="count" v-if="out > 0">{{out}}</div>
+                </div>
+            </div>
+
+
+            <div class="close">
+                Inchidere
+                <div @click="destroy()">ESC</div>
+            </div>
+
+        </div>
+
+        <div class="garages-stats"> <!-- ?? ?? ?? -->
+            <div>
+                <i class="fas fa-star"></i>
+                <p>Premium Cars</p>
+                
+                <div class="count">69</div>
+            </div>
+            <div class="green">
+                <i class="fas fa-tire"></i>
+                <p>Outside Cars</p>
+                
+                <div class="count">69</div>
+            </div>
+            <div class="red">
+                <i class="fas fa-car-wrench"></i>
+                <p>Broken Cars</p>
+                
+                <div class="count" v-if="out > 0">{{out}}</div>
+            </div>
+        </div>
+
+
+        <div class="vehicles-list">
+            <div class="vehicles-wrapper">
+
+                <div :class="{vehicle: true, premium: vehicle.premium}" v-for="(vehicle, index) in filtered" v-if="isShown(vehicle)" @click="spawn(vehicle.vehicle, vehicle.vtype)">
+                    <img :src="'https://cdn.armylegends.ro/vehicles/' + vehicle.vehicle + '.png'" onerror="this.src='https://cdn.armylegends.ro/vehicles/error.svg'; this.classList.add('error')">
+
+                    <i v-if="vehicle.state == 2" class="fas fa-tire out"></i>
+
+                    <div class="details">
+                        <i class="fas fa-star"></i>
+
+                        <p :class="{'smaller-size': vehicle.name.length > 28}">{{vehicle.name}}<span>{{vehicle.carPlate}}</span></p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="park-vehicle">
+            <div class="text">
+                <div class="title">Ai un vehicul scos din garaj?</div>
+                <div class="park-btn" @click="park()">Parcheaza vehiculul</div>
+            </div>
+            
+            <div class="icon">
+                <img src="https://cdn.armylegends.ro/garages/park.svg">
+            </div>
+        </div>
+
+    </div>
+</div>

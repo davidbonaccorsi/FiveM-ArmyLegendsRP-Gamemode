@@ -1,0 +1,15 @@
+
+<div class="faction-closet-layout" v-if="active">
+    <div class="side-bar"></div>
+    <h1 class="center">VESTIAR {{name}}</h1>
+
+    <div class="arrows-box center">
+        <i @click="prev()" class="bi bi-chevron-left"></i>
+        <i @click="next()" class="bi bi-chevron-right"></i>
+    </div>
+
+    <div class="actions">
+        <p>UNIFORMA {{current}}</p>
+        <h1 @click="reset()">RESETEAZA IMBRACAMINTEA</h1>
+    </div>
+</div>

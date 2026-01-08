@@ -1,0 +1,39 @@
+<div class="warrants-layout">
+
+    <div class="wrapper center">
+
+        <div class="side">
+            <button class="arrow" @click="moveIndex(true)"></button>
+            <div class="circle"></div>
+            <button class="arrow bot" @click="moveIndex()"></button>
+            <div class="line"></div>
+            <div class="page">
+                <p>{{index}}</p>
+                <span>/ {{maxIndex}}</span>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="window">
+                <div class="window-img">
+                    <img src="https://cdn.armylegends.ro/elements/palarie.webp">      
+                </div>
+
+                <p class="info">{{truncate(warrants[index-1].description, 749)}}</p>
+            </div>
+
+            <p class="header">CAZIERELE TALE</p>
+            <p class="name">Mare atentie</p>
+            <p class="description">Cand vei ajunge la un total de 5 caziere active, ai la dispozitie 48 de ore pentru a le plati, altfel vei primi puscarie pe viata.</p>
+            
+            <p class="fine">Pret cazier</p>
+            <div class="fine-value">${{price | formatnum}}</div>
+            
+            <div class="buttons-list">
+                <button class="take" @click="pay()">Plateste-ti cazierele</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,574 @@
+
+.main-garages, .garages-flex {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.main-garages {
+    align-items: center;
+    justify-content: center;
+}
+
+.main-garages {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://cdn.armylegends.ro/bg/tzUC67jnPPcAAAAASUVORK5CYII.webp) no-repeat;
+    background-size: 100% 100%;
+    font-family: "TT Norms";
+}
+
+.garages-flex {
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+}
+
+.garages-flex .garages-header, .garages-stats {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.garages-stats {
+    height: 75px;
+
+    display: none; /* momentan nu mi place cum arata, to be continued :( */
+}
+
+.garages-flex .garages-header .title {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 500;
+    font-variant-ligatures: none;
+    /* letter-spacing: .025em; */
+}
+
+.garages-flex .garages-header .title > i {
+    margin-right: 20px;
+    color: #858585;
+    font-size: 20px;
+}
+
+.garages-flex .garages-header .search-box {
+    width: 450px;
+    height: 60px;
+    margin-left: 80px;
+    background-color: hsla(0,0%,100%,.05);
+    backdrop-filter: blur(3px);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+}
+
+.garages-flex .garages-header .search-box input {
+    font-size: 18px;
+    color: #8b8d93;
+    font-weight: 500;
+    font-variant-ligatures: none;
+    font-family: "TT Norms";
+    width: 90%;
+    background: none;
+    border: none;
+    outline: none !important;
+}
+
+.garages-flex .garages-header .search-box > i {
+    color: #8b8d93;
+    font-size: 16px;
+    margin-left: auto;
+}
+
+.garages-flex .garages-header .tabs {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.garages-flex .garages-header .tabs .tab {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: hsla(0,0%,100%,.05);
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .232323s ease-in-out;
+}
+
+.garages-flex .garages-header .tabs .tab .count {
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: hsla(0, 0%, 100%, .1);
+    border-radius: 100px;
+
+    color: hsla(0, 0%, 100%, .4);
+    font-size: 13px;
+    font-weight: 500;
+
+    position: absolute;
+    margin-top: 85%;
+    margin-left: 85%;
+}
+
+.garages-flex .garages-header .tabs .tab.active .count {
+    background: linear-gradient(to top, #858585, #fff);
+    color: #212121;
+}
+
+.garages-flex .garages-header .tabs .tab:hover {
+    opacity: .5;
+}
+
+.garages-flex .garages-header .tabs .tab.active {
+    background: linear-gradient(to top, #858585, #fff);
+}
+
+.garages-flex .garages-header .tabs .tab.active::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 45%;
+    height: 4px;
+    background-color: #85858555;
+    border-radius: 6px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.garages-flex .garages-header .tabs .tab.active > i {
+    color: #212121;
+}
+
+.garages-flex .garages-header .tabs .tab > i {
+    font-size: 22px;
+    color: hsla(0,0%,100%,.4);
+}
+
+
+
+.garages-flex .garages-header .close {
+    
+    margin-left: auto;
+    
+    display: flex;
+    align-items: center;
+
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+
+    color: hsla(0,0%,100%,.4);
+}
+
+.garages-flex .garages-header .close:hover > div {
+    background: hsla(0, 0%, 100%, .2);
+}
+
+.garages-flex .garages-header .close > div {
+    margin-left: 15px;
+    padding: 11px 12px;
+
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: .2px;
+
+    background-color: hsla(0,0%,100%,.05);
+    border-radius: 4px;
+
+    transition: .232323s ease-in-out;
+}
+
+.garages-flex .garages-stats > div {
+    position: relative;
+
+    height: 100%;
+    width: 210px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: linear-gradient(to top right, #d7c84010, #d7c84090);
+    border-radius: 8px;
+
+    margin-left: 10px;
+
+    opacity: .5;
+}
+
+.garages-flex .garages-stats > div:first-of-type {
+    margin-left: 0;
+}
+
+.garages-flex .garages-stats > div.red {
+    background: linear-gradient(to top right, #cb3e3e10, #cb3e3e90);
+}
+
+.garages-flex .garages-stats > div.green {
+    background: linear-gradient(to top right, #3ecb5d10, #3ecb5d90);
+}
+
+.garages-flex .garages-stats > div::after {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    content: "\f005";
+    color: #d7c840;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    font-size: 85px;
+    opacity: .05;
+}
+
+.garages-flex .garages-stats > div.red::after {
+    content: "\f5e3";
+}
+
+.garages-flex .garages-stats > div.green::after {
+    content: "\f631";
+    color: #3ecb5d;
+}
+
+
+.garages-flex .garages-stats > div::before {
+    position: absolute;
+    inset: 0;
+    
+    width: 100%;
+    height: 100%;
+
+    content: "";
+    background: linear-gradient(to top left, rgba(0, 0, 0, .5), rgba(0, 0, 0, .3));
+}
+
+.garages-flex .garages-stats > div * {
+    z-index: 1;
+}
+
+.garages-flex .garages-stats > div > i{
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+
+.garages-flex .garages-stats > div > p{
+    font-size: 14.5px;
+    font-weight: 400;
+    letter-spacing: .025em;
+}
+
+.garages-flex .garages-stats > div .count {
+    border: 2px solid #d7c840;
+    background: #d7c84035;
+    padding: 6px 12px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #d7c840;
+    margin-left: 10px;
+}
+
+.garages-flex .garages-stats > div.red .count {
+    color: #cb3e3e;
+    border-color: #cb3e3e;
+    background: #cb3e3e35;
+}
+
+.garages-flex .garages-stats > div.green .count {
+    color: #3ecb5d;
+    border-color: #3ecb5d;
+    background: #3ecb5d35;
+}
+
+
+.garages-flex .vehicles-list {
+    margin-top: 65px;
+
+    height: 620px;
+
+    padding-right: 5px;
+
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.garages-flex .vehicles-list::-webkit-scrollbar {
+    width: 4px;
+}
+.garages-flex .vehicles-list::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+.garages-flex .vehicles-list::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: hsla(0, 0%, 100%, .2);
+}
+.garages-flex .vehicles-list::-webkit-scrollbar-thumb:window-inactive {
+    background: hsla(0, 0%, 100%, .2);
+}
+
+.garages-flex .vehicles-list .vehicles-wrapper {
+    width: fit-content;
+
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 20px 30px;
+}
+
+.garages-flex .vehicles-list .vehicles-wrapper .vehicle {
+    width: 300px;
+    height: 300px;
+
+    position: relative;
+
+    border: 3px solid hsla(0, 0%, 100%, .025);
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+
+    cursor: pointer;
+
+    animation: fadeIn 1s;
+
+    /* transition: .1s ease-in-out; */
+}
+
+.garages-flex .vehicles-list .vehicles-wrapper .vehicle > i.out {
+    position: absolute;
+    align-self: center;
+
+    margin-top: 50%;
+    transform: translateY(-50%);
+
+    z-index: 0;
+
+    font-size: 240px;
+    opacity: .025;
+}
+
+.garages-flex .vehicles-list .vehicles-wrapper .vehicle.premium {
+    border-color: hsl(54, 65%, 55%, .05);
+    overflow: hidden;
+    /* backdrop-filter: blur(1px); */
+}
+
+.garages-flex .vehicles-list .vehicles-wrapper .vehicle.premium * {
+    z-index: 1;
+}
+
+.garages-flex .vehicles-list .vehicles-wrapper .vehicle.premium::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(to bottom right, #d7c84020, #d7c84010, transparent);
+}
+
+.garages-flex .vehicles-list .vehicles-wrapper .vehicle:not(.premium):hover{
+    border: none;
+
+    background: linear-gradient(to bottom right, #9fc0ff75, transparent);
+    backdrop-filter: blur(1px);
+}
+
+.garages-flex .vehicles-list .vehicles-wrapper .vehicle:not(.premium):hover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 45%;
+    height: 4px;
+    background-color: #9fc0ff;
+    border-radius: 6px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.garages-flex .vehicles-list .vehicles-wrapper .vehicle::before {
+    animation: animHoverBar 1s;
+}
+
+@keyframes animHoverBar {
+    from {
+        width: 0%;
+        left: 0%;
+        transform: translateX(-0%);
+    } to {
+        width: 45%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.garages-flex .vehicles-list .vehicles-wrapper .vehicle.premium:hover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 45%;
+    height: 4px;
+    background-color: #d7c840;
+    border-radius: 6px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.garages-flex .vehicles-list .vehicles-wrapper .vehicle.premium:hover{
+    border: none;
+
+    background: linear-gradient(to bottom right, #d7c84075, transparent);
+    backdrop-filter: blur(1px);
+}
+
+.garages-flex .vehicles-list .vehicles-wrapper .vehicle > img {
+    width: 205px;
+    height: 205px;
+
+    transform: scaleX(-1) rotate(5deg);
+
+    align-self: center;
+    z-index: 1;
+}
+
+.garages-flex .vehicles-list .vehicles-wrapper .vehicle > img.error {
+    opacity: .4;
+}
+
+.garages-flex .vehicles-list .vehicles-wrapper .vehicle:hover {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.garages-flex .vehicles-list .vehicles-wrapper .vehicle:hover > img {
+    margin-top: 3px;
+}
+
+
+.garages-flex .vehicles-list .vehicles-wrapper .vehicle .details {
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    /* padding-right: 5px; */
+    margin-top: 15px;
+    /* margin-bottom: 35px; */
+}
+
+.garages-flex .vehicles-list .vehicles-wrapper .vehicle.premium .details > i {
+    color: #F6FF8B;
+}
+
+.garages-flex .vehicles-list .vehicles-wrapper .vehicle .details > p {
+    font-variant-ligatures: none;
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 16.2px;
+}
+
+.garages-flex .vehicles-list .vehicles-wrapper .vehicle .details > p.smaller-size {
+    font-size: 14px;
+}
+
+/* 
+.garages-flex .vehicles-list .vehicles-wrapper .vehicle .details > p.extra-small {
+    font-size: 12px;
+} */
+
+
+.garages-flex .vehicles-list .vehicles-wrapper .vehicle .details > p span {
+    display: block;
+    color: hsla(0,0%,100%,.4);
+    letter-spacing: .025em;
+    font-size: 16.2px;
+}
+
+.garages-flex .park-vehicle {
+    margin-left: auto;
+    margin-top: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.garages-flex .park-vehicle .icon { 
+    padding: 14px 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.garages-flex .park-vehicle .icon > img {
+    width: 38px;
+    height: 38px;
+    opacity: .4;
+    margin-left: 10px;
+}
+
+.garages-flex .park-vehicle .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.garages-flex .park-vehicle .text .title {
+    font-weight: 500;
+    font-size: 16px;
+    color:hsla(0,0%,100%,.8);
+}
+
+.garages-flex .park-vehicle .text .park-btn {
+    width: 165px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsla(0,0%,100%,.05);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    margin-top: 7px;
+    transition: .232323s ease-in-out;
+    /* cursor: pointer; */
+    color: hsla(0,0%,100%,.6);
+}
+
+.garages-flex .park-vehicle .text .park-btn:hover {
+    background-color: hsla(0, 0%, 100%, .1);
+}

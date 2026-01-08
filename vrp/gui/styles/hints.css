@@ -1,0 +1,73 @@
+.hud-top-right-flex .hint-notify-wrapper{
+    margin: 20px 0;
+    margin-left: auto;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 290px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.hud-top-right-flex .hint-notify-wrapper .hint-notify {
+    width: 290px;
+    height: 70px;
+
+    border-radius: 5px;
+    background: linear-gradient(270deg, #FFF -502.27%, rgba(255, 255, 255, 0.00) 94.38%);
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.hud-top-right-flex .hint-notify-wrapper .hint-notify .icon {
+    position: absolute;
+    left: -10px;
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+}
+
+.hud-top-right-flex .hint-notify-wrapper .hint-notify .icon i {
+    font-size: 14px;
+    color: #fff;
+}
+
+
+.hud-top-right-flex .hint-notify-wrapper .hint-notify .header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: flex-end;
+    color: #7FB5FF;
+    text-align: right;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.hud-top-right-flex .hint-notify-wrapper .hint-notify .header div {
+    margin-left: 7px;
+    margin-top: 2.5px;
+    width: 10px;
+    height: 10px;
+}
+
+.hud-top-right-flex .hint-notify-wrapper .hint-notify span {
+    width: 239.301px;
+    color: rgba(255, 255, 255, 0.80);
+    text-align: right;
+    font-feature-settings: 'liga' off;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 2px;
+}

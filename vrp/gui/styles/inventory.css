@@ -1,0 +1,751 @@
+/* Font */
+@import "https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap";
+
+.inventory-layout{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: url(https://cdn.armylegends.ro/elements/bg_inventar_2.png) no-repeat;
+    background-size: 100% 100%;
+    opacity: 1;
+    
+    font-family: "Akrobat";
+    display: none;
+    color: #fff;
+}
+
+/* Inventar  */
+
+.inventory-layout > .inventories-list{
+	position: absolute;
+	top: 6%;
+	right: 45%;
+
+	display: flex;
+	flex-direction: column;
+	gap: 2vh;
+	align-self: flex-start;
+	margin-top: 3.3%;
+}
+
+.inventory-layout > .inventories-list > .other-inv-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap:1vh;
+}
+
+.inventory-layout > .inventories-list > .the-items, .inventory-layout > .inventories-list > .other-inv-wrapper > .the-items{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+	align-self: flex-start;
+}
+
+.inventory-layout > .inventories-list .title-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inventory-layout > .inventories-list .title-wrapper .space-data {
+    margin-right: 25px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.inventory-layout > .inventories-list .title-wrapper .space-data i {
+    font-size: 1.4em;
+    color: #699bf9
+}
+
+.inventory-layout > .inventories-list .title-wrapper .space-data p {
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 2.5px;
+    font-size: 1.4em;
+    font-weight: 600;
+    /* opacity: .7; */
+    opacity: 1;
+}
+
+.inventory-layout > .inventories-list > .the-items .title-wrapper .title, .inventory-layout > .inventories-list > .other-inv-wrapper > .the-items .title-wrapper .title {
+    height: 5vh;
+    width: 14vh;
+
+    background: url(https://cdn.armylegends.ro/elements/test-bg3.png) no-repeat;
+    background-size: 100% 100%;
+    /* mix-blend-mode: overlay; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #fff;
+}
+
+.inventory-layout > .inventories-list > .the-items .title-wrapper .line, .inventory-layout > .inventories-list > .other-inv-wrapper > .the-items .title-wrapper .line {
+    height: 2.5px;
+    width: 70%;
+    border-radius: .50vw;
+
+    background: #5d5d5f;
+    opacity: 1;
+}
+
+.inventory-layout > .inventories-list > .the-items .items-wrapper, .inventory-layout > .inventories-list > .other-inv-wrapper > .the-items .items-wrapper{
+    width: 100%;
+    height: 100%;
+    margin-top: 1vh;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-right: 1vw;
+}
+
+.inventory-layout > .inventories-list > .other-inv-wrapper > .the-items:not(.player-other) .items-wrapper:not(.locked) .locked-status  {
+    display: none;
+}
+
+.inventory-layout > .inventories-list > .other-inv-wrapper > .the-items:not(.player-other) .items-wrapper.locked {
+    pointer-events: none;
+}
+
+.inventory-layout > .inventories-list > .other-inv-wrapper > .the-items:not(.player-other) .items-wrapper.locked .locked-status {
+    position: absolute;
+    bottom: 33%;
+    left: 25%;
+
+    width: 334px;
+    height: 138px;
+
+    background: url(https://cdn.armylegends.ro/elements/block_ghiozdan.webp) no-repeat;
+    background-size: 100% 100%;
+}
+
+.inventory-layout > .inventories-list > .other-inv-wrapper > .the-items:not(.player-other) .items-wrapper.locked .list .item {
+    opacity: .2;
+    /* opacity: 1; */
+}
+
+.inventory-layout > .inventories-list > .the-items .items-wrapper .list, .inventory-layout > .inventories-list > .other-inv-wrapper > .the-items .items-wrapper .list{
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 1vw;
+}
+
+.inventory-layout > .inventories-list > .the-items .items-wrapper .list > .item, .inventory-layout > .inventories-list > .other-inv-wrapper > .the-items .items-wrapper .list .item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 5vw;
+    height: 5vw;
+
+    background: url(https://cdn.armylegends.ro/elements/inv-box3.png) no-repeat;
+    background-size: 100% 100%;
+
+    /* background: #ffffff08;
+    border: .25vh solid #ffffff09; */
+    border-radius: .35vw;
+}
+
+.inventory-layout > .inventories-list > .the-items .items-wrapper .list > .item.empty, .inventory-layout > .inventories-list > .other-inv-wrapper > .the-items .items-wrapper .list .item .item.empty{
+	transition: .15s;
+}
+
+.inventory-layout > .inventories-list > .the-items .items-wrapper .list > .item:hover, .inventory-layout > .inventories-list > .other-inv-wrapper > .the-items .items-wrapper:not(.locked) .list .item:hover{
+    /* opacity: .2; */
+    opacity: 1;
+}
+
+.inventory-layout > .inventories-list > .the-items .items-wrapper .list > .item > h1, .inventory-layout > .inventories-list > .other-inv-wrapper > .the-items .items-wrapper .list .item h1{
+    /* opacity: .7; */
+    opacity: 1;
+    font-size: 3.05vh;
+    font-family: "Akrobat Bold";
+    font-weight: 600;
+}
+
+.inventory-layout > .inventories-list > .the-items .items-wrapper .list > .item > img, .inventory-layout > .inventories-list > .other-inv-wrapper > .the-items .items-wrapper .list .item img{
+    width: 75px;
+    position: fixed;
+}
+
+.inventory-layout > .inventories-list > .other-inv-wrapper > .the-items.player-other.notvisible {
+    display: none;
+}
+
+.inventory-layout > .inventories-list > .other-inv-wrapper > .the-items.player-pocket {
+    overflow: hidden;
+}
+
+.inventory-layout > .inventories-list > .the-items:not(.notvisible) .items-wrapper .list > .item > .item-amount, .inventory-layout > .inventories-list > .other-inv-wrapper > .the-items:not(.notvisible)  .items-wrapper .list .item .item-amount  {
+    position: absolute;
+    margin-left: 6%;
+    margin-bottom: 6%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.3vw;
+	height: 1.3vw;
+
+    background: url(https://cdn.armylegends.ro/elements/test-button4.png) no-repeat;
+    background-size: 100% 100%;
+
+    border-radius: .25vw;
+    /* background: #5bbc84; */
+}
+
+.inventory-layout > .inventories-list > .the-items.notvisible .items-wrapper .list > .item > .item-amount,   .inventory-layout > .inventories-list > .other-inv-wrapper > .the-items.notvisible .items-wrapper .list .item .item-amount {
+    position: absolute;
+    margin-left: 12%;
+    margin-bottom: 12%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.3vw;
+	height: 1.3vw;
+
+    background: url(https://cdn.armylegends.ro/elements/test-button4.png) no-repeat;
+    background-size: 100% 100%;
+
+    border-radius: .25vw;
+}
+
+.inventory-layout > .inventories-list > .the-items .items-wrapper .list > .item > .item-amount::before, .inventory-layout > .inventories-list > .other-inv-wrapper > .the-items .items-wrapper .list .item .item-amount::before {
+    content: attr(data-amount);
+}
+
+/* Fast Slots */
+
+.inventory-layout > .fast-slots{
+	position: absolute;
+	top: 28%;
+	left: 3.5%;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.inventory-layout > .fast-slots .text-box {
+    position: relative; /*make container the closest positioned ancestor*/
+    /* border: 1px solid red; */
+    display: inline-block;
+    height: 400px;
+    min-width: 30px; /*same as line-height of rotated text*/
+}
+
+.inventory-layout > .fast-slots .text-box h1{
+	font-size: 2vh;
+	font-family: "Akrobat ExtraBold";
+	font-weight: 600;
+	letter-spacing: 25px;
+	/* opacity: .7; */
+    opacity: 1;
+
+    text-align: center;
+    overflow: hidden;
+    height: 30px;
+    line-height: 30px;
+    width: 400px; /*matches the height of the container*/
+    position: absolute;
+    left: -30px;
+    bottom: -32px; /*0 = bottom of container, then subtract (line-height+border)*/
+    /* border: 1px solid blue; */
+    transform: rotate(-90deg);
+    transform-origin: top left;
+}
+
+.inventory-layout > .fast-slots > .slots{	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1vw;
+}
+
+.inventory-layout > .fast-slots > .slots > .box{
+	display: flex;
+	align-items: center;
+	gap: 1vh;
+}
+
+.inventory-layout > .fast-slots > .slots > .box > .item{
+    width: 5vw;
+    height: 5vw;
+
+    background: url(https://cdn.armylegends.ro/elements/inv-box3.png) no-repeat;
+    background-size: 100% 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.inventory-layout > .fast-slots > .slots > .box > .item.occupied{
+	transition: none;
+}
+
+.inventory-layout > .fast-slots > .slots > .box > .item:hover{
+	/* opacity: .5; */
+    opacity: 1;
+}
+
+.inventory-layout > .fast-slots > .slots > .box > .item > img{
+    width: 45px;
+}
+
+.inventory-layout > .fast-slots > .slots > .box > .key{
+    position: absolute;
+    margin-top: 70%;
+    left: 90%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.3vw;
+	height: 1.3vw;
+
+    background: url(https://cdn.armylegends.ro/elements/test-button4.png) no-repeat;
+    background-size: 100% 100%;
+
+    border-radius: .25vw;
+    /* background: #5bbc84; */
+}
+
+.inventory-layout > .fast-slots > .slots > .box > .key > .text{
+    text-shadow: 0 0 1vw white;
+	color: #fff;
+	text-align: center;
+	line-height: 2vw;
+	font-family: "Akrobat ExtraBold";
+	font-size: 1vw;
+}
+
+/* Wardrobe  */
+
+.inventory-layout > .wardrobe {
+    position: absolute;
+    top: 25.5%;
+    right: 19%;
+
+    width: 15vw;
+	height: 75%;
+	display: none;
+}
+
+.inventory-layout > .wardrobe.visible {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.inventory-layout > .wardrobe .clothes-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vh;
+}
+
+.inventory-layout > .wardrobe .clothes-wrapper .row{
+    display: flex;
+    flex-direction: column;
+	gap: 1vh;
+}
+
+.inventory-layout > .wardrobe .clothes-wrapper .row .spacer{
+	height: 5.25vw;
+}
+
+.inventory-layout > .wardrobe .clothes-wrapper .row .box{
+    width: 5vw;
+    height: 5vw;
+
+    background: url(https://cdn.armylegends.ro/elements/inv-box3.png) no-repeat;
+    background-size: 100% 100%;
+
+	z-index: 1;
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	justify-content: center;
+    gap: 10px;
+}
+
+.inventory-layout > .wardrobe .clothes-wrapper .row .box p{
+    font-size: .7em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #68676f;
+}
+
+.inventory-layout > .wardrobe .clothes-wrapper .row .box.occupied{
+	transition: none;
+}
+
+.inventory-layout > .wardrobe .clothes-wrapper .row .box:hover{
+	/* opacity: .5; */
+    opacity: 1;
+}
+
+.inventory-layout > .wardrobe .clothes-wrapper .row .box> img{
+	width: 45px;
+	/* opacity: .25; */
+    opacity: .5;
+}
+
+.inventory-layout > .wardrobe .clothes-wrapper .row .box > img.equiped{
+	opacity: 1;
+	width: 85px;
+}
+
+.inventory-layout > .wardrobe .image-box{
+    position: absolute;
+    width: 28vh;
+    top: -7vh;
+    left: 17vh;
+}
+
+.inventory-layout > .wardrobe .image-box svg {
+    position: absolute;
+}
+
+/* Context Menu  */
+
+.inventory-layout > .context-menu{
+	position: absolute;
+	top: 25.5%;
+	left: 19.5%;
+
+    width: 16%;
+
+    display: none;
+    z-index: 1;
+}
+
+.inventory-layout > .context-menu > .wrapper{
+	width: 100%;
+	height: 100%;
+	
+	display: flex;
+	flex-direction: column;
+	gap: 2.5vh;
+}
+
+.inventory-layout > .context-menu > .wrapper > .item-data {
+    min-height: 17vh;
+    background: #25262b;
+    border-radius: .5vw;
+    padding: 1vw;
+    padding-top: 1.35vw;
+    padding-left: 1.35vw;
+    padding-right: 1.35vw;
+    display: flex;
+    flex-direction: column;
+    gap: .65vh;
+}
+
+.inventory-layout > .context-menu > .wrapper > .item-data > h1{
+	font-size: 1.5vh;
+	font-family: "Akrobat Light";
+	letter-spacing: 1.5px;
+	font-weight: 600;
+}
+
+.inventory-layout > .context-menu > .wrapper > .item-data > p:nth-of-type(1){
+	/* opacity: .5; */
+    opacity: 1;
+	font-family: "Akrobat Bold";
+	letter-spacing: 1px;
+}
+
+.inventory-layout > .context-menu > .wrapper > .item-data > .remaining-use-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+    width: 98%;
+}
+
+.inventory-layout > .context-menu > .wrapper > .item-data > .remaining-use-wrapper p {
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-weight: 600;
+    font-size: .7em;
+    /* opacity: .5; */
+    opacity: 1;
+}
+
+.inventory-layout > .context-menu > .wrapper > .item-data > .remaining-use-wrapper .remaining-use{
+	height: .45vh;
+	background: #61dc6b;
+	box-shadow: 0 0 10px #61dc6b;
+	border-radius: 10vw;
+	margin-top: .5vh;
+}
+
+.inventory-layout > .context-menu > .wrapper > .item-data > .remaining-use-wrapper .remaining-use.middle {
+	background: #f7cc00;
+	box-shadow: 0 0 10px #f7cc00;
+}
+
+.inventory-layout > .context-menu > .wrapper > .item-data > .remaining-use-wrapper .remaining-use.low {
+	background: #d54144;
+	box-shadow: 0 0 10px #d54144;
+}
+
+.inventory-layout > .context-menu > .wrapper > .item-data > p:nth-of-type(2){
+	margin-top: 1.25vh;
+	/* opacity: .5; */
+    opacity: 1;
+	font-family: "Poppins";
+	font-weight: 400;
+	font-size: 1.25vh;
+}
+
+.inventory-layout > .context-menu > .wrapper > .actions {
+    /* height: 8vh; */
+    background: #25262b;
+    border-radius: .5vw;
+    display: flex;
+    justify-content: center;
+    padding: 2.5vh 0;
+}
+
+.inventory-layout > .context-menu > .wrapper > .actions > .action{
+	height: 100%;
+	width: 30%;
+	opacity: .5;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	transition: all .33s;
+	
+}
+
+.inventory-layout > .context-menu > .wrapper > .actions > .action:hover{
+	opacity: 1;
+}
+
+.inventory-layout > .context-menu > .wrapper > .actions > .action > i{
+	font-size: 1.65vh;
+}
+
+.inventory-layout > .context-menu > .wrapper > .actions > .action > p{
+	margin-top: 1.5vh;
+	font-family: "Akrobat Light";
+	font-weight: 700;
+	font-size: 1.2vh;
+	letter-spacing: .5px;
+}
+
+/* Prompt Menu  */
+
+.inventory-layout > .inv-prompt-menu{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .75);
+	color: #fff;
+    display: none;
+}
+
+.inventory-layout > .inv-prompt-menu > .bg{
+	width: 100%;
+	height: 100%;
+	background-image: url(https://cdn.armylegends.ro/elements/l6llyxB.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.inventory-layout > .inv-prompt-menu > .wrapper{
+	width: 20%;
+	height: 50%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 3vh;
+}
+
+.inventory-layout > .inv-prompt-menu > .wrapper > h1{
+	font-family: "Akrobat ExtraBold";
+	font-size: 4vh;
+	/* letter-spacing: 1px; */
+}
+
+.inventory-layout > .inv-prompt-menu > .wrapper > p{
+	font-family: "Akrobat Light";
+	text-align: center;
+	font-size: 2.5vh;
+	opacity: .5;
+}
+
+.inventory-layout > .inv-prompt-menu > .wrapper > input{
+	border: none;
+	background: rgba(0, 0, 0, .35);
+	width: 20vw;
+	height: 10vh;
+	border-radius: .5vw;
+	text-align: center;
+	font-size: 2vh;
+	font-family: "Akrobat ExtraLight";
+	color: #fff;
+}
+
+.inventory-layout > .inv-prompt-menu > .wrapper > input:focus{
+	outline: none;
+}
+
+.inventory-layout > .inv-prompt-menu > .wrapper > input::-webkit-outer-spin-button,
+.inventory-layout > .inv-prompt-menu > .wrapper > input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.inventory-layout > .inv-prompt-menu > .wrapper > .options{
+	display: flex;
+	gap: 1vw;
+}
+
+.inventory-layout > .inv-prompt-menu > .wrapper > .options > p{
+	padding: 1.85vh 2.25vh;
+	border-radius: .35vw;
+	font-family: "Akrobat ExtraBold";
+	font-size: 2.25vh;
+	opacity: 1;
+}
+
+.inventory-layout > .inv-prompt-menu > .wrapper > .options > p:nth-of-type(1){
+	background: #eed030;
+	color: #2b2b26;
+}
+
+.inventory-layout > .inv-prompt-menu > .wrapper > .options > p:nth-of-type(2){
+	background: #ffffff0f;
+}
+
+.inventory-layout > .inv-prompt-menu > .wrapper > .options > p:hover{
+	box-shadow: 0 0 0 7.5px #eed03020;
+}
+
+.inventory-layout > .inv-prompt-menu > .wrapper > .options > p:nth-of-type(2):hover{
+	box-shadow: 0 0 0 7.5px #ffffff08;
+}
+
+/* Notify */
+
+.inventory-notify {
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translateX(-50%);
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    font-family: "TT Norms";
+
+    z-index: -1;
+}
+
+.inventory-notify .bg {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    
+    background: url(https://cdn.armylegends.ro/elements/element_inventar_smecher.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.inventory-notify .wrap {
+    display: flex;
+    align-items: start;
+
+    padding-bottom: 40px;
+}
+
+.inventory-notify .item-img {
+    position: relative;
+
+    width: 100px;
+    height: 100px;
+
+    background-color: hsla(0, 0%, 100%, .025);
+    border-bottom-left-radius: 6px;
+    border-top-right-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inventory-notify .item-img::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    transform: translateY(-100%);
+    margin-top: 10px;
+    height: 2.5px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #ffffff06;
+}
+
+
+.inventory-notify .item-img > img {
+    width: 80px;
+    height: 80px;
+}
+
+.inventory-notify .wrap .right {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 20px;
+    z-index: 10;
+
+    font-variant-ligatures: none;
+}
+
+.inventory-notify .wrap .right .title {
+    font-size: 16px;
+    color: #fff;
+
+    background: #ffffff20;
+    
+    padding: 8px 12px;
+    max-width: 225px;
+    
+    text-align: center;
+}
+
+.inventory-notify .wrap .right .count {
+    margin-bottom: 5px;
+    color: hsla(0, 0%, 100%, .6);
+}

@@ -1,0 +1,101 @@
+ <div class="fine" style="display: none;">
+    <header>
+        <div class="left">
+            <img src="https://raw.githubusercontent.com/KPGTB/KFines/main/web/assets/logo.png" alt="logo"  width="50px" height="50px"/>
+            <div>
+                <div class="department">Departamentul de Politie Los Santos</div>
+                <div class="title">{{ fineData && fineData.type == 'radar' && 'Amenda Circulatie' || 'Amenda' }}</div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="city">Los Santos</div>
+            <div class="currentDate">{{ getDateFromTimestamp(fineData && fineData.createdAt) }}</div>
+        </div>
+    </header>
+
+    <fieldset class="category" v-if="fineData && fineData.type != 'radar'">
+        <legend class="catType">Politist</legend>
+
+        <fieldset>
+            <legend>Nume si Prenume</legend>
+            <input type="text" v-model="fineData && fineData.cop">
+        </fieldset>
+
+        <fieldset>
+            <legend>Rank</legend>
+            <input type="text" v-model="fineData && fineData.rank">
+        </fieldset>
+
+        <fieldset>
+            <legend>Insigna</legend>
+            <input type="text" v-model="fineData && fineData.badge">
+        </fieldset>
+    </fieldset>
+
+    <fieldset class="category" v-if="fineData && fineData.type != 'cop'">
+        <legend class="catType">Informati</legend>
+
+        <fieldset>
+            <legend>Vehicul</legend>
+            <input type="text" v-model="fineData && fineData.model">
+        </fieldset>
+
+        <fieldset>
+            <legend>Numar de inmatriculare</legend>
+            <input type="text" v-model="fineData && fineData.carPlate">
+        </fieldset>
+
+        <fieldset>
+            <legend>Viteza</legend>
+            <input type="text" v-model="fineData && fineData.speed">
+        </fieldset>
+    </fieldset>
+
+    <fieldset class="category">
+        <legend class="catType">Cetatean</legend>
+
+        <fieldset>
+            <legend>Nume si Prenume</legend>
+            <input type="text" v-model="fineData && fineData.name">
+        </fieldset>
+
+        <fieldset>
+            <legend>Sex</legend>
+            <input type="text" v-model="fineData && fineData.sex">
+        </fieldset>
+
+        <fieldset>
+            <legend>Data de nastere</legend>
+            <input type="text" value="26.03.2005">
+        </fieldset>
+    </fieldset>
+    
+
+    <fieldset class="category">
+        <legend class="catType">Amenda</legend>
+    
+        <fieldset class="larger">
+            <legend>Valoare</legend>
+            <input type="number" v-model="fineData && fineData.amount">
+        </fieldset>
+
+        <fieldset class="larger">
+            <legend>Motiv</legend>
+            <textarea readonly="true" rows="5" v-model="fineData && fineData.reason"></textarea>
+        </fieldset>
+
+        <fieldset class="larger">
+            <legend>Data</legend>
+            <div>{{ getDateFromTimestamp(fineData && fineData.expire) }}</div>
+        </fieldset>
+    </fieldset>
+
+    <footer>
+        <!-- <button>Plateste</button> -->
+
+        <fieldset>
+            <legend>Semnatura</legend>
+            <input type="text" v-model="fineData && fineData.name">
+        </fieldset>
+    </footer>
+</div>

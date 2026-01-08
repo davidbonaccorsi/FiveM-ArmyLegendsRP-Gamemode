@@ -1,0 +1,209 @@
+
+@import "https://fonts.cdnfonts.com/css/betterlett";
+@import "https://fonts.cdnfonts.com/css/montserrat";
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+* {
+    color: rgb(255, 255, 255);
+    font-family: inherit;
+}
+
+body{
+    cursor: none;
+    overflow: hidden;
+    user-select: none;
+    font-family: "Montserrat";
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.main-score {
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    inset: 0;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-score .score-block {
+    width: fit-content;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-name {
+    font-family: "Betterlett";
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+}
+
+.f-name > div {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    color: hsla(0, 0%, 100%, .8);
+    text-decoration: underline 2px;
+    text-align: center;
+    text-underline-offset: 5px;
+    text-decoration-color: hsla(0, 0%, 100%, .8);
+}
+
+.f-name > div::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    width: 40px;
+    height: 40px;
+    background: url(https://cdn.discordapp.com/attachments/1106558983378055338/1119990439194394624/skull-crack-svgrepo-com.png) no-repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+    opacity: .5;
+}
+
+.f-name:first-of-type > div {
+    margin-left: 25px;
+}
+.f-name:last-of-type > div {
+    margin-right: 25px;
+}
+
+.war-time {
+    width: 115px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-name.t-col {
+    color: #d3d1e7;
+}
+
+.f-name.u-col {
+    color: #86de86;
+}
+
+.war-time div:not(.time) {
+    background: #d0132290;
+    border-radius: 4px;
+    padding: 7px 14px;
+    height: fit-content;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .055em;
+}
+
+.war-time .time {
+    font-size: 14px;
+    margin-top: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    color: hsla(0, 0%, 100%, .8);
+}
+
+
+.main-killfeed {
+    position: absolute;
+    right: 35px;
+    top: 0;
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.main-killfeed > div {
+    width: fit-content;
+    min-height: 40px;
+    padding: 12px 32px;
+    background: #17182799;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    letter-spacing: .025em;
+    font-weight: 400;
+    position: relative;
+}
+.main-killfeed > div:last-of-type {
+    margin-bottom: 0;
+}
+
+.main-killfeed > div > div {
+    height: calc(100% + 35px);
+    width: 60px;
+    background: #2e2f40;
+    /* backdrop-filter: blur(2px); */
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-killfeed > div > div > img {
+    width: 20px;
+    height: 20px;
+}
+
+
+.log {
+    --t-kill: 208, 19, 34;
+    --u-kill: 134, 222, 134;
+}
+/* log 1 - red, log 2 - green */
+
+.log::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: rgb(var(--t-kill));
+    box-shadow: 0 0 0 5.5px rgb(var(--t-kill), 0.376);
+    border-radius: 100px;
+}
+
+.log-2::before {
+    background: rgb(var(--u-kill));
+    box-shadow: 0 0 0 5.5px rgb(var(--u-kill), 0.376);
+}
+
+.log.headshot::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) translateX(70%);
+    width: 32.5px;
+    height: 30px;
+    background: url(https://cdn.discordapp.com/attachments/1041015856446046229/1120004015384703156/Icon_headshot.webp) no-repeat;
+    background-size: 100% 100%;
+    filter: brightness(1000%) invert(100%);
+}

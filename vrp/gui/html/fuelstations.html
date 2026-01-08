@@ -1,0 +1,129 @@
+
+<div class="fuel-station-layout">
+    <div id="fuel-station-menu">
+        <div class="wrapper center">
+            <header>
+               <h1>Gas Station Nº74</h1>
+               <p>Mirror Park</p>
+            </header>
+            
+            <div class="data">
+               <div class="text">
+                  <p>$ {{ fuelPrice }}</p>
+                  <p>PRET PER LITRU</p>
+               </div>
+
+               <div class="text">
+                  <p id="fuel-station-liters">{{liters}}L</p>
+                  <p>TOTAL LITRI</p>
+               </div>
+            </div>
+
+            <div class="selectors">
+               <div class="slider"></div>
+
+               <div class="presets">
+                  <div class="preset" @click="setFuelLevel(25)">
+                     <p>25%</p>
+                  </div>
+                  <div class="preset" @click="setFuelLevel(50)">
+                     <p>50%</p>
+                  </div>
+                  <div class="preset" @click="setFuelLevel(100)">
+                     <p>100%</p>
+                  </div>
+               </div>
+            </div>
+
+            <div class="quick-buy">
+               <header>
+                  <i class="fa-solid fa-circle-minus"></i> 
+                  <p>CUMPARA RAPID</p>
+               </header>
+               <div class="items-list">
+                  <div class="product" @click="buyProduct('gas')">
+                     <p>$50</p>
+                     <img src="https://cdn.armylegends.ro/fuelstation/benzina.png">
+                  </div>
+               </div>
+            </div>
+
+            <div class="payment">
+               <header>
+                  <p>METODA DE PLATA</p>
+                  <p id="fuel-station-price">${{(fuelPrice * liters).toFixed(2)}}</p>
+               </header>
+               <div class="options">
+                  <div class="option" :class="[payMethode == 'cash' ? 'selected' : '']" @click="changePaymentMethode('cash')">
+                     <i class="far fa-money-bill-1" aria-hidden="true"></i>
+                     <p>CASH</p>
+                  </div>
+                  <div class="option" :class="[payMethode == 'card' ? 'selected' : '']" @click="changePaymentMethode('card')">
+                     <i class="fa-regular fa-credit-card"></i>
+                     <p>CREDIT CARD</p>
+                  </div>
+               </div>
+            </div>
+            <div class="confirm" @click="payFuel()">
+               <p>{{payMethode == "cash" ? "PLATESTE CASH" : "PLATESTE CU CARDUL"}}</p>
+            </div>
+        </div>         
+    </div>
+                        
+    <div class="fuelstation-business">
+        <div class="wrapper center">
+            <header>
+               <h1>Gas Station Nº74</h1>
+               <p>Mirror Park</p>
+            </header>
+            
+            <div class="data">
+               <div class="text">
+                  <p>${{ currentPrice }}</p>
+                  <p>PRET PER LITRU</p>
+               </div>
+
+               <div class="text">
+                  <p>{{ fuelLevel }}L</p>
+                  <p>TOTAL LITRI COMBUSTIBIL</p>
+               </div>
+            </div>
+
+            <div class="selectors">
+               <div class="slider-business"></div>
+
+               <div class="presets">
+                  <div class="preset" @click="setFuelPrice(7)">
+                     <p>7$</p>
+                  </div>
+                  <div class="preset" @click="setFuelPrice(12)">
+                     <p>12$</p>
+                  </div>
+                  <div class="preset" @click="setFuelPrice(15)">
+                     <p>15$</p>
+                  </div>
+               </div>
+            </div>
+
+            <div class="payment">
+               <header>
+                  <p>BALANTA BENZINARIE</p>
+                  <p>${{ bizMoney.toFixed(2) }}</p>
+               </header>
+               <div class="options">
+                  <div class="option" @click="withdrawBalance()">
+                     <i class="far fa-money-bill-1" aria-hidden="true"></i>
+                     <p>RETRAGE BALANTA</p>
+                  </div>
+                  <div class="option" @click="sellGasStation()">
+                     <i class="fa-regular fa-credit-card"></i>
+                     <p>VINDE BENZINARIA</p>
+                  </div>
+               </div>
+            </div>
+            <div class="confirm" @click="addFuel()">
+               <p>ADAUGA COMBUSTIBIL</p>
+            </div>
+        </div>         
+    </div>
+</div>

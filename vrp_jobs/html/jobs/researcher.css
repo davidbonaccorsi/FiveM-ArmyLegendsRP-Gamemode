@@ -1,0 +1,164 @@
+.main-researcher, .researcher-flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.main-researcher {
+
+    --bg: url("https://cdn.armylegends.ro/bg/Cercetator_Maritim.webp");
+    --clr: 71, 105, 173;
+
+    position: absolute;
+    inset: 0;
+    
+    background: var(--bg) no-repeat;
+    background-size: 100% 100%;
+}
+
+
+.researcher-flex {
+    padding: 120px;
+    flex-direction: column;
+}
+
+.researcher-flex .min-level {
+    position: absolute;
+    right: 0;
+    top: -15px;
+    width: 200px;
+    height: 45px;
+    background-color: #ee4630;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg) translateX(35%);
+}
+
+.researcher-flex .job-header {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.researcher-flex .job-header .header-box {
+    display: flex;
+    font-variant-ligatures: none;
+}
+
+.researcher-flex .job-header .header-box .job-title {
+    font-size: 6vh;
+    /* text-transform: uppercase; */
+    letter-spacing: .05em;
+    font-weight: 300;
+    color: hsla(0, 0%, 100%, .9);
+    line-height: 60px;
+    margin-right: 26px;
+}
+
+.researcher-flex .job-header .header-box .job-title p {
+    font-size: 6vh;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .05em;
+}
+
+.researcher-flex .job-header .job-description {
+    margin-top: 10px;
+    color: hsla(0, 0%, 100%, .4);
+    font-size: 2vh;
+    letter-spacing: .025em;
+    line-height: 22px;
+    width: 570px;
+    font-weight: 300;
+}
+
+.researcher-flex .job-header .header-box .job-action {
+    padding: 10px 14px;
+    min-width: 180px;
+    min-height: 50px;
+    height: fit-content;
+    background-color: rgba(var(--clr), .7);
+    border: 2px dashed transparent;
+    border-radius: 6px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsla(0, 0%, 100%, .7);
+    font-size: 18px;
+    letter-spacing: .015em;
+    font-weight: 400;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: .232323s ease-in-out;
+}
+
+.researcher-flex .job-header .header-box .job-action:hover {
+    border: 2px dashed rgb(var(--clr));
+    opacity: .8;
+}
+
+.researcher-flex .job-boxes {
+    margin-top: 102px;
+    display: flex;
+    gap: 3vh;
+}
+
+.researcher-flex .job-boxes > div {
+    position: relative;
+    transition: all 0.33s, border 0s;
+    min-width: 28vh;
+    border-radius: 0.5vh;
+    min-height: 40vh;
+    border: 0.4vh dashed hsla(0, 0%, 100%, 0.125);
+    padding: 20px 22px;
+}
+.researcher-flex .job-boxes > div:first-of-type {
+    border-style: solid;
+}
+.researcher-flex .job-boxes > div:hover {
+    transition: 0.33s, border 0s;
+    border-color: hsla(0, 0%, 100%, 0.188);
+    background: hsla(0, 0%, 100%, 0.02);
+    border-style:dotted;
+}
+
+
+.researcher-flex .job-boxes > div:first-of-type::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 225px;
+    height: 225px;
+    background: url(https://cdn.armylegends.ro/elements/bullet-5435617-4537803_1.webp) no-repeat;
+    background-size: 100% 100%;
+    transform: translateX(30%) translateY(25%);
+}
+
+.researcher-flex .job-boxes > div .title {
+    font-size: 2vh;
+    font-weight: 600;
+    position: relative;
+}
+
+.researcher-flex .job-boxes > div .title::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(-25%) translateY(-65%);
+    content: "";
+    width: 162px;
+    height: 162px;
+    background: url(https://cdn.armylegends.ro/elements/Mask_Group-2.webp) no-repeat;
+}
+
+.researcher-flex .job-boxes > div .description {
+    max-width: 250px;
+    margin-top: 35px;
+    letter-spacing: .025em;
+    color: hsla(0, 0%, 100%, .5);
+    line-height: 21px;
+}
+

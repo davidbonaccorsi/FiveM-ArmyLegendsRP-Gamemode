@@ -1,0 +1,315 @@
+
+.phone-layout > .bank{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1.5vh;
+    
+    padding-top: 2.5vh;
+    padding-right: 1.25vw;
+    padding-left: 1.5vw;
+
+    backdrop-filter: blur(10px);
+    background: #36518765;
+}
+
+.phone-layout > .bank.visible{
+    display: flex;
+    animation: fadeIn 1.5s;
+}
+
+.phone-layout > .bank > header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.phone-layout > .bank > header > p{
+    font-family: "Akrobat Light";
+    font-size: 3vh;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.phone-layout > .bank > header > .actions{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    gap: .5vw;
+}
+
+.phone-layout > .bank > header > .actions > .btn{
+    padding: 1.45vh .95vw;
+    border-radius: .75vw;
+    background: #ffffff20;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .15s ease-in-out;
+}
+
+.phone-layout > .bank > header > .actions > .btn.hidden{
+    display: none;
+}
+
+.phone-layout > .bank > header > .actions > .btn:hover{
+/*     box-shadow: 0 0 0 5.5px #ffffff09; */
+    background: #ffffff30;
+}
+
+
+.phone-layout > .bank > .actions{
+    height: 65%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.phone-layout > .bank > .actions > .action{
+    height: 8vh;
+    background: #ffffff20;
+    border-radius: 1.65vw;
+
+    display: flex;
+    align-items: center;
+    gap: 1.10vw;
+    padding: 0 1.35vw;
+    transition: .33s ease-in-out;
+}
+
+.phone-layout > .bank > .actions > .action:hover{
+    box-shadow: 0 0 0 5.5px #ffffff09;
+    background: #ffffff25;
+}
+
+.phone-layout > .bank > .actions > .action > img{
+    width: 2.85em;
+}
+
+.phone-layout > .bank > .actions > .action > .text{
+    display: flex;
+    flex-direction: column;
+    gap: .5vh;
+}
+
+.phone-layout > .bank > .actions > .action > .text > p:nth-of-type(1){
+    font-family: "Akrobat Light";
+    font-weight: 700;
+    font-size: 1.85vh;
+    letter-spacing: 1.5px;
+}
+
+.phone-layout > .bank > .actions > .action > .text > p:nth-of-type(2){
+    font-family: "Akrobat Light";
+    font-weight: 700;
+    font-size: 1.3vh;
+    letter-spacing: 1.25px;
+    opacity: .5;
+}
+
+
+
+.phone-layout > .bank > .actions > .iban{
+    height: 8vh;
+    background: #ffffff20;
+    border-radius: 1.65vw;
+
+    display: flex;
+    align-items: center;
+    gap: 1.10vw;
+    padding: 0 1.35vw;
+    transition: .33s ease-in-out;
+
+    margin-top: 5%;
+}
+
+.phone-layout > .bank > .actions > .iban:hover{
+    box-shadow: 0 0 0 5.5px #ffffff09;
+    background: #ffffff25;
+}
+
+.phone-layout > .bank > .actions > .iban > p:nth-of-type(1){
+    font-family: "Akrobat";
+    font-size: 1.35vh;
+    opacity: .35;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.phone-layout > .bank > .actions > .iban > p:nth-of-type(2){
+    margin-left: auto;
+    font-family: "Akrobat Bold";
+    font-size: 2.65vh;
+}
+
+.phone-layout > .bank > .balance{
+/*     margin-top: auto; */
+    align-self: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5vh;
+}
+
+.phone-layout > .bank > .balance > h1{
+    font-size: 4.25vh;
+    font-family: "Akrobat Bold";
+    letter-spacing: 1.5px;
+}
+
+.phone-layout > .bank > .balance > p{
+    opacity: .6;
+    font-family: "Akrobat Light";
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+/* Prompt */
+
+.phone-layout > .bank > .bank-prompt{
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+    
+    background: rgba(0, 0, 0, .925);
+    z-index: 2;
+
+    display: none;
+    animation: fadeIn .13s;
+
+    padding-top: 2.5vh;
+    padding-right: 1.25vw;
+    padding-left: 1.5vw;
+    
+    flex-direction: column;
+    align-items: center;
+}
+
+.phone-layout > .bank > .bank-prompt.visible{
+    display: flex;
+}
+
+.phone-layout > .bank > .bank-prompt > header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.phone-layout > .bank > .bank-prompt > header > p{
+    font-family: "Akrobat Light";
+    font-size: 3vh;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.phone-layout > .bank > .bank-prompt > header > .actions{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    gap: .5vw;
+}
+
+.phone-layout > .bank > .bank-prompt > header > .actions > .btn{
+    padding: 1.45vh .95vw;
+    border-radius: .75vw;
+    background: #ffffff20;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .15s ease-in-out;
+}
+
+.phone-layout > .bank > .bank-prompt > header > .actions > .btn.hidden{
+    display: none;
+}
+
+.phone-layout > .bank > .bank-prompt > header > .actions > .btn:hover{
+/*     box-shadow: 0 0 0 5.5px #ffffff09; */
+    background: #ffffff30;
+}
+
+
+.phone-layout > .bank > .bank-prompt > h1{
+    margin-top: 10.5%;
+    font-size: 3.5vh;
+    letter-spacing: 1px;
+}
+
+.phone-layout > .bank > .bank-prompt > .fields{
+    margin-top: 15%;
+    
+    padding: 4vh 0;
+    padding-top: 0;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+}
+
+.phone-layout > .bank > .bank-prompt > .fields > .box{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    width: 95%;
+}
+
+.phone-layout > .bank > .bank-prompt > .fields > .box > p{
+    font-family: "Akrobat Light";
+    font-weight: 600;
+    opacity: .6;
+    letter-spacing: 1.65px;
+    font-size: 1.35vh;
+}
+
+.phone-layout > .bank > .bank-prompt > .fields > .box > input{
+    height: 7.5vh;
+    background: #ffffff20;
+    border: .18vh solid #ffffff20;
+    border-radius: .35vw;
+    text-align: center;
+    font-family: "Akrobat";
+    font-size: 3vh;
+    letter-spacing: 1px;
+    padding: 0 1vw;
+}
+
+.phone-layout > .bank > .bank-prompt > .fields > .box > input:focus{
+    outline: none;
+}
+
+.phone-layout > .bank > .bank-prompt > .confirm{
+    width: 95%;
+    height: 7vh;
+    
+    background: #f1c84b;
+    border-radius: .35vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .33s all ease-in-out;
+}
+
+.phone-layout > .bank > .bank-prompt > .confirm:hover{
+    box-shadow: 0 0 0 6.5px #f1c84b40;
+}
+
+.phone-layout > .bank > .bank-prompt > .confirm > p{
+    font-family: "Akrobat ExtraBold";
+    letter-spacing: 1px;
+    font-size: 2.5vh;
+}

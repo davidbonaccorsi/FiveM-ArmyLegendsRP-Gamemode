@@ -1,0 +1,321 @@
+.admin-tickets-layout{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Akrobat";
+    background: linear-gradient(135deg, rgb(32, 57, 57, .85), rgb(57, 65, 101, .85));
+}
+
+.admin-tickets-layout > .wrapper{
+    width: 60%;
+    height: 50%;
+    
+    background: url(https://cdn.armylegends.ro/bg/tickete.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 5vh 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+
+    z-index: 10;
+}
+
+.admin-tickets-layout > .wrapper > header{
+    width: 100%;
+    height: 5vh;
+
+    display: flex;
+    align-items: center;
+
+    margin-left: -1.5vw;
+    
+}
+
+.admin-tickets-layout > .wrapper > header > .exit{
+    width: 4vw;
+    height: 4vw;
+    
+    background: #fff;
+    border-radius: 10vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .33s ease-in-out;
+}
+
+.admin-tickets-layout > .wrapper > header > .exit:hover{
+    box-shadow: 0 0 0 5.5px #ffffff20;
+}
+
+.admin-tickets-layout > .wrapper > header > .exit > i{
+    color: #4d3994;
+    font-size: 4vh;
+}
+
+.admin-tickets-layout > .wrapper > header > p{
+    margin-left: 2vw;
+    font-family: "Akrobat Light";
+    font-weight: 600;
+    font-size: 1.85vh;
+    letter-spacing: 4px;
+}
+
+.admin-tickets-layout > .wrapper > .lists{
+    align-self: center;
+    height: -webkit-fill-available;
+    width: 85%;
+
+    display: flex;
+    gap: 2vw;
+    
+}
+
+.admin-tickets-layout > .wrapper > .lists.hidden{
+    display: none;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .subjects{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+    width: 18vw;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .subjects > .subject{
+    height: 6vh;
+    width: 100%;
+    
+    background: #ffffff20;
+    border: .2vh solid #ffffff00;
+    border-radius: .35vw;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 2vw;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .subjects > .subject.selected{
+    border: .2vh solid #ffffff10;
+    background: #d3693f99;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .subjects > .subject:not(.selected):hover{
+    background: #ffffff35;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .subjects > .subject > p{
+    font-family: "Akrobat Bold";
+    letter-spacing: 1px;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .data{
+    height: -webkit-fill-available;
+    width: 30vw;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .data > textarea{
+    width: 100%;
+    height: 25vh;
+
+    color: #a6a4a4;
+
+    border-radius: .35vw;
+
+    padding: 2vh;
+
+    font-family: "Akrobat Light";
+    font-size: 2.35vh;
+
+    border: .3vh solid #ffffff00;
+    resize: none;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .data > textarea::-webkit-scrollbar{
+    display: none;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .data > textarea:focus{
+    outline: none;
+    border: .3vh solid #d3693f;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .data > .confirm{
+    margin-left: auto;
+    margin-top: 1vh;
+    
+    height: 6.5vh;
+    width: 11vw;
+    
+    background:#ffcc30;
+    border-radius:6px;
+    
+    box-shadow:0 0 30px rgba(255,204,48,.83);
+    
+    transition:all .23232323s ease-in-out;
+    transition:all easy-in-out .23232323s;
+    -webkit-transition:all .23232323s ease-in-out;
+    -moz-transition:all .23232323s ease-in-out;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .data > .confirm:hover{
+    box-shadow: 0 0 0 7.5px #ffcc3050;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .data > .confirm > p{
+    font-size: 2.5vh;
+    letter-spacing: 5px;
+    font-family: "Akrobat Light";
+    font-weight: 600;
+    transition:all .23232323s ease-in-out;
+    transition:all easy-in-out .23232323s;
+    -webkit-transition:all .23232323s ease-in-out;
+    -moz-transition:all .23232323s ease-in-out;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .data > .confirm:hover > p{
+    color: #232323;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .tickets{
+    width: 100%;
+    height: 95%;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    padding-right: 1vw;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .tickets::-webkit-scrollbar {
+    width: 6px;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .tickets::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .tickets::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #d3693f;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .tickets::-webkit-scrollbar-thumb:window-inactive {
+    background: #d3693f;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .tickets > .ticket{
+    width: 100%;
+    padding: 2.5vh 3vw;
+    background: #ffffff15;
+    border-radius: .35vw;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 3.5vw;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .tickets > .ticket:hover{
+    background: #ffffff25;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .tickets > .ticket > .data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5vh;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .tickets > .ticket > .data:nth-of-type(3){
+    align-items: flex-start;
+    text-transform: lowercase;
+    width: 20vw;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .tickets > .ticket > .data > header{
+    display: flex;
+    align-items: center;
+    gap: .5vw;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .tickets > .ticket > .data > header > i{
+    color: #ffe813;
+    font-size: 2vh;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .tickets > .ticket > .data > header > p{
+    text-transform: uppercase;
+    font-family: "Akrobat Light";
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 1.5vh;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .tickets > .ticket > .data > p{
+    opacity: .5;
+    font-family: "Akrobat Light";
+}
+
+.admin-tickets-layout > .wrapper > .lists > .tickets > .ticket > i{
+    align-self: center;
+    font-size: 2.5vh;
+    margin-left: auto;
+    transition: .33s ease-in-out;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .tickets > .ticket > i:hover{
+    opacity: .65;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .tickets > .ticket > i.take{
+    color: #74ce60;
+}
+
+.admin-tickets-layout > .wrapper > .lists > .tickets > .ticket > i.skip{
+    color: #d3693f;
+}
+
+
+/* Tickets alert */
+
+.admintk-alert-layout{
+    position: absolute;
+    bottom: 21.5%;
+    left: 1%;
+    background: url(https://cdn.armylegends.ro/elements/ticket-alert-new.png) no-repeat;
+    width: 314px;
+    height: 51.5px;
+    display: none;
+    animation: animadmintk 1s;
+	z-index: -1;
+}
+
+@keyframes animadmintk{
+    from {
+        left: -10%;
+    } to {
+        left: 1%;
+    }
+}

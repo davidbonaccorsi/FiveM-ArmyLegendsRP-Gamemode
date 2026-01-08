@@ -1,0 +1,81 @@
+.badge-layout{
+    position: absolute;
+
+    bottom: 35%;
+    left: 7%;
+
+    width: 537px;
+    height: 683px;
+    
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    border-radius: .25vw;
+
+    font-family: "Akrobat";
+
+    display: none;
+}
+
+.badge-layout.politie{
+    background-image: url(https://cdn.armylegends.ro/elements/lspd_docs.png);
+}
+
+.badge-layout.smurd{
+    background-image: url(https://cdn.armylegends.ro/elements/ems_docs.png);
+}
+
+.badge-layout > .wrapper{
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+
+    gap: 3vh;
+
+    padding-left: 2.5vw;
+}
+
+.badge-layout > .wrapper > .data{
+    margin-left: 10px;
+    width: 60%;
+
+    display: flex;
+    flex-direction: column;
+    gap: .5vh;
+}
+
+.badge-layout > .wrapper > .data:first-of-type{
+    margin-top: 22.5%;
+}
+
+.badge-layout > .wrapper > .data > .text{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.badge-layout > .wrapper > .data > .text > img{
+    width: 30px;
+}
+
+.badge-layout.politie > .wrapper > .data > .text > img{
+    filter: invert(0%) sepia(5%) saturate(21%) hue-rotate(236deg) brightness(91%) contrast(106%);
+}
+
+.badge-layout > .wrapper > .data > .text > p{
+    font-family: "Akrobat Black";
+    text-transform: uppercase;
+    font-size: 1.8vh;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+.badge-layout > .wrapper > .data > p{
+    margin-left: 2.5vw;
+    font-family: "Akrobat Light";
+    letter-spacing: .5px;
+    font-size: 1.7vh;
+    opacity: .5;
+    color: #000;
+}

@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <!-- ArmyLegends Roleplay Loadscreen -->
+        <!-- made by @21proxy -->
+
+        <title>ArmyLegends Romania</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <link href="https://cdn.armylegends.ro/fonts/ttnorms/ttnorms.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    
+    <script>
+        let musicState = true;
+
+        const audio = new Audio("load.webm");
+
+        audio.addEventListener("canplaythrough", () => audio.play());
+        
+        window.addEventListener("keydown", e => {
+            if (e.code === "Space") {
+                musicState = !musicState;
+
+                musicState ? audio.play() : audio.pause();
+            }
+        })
+
+        const allTexts = ["Distractia incepe imediat...", "Iti pregatim caracterul...", "Preluam ultima locatie..."];
+        //... de adaugat mai multe
+
+        let index = -1;
+
+        const updateText = () => {
+            index = (index + 1) % allTexts.length;
+
+            $(".load-text").text(allTexts[index]);
+        }
+
+        setInterval(updateText, 5000);
+    </script>
+
+    <body style="overflow: hidden;cursor: none;">
+      <div class="main-load">
+        <video class="loadbg" autoplay muted loop>
+            <source src="loadscreen.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+
+        <div class="key">Apasa tasta <span>SPACE</span> pentru a porni/opri melodia</div>
+
+        <div class="load-text">Te conectam pe server...</div>
+        <div class="loading-bar">
+            <div class="fill"></div>
+        </div>
+      </div>
+        
+    </body>
+</html>

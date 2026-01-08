@@ -1,0 +1,89 @@
+.faction-closet-layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://cdn.armylegends.ro/bg/showroom.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-family: "TT Norms";
+}
+
+.faction-closet-layout > .side-bar{
+    width: 11vw;
+    height: 100%;
+    border-right: 2px solid #ffffff20;
+}
+
+.faction-closet-layout > h1 {
+    text-align: center;
+    font-family: "TT Norms";
+    letter-spacing: 5px;
+    font-size: 3em;
+    font-weight: 4500;
+    text-shadow: 0 0 5px #fff;
+    transform: translate(-50%,-50%) rotate(270deg);
+    left: 5%;
+}
+
+.faction-closet-layout > .arrows-box{
+    width: 30%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.faction-closet-layout > .arrows-box > i{
+    font-size: 2.5em;
+    transition: 1s;
+}
+
+.faction-closet-layout > .arrows-box > i:nth-of-type(2){
+    margin-left: auto;
+}
+
+.faction-closet-layout > .arrows-box > i:hover{
+    opacity: .5;
+}
+
+.faction-closet-layout > .actions {
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translateX(-50%);
+    bottom: 3%;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    align-items: center;
+}
+
+.faction-closet-layout > .actions > p {
+    letter-spacing: .025em;
+    background: #ffca4e;
+    padding: 1.65vh 1.65vw;
+    border-radius: 10vw;
+    font-family: "TT Norms";
+    font-size: 1.15em;
+    font-weight: 500;
+    box-shadow: 0 20px 40px #ffca4e70;
+}
+
+.faction-closet-layout > .actions > h1 {
+    font-size: 1em;
+    background: #fff;
+    border: 2px solid #ffffff00;
+    padding: 1.5vh 1.5vw;
+    color: #2b3239;
+    letter-spacing: .025em;
+    border-radius: .25vw;
+    transition: 1s;
+}
+
+.faction-closet-layout > .actions > h1:hover{
+    background: transparent;
+    color: #fff;
+    border-color: #ffffff20;
+    transition: .5s;
+}

@@ -1,0 +1,36 @@
+<div class="main-daily" v-if="active">
+    <div class="daily-reward-list">
+       <div class="daily-reward-item" v-for="(data, index) of dailyRewards" :class="{'locked': index + 1 > day, 'can-collect': index + 1 === day, 'collected': index + 1 < day}">
+          <div class="day-number">
+             <h1>ZIUA</h1>
+             <p>{{ index + 1 }}</p>
+          </div>
+          <div class="reward-item">
+             <img :src="data.img" alt="">
+          </div>
+          <div class="item-detail">
+             <h1>{{ data.name }}</h1>
+          </div>
+       </div>
+    </div>
+    <div class="daily-item-collect">
+       <div class="title">
+          <h1>RECOMPENSE <span>ZILNICE</span></h1>
+          <p>Eliberează-ți potențialul și descoperă întregul server timp de 50 de zile, iar în schimb vei fi răsplătit zilnic cu recompense exclusive.</p>
+       </div>
+       <div class="daily-reward-item">
+          <div class="day-number">
+             <h1>ZIUA</h1>
+             <p>{{ day }}</p>
+          </div>
+          <div class="reward-item">
+             <img :src="collectData.img" alt="">
+          </div>
+          <div class="item-detail">
+             <h1>{{ collectData.name }}</h1>
+          </div>
+       </div>
+       <div class="collect-button" v-if="canCollect" @click="collectReward()">Colecteaza Recompensa Zilnica</div>
+       <div class="collect-button disabled" v-else><i class="fa-regular fa-lock"></i> {{ collectCooldown }}</div>
+    </div>
+</div>

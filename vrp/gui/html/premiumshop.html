@@ -1,0 +1,373 @@
+
+<div class="premiumshop-layout">
+    <div class="wrapper">
+        <div @click="goBack()" :class="{close: true, prime: page == 'prime'}">
+            <p>INCHIDERE</p>
+
+            <div class="key">
+                <p>ESC</p>
+            </div>
+        </div>
+
+        <div class="side" v-if="page != 'prime'">
+            <header>
+                <img src="https://cdn.armylegends.ro/shop/rpc.png" />
+                <h1>{{coins | formatnum}}<span> FC</span></h1>
+
+                <div class="add-funds" @click="addFunds()">
+                    <i class="fas fa-plus" aria-hidden="true"></i>
+                    <p>ADD FUNDS</p>
+                </div>
+            </header>
+
+            <div class="categories">
+                <div :class="{categ: true, active: page == 'prime'}" @click="setPage('prime')">
+                    <img src="https://cdn.armylegends.ro/shop/crown.svg" />
+                    <p>PRIME</p>
+                </div>
+
+                <div :class="{categ: true, 'bigger-img': true, active: page == 'popular'}" @click="setPage('popular')">
+                    <img src="https://cdn.armylegends.ro/elements/white_logo.png" />
+                    <p>POPULAR</p>
+                </div>
+
+                <div :class="{categ: true, 'bigger-img': true, active: page == 'begginers'}" @click="setPage('begginers')">
+                    <img src="https://cdn.armylegends.ro/shop/baby.svg" />
+                    <p>FOR BEGINNERS(14 DAYS OF 2X XP + 15 LVL UPS)</p>
+                </div>
+
+                <div :class="{categ: true, active: page == 'cars'}" @click="setPage('cars')">
+                    <img src="https://cdn.armylegends.ro/shop/cars.svg" />
+                    <p>CARS</p>
+                </div>
+
+                <div :class="{categ: true, active: page == 'money'}" @click="setPage('money')">
+                    <img src="https://cdn.armylegends.ro/shop/money.svg" />
+                    <p>MONEY</p>
+                </div>
+
+                <div :class="{categ: true, active: page == 'others'}" @click="setPage('others')">
+                    <img src="https://cdn.armylegends.ro/shop/honeycomb.svg" />
+                    <p>OTHERS</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="products prime" v-if="page == 'prime'">
+            <div class="benefits">
+                <div class="col">
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/prime_checkmark.png"> 
+                      <p>POSIBILITATEA DE A DETINE 6 CASE</p>
+                   </div>
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/prime_checkmark.png"> 
+                      <p>POSIBILITATEA DE A SCOATE UN VEHICUL PESTE LIMITA PERMISA</p>
+                   </div>
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/prime_checkmark.png"> 
+                      <p>GRAD SPECIAL PE SERVERUL NOSTRU DE DISCORD</p>
+                   </div>
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/prime_checkmark.png"> 
+                      <p>TAG SPECIAL PE CHATUL GLOBAL</p>
+                   </div>
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/prime_checkmark.png"> 
+                      <p>5% BOOST LA TOATE JOBURILE</p>
+                   </div>
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/prime_checkmark.png"> 
+                      <p>CRESTEREA ACCELERATA A PUTERII LA SALA DE FORTA <span>+25%</span></p>
+                   </div>
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/prime_checkmark.png"> 
+                      <p>PREMIUM VEHICLE VOUCHER <span>1x</span></p>
+                   </div>
+                   <!-- <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/prime_checkmark.png"> 
+                      <p>10% REDUCERE LA PLATA TAXELOR SI A IMPOZITELOR</p>
+                   </div> -->
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/prime_checkmark.png"> 
+                      <p>+ 15,000$ LA FIECARE PAYDAY</p>
+                   </div>
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/prime_checkmark.png"> 
+                      <p>+ 50,000$ LA ACHIZITIONARE</p>
+                   </div>
+                </div>
+                <div class="col">
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/x.png"> 
+                      <p>60 DE MINUTE PERMISE AFK</p>
+                   </div>
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/x.png"> 
+                      <p>CUSTOM CAR PLATE VOUCHER</p>
+                   </div>
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/x.png"> 
+                      <p>50% MAI PUTIN COMISION LA RETRAGEREA DIN BANCA</p>
+                   </div>
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/x.png"> 
+                      <p>TIMP REDUS IN INCHISOARE</p>
+                   </div>
+                   <div class="benefit">
+                    <img src="https://cdn.armylegends.ro/shop/x.png"> 
+                    <p>50% REDUCERE LA PLATA TAXELOR SI A IMPOZITELOR</p>
+                 </div>
+                </div>
+            </div>                 
+            
+            <div class="benefits platinum">
+                <div class="col">
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/prime_platinum_checkmark.png">
+                      <p>TIMP REDUS IN INCHISOARE <span>-50%</span></p>
+                   </div>
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/prime_platinum_checkmark.png">
+                      <p>50% MAI PUTIN COMISION LA RETRAGEREA DIN BANCA</p>
+                   </div>
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/prime_platinum_checkmark.png">
+                      <p>CUSTOM CAR PLATE VOUCHER</p>
+                   </div>
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/prime_platinum_checkmark.png">
+                      <p>60 DE MINUTE PERMISE AFK</p>
+                   </div>
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/prime_platinum_checkmark.png">
+                      <p>GRAD SPECIAL PE SERVERUL NOSTRU DE DISCORD</p>
+                   </div>
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/prime_platinum_checkmark.png">
+                      <p>TAG SPECIAL PE CHATUL GLOBAL</p>
+                   </div>
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/prime_platinum_checkmark.png">
+                      <p>CRESTEREA ACCELERATA A PUTERII LA SALA DE FORTA <span>+50%</span></p>
+                   </div>
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/prime_platinum_checkmark.png">
+                      <p>POSIBILITATEA DE A SCOATE DOUA VEHICULE PESTE LIMITA</p>
+                   </div>
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/prime_platinum_checkmark.png">
+                      <p>15% BOOST LA TOATE JOBURILE</p>
+                   </div>
+                </div>
+                <div class="col">
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/prime_platinum_checkmark.png">
+                      <p>50% REDUCERE LA PLATA TAXELOR SI A IMPOZITELOR</p>
+                   </div>
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/prime_platinum_checkmark.png">
+                      <p>+ 30,000$ LA FIECARE PAYDAY</p>
+                   </div>
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/prime_platinum_checkmark.png">
+                      <p>+ 250,000$ LA ACHIZITIONARE</p>
+                   </div>
+                   <div class="benefit">
+                      <img src="https://cdn.armylegends.ro/shop/prime_platinum_checkmark.png">
+                      <p>PREMIUM VEHICLE VOUCHER <span>2x</span></p>
+                   </div>
+                </div>
+            </div>
+            
+            <div class="buy-layout">
+                <div class="buy" @click="buy('vip:1')">
+                    <p>BUY</p>
+                
+                    <div class="price">
+                        <img src="https://cdn.armylegends.ro/shop/rpc.png">
+                        <h1>20<span> FC</span></h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buy-layout platinum">
+                <div class="buy" @click="buy('vip:2')">
+                    <p>BUY</p>
+                
+                    <div class="price">
+                        <img src="https://cdn.armylegends.ro/shop/rpc.png">
+                        <h1>35<span> FC</span></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="products popular" v-if="page == 'popular'">
+            <div class="warning"></div>
+            
+            <div class="middle-boxes">
+                <div class="col">
+                    <div class="box" @click="setPage('prime')"></div>
+                    <div class="box">
+                        <div class="buy" @click="buy('car:serv_electricscooter')">
+                            <img src="https://cdn.armylegends.ro/shop/rpc.png">
+                            <h1>10<span> FC</span></h1>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="big-box">
+                    <div class="buy" @click="buy('money:3000000')">
+                        <img src="https://cdn.armylegends.ro/shop/rpc.png">
+                        <h1>100<span> FC</span></h1>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="box">
+                        <div class="buy" @click="buy('money:1100000')">
+                            <img src="https://cdn.armylegends.ro/shop/rpc.png">
+                            <h1>50<span> FC</span></h1>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="buy" @click="buy('car:chiron17')">
+                            <img src="https://cdn.armylegends.ro/shop/rpc.png">
+                            <h1>40<span> FC</span></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="products cars" v-if="page == 'cars'">
+            <div class="grid">
+                <div class="box" v-for="(price, car) of cars" :style="{'background-image': 'url(https://cdn.armylegends.ro/vehicles/' + car + '.png)'}">
+                    <div class="buy" @click="buy('car:' + car)">
+                        <img src="https://cdn.armylegends.ro/shop/rpc.png">
+                        <h1>{{price}}<span> FC</span></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="products begginers" v-if="page == 'begginers'">
+            <div class="box">
+                
+                <div class="buy" @click="buy('starterpack')">
+                    <p>BUY</p>
+                
+                    <div class="price">
+                        <img src="https://cdn.armylegends.ro/shop/rpc.png">
+                        <h1>25<span> FC</span></h1>
+                    </div>
+                </div>
+                
+                <div class="learn-more" @click="setPage('prime')">
+                    <p>LEARN MORE</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="products money" v-if="page == 'money'">
+            <div class="small-boxes">
+                <div class="box">
+                    <div class="buy" @click="buy('money:20000')">
+                        <img src="https://cdn.armylegends.ro/shop/rpc.png">
+                        <h1>5<span> FC</span></h1>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="buy" @click="buy('money:300000')">
+                        <img src="https://cdn.armylegends.ro/shop/rpc.png">
+                        <h1>20<span> FC</span></h1>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="buy" @click="buy('money:100000')">
+                        <img src="https://cdn.armylegends.ro/shop/rpc.png">
+                        <h1>10<span> FC</span></h1>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="buy" @click="buy('money:1100000')">
+                        <img src="https://cdn.armylegends.ro/shop/rpc.png">
+                        <h1>80<span> FC</span></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="big-box">
+                <div class="buy" @click="buy('money:3000000')">
+                    <img src="https://cdn.armylegends.ro/shop/rpc.png">
+                    <h1>160<span> FC</span></h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="products others" v-if="page == 'others'">
+            <!-- <div class="promotion"></div> -->
+
+            <div class="row">
+
+                <div class="box">
+                    <div class="buy" @click="buy('doublexp')">
+                        <img src="https://cdn.armylegends.ro/shop/rpc.png">
+                        <h1>10<span> FC</span></h1>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="buy" @click="buy('gunpermit')">
+                        <img src="https://cdn.armylegends.ro/shop/rpc.png">
+                        <h1>10<span> FC</span></h1>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="buy" @click="buy('clearwarn')">
+                        <img src="https://cdn.armylegends.ro/shop/rpc.png">
+                        <h1>10<span> FC</span></h1>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="buy" @click="buy('buynr')">
+                        <img src="https://cdn.armylegends.ro/shop/rpc.png">
+                        <h1>10<span> FC</span></h1>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="buy" @click="buy('buyxenon')">
+                        <img src="https://cdn.armylegends.ro/shop/rpc.png">
+                        <h1>5<span> FC</span></h1>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="buy" @click="buy('carplate')">
+                        <img src="https://cdn.armylegends.ro/shop/rpc.png">
+                        <h1>5<span> FC</span></h1>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="buy" @click="buy('resetcharacter')">
+                        <img src="https://cdn.armylegends.ro/shop/rpc.png">
+                        <h1>10<span> FC</span></h1>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="buy" @click="buy('transfer')">
+                        <img src="https://cdn.armylegends.ro/shop/rpc.png">
+                        <h1>5<span> FC</span></h1>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

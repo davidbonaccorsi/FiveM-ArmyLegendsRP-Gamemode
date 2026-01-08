@@ -1,0 +1,218 @@
+
+.phone-layout > .settings{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1.5vh;
+    
+    padding-top: 2.5vh;
+    padding-right: 1.25vw;
+    padding-left: 1.5vw;
+
+    backdrop-filter: blur(10px);
+}
+
+.phone-layout > .settings.visible{
+    display: flex;
+    animation: fadeIn 1.5s;
+}
+
+.phone-layout > .settings > header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.phone-layout > .settings > header > p{
+    font-family: "Akrobat Light";
+    font-size: 3vh;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.phone-layout > .settings > header > .actions{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    gap: 1vw;
+}
+
+.phone-layout > .settings > header > .actions > .btn{
+    padding: 1.45vh .95vw;
+    border-radius: .75vw;
+    background: #ffffff20;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .15s ease-in-out;
+}
+
+.phone-layout > .settings > header > .actions > .btn:hover{
+/*     box-shadow: 0 0 0 5.5px #ffffff09; */
+    background: #ffffff30;
+}
+
+.phone-layout > .settings > main{
+    margin-top: 5%;
+    
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap:2vh;
+}
+
+.phone-layout > .settings > main > .splash-selector{
+    display: flex;
+    flex-direction: column;
+    gap: .85vh;
+}
+
+.phone-layout > .settings > main > .splash-selector > p{
+    color: #6a7376;
+    font-family: "Akrobat ExtraBold";
+    letter-spacing: 1.5px;
+    font-size: 1.35vh;
+}
+
+.phone-layout > .settings > main > .splash-selector > .list{    
+    width: 100%;
+    height: 17vh;
+    
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    grid-gap: 0;
+
+    justify-content: start;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.phone-layout > .settings > main > .splash-selector > .list > .item{
+    width: 7.9vw;
+    height: 9.5vw;
+    
+    background: var(--wallpaper-1);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .33s ease-in-out;
+}
+
+.phone-layout > .settings > main > .splash-selector > .list > .item:nth-of-type(2){
+    background: var(--wallpaper-2);
+    background-position:unset;
+    background-size: 100% 100%;
+}
+
+.phone-layout > .settings > main > .splash-selector > .list > .item:hover{
+/*     border: .15vh solid #ffffff50; */
+    opacity: .85;
+}
+
+
+.phone-layout > .settings > main > .ringer-selector{
+    display: flex;
+    flex-direction: column;
+    gap: .85vh;
+}
+
+.phone-layout > .settings > main > .ringer-selector > p{
+    color: #6a7376;
+    font-family: "Akrobat ExtraBold";
+    letter-spacing: 1.5px;
+    font-size: 1.35vh;
+}
+
+.phone-layout > .settings > main > .ringer-selector > .selector{
+    height: 6.85vh;
+    width: 100%;
+
+    background: #ffffff15;
+    
+    border: .2vh solid #ffffff20;
+    border-radius: .25vw;
+    
+    display: flex;
+    align-items: center;
+
+    padding: 0 1.5vw;
+}
+
+.phone-layout > .settings > main > .ringer-selector > .selector > p{
+    font-family: "Akrobat Light";
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 1.75vh;
+}
+
+.phone-layout > .settings > main > .ringer-selector > .selector > .btns{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: .55vw;
+}
+
+.phone-layout > .settings > main > .ringer-selector > .selector > .btns > i{
+    transition: .33s ease-in-out;
+}
+
+.phone-layout > .settings > main > .ringer-selector > .selector > .btns > i:hover{
+    opacity: .5;
+}
+
+.phone-layout > .settings > main > .dnd-mode{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    padding: 0 1vw;
+    background: #2f568e50;
+    border-radius: .25vw;
+    height: 7.5vh;
+}
+
+.phone-layout > .settings > main > .dnd-mode > .switcher{
+    width: 30%;
+    height: 60%;
+    
+    background: #ffffff15;
+    border: .2vh solid #ffffff20;
+    border-radius: .25vw;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 .55vw;
+    transition: .33s ease-in-out;
+}
+
+.phone-layout > .settings > main > .dnd-mode > .switcher:hover{
+    background: #ffffff20;
+}
+
+.phone-layout > .settings > main > .dnd-mode > .switcher > .check{
+    width: 52%;
+    height: 65%;
+    background: #87929f;
+    border-radius: .15vw;
+    transition: .5s;
+}
+
+.phone-layout > .settings > main > .dnd-mode > .switcher > .check.checked{
+    margin-left: auto;
+}
+
+.phone-layout > .settings > main > .dnd-mode > p{
+    font-family: "Akrobat Bold";
+    letter-spacing: 1px;
+}

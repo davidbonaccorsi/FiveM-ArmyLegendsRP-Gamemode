@@ -1,0 +1,181 @@
+.main-streetsweeper, .streetsweeper-flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.main-streetsweeper {
+
+    --bg: url("https://cdn.armylegends.ro/bg/Curatator_de_strazi.png");
+    --clr: 151, 202, 233;
+
+    position: absolute;
+    inset: 0;
+    
+    background: var(--bg) no-repeat;
+    background-size: 100% 100%;
+}
+
+
+.streetsweeper-flex {
+    padding: 120px;
+    flex-direction: column;
+}
+
+.streetsweeper-flex .job-header {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.streetsweeper-flex .job-header .header-box {
+    display: flex;
+    font-variant-ligatures: none;
+}
+
+.streetsweeper-flex .job-header .header-box .job-title {
+    font-size: 6vh;
+    /* text-transform: uppercase; */
+    letter-spacing: .05em;
+    font-weight: 300;
+    color: hsla(0, 0%, 100%, .9);
+    line-height: 60px;
+    margin-right: 26px;
+}
+
+.streetsweeper-flex .job-header .header-box .job-title p {
+    font-size: 6vh;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .05em;
+}
+
+.streetsweeper-flex .job-header .job-description {
+    margin-top: 10px;
+    color: hsla(0, 0%, 100%, .4);
+    font-size: 2vh;
+    letter-spacing: .025em;
+    line-height: 22px;
+    width: 570px;
+    font-weight: 300;
+}
+
+.streetsweeper-flex .job-header .header-box .job-action {
+    padding: 10px 14px;
+    min-width: 180px;
+    min-height: 50px;
+    height: fit-content;
+    background-color: rgba(var(--clr), .7);
+    border: 2px dashed transparent;
+    border-radius: 6px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsla(0, 0%, 100%, .7);
+    font-size: 18px;
+    letter-spacing: .015em;
+    font-weight: 400;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: .232323s ease-in-out;
+}
+
+.streetsweeper-flex .job-header .header-box .job-action:hover {
+    border: 2px dashed rgb(var(--clr));
+    opacity: .8;
+}
+
+.streetsweeper-flex .job-boxes {
+    margin-top: 102px;
+    display: flex;
+    gap: 3vh;
+}
+
+.streetsweeper-flex .job-boxes > div {
+    position: relative;
+    transition: all 0.33s, border 0s;
+    min-width: 28vh;
+    border-radius: 0.5vh;
+    min-height: 40vh;
+    border: 0.4vh dashed hsla(0, 0%, 100%, 0.125);
+    padding: 20px 22px;
+}
+.streetsweeper-flex .job-boxes > div:first-of-type {
+    border-style: solid;
+}
+.streetsweeper-flex .job-boxes > div:hover {
+    transition: 0.33s, border 0s;
+    border-color: hsla(0, 0%, 100%, 0.188);
+    background: hsla(0, 0%, 100%, 0.02);
+    border-style:dotted;
+}
+
+
+.streetsweeper-flex .job-boxes > div:first-of-type::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 255px;
+    height: 225px;
+    background: url(https://cdn.armylegends.ro/elements/pngwing.com55.webp) no-repeat;
+    background-size: 100% 100%;
+    transform: translateX(30%) translateY(25%);
+}
+
+.streetsweeper-flex .job-boxes > div .title {
+    font-size: 2vh;
+    font-weight: 600;
+    position: relative;
+}
+
+.streetsweeper-flex .job-boxes > div .title::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(-25%) translateY(-65%);
+    content: "";
+    width: 162px;
+    height: 162px;
+    background: url(https://cdn.armylegends.ro/elements/Mask_Group-2.webp) no-repeat;
+}
+
+.streetsweeper-flex .job-boxes > div .description {
+    max-width: 250px;
+    margin-top: 35px;
+    letter-spacing: .025em;
+    color: hsla(0, 0%, 100%, .5);
+    line-height: 21px;
+}
+
+
+.streetsweeper-minigame {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+}
+.streetsweeper-minigame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://cdn.armylegends.ro/bg/Curatator_de_strazi_Minigame.png) no-repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+}
+
+.streetsweeper-minigame .dirt{
+    width: 400px;
+    height: 400px;
+
+    background: url(https://cdn.armylegends.ro/elements/pngwing.com56.webp) no-repeat;
+    background-size: 100% 100%;
+
+    position: absolute;
+    z-index: 1000;
+
+}

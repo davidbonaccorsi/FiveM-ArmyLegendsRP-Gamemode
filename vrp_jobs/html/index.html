@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Jobs UI - Proxy#3805</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.4.0/css/pro.min.css">
+	    
+        <link href="https://cdn.armylegends.ro/fonts/ttnorms/ttnorms.css" rel="stylesheet">
+        
+	    <link href="design.css" rel="preload" as="style" type="text/css" />
+	    <link href="design.css" rel="stylesheet" type="text/css" />
+
+        <link href="jobs/constructor.css" rel="preload" as="style" type="text/css" />
+	    <link href="jobs/constructor.css" rel="stylesheet" type="text/css" />
+        <link href="jobs/hunter.css" rel="preload" as="style" type="text/css" />
+	    <link href="jobs/hunter.css" rel="stylesheet" type="text/css" />
+        <link href="jobs/lawnmower.css" rel="preload" as="style" type="text/css" />
+	    <link href="jobs/lawnmower.css" rel="stylesheet" type="text/css" />
+        <link href="jobs/orangepicker.css" rel="preload" as="style" type="text/css" />
+	    <link href="jobs/orangepicker.css" rel="stylesheet" type="text/css" />
+        <link href="jobs/busdriver.css" rel="preload" as="style" type="text/css" />
+	    <link href="jobs/busdriver.css" rel="stylesheet" type="text/css" />
+        <link href="jobs/pescar.css" rel="preload" as="style" type="text/css" />
+	    <link href="jobs/pescar.css" rel="stylesheet" type="text/css" />
+        <link href="jobs/pilot.css" rel="preload" as="style" type="text/css" />
+	    <link href="jobs/pilot.css" rel="stylesheet" type="text/css" />
+        <link href="jobs/streetsweeper.css" rel="preload" as="style" type="text/css" />
+	    <link href="jobs/streetsweeper.css" rel="stylesheet" type="text/css" />
+        <link href="jobs/weed.css" rel="preload" as="style" type="text/css" />
+	    <link href="jobs/weed.css" rel="stylesheet" type="text/css" />
+        <link href="jobs/pcp.css" rel="preload" as="style" type="text/css" />
+	    <link href="jobs/pcp.css" rel="stylesheet" type="text/css" />
+        <link href="jobs/opium.css" rel="preload" as="style" type="text/css" />
+	    <link href="jobs/opium.css" rel="stylesheet" type="text/css" />
+        <link href="jobs/hacker.css" rel="preload" as="style" type="text/css" />
+	    <link href="jobs/hacker.css" rel="stylesheet" type="text/css" />
+        <link href="jobs/researcher.css" rel="preload" as="style" type="text/css" />
+	    <link href="jobs/researcher.css" rel="stylesheet" type="text/css" />
+        <link href="jobs/mecanic.css" rel="preload" as="style" type="text/css" />
+	    <link href="jobs/mecanic.css" rel="stylesheet" type="text/css" />
+        <link href="jobs/taxi.css" rel="preload" as="style" type="text/css" />
+	    <link href="jobs/taxi.css" rel="stylesheet" type="text/css" />
+        <link href="jobs/provider.css" rel="preload" as="style" type="text/css" />
+	    <link href="jobs/provider.css" rel="stylesheet" type="text/css" />
+        <link href="jobs/dirtymoney.css" rel="preload" as="style" type="text/css" />
+	    <link href="jobs/dirtymoney.css" rel="stylesheet" type="text/css" />
+	</head>
+    <body>
+
+        <div class="main-constructor" v-if="active">
+            <div class="constructor-flex" :style="{zoom: zoom}">
+                <div class="min-level">MIN. LVL. 25</div> 
+                <div class="job-header">
+                    <div class="header-box">
+                        <div class="job-title">
+                            <p>Loc de munca</p>
+                            Constructor
+                        </div>
+                        <div class="job-action" @click="post((job != 'Constructor' ? 'getGroup' : 'getFired'), ['Constructor']); destroy();">{{job == "Constructor" ? "Opreste munca" : "Incepe sa muncesti"}}</div>
+                    </div>
+                    <div class="job-description">
+                        Acest job necesita un vehicul personal, desfasurandu-se in diferite locatii. Plata se va face doar dupa finalizarea misiunii in desfasurare.
+                    </div>
+                </div>
+
+                <div class="job-boxes">
+                    <div>
+                        <div class="title">Dupa angajare</div>
+                        <div class="description">
+                            Dupa angajare, vi se va genera o misiune disponibila pana la completare iar un checkpoint se va face vizibil pe harta, reprezentand urmatoarea locatie in care trebuie sa construiesti.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum voi lucra?</div>
+                        <div class="description">
+                            In timpul muncii, cand veti fi aproape de locatia in care trebuie sa construiti, veti vedea o holograma cu obiectul care trebuie plasat. Puteti folosi SAGETILE (stanga-dreapta) pentru ROTATIE si SAGETILE (sus-jos) pentru POZITIE, pentru a putea sa construiti trebuie ca obiectul care urmeaza sa fie plasat sa fie la o distanta de maximum +- 2 metri fata de pozitia corecta.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum pot avansa?</div>
+                        <div class="description">
+                            Acest job este structurat pe un singur nivel de dificultate, insa, dificultatea reala variaza in functie de locul in care se construieste, iar singura posibilitate de "avansare" este la nivelul contului. Banii primiti la finalul misiunii cresc in functie de nivelul contului tau.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-hunter" v-if="active">
+            <div class="hunter-flex" :style="{zoom: zoom}">
+                <div class="job-header">
+                    <div class="header-box">
+                        <div class="job-title">
+                            <p>Loc de munca</p>
+                            Vanator
+                        </div>
+                        <div class="job-action" @click="post((job != 'Vanator' ? 'getGroup' : 'getFired'), ['Vanator']); destroy();">{{job == "Vanator" ? "Opreste munca" : "Incepe sa muncesti"}}</div>
+                    </div>
+                    <div class="job-description">
+                        Acest job necesita un vehicul personal, desfasurandu-se in diferite locatii. Plata se va face doar dupa finalizarea misiunii in desfasurare.
+                    </div>
+                </div>
+
+                <div class="job-boxes">
+                    <div>
+                        <div class="title">Dupa angajare</div>
+                        <div class="description">
+                            Dupa angajare, este indicat sa va duceti la magazinul de vizavi si sa va cumparati o arma si gloante pentru aceasta.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum voi lucra?</div>
+                        <div class="description">
+                            Dupa ce v-ati achizitionat resursele necesare, trebuie sa va duceti in zona afisata pe harta si sa cautati animale, pe care drept urmare le puteti ucide si sa culegeti prada.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-lawnmower" v-if="active">
+            <div class="lawnmower-flex" :style="{zoom: zoom}">
+                <div class="job-header">
+                    <div class="header-box">
+                        <div class="job-title">
+                            <p>Loc de munca</p>
+                            Taietor de iarba
+                        </div>
+                        <div class="job-action" @click="post((job != 'Taietor de iarba' ? 'getGroup' : 'getFired'), ['Taietor de iarba']); destroy();">{{job == "Taietor de iarba" ? "Opreste munca" : "Incepe sa muncesti"}}</div>
+                    </div>
+                    <div class="job-description">
+                        Acest job nu necesita un vehicul personal, desfasurandu-se cu vehiculele ingrijitorului. Plata se va face doar dupa finalizarea misiunii in desfasurare.
+                    </div>
+                </div>
+
+                <div class="job-boxes">
+                    <div>
+                        <div class="title">Dupa angajare</div>
+                        <div class="description">
+                            Dupa angajare, vi se va genera o misiune disponibila pana la completare iar un checkpoint se va face vizibil pe harta, reprezentand urmatoarea locatie in care trebuie sa tunzi iarba.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum voi lucra?</div>
+                        <div class="description">
+                            In timpul muncii, cand veti fi aproape de locatia in care trebuie sa tundeti iarba, veti vedea iarba care a crescut si pietrele disponibile pentru a fi stranse. Trebuie sa treceti peste ea de mai multe ori in diferite directii cu vehiculul oferit de catre ingrijitor pentru a o tunde. Acest lucru se va repeta pentru toate locatiile oferite de catre ingrijitor.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum pot avansa?</div>
+                        <div class="description">
+                            Acest job este structurat pe un singur nivel de dificultate, iar singura posibilitate de "avansare" este la nivelul contului. Banii primiti la finalul misiunii cresc in functie de nivelul contului tau. Daca aduni pietre vei primi si XP mai mult la finalul misiunii.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mower-minigame" style="display: none;">
+            <div class="mouse-info"></div>    
+        </div>
+
+        <div class="main-busdriver" v-if="active">
+            <div class="busdriver-flex" :style="{zoom: zoom}">
+                <div class="min-level">MIN. LVL. 2</div> 
+                <div class="job-header">
+                    <div class="header-box">
+                        <div class="job-title">
+                            <p>Loc de munca</p>
+                            Sofer de autobuz
+                        </div>
+                        <div class="job-action" @click="post((job != 'Sofer de autobuz' ? 'getGroup' : 'getFired'), ['Sofer de autobuz']); destroy();">{{job == "Sofer de autobuz" ? "Opreste munca" : "Incepe sa muncesti"}}</div>
+                    </div>
+                    <div class="job-description">
+                        Acest job nu necesita un vehicul personal, desfasurandu-se cu vehiculele firmei de transport. Plata se va face doar dupa finalizarea misiunii in desfasurare.
+                    </div>
+                </div>
+
+                <div class="job-boxes">
+                    <div>
+                        <div class="title">Dupa angajare</div>
+                        <div class="description">
+                            Dupa angajare, vi se va genera o misiune disponibila pana la completare iar un checkpoint se va face vizibil pe harta, reprezentand urmatoarea locatie din care trebuie sa urce pasageri.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum voi lucra?</div>
+                        <div class="description">
+                            In timpul muncii, cand veti fi aproape de statia din care trebuie sa urce pasageri, veti vedea un checkpoint verde, mare si inalt. Trebuie sa reduceti viteza autobuzului la maxim 20 km/h si sa intrati in acel checkpoint. Completati jocul, urcati pasagerii si treceti la urmatoarea statie, pana la finalul rutei.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum pot avansa?</div>
+                        <div class="description">
+                            Acest job este structurat pe un singur nivel de dificultate, iar singura posibilitate de "avansare" este la nivelul contului. Banii primiti la finalul misiunii cresc in functie de nivelul contului tau. Daca aduni pietre vei primi si XP mai mult la finalul misiunii.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bus-minigame" style="display: none;">
+            <div class="minigame-flex">
+                <div class="seats"></div>
+            </div>
+        </div>
+
+        <div class="main-fisher" v-if="active">
+            <div class="fisher-flex" :style="{zoom: zoom}">
+                <div class="job-header">
+                    <div class="header-box">
+                        <div class="job-title">
+                            <p>Loc de munca</p>
+                            Pescar
+                        </div>
+                        <div class="job-action" @click="post((job != 'Pescar' ? 'getGroup' : 'getFired'), ['Pescar']); destroy();">{{job == "Pescar" ? "Opreste munca" : "Incepe sa muncesti"}}</div>
+                    </div>
+                    <div class="job-description">
+                        Acest job necesita un vehicul personal, desfasurandu-se in Los Santos unde se poate prinde peste exotic. Plata se va face doar dupa vanzarea pestelui la un Magazin 24/7.
+                    </div>
+                </div>
+
+                <div class="job-boxes">
+                    <div>
+                        <div class="title">Dupa angajare</div>
+                        <div class="description">
+                            Dupa angajare, va puteti duce la magazinul de langa care va accepta sa va vanda momeala, folosita ulterior pentru ademenirea pestelui exotic.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum voi lucra?</div>
+                        <div class="description">
+                            In timpul muncii, cand veti fi aproape de pontonul de pe care se poate prinde peste, veti vedea un hint in partea dreapta a ecranului care va va spune ce sa faceti. In momentul in care veti avea undita in mana, trebuie doar sa va asteptati norocul. Cu un gram de noroc, pe ecran va aparea un minigame care ajuta la prinderea pestelui, insa, daca va veti misca greu, il veti pierde.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum pot avansa?</div>
+                        <div class="description">
+                            Acest job este structurat pe un singur nivel de dificultate, iar din pacate, nu exista o posibilitate de avansare in acest moment.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fisher-minigame" style="display: none;">
+            <div class="fishergame-flex">
+                <div class="line"><div></div></div>
+                <div class="key">SPACE</div>
+
+                <div class="description">Apasa consecutiv tasta <span>SPACE</span> pentru a prinde peste</div>
+            </div>
+        </div>
+
+        <div class="main-pilotamm" v-show="active">
+            <div class="pilotamm-flex">
+                <i class="pilotamm-icon"></i>
+                <p>Pasageri in avion</p>
+                <span>{{passengers}}/4</span>
+            </div>
+        </div>
+
+        <div class="main-orangepicker" v-if="active">
+            <div class="orangepicker-flex" :style="{zoom: zoom}">
+                <div class="min-level">MIN. LVL. 10</div> 
+                <div class="job-header">
+                    <div class="header-box">
+                        <div class="job-title">
+                            <p>Loc de munca</p>
+                            Culegator de portocale
+                        </div>
+                        <div class="job-action" @click="post((job != 'Culegator de portocale' ? 'getGroup' : 'getFired'), ['Culegator de portocale']); destroy();">{{job == "Culegator de portocale" ? "Opreste munca" : "Incepe sa muncesti"}}</div>
+                    </div>
+                    <div class="job-description">
+                        Acest job nu necesita un vehicul personal, desfasurandu-se cu vehiculele culegatorului. Plata se va face doar dupa finalizarea misiunii in desfasurare.
+                    </div>
+                </div>
+
+                <div class="job-boxes">
+                    <div>
+                        <div class="title">Dupa angajare</div>
+                        <div class="description">
+                            Dupa angajare, vi se va genera o misiune disponibila pana la completare iar un checkpoint se va face vizibil pe harta, reprezentand urmatoarea locatie in care trebuie sa culegi portocale.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum voi lucra?</div>
+                        <div class="description">
+                            In timpul muncii, cand veti fi aproape de locatia in care trebuie sa culegeti portocale, veti vedea un checkpoint in care trebuie sa intrati. Trebuie sa treceti de un minigame pentru a trece la urmatorul pom. Acest lucru se va repeta pentru toate locatiile oferite de catre culegator.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum pot avansa?</div>
+                        <div class="description">
+                            Acest job este structurat pe un singur nivel de dificultate, iar singura posibilitate de "avansare" este la nivelul contului. Banii primiti la finalul misiunii cresc in functie de nivelul contului tau.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="orangepicker-minigame" style="display: none;">
+            <div class="orangepicker-game-flex">
+                <div class="spawn-zone"></div>
+                <div class="drag-zone"></div>
+            </div>
+        </div>
+
+        <div class="main-streetsweeper" v-if="active">
+            <div class="streetsweeper-flex" :style="{zoom: zoom}">
+                <div class="min-level">MIN. LVL. 4</div> 
+                <div class="job-header">
+                    <div class="header-box">
+                        <div class="job-title">
+                            <p>Loc de munca</p>
+                            Curatator de strazi
+                        </div>
+                        <div class="job-action" @click="post((job != 'Curatator de strazi' ? 'getGroup' : 'getFired'), ['Curatator de strazi']); destroy();">{{job == "Curatator de strazi" ? "Opreste munca" : "Incepe sa muncesti"}}</div>
+                    </div>
+                    <div class="job-description">
+                        Acest job nu necesita un vehicul personal, desfasurandu-se cu vehiculele firmei de curatenie. Plata se va face doar dupa finalizarea misiunii in desfasurare.
+                    </div>
+                </div>
+
+                <div class="job-boxes">
+                    <div>
+                        <div class="title">Dupa angajare</div>
+                        <div class="description">
+                            Dupa angajare, vi se va genera o misiune disponibila pana la completare iar un checkpoint se va face vizibil pe harta, reprezentand urmatoarea locatie in care trebuie sa spalati.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum voi lucra?</div>
+                        <div class="description">
+                            In timpul muncii, cand veti fi aproape de locatia cu murdarie, veti vedea un checkpoint verde, mare si inalt. Trebuie sa reduceti viteza vehiculului la maxim 25 km/h si sa intrati in acel checkpoint. Completati jocul, scapati de murdarie si treceti la urmatoarea locatie, pana la finalul rutei.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum pot avansa?</div>
+                        <div class="description">
+                            Acest job este structurat pe un singur nivel de dificultate, iar singura posibilitate de "avansare" este la nivelul contului. Banii primiti la finalul misiunii cresc in functie de nivelul contului tau.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="streetsweeper-minigame" style="display: none;"></div>
+
+
+        <div class="main-weed" v-if="active">
+            <div class="weed-flex" :style="{zoom: zoom}">
+                <div class="min-level">MIN. LVL. 30</div> 
+                <div class="job-header">
+                    <div class="header-box">
+                        <div class="job-title">
+                            <p>Loc de munca</p>
+                            Traficant de iarba
+                        </div>
+                        <div class="job-action" @click="post((job != 'Traficant de iarba' ? 'getGroup' : 'getFired'), ['Traficant de iarba']); destroy();">{{job == "Traficant de iarba" ? "Opreste munca" : "Incepe sa muncesti"}}</div>
+                    </div>
+                    <div class="job-description">
+                        Acest job necesita un vehicul personal, desfasurandu-se in diferite locatii. Plata se va face doar dupa finalizarea misiunii in desfasurare.
+                    </div>
+                </div>
+
+                <div class="job-boxes">
+                    <div>
+                        <div class="title">Dupa angajare</div>
+                        <div class="description">
+                            Dupa angajare, vi se va genera o misiune disponibila pana la completare iar un checkpoint se va face vizibil pe harta, reprezentand urmatoarea zona in care un cumparator va asteapta sa livrati Marijuana.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum voi lucra?</div>
+                        <div class="description">
+                            In timpul muncii, cand veti fi in zona de livrare, trebuie sa cautati un NPC cu un checkpoint verde deasupra capului. Mergeti sa vorbiti cu el pentru a putea vinde drogurile si repetati aceasta actiune pana cand ramaneti fara droguri. Cand veti ramane fara droguri, parcurgeti iar procesul de creare Cannabis Sativa, cumparand si plantand seminte, apoi, culegeti-le creatia si vorbiti cu chimistul pentru a le transforma in Marijuana.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum pot avansa?</div>
+                        <div class="description">
+                            Acest job este structurat pe un singur nivel de dificultate, iar singura posibilitate de "avansare" este la nivelul contului. Banii primiti la finalul misiunii cresc in functie de nivelul contului tau.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="weed-minigame" style="display: none;">
+            <div class="weed-game-flex">
+                <div class="spawn-zone"></div>
+                <div class="drag-zone"></div>
+            </div>
+        </div>
+        
+        <div class="main-opium" v-if="active">
+            <div class="opium-flex" :style="{zoom: zoom}">
+                <div class="min-level">MIN. LVL. 90</div>
+                <div class="job-header">
+                    <div class="header-box">
+                        <div class="job-title">
+                            <p>Loc de munca</p>
+                            Traficant de opium
+                        </div>
+                        <div class="job-action" @click="post((job != 'Traficant de opium' ? 'getGroup' : 'getFired'), ['Traficant de opium']); destroy();">{{job == "Traficant de opium" ? "Opreste munca" : "Incepe sa muncesti"}}</div>
+                    </div>
+                    <div class="job-description">
+                        Acest job necesita un vehicul personal, desfasurandu-se in diferite locatii. Plata se va face doar dupa finalizarea misiunii in desfasurare.
+                    </div>
+                </div>
+
+                <div class="job-boxes">
+                    <div>
+                        <div class="title">Dupa angajare</div>
+                        <div class="description">
+                            Dupa angajare, vi se va genera o misiune disponibila pana la completare iar un checkpoint se va face vizibil pe harta, reprezentand urmatoarea zona in care un cumparator va asteapta sa livrati Marijuana.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum voi lucra?</div>
+                        <div class="description">
+                            In timpul muncii, cand veti fi in zona de livrare, trebuie sa cautati un NPC cu un checkpoint verde deasupra capului. Mergeti sa vorbiti cu el pentru a putea vinde drogurile si repetati aceasta actiune pana cand ramaneti fara droguri. Cand veti ramane fara droguri, parcurgeti iar procesul de creare Cannabis Sativa, cumparand si plantand seminte, apoi, culegeti-le creatia si vorbiti cu chimistul pentru a le transforma in Marijuana.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum pot avansa?</div>
+                        <div class="description">
+                            Acest job este structurat pe un singur nivel de dificultate, iar singura posibilitate de "avansare" este la nivelul contului. Banii primiti la finalul misiunii cresc in functie de nivelul contului tau.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="opium-minigame" style="display: none;">
+            <div class="opium-game-flex">
+                <div class="spawn-zone"></div>
+                <div class="drag-zone"></div>
+            </div>
+        </div>
+
+        
+        <div class="main-pcp" v-if="active">
+            <div class="pcp-flex" :style="{zoom: zoom}">
+                <div class="min-level">MIN. LVL. 60</div>
+                <div class="job-header">
+                    <div class="header-box">
+                        <div class="job-title">
+                            <p>Loc de munca</p>
+                            Traficant de PCP
+                        </div>
+                        <div class="job-action" @click="post((job != 'Traficant de PCP' ? 'getGroup' : 'getFired'), ['Traficant de PCP']); destroy();">{{job == "Traficant de PCP" ? "Opreste munca" : "Incepe sa muncesti"}}</div>
+                    </div>
+                    <div class="job-description">
+                        Acest job necesita un vehicul personal, desfasurandu-se in diferite locatii. Plata se va face doar dupa finalizarea misiunii in desfasurare.
+                    </div>
+                </div>
+
+                <div class="job-boxes">
+                    <div>
+                        <div class="title">Dupa angajare</div>
+                        <div class="description">
+                            Dupa angajare, vi se va genera o misiune disponibila pana la completare iar un checkpoint se va face vizibil pe harta, reprezentand urmatoarea zona in care un cumparator va asteapta sa livrati PCP.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum voi lucra?</div>
+                        <div class="description">
+                            In timpul muncii, cand veti fi in zona de livrare, trebuie sa cautati un NPC cu un checkpoint gri deasupra capului. Mergeti sa vorbiti cu el pentru a putea vinde drogurile si repetati aceasta actiune pana cand ramaneti fara droguri. Cand veti ramane fara droguri, parcurgeti iar procesul de creare Cannabis Sativa, cumparand si plantand seminte, apoi, culegeti-le creatia si vorbiti cu chimistul pentru a le transforma in Marijuana.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum pot avansa?</div>
+                        <div class="description">
+                            Acest job este structurat pe un singur nivel de dificultate, iar singura posibilitate de "avansare" este la nivelul contului. Banii primiti la finalul misiunii cresc in functie de nivelul contului tau.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pcp-minigame" style="display: none;">
+            <div class="pcp-game-flex">
+                <div class="spawn-zone"></div>
+                <div class="drag-zone"></div>
+            </div>
+        </div>
+
+        <div class="main-hacker" v-if="active">
+            <div class="hacker-flex" :style="{zoom: zoom}">
+                <div class="min-level">MIN. LVL. 120</div>
+                <div class="job-header">
+                    <div class="header-box">
+                        <div class="job-title">
+                            <p>Loc de munca</p>
+                            Hacker
+                        </div>
+                        <div class="job-action" @click="post((job != 'Hacker' ? 'getGroup' : 'getFired'), ['Hacker']); destroy();">{{job == "Hacker" ? "Opreste munca" : "Incepe sa muncesti"}}</div>
+                    </div>
+                    <div class="job-description">
+                        Acest job necesita un vehicul personal, desfasurandu-se in diferite locatii. Plata se va face doar dupa finalizarea misiunii in desfasurare.
+                    </div>
+                </div>
+
+                <div class="job-boxes">
+                    <div>
+                        <div class="title">Dupa angajare</div>
+                        <div class="description">
+                            Dupa angajare, vi se va genera o misiune disponibila pana la completare iar un checkpoint se va face vizibil pe harta, reprezentand urmatoarea zona in care un cumparator va asteapta sa livrati PCP.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum voi lucra?</div>
+                        <div class="description">
+                            In timpul muncii, cand veti fi in zona de livrare, trebuie sa cautati un NPC cu un checkpoint gri deasupra capului. Mergeti sa vorbiti cu el pentru a putea vinde drogurile si repetati aceasta actiune pana cand ramaneti fara droguri. Cand veti ramane fara droguri, parcurgeti iar procesul de creare Cannabis Sativa, cumparand si plantand seminte, apoi, culegeti-le creatia si vorbiti cu chimistul pentru a le transforma in Marijuana.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum pot avansa?</div>
+                        <div class="description">
+                            Acest job este structurat pe un singur nivel de dificultate, iar singura posibilitate de "avansare" este la nivelul contului. Banii primiti la finalul misiunii cresc in functie de nivelul contului tau.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-researcher" v-if="active">
+            <div class="researcher-flex" :style="{zoom: zoom}">
+                <div class="min-level">MIN. LVL. 45</div>
+                <div class="job-header">
+                    <div class="header-box">
+                        <div class="job-title">
+                            <p>Loc de munca</p>
+                            Cercetator maritim
+                        </div>
+                        <div class="job-action" @click="post((job != 'Cercetator maritim' ? 'getGroup' : 'getFired'), ['Cercetator maritim']); destroy();">{{job == "Cercetator maritim" ? "Opreste munca" : "Incepe sa muncesti"}}</div>
+                    </div>
+                    <div class="job-description">
+                        Acest job necesita un vehicul personal, desfasurandu-se in ocean.
+                    </div>
+                </div>
+
+                <div class="job-boxes">
+                    <div>
+                        <div class="title">Dupa angajare</div>
+                        <div class="description">
+                            Dupa angajare, vi se va genera o zona in ocean vizibila pe harta, reprezentand urmatoarea zona in care trebuie sa va scufundati pentru a cauta diferite obiecte pe care le puteti folosi in scop personal sau le puteti vinde la alte persoane.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum voi lucra?</div>
+                        <div class="description">
+                            In timpul muncii, cand veti fi in zona de cautare, trebuie sa observati fie cutii, fie saci. Mergeti sa le deschideti pentru a avea oportunitatea de a gasi diferite materiale sau obiecte. Nu uitati sa folositi Scuba Kit pe care il puteti achizitiona de langa farul din fata mea. Cand veti ramane fara aer, urcati repede la suprafata !
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum pot avansa?</div>
+                        <div class="description">
+                            Acest job este structurat pe un singur nivel de dificultate, iar singura posibilitate de "avansare" este la nivelul contului. Acest loc de munca va ofera posibilitatea de a gasi obiecte si materiale foarte rare si pretioase.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="main-mechanic" v-if="active">
+            <div class="mechanic-flex" :style="{zoom: zoom}">
+                <div class="job-header">
+                    <div class="header-box">
+                        <div class="job-title">
+                            <p>Loc de munca</p>
+                            Mecanic
+                        </div>
+                        <div class="job-action" @click="post((job != 'Mecanic' ? 'getGroup' : 'getFired'), ['Mecanic']); destroy();">{{job == "Mecanic" ? "Opreste munca" : "Incepe sa muncesti"}}</div>
+                    </div>
+                    <div class="job-description">
+                        Acest job nu necesita un vehicul personal, desfasurandu-se cu vehiculele firmei. Plata se va face doar dupa completarea cerintelor fiecarui client.
+                    </div>
+                </div>
+
+                <div class="job-boxes">
+                    <div>
+                        <div class="title">Dupa angajare</div>
+                        <div class="description">
+                            Dupa angajare, un nou garaj intitulat Garaj Mecanici va aparea pe harta care va va permite spawnarea vehiculului pentru tractari. Folositi F5 pentru a deschide meniul jobului.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum voi lucra?</div>
+                        <div class="description">
+                            In timpul muncii, va vor fi disponibile apelurile clientilor accesibile apasand tasta F5 -> Apeluri. Va puteti alimenta cu o canistra de combustibil la sediul mecanicilor, sau, cu truse de reparatie de langa locul de angajare.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum pot avansa?</div>
+                        <div class="description">
+                            Acest job este structurat pe un singur nivel de dificultate, iar singura posibilitate de "avansare" este la nivelul contului. Banii primiti la finalul apelului tin strict de generozitatea clientuluii si de cerinta voastra.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-taxi" v-if="active">
+            <div class="taxi-flex">
+                <div class="job-header">
+                    <div class="header-box">
+                        <div class="job-title">
+                            <p>Loc de munca</p>
+                            Taximetrist
+                        </div>
+                        <div class="job-action" @click="post((job != 'Taximetrist' ? 'getGroup' : 'getFired'), ['Taximetrist']); destroy();">{{job == "Taximetrist" ? "Opreste munca" : "Incepe sa muncesti"}}</div>
+                    </div>
+                    <div class="job-description">
+                        Acest job nu necesita un vehicul personal, desfasurandu-se cu vehiculele firmei. Plata se va face doar dupa completarea transporturilor.
+                    </div>
+                </div>
+
+                <div class="job-boxes">
+                    <div>
+                        <div class="title">Dupa angajare</div>
+                        <div class="description">
+                            Dupa angajare, un nou garaj intitulat Garaj Taxi va aparea pe harta care va va permite spawnarea vehiculului pentru transport. Folositi F5 pentru a deschide meniul jobului.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum voi lucra?</div>
+                        <div class="description">
+                            In timpul muncii, va vor fi disponibile apelurile clientilor accesibile apasand tasta F5 -> Apeluri. Odata acceptat un apel, vi se va pune un checkpoint catre locatia clientului, unde veti ajunge si veti negocia pretul cu acesta.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum pot avansa?</div>
+                        <div class="description">
+                            Acest job este structurat pe un singur nivel de dificultate, iar singura posibilitate de "avansare" este la nivelul contului. Banii primiti la finalul apelului tin strict de ceea ce ai negociat cu clientul.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="main-provider" v-if="active">
+            <div class="provider-flex" :style="{zoom: zoom}">
+                <div class="job-header">
+                    <div class="header-box">
+                        <div class="job-title">
+                            <p>Loc de munca</p>
+                            Furnizor de stocuri
+                        </div>
+                        <div class="job-action" @click="post((job != 'Furnizor de stocuri' ? 'getGroup' : 'getFired'), ['Furnizor de stocuri']); destroy();">{{job == "Furnizor de stocuri" ? "Opreste munca" : "Incepe sa muncesti"}}</div>
+                    </div>
+                    <div class="job-description">
+                        Acest job nu necesita un vehicul personal, desfasurandu-se cu duba firmei de transport. Plata se va face doar dupa finalizarea transportului.
+                    </div>
+                </div>
+
+                <div class="job-boxes">
+                    <div>
+                        <div class="title">Dupa angajare</div>
+                        <div class="description">
+                            Dupa angajare, veti putea lua duba de transport de la garajul de vizavi si veti putea prelua comenzile de pe telefon.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum voi lucra?</div>
+                        <div class="description">
+                            Dupa ce ati preluat comanda, trebuie sa va duceti pana la depozit pentru a lua comanda necesara si apoi sa va indreptati catre magazin si sa descarcati duba.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="title">Cum pot avansa?</div>
+                        <div class="description">
+                            Acest job este structurat pe un singur nivel de dificultate, iar singura posibilitate de "avansare" este la nivelul contului. Banii primiti la finalul misiunii cresc in functie de nivelul contului tau. Daca aduni pietre vei primi si XP mai mult la finalul misiunii.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="provider-minigame" style="display: none;"></div>
+
+        
+        <div class="dirty-minigame" style="display: none;"></div>
+
+
+        <div class="newgroup-alert center"  style="display: none;">
+            <div class="icon">
+                <img src="https://cdn.armylegends.ro/elements/briefcase-solid-svgrepo-com.png">
+            </div>
+            <div class="title">Locuri de munca</div>
+            <div class="description">Tocmai te-ai angajat ca <span>Constructor</span></div>
+        </div>
+
+        <script src="app.js" type="text/javascript" defer></script>
+        <script src="jobs/constructor.js" type="text/javascript" defer></script>
+        <script src="jobs/hunter.js" type="text/javascript" defer></script>
+        <script src="jobs/lawnmower.js" type="text/javascript" defer></script>
+        <script src="jobs/orangepicker.js" type="text/javascript" defer></script>
+        <script src="jobs/busdriver.js" type="text/javascript" defer></script>
+        <script src="jobs/pescar.js" type="text/javascript" defer></script>
+        <script src="jobs/pilot.js" type="text/javascript" defer></script>
+        <script src="jobs/streetsweeper.js" type="text/javascript" defer></script>
+        <script src="jobs/weed.js" type="text/javascript" defer></script>
+        <script src="jobs/pcp.js" type="text/javascript" defer></script>
+        <script src="jobs/opium.js" type="text/javascript" defer></script>
+        <script src="jobs/hacker.js" type="text/javascript" defer></script>
+        <script src="jobs/researcher.js" type="text/javascript" defer></script>
+        <script src="jobs/mecanic.js" type="text/javascript" defer></script>
+        <script src="jobs/taxi.js" type="text/javascript" defer></script>
+        <script src="jobs/provider.js" type="text/javascript" defer></script>
+        <script src="jobs/dirtymoney.js" type="text/javascript" defer></script>
+    </body>
+</html>

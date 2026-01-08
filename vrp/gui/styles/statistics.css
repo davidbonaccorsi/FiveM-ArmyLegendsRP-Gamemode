@@ -1,0 +1,334 @@
+.main-statistics, .statistics-flex {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.main-statistics {
+    position: absolute;
+    inset: 0;
+
+    background: url(https://cdn.armylegends.ro/bg/image.psd3.webp) no-repeat;
+    background-size: 100% 100%;
+
+    font-family: "TT Norms";
+}
+
+.main-statistics::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://cdn.armylegends.ro/bg/image.psd3.webp) no-repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+}
+
+.statistics-flex .esc {
+    position: absolute;
+    top: 65px;
+    right: 88px;
+    width: 133px;
+    height: 45px;
+    background: url(https://cdn.armylegends.ro/elements/esc.webp) no-repeat;
+    background-size: 100% 100%;
+    transition: .232323s ease-in-out;
+    cursor: pointer;
+}
+
+.statistics-flex .esc:hover {
+    opacity: .6;
+}
+
+.statistics-flex .top-players {
+    position: absolute;
+    top: 378px;
+    right: 88px;
+    display: flex;
+    flex-direction: column;
+}
+
+.statistics-flex .top-players > div {
+    width: 405px;
+    height: 60px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background: none;
+    border: 2px solid rgba(36, 39, 39, 0.85);
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+    padding-right: 17px;
+}
+
+.statistics-flex .top-players > div * {
+    color: #727171;
+}
+
+.statistics-flex .top-players > div:last-of-type {
+    margin-bottom: 0;
+}
+
+.statistics-flex .top-players > div:first-of-type {
+    background: rgba(211, 121, 3, 0.10);
+    border-color: rgba(255, 255, 255, 0);
+}
+
+.statistics-flex .top-players > div:first-of-type * {
+    color: #D37903;
+}
+
+.statistics-flex .top-players > div:nth-of-type(2) {
+    background: rgba(157, 157, 158, 0.10);
+    border-color: rgba(255, 255, 255, 0);
+}
+
+
+.statistics-flex .top-players > div:nth-of-type(2) * {
+    color: #9D9D9E;
+}
+
+.statistics-flex .top-players > div:nth-of-type(3) {
+    background: rgba(252, 166, 101, 0.10);
+    border-color: rgba(255, 255, 255, 0);
+}
+
+.statistics-flex .top-players > div:nth-of-type(3) * {
+    color: #FCA665;
+}
+
+.statistics-flex .top-players div span {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 2px;
+}
+
+.statistics-flex .top-players div p {
+    margin-left: 23px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.statistics-flex .top-players div > div {
+    margin-left: auto;
+    text-align: right;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+.statistics-flex .statistics-body {
+    position: absolute;
+    top: 191px;
+    left: 212px;
+    
+    width: 908px;
+    height: 625px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.statistics-flex .statistics-body .statistics-body-header {
+    height: 75px;
+    width: 100%;
+
+    display: flex;
+}
+
+.statistics-flex .statistics-body .statistics-body-header img {
+    width: 40px;
+    height: 35.3px;
+    margin-top: 7px;
+}
+
+.statistics-flex .statistics-body .statistics-body-header .header-flex {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.statistics-flex .statistics-body .statistics-body-header .header-flex .title {
+    color: #FFF;
+    text-shadow: 1px 0px 7px rgba(161, 201, 255, 0.25);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.statistics-flex .statistics-body .statistics-body-header .header-flex .title span {
+    display: block;
+    color: rgba(255, 255, 255, 0.50);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 4px;
+}
+
+.statistics-flex .statistics-body .statistics-body-header .header-flex .playtime {
+    position: relative;
+    color: #B8FB41;
+    font-variant-ligatures: none;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 15px;
+    text-indent: calc(6px + 6px);
+}
+
+.statistics-flex .statistics-body .statistics-body-header .header-flex .playtime::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 100px;
+    background-color: #B8FB41;
+    box-shadow: 0 0 0 2px rgba(184, 251, 65, 0.10);
+}
+
+
+.statistics-flex .statistics-body .statistics-body-content {
+    display: flex;
+    margin-top: 40px;
+    width: fit-content;
+}
+
+.statistics-flex .statistics-body .statistics-body-content .group {
+    width: 404px;
+    height: 510px;
+    position: relative;
+    margin-right: 100px;
+    margin-left: 14px;
+    padding-left: calc(14px + 10px);
+
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 10px;
+}
+
+.statistics-flex .statistics-body .statistics-body-content .group::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(0 - 14px);
+    width: 14px;
+    height: 265px;
+    background-image: url(https://cdn.armylegends.ro/elements/Group_218.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.statistics-flex .statistics-body .statistics-body-content .group:last-of-type::before {
+    background-image: url(https://cdn.armylegends.ro/elements/Group_218.webp);
+    height: 255px;
+}
+
+.statistics-flex .statistics-body .statistics-body-content .group:last-of-type {
+    margin-right: 0;
+    width: fit-content;
+    height: fit-content;
+    color: hsla(0, 0%, 100%, .4);
+    text-indent: 6px;
+}
+
+
+.statistics-flex .statistics-body .statistics-body-content .group:first-of-type {
+    width: 380px;
+    height: 510px;
+}
+
+
+.statistics-flex .statistics-body .statistics-body-content .group div:not(.vehicles-list) {
+    width: 120px;
+    height: 120px;
+    background: url(https://cdn.armylegends.ro/elements/Rectangle_77.webp) no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.statistics-flex .statistics-body .statistics-body-content .group .vehicles-list {
+    height: fit-content;
+    width: fit-content;
+    max-height: 510px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 10px;
+}
+
+.statistics-flex .statistics-body .statistics-body-content .group .vehicles-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.statistics-flex .statistics-body .statistics-body-content .group .vehicles-list::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.statistics-flex .statistics-body .statistics-body-content .group .vehicles-list::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.035);
+}
+
+.statistics-flex .statistics-body .statistics-body-content .group .vehicles-list::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255, 255, 255, 0.045);
+}
+
+.statistics-flex .statistics-body .statistics-body-content .group > div span {
+    color: rgba(255, 255, 255, 0.59);
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 17px;
+}
+
+
+.statistics-flex .statistics-body .statistics-body-content .group:last-of-type > div {
+    padding: 0 10px;
+    justify-content: flex-start;
+}
+
+.statistics-flex .statistics-body .statistics-body-content .group:last-of-type div img {
+    width: 55px;
+    height: 55px;
+    margin-top: 13px;
+    margin-bottom: 10px;
+}
+
+.statistics-flex .statistics-body .statistics-body-content .group:last-of-type div p {
+    color: rgba(255, 255, 255, 0.59);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    /* truncate: 24-3 */
+}

@@ -1,0 +1,134 @@
+
+.phone-layout > .auctions{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1.5vh;
+   
+    padding-top: 2.5vh;
+    padding-right: 1.25vw;
+    padding-left: 1.5vw;
+
+    backdrop-filter: blur(10px);
+
+    background: url(https://cdn.armylegends.ro/bg/AuctionsPhoneBG.webp) no-repeat;
+    background-size: 100% 100%;
+}
+
+.phone-layout > .auctions.visible{
+    display: flex;
+    animation: fadeIn 1.5s;
+}
+
+.phone-layout > .auctions > header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.phone-layout > .auctions > header > p{
+    font-family: "Akrobat Light";
+    font-size: 3vh;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.phone-layout > .auctions > header > .actions{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    gap: .5vw;
+}
+
+.phone-layout > .auctions > header > .actions > .btn{
+    padding: 1.45vh .95vw;
+    border-radius: .75vw;
+    background: #ffffff20;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .15s ease-in-out;
+}
+
+.phone-layout > .auctions > header > .actions > .btn.hidden{
+    display: none;
+}
+
+.phone-layout > .auctions > header > .actions > .btn:hover{
+    background: #ffffff35;
+}
+
+.phone-layout > .auctions .no-auctions {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    color: hsla(0, 0%, 100%, .3);
+}
+
+.phone-layout > .auctions .no-auctions i {
+    margin-bottom: 15px;
+    font-size: 38px;
+    color: hsla(0, 0%, 100%, .2);
+}
+
+
+.phone-layout .auctions .bid-rectangle {
+    position: absolute;
+    top: 128px;
+
+    width: 287px;
+    height: 152px;
+
+    background: url(https://cdn.armylegends.ro/elements/bgauctionss.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.phone-layout .auctions .bid-image {
+    
+    --url: url("https://cdn.armylegends.ro/bg/GTA_Online_-_12_15_2020_-_Taking_Down_El_Rubio_5.webp");
+
+    position: absolute;
+    top: 137px;
+
+    width: 271px;
+    height: 136px;
+
+    background: var(--url) no-repeat;
+    background-size: 100% 100%;
+}
+
+.phone-layout .auctions .join-bid {
+    position: absolute;
+    top: 250px;
+    right: 29px;
+
+    width: 65px;
+    height: 65px;
+
+    background-color: #51B8D1;
+    box-shadow: 0 0 0 8px #51B8D140;
+
+    border-radius: 100px;
+
+    display: grid;
+    place-items: center;
+}
+
+.phone-layout .auctions .join-bid:hover {
+    cursor: pointer;
+}
+
+.phone-layout .auctions .join-bid svg {
+    transition: .232323s ease-in-out;
+}
+
+.phone-layout .auctions .join-bid:hover > svg {
+    opacity: .5;
+}

@@ -1,0 +1,49 @@
+<div class="main-auctions" v-if="active">
+    <div class="auctions-flex" :style="{zoom: zoom}">
+        <div class="close" @click="destroy()"></div>
+
+        <div class="watchers">
+            <div v-bind:count="auctionData.activePlayers"></div>
+            <span>persoane active in licitatie</span>
+        </div>
+
+        <div class="bid-image"></div>
+        <div class="set-position">
+            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
+                <circle cx="23.5" cy="23.5" r="23.5" fill="white" fill-opacity="0.15"/>
+                <path d="M24 23.5C23.337 23.5 22.7011 23.2366 22.2322 22.7678C21.7634 22.2989 21.5 21.663 21.5 21C21.5 20.337 21.7634 19.7011 22.2322 19.2322C22.7011 18.7634 23.337 18.5 24 18.5C24.663 18.5 25.2989 18.7634 25.7678 19.2322C26.2366 19.7011 26.5 20.337 26.5 21C26.5 21.3283 26.4353 21.6534 26.3097 21.9567C26.1841 22.26 25.9999 22.5356 25.7678 22.7678C25.5356 22.9999 25.26 23.1841 24.9567 23.3097C24.6534 23.4353 24.3283 23.5 24 23.5ZM24 14C22.1435 14 20.363 14.7375 19.0503 16.0503C17.7375 17.363 17 19.1435 17 21C17 26.25 24 34 24 34C24 34 31 26.25 31 21C31 19.1435 30.2625 17.363 28.9497 16.0503C27.637 14.7375 25.8565 14 24 14Z" fill="white"/>
+            </svg>
+        </div>
+
+        <div class="bid-title">{{auctionData && auctionData.title || "Necunoscut"}}</div>
+        <div class="bid-description">{{ auctionData && auctionData.description || 'Necunoscut'}}</div>
+
+
+        <div class="place-bid">
+            <p>PLASEAZA OFERTA</p>
+            <div @click="bid()">${{ getAuctionBid() }}</div>
+        </div>
+
+        <div class="bid">
+            <div class="last-bid">
+                Ultima oferta
+                <span>${{ auctionData && auctionData.lastBidder && auctionData.lastBidder.bid || '0'}}</span>
+            </div>
+
+            <div class="time-remaining">
+                {{ timeLeft }}
+                <span>va fi castigata de</span>
+            </div>
+
+            <div class="winner">{{ auctionData && auctionData.lastBidder && auctionData.lastBidder.name || 'Necunoscut'}}</div>
+        </div>
+
+        
+        <div class="time-until-end">
+            <p>Ultima licitatie a fost acum:<span>{{ timePassed && timePassed.minutes }} minute, {{ timePassed && timePassed.seconds }} secunde</span></p>
+        </div>
+        <div class="last-bids" >
+            <div v-for="data in auctionTop">${{ data.bid | formatnum }} <span>de la</span> {{ data.name }} ({{ data.id }})</div>
+        </div>
+    </div>
+</div>

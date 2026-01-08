@@ -1,0 +1,325 @@
+.main-daily {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.9;
+    background: linear-gradient(107deg, #131E33 0%, rgba(2, 13, 40, 0.64) 102.29%), linear-gradient(107deg, #3E0860 0%, #896300 102.29%);
+    z-index: 9;
+
+    display: flex;
+}
+
+.main-daily .daily-reward-list {
+    margin-top: 4vh;
+
+    width: 35%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7vh;
+    overflow: scroll;
+}
+
+.main-daily .daily-reward-list::-webkit-scrollbar {
+    display: none;
+}
+
+.main-daily .daily-reward-list .daily-reward-item {
+    margin-right: 10vh;
+    display: flex;
+    align-items: center;
+    gap: 3vh;
+}
+
+.main-daily .daily-reward-list .daily-reward-item .reward-item{
+    width: 104px;
+    height: 104px;
+    transform: rotate(-45deg);
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 24px 0px;
+    background: #ffffff15;
+}
+
+.main-daily .daily-reward-list .daily-reward-item.collected .reward-item::after {
+    position: absolute;
+    content: "";
+    background: url(https://cdn.armylegends.ro/daily/checkmark.svg) no-repeat;
+    background-size: 100% 100%;
+    width: 30px;
+    height: 30px;
+    transform: rotate(45deg);
+}
+
+.main-daily .daily-reward-list .daily-reward-item.collected .reward-item img {
+    opacity: .5;
+}
+
+.main-daily .daily-reward-list .daily-reward-item.locked .reward-item::after {
+    position: relative;
+    top: 45%;
+    left: 1%;
+    content: "";
+    background: url(https://cdn.armylegends.ro/daily/locked.svg) no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+}
+
+.main-daily .daily-reward-list .daily-reward-item.locked .reward-item img {
+    position: relative;
+    left: 8%;
+}
+
+.main-daily .daily-reward-list .daily-reward-item.collected .reward-item {
+    background: linear-gradient(90deg, #9dd34733 0%, #7fa95e34 100%);
+}
+
+.main-daily .daily-reward-list .daily-reward-item.can-collect .reward-item {
+    background: #ffffff15;
+}
+
+.main-daily .daily-reward-list .daily-reward-item .reward-item img {
+    transform: rotate(45deg);
+    width: 90px;
+    height: 90px;
+}
+
+.main-daily .daily-reward-list .daily-reward-item .day-number {
+    position: relative;
+    left: 11%;
+
+    display: flex;
+    gap: 1vh;
+    align-items: center;
+}
+
+.main-daily .daily-reward-list .daily-reward-item .day-number p {
+    width: 4vh;
+    height: 4vh;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Akrobat ExtraBold';
+    font-size: 18px;
+    color: #232A43;
+
+    background: #fff;
+    box-shadow: 24px 24px 34px 0px rgba(0, 0, 0, 0.25);
+}
+
+.main-daily .daily-reward-list .daily-reward-item .day-number h1 {
+    font-size: 1em;
+    color: #fff;
+}
+
+.main-daily .daily-reward-list .daily-reward-item.collected .day-number p {
+    background: linear-gradient(90deg, #9ED347 0%, #7FA95E 100%);
+}
+
+.main-daily .daily-reward-list .daily-reward-item.collected .day-number h1 {
+    color: #9ED347;
+}
+
+.main-daily .daily-reward-list .daily-reward-item.can-collect .day-number h1 {
+    color: #7fb5ff;
+}
+
+.main-daily .daily-reward-list .daily-reward-item.can-collect .day-number p {
+    background: #7fb5ff;
+}
+
+.main-daily .daily-reward-list .daily-reward-item .item-detail h1{
+    color: #FFF;
+    text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 18px;
+    font-family: 'Akrobat ExtraBold';
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Collect */
+
+.main-daily .daily-item-collect {
+    width: 70%;
+    height: 100%;
+
+    background: linear-gradient(180deg, #7fb5ff6e 0%, rgba(127, 181, 255, 0.00) 88.54%);
+    z-index: 12;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8vh;
+}
+
+.main-daily .daily-item-collect .title {
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+}
+
+.main-daily .daily-item-collect .title h1 {
+    color: #7fb5ff;
+    text-align: center;
+    font-size: 3.8em;
+    font-family: 'Akrobat ExtraBold';
+    font-weight: 600;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+.main-daily .daily-item-collect .title h1 span {
+    font-family: 'Akrobat';
+    font-weight: 400;
+    color: #FFF;
+}
+
+.main-daily .daily-item-collect .title p {
+    color: #FFF;
+    width: 55%;
+    font-size: .9em;
+    font-family: 'Akrobat';
+    text-align: center;
+    line-height: 140%;
+    text-transform: uppercase;
+}
+
+.main-daily .daily-item-collect .daily-reward-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-daily .daily-item-collect .daily-reward-item .day-number {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    align-items: center;
+}
+
+.main-daily .daily-item-collect .daily-reward-item .day-number p {
+    width: 47px;
+    height: 47px;
+
+    font-family: 'Akrobat ExtraBold';
+    font-size: 18px;
+    color: #232A43;
+
+    flex-shrink: 0;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #7fb5ff;
+    box-shadow: 24px 24px 34px 0px rgba(0, 0, 0, 0.25);
+}
+
+.main-daily .daily-item-collect .daily-reward-item .day-number h1 {
+    font-size: 1em;
+    color: #7fb5ff;
+}
+
+.main-daily .daily-item-collect .daily-reward-item .reward-item{
+    width: 104px;
+    height: 104px;
+    transform: rotate(-45deg);
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 24px 0px;
+    background: #ffffff15;
+}
+
+.main-daily .daily-item-collect .daily-reward-item .reward-item img {
+    transform: rotate(45deg);
+    width: 90px;
+    height: 90px;
+}
+
+.main-daily .daily-item-collect .daily-reward-item .item-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-daily .daily-item-collect .daily-reward-item .item-detail h1{
+    color: #FFF;
+    text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 18px;
+    font-family: 'Akrobat';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+
+.main-daily .daily-item-collect .collect-button {
+    width: 280px;
+    height: 55px;
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .7vh;
+
+    background: #7fb5ff;
+    border-radius: 300px;
+
+    color: #232A43;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Akrobat';
+    font-weight: 700;
+    line-height: 130%;
+    text-transform: uppercase;
+
+    transition: 1s all;
+}
+
+.main-daily .daily-item-collect .collect-button.disabled {
+    opacity: .8;
+    font-size: 1.2em;
+}
+
+.main-daily .daily-item-collect .collect-button.disabled i {
+    color: #232A43;
+}
+
+.main-daily .daily-item-collect .collect-button:not(.disabled):hover {
+    opacity: .5;
+}
+
+/* IMG */
+
+.main-daily img.daily-img {
+    z-index: 22;
+    position: absolute;
+
+    bottom: 0;
+}

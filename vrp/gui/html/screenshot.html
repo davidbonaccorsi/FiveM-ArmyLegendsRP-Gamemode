@@ -1,0 +1,15 @@
+
+<div class="main-screenshot" style="display: none;">
+    <div class="screenshot-flex" :style="{zoom: zoom}">
+        <div class="close" @click="destroy()">
+            <p>CLOSE</p>
+            <div class="key">
+                <p>ESC</p>
+            </div>
+        </div>
+
+        <p>screenshot of<span>{{name}}</span></p>
+
+        <img :src="image">
+    </div>
+</div>

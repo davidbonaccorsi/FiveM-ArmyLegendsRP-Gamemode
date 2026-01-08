@@ -1,0 +1,127 @@
+
+
+@import "https://fonts.cdnfonts.com/css/akrobat";
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+:root{
+    --wallpaper: url("https://cdn.armylegends.ro/phone/newphone_wallpaper_2.png");
+    
+    --wallpaper-1: url("https://cdn.armylegends.ro/phone/newphone_wallpaper_1.png");
+    --wallpaper-2: url("https://cdn.armylegends.ro/phone/newphone_wallpaper_2.png");
+}
+
+*{
+    font-family: "Akrobat";
+    color: #fff;
+}
+
+body{
+    cursor: none;
+    overflow: hidden;
+    user-select: none;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+
+.phone-layout{
+
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    width: 19.5%;
+    height: 58%;
+
+    align-items: center;
+    justify-content: center;
+
+    display: none;
+}
+
+.phone-layout:not(.only-notify){
+    animation: phoneShow 1s;
+}
+
+@keyframes phoneShow{
+    from {
+        bottom: -10%;
+    } to {
+        bottom: 0;
+    }
+}
+
+.phone-layout.visible{
+    display: flex;
+}
+
+.phone-layout > .frame{
+    width: 100%;
+    height: 100%;
+
+    box-shadow: inset 0 0 60px 5px #171717, 16px 3px 26px 0px rgba(0,0,0,0.55);
+    background: linear-gradient(to top, rgb(47 47 47 / 21%), #131313);
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.phone-layout > .cover{
+    position: absolute;
+    bottom: 1%;
+    margin-right: .5%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    background: linear-gradient(to right, rgb(0 0 0 / 65%), rgb(10 10 10 / 37%), rgb(179 109 251 / 24%)),
+                var(--wallpaper);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);	
+    width: 95%;
+    height: 94.5%;
+}
+
+.phone-layout > .top-line{
+    position: absolute;
+    top: 2.1%;
+    
+    width: 25%;
+    height: .5%;
+    
+    background: #ffffff30;
+    border-radius: .25vw;
+}
+
+.phone-layout > .new-screen{
+    position: absolute;
+    bottom: 1%;
+    
+    margin-right: .5%;
+    z-index: 1;
+    
+    width: 95%;
+    height: 94.5%;
+}
+
+@keyframes fadeIn{
+    from{opacity: 0}
+    to{opacity: 1}
+}

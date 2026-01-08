@@ -1,0 +1,1328 @@
+.premiumshop-layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Akrobat";
+
+	background: linear-gradient(to bottom right, rgba(32, 32, 34, .9), #202022);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, .6);
+
+    display: none;
+}
+
+.premiumshop-layout > .wrapper {
+    width: 100%;
+    height: 100%;
+
+	display: flex;
+	gap: 1vw;
+}
+
+.premiumshop-layout > .wrapper > .close{
+	position: absolute;
+	right: 2.5vw;
+	top: 1.5vw;
+
+	display: flex;
+	align-items: center;
+	gap: 1vw;
+	
+	z-index: 1;
+}
+
+.premiumshop-layout > .wrapper > .close.prime{
+	top: 2vw;
+	right: 2vw;
+}
+
+.premiumshop-layout > .wrapper > .close.prime > p{
+	color: #ababab;
+	font-family: "Akrobat Bold";
+}
+
+.premiumshop-layout > .wrapper > .close.prime > .key{
+	background: #989898;
+}
+
+.premiumshop-layout > .wrapper > .close.prime > .key > p{
+	color: #fff;
+}
+
+.premiumshop-layout > .wrapper > .close > p{
+	font-family: "Akrobat ExtraBold";
+	color: #737374;
+	font-size: 1.8vh;
+	transition: .33s ease-in-out;
+}
+
+.premiumshop-layout > .wrapper > .close:not(.prime):hover > p{
+	color: #ffffff99;
+}
+
+.premiumshop-layout > .wrapper > .close > .key{
+	width: 2.1vw;
+	height: 2vw;
+	background: #777779;
+	border-radius: .25vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: .33s ease-in-out;
+}
+
+.premiumshop-layout > .wrapper > .close:not(.prime):hover > .key{
+	background: #9c9c9f;
+}
+
+.premiumshop-layout > .wrapper > .close > .key > p{
+	color: #212124;
+	font-family: "Akrobat ExtraBold";
+	font-size: 1.8
+}
+
+
+.premiumshop-layout > .wrapper > .side{
+	width: 25%;
+	margin-left: 3.5vw;
+	
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 1vh;
+
+	padding-top: 10vh;
+}
+
+.premiumshop-layout > .wrapper > .side > header{
+	display: flex;
+	align-items: center;
+	gap: 1vw;
+}
+
+.premiumshop-layout > .wrapper > .side > header > img{
+	width: 45px;
+}
+
+.premiumshop-layout > .wrapper > .side > header > h1{
+	font-family: "Akrobat ExtraBold";
+	font-size: 4vh;
+}
+
+.premiumshop-layout > .wrapper > .side > header > h1 > span{
+	color: #3e4042;
+}
+
+.premiumshop-layout > .wrapper > .side > header > .add-funds{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: .5vw;
+
+	background: linear-gradient(90deg, #7fb5ff, #4493ff);
+	width: 7.5vw;
+	height: 2.5vw;
+
+	border-radius: 10vw;
+
+	margin-left: .5vw;
+
+	transition: .33s ease-in-out;
+}
+
+.premiumshop-layout > .wrapper > .side > header > .add-funds:hover{
+	box-shadow: 0 0 0 5px #7fb4ff3f, 0 0 30px #7fb4ffa1;
+}
+
+.premiumshop-layout > .wrapper > .side > header > .add-funds > i {
+	color: #232323;
+}
+
+.premiumshop-layout > .wrapper > .side > header > .add-funds > p{
+	color: #232323;
+	font-family: "Akrobat Bold";
+	font-size: 1.6vh;
+}
+
+.premiumshop-layout > .wrapper > .side > .categories{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 1.5vh;
+	width: 100%;
+	margin-top: 7vh;
+}
+
+.premiumshop-layout > .wrapper > .side > .categories > .categ{
+	width: 90%;
+	height: 9.5vh;
+
+	display: flex;
+	align-items: center;
+	gap: 1.25vw;
+
+	background: linear-gradient(90deg, #3e3e3e99, transparent);
+
+	border-radius: .35vw;
+
+	transition: .33s ease-in-out;
+}
+
+.premiumshop-layout > .wrapper > .side > .categories > .categ:hover, .premiumshop-layout > .wrapper > .side > .categories > .categ.active{
+	background: linear-gradient(90deg, #ffffff30, transparent);
+}
+
+.premiumshop-layout > .wrapper > .side > .categories > .categ > img{
+	width: 40px;
+	opacity: .35;
+	margin-left: 1.5vw;
+	transition: .33s ease-in-out;
+}
+
+.premiumshop-layout > .wrapper > .side > .categories > .categ.bigger-img > img{
+	width: 50px;
+	margin-left: 1.2vw;
+}
+
+.premiumshop-layout > .wrapper > .side > .categories > .categ:hover > img, .premiumshop-layout > .wrapper > .side > .categories > .categ.active > img{
+	opacity: 1;
+}
+
+.premiumshop-layout > .wrapper > .side > .categories > .categ > p{
+	font-family: "Akrobat Bold";
+	letter-spacing: 3px;
+	font-size: 1.6vh;
+}
+
+.premiumshop-layout > .wrapper > .side > .categories > .categ:not(.bigger-img) > p{
+	margin-left: .15vw;
+}
+
+@keyframes animProductsPage{
+	from {
+		opacity: 0;
+	} to {
+		opacity: 1;
+	}
+}
+
+.premiumshop-layout > .wrapper > .products{
+	margin-top: 10vh;
+	margin-left: 5vw;
+	height: 80%;
+	width: 55%;
+	display: flex;
+	flex-direction: column;
+	gap: 1vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding-right: 1.5vw;
+	animation: animProductsPage 1s;
+}
+
+.premiumshop-layout > .wrapper > .products.hidden{
+	display: none;
+}
+
+.premiumshop-layout > .wrapper > .products::-webkit-scrollbar {
+    width: 8px;
+}
+
+.premiumshop-layout > .wrapper > .products::-webkit-scrollbar-track {
+    background: #2b2c2e;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.premiumshop-layout > .wrapper > .products::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #404040;
+}
+
+.premiumshop-layout > .wrapper > .products::-webkit-scrollbar-thumb:window-inactive {
+    background: #404040;
+}
+
+/* Category: Popular */
+
+
+.premiumshop-layout > .wrapper > .products > .warning{
+	width: 100%;
+	height: 32vh;
+	border-radius: .25vw;
+	background: url(https://cdn.armylegends.ro/shop/shopwarning1.png);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.premiumshop-layout > .wrapper > .products.popular{
+	display: grid;
+	grid-template-columns: repeat(1, auto);
+	grid-gap: 2vh 0;
+}
+
+.premiumshop-layout > .wrapper > .products.popular:focus{
+	outline: none;
+}
+
+.premiumshop-layout > .wrapper > .products.popular > .middle-boxes{
+	height: 65vh;
+	width: 100%;
+	display: flex;
+	gap: 1vh;
+}
+
+.premiumshop-layout > .wrapper > .products.popular > .middle-boxes > .col{
+	display: flex;
+	flex-direction: column;
+	gap: 2.5vh;
+	height: 100%;
+	width: 32.5%;
+}
+
+.premiumshop-layout > .wrapper > .products.popular > .middle-boxes > .col > .box{
+	height: 100%;
+	width: 100%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+
+	padding: 0 1.15vw;
+	padding-bottom: 1.8vh;
+}
+
+.premiumshop-layout > .wrapper > .products.popular > .middle-boxes > .col:first-of-type > .box:first-of-type{
+	background-image: url(https://cdn.armylegends.ro/shop/popular/prime.png);
+}
+
+.premiumshop-layout > .wrapper > .products.popular > .middle-boxes > .col:first-of-type > .box:last-of-type{
+/* 	background-image: url(https://cdn.armylegends.ro/shop/popular/amggt63.png); */
+	background-image: url(https://cdn.armylegends.ro/shop/popular/scooter.png);
+	background-size: 100% 100%;
+}
+
+.premiumshop-layout > .wrapper > .products.popular > .middle-boxes > .col:last-of-type > .box:first-of-type{
+	background-image: url(https://cdn.armylegends.ro/shop/popular/1_1kk.png);
+}
+
+.premiumshop-layout > .wrapper > .products.popular > .middle-boxes > .col:last-of-type > .box:first-of-type{
+	padding-bottom: 1.6vh;
+}
+
+.premiumshop-layout > .wrapper > .products.popular > .middle-boxes > .col:last-of-type > .box:last-of-type{
+	background-image: url(https://cdn.armylegends.ro/shop/popular/chiron.png);
+	background-size: 100% 100%;
+}
+
+.premiumshop-layout > .wrapper > .products.popular > .middle-boxes > .col > .box > .buy{
+	display: flex;
+	align-items: center;
+	gap: .7vw;
+	background: linear-gradient(90deg, #282828, #343434, #272727);
+	border-radius: .25vw;
+	padding: 1vh 1.5vw;
+	padding-bottom: 1.25vh;
+	padding-left: 1.3vw;
+	transition: .33s ease-in-out;
+	box-shadow: 0 0 0 4.5px #28282850;
+}
+
+.premiumshop-layout > .wrapper > .products.popular > .middle-boxes > .col > .box > .buy:hover{
+	box-shadow: 0 0 0 5.5px #23232385;
+}
+
+.premiumshop-layout > .wrapper > .products.popular > .middle-boxes > .col > .box > .buy > img{
+	width: 30px;
+	margin-top: .5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.popular > .middle-boxes > .col > .box > .buy > h1{
+	font-family: "Akrobat Black";
+	font-size: 3.5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.popular > .middle-boxes > .col > .box > .buy > h1 > span{
+	color: #5c5c5c;
+	font-size: 3.6vh;
+}
+
+
+.premiumshop-layout > .wrapper > .products.popular > .middle-boxes > .big-box{
+	height: 100%;
+	width: 35%;
+	background-image: url(https://cdn.armylegends.ro/shop/popular/3kk.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+
+	padding: 0 1.5vw;
+	padding-bottom: .65vh;
+}
+
+.premiumshop-layout > .wrapper > .products.popular > .middle-boxes > .big-box > .buy{
+	display: flex;
+	align-items: center;
+	gap: .7vw;
+/* 	position: absolute; */
+	background: linear-gradient(90deg, #282828, #343434, #272727);
+	border-radius: .25vw;
+	padding: 1vh 1.25vw;
+	padding-bottom: 1.25vh;
+	padding-left: 1.2vw;
+	transition: .33s ease-in-out;
+}
+
+.premiumshop-layout > .wrapper > .products.popular > .middle-boxes > .big-box > .buy:hover{
+	box-shadow: 0 0 0 5.5px #23232345;
+}
+
+
+.premiumshop-layout > .wrapper > .products.popular > .middle-boxes > .big-box > .buy > img{
+	width: 30px;
+	margin-top: .5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.popular > .middle-boxes > .big-box > .buy > h1{
+	font-family: "Akrobat Black";
+	font-size: 3.5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.popular > .middle-boxes > .big-box > .buy > h1 > span{
+	color: #5c5c5c;
+	font-size: 3.6vh;
+}
+
+.premiumshop-layout > .wrapper > .products.popular > .footer-boxes{
+	height: 30vh;
+	width: 100%;
+	display: flex;
+	gap: 2vh;
+}
+
+.premiumshop-layout > .wrapper > .products.popular > .footer-boxes > .box{
+	height: 100%;
+	width: 45%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.premiumshop-layout > .wrapper > .products.popular > .footer-boxes > .box:first-of-type{
+	background-image: url(https://cdn.armylegends.ro/shop/popular/scooter.png)
+}
+
+.premiumshop-layout > .wrapper > .products.popular > .footer-boxes > .box:nth-of-type(2){
+	background-image: url(https://cdn.armylegends.ro/shop/popular/inventory.png)
+}
+
+.premiumshop-layout > .wrapper > .products.popular > .footer-boxes > .box:last-of-type{
+	background-image: url(https://cdn.armylegends.ro/shop/popular/licences.png)
+}
+
+/* Category: Money */
+
+.premiumshop-layout > .wrapper > .products.money{
+	display: flex;
+	flex-direction: row;
+	gap: 2vw;
+	width: 60%;
+}
+
+.premiumshop-layout > .wrapper > .products.money > .small-boxes{
+	width: 70%;
+	height: 85%;
+
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	grid-gap: 2.5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.money > .small-boxes > .box{
+	height: 100%;
+	width: 100%;
+	border-radius: .35vw;
+	background-image: url(https://cdn.armylegends.ro/shop/money/20k.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+
+	padding: 0 1.15vw;
+	padding-bottom: 1.5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.money > .small-boxes > .box > .buy{
+	display: flex;
+	align-items: center;
+	gap: .7vw;
+	position: absolute;
+	background: linear-gradient(90deg, #282828, #343434, #272727);
+	border-radius: .25vw;
+	padding: 1vh 1.25vw;
+	padding-bottom: 1.25vh;
+	padding-left: 1.2vw;
+	transition: .33s ease-in-out;
+	box-shadow: 0 0 0 4.5px #28282850;
+}
+
+.premiumshop-layout > .wrapper > .products.money > .small-boxes > .box > .buy:hover{
+	box-shadow: 0 0 0 5.5px #23232385;
+}
+
+.premiumshop-layout > .wrapper > .products.money > .small-boxes > .box > .buy > img, .premiumshop-layout > .wrapper > .products.money > .big-box > .buy > img{
+	width: 30px;
+	margin-top: .5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.money > .small-boxes > .box > .buy > h1, .premiumshop-layout > .wrapper > .products.money > .big-box > .buy > h1{
+	font-family: "Akrobat Black";
+	font-size: 3.5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.money > .small-boxes > .box > .buy > h1 > span, .premiumshop-layout > .wrapper > .products.money > .big-box > .buy > h1 > span{
+	color: #5c5c5c;
+	font-size: 3.6vh;
+}
+
+.premiumshop-layout > .wrapper > .products.money > .small-boxes > .box:nth-of-type(2){
+	background-image: url(https://cdn.armylegends.ro/shop/money/300k.png);
+}
+
+.premiumshop-layout > .wrapper > .products.money > .small-boxes > .box:nth-of-type(3){
+	background-image: url(https://cdn.armylegends.ro/shop/money/100k.png);
+}
+
+.premiumshop-layout > .wrapper > .products.money > .small-boxes > .box:nth-of-type(4){
+	background-image: url(https://cdn.armylegends.ro/shop/money/1_1kk.png);
+}
+
+.premiumshop-layout > .wrapper > .products.money > .big-box{
+	height: 85%;
+	width: 35%;
+	background-image: url(https://cdn.armylegends.ro/shop/money/3kk.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	border-radius: .35vw;
+
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+
+	padding: 0 .5vw;
+	padding-bottom: 1vh;
+}
+
+.premiumshop-layout > .wrapper > .products.money > .big-box > .buy{
+	display: flex;
+	align-items: center;
+	gap: .7vw;
+	position: absolute;
+	background: linear-gradient(90deg, #282828, #343434, #272727);
+	border-radius: .25vw;
+	padding: 1vh 1.25vw;
+	padding-bottom: 1.25vh;
+	padding-left: 1.2vw;
+	transition: .33s ease-in-out;
+}
+
+.premiumshop-layout > .wrapper > .products.money > .big-box > .buy:hover{
+	box-shadow: 0 0 0 5.5px #23232345;
+}
+
+/* Category: Others */
+
+.premiumshop-layout > .wrapper > .products.others{
+	display: flex;
+	flex-direction: column;
+	gap: 2vw;
+}
+
+/*.premiumshop-layout > .wrapper > .products > .promotion{
+	width: 100%;
+	height: 34vh; 
+	border-radius: .25vw;
+	background: url(https://cdn.armylegends.ro/shop/others/promotion1.png);
+	background-position: center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}*/
+
+
+.premiumshop-layout > .wrapper > .products.others > .row {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 10px;
+	width: 100%;
+	height: 0;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row > .box {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+/* xp booster */
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:first-of-type{
+	background-image: url(https://cdn.armylegends.ro/shop/others/doublexpbooster72.png);
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+
+	padding: 0 1.15vw;
+	padding-bottom: 1.5vh;
+
+	min-width: 150px;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:first-of-type > .buy{
+	display: flex;
+	align-items: center;
+	gap: .7vw;
+	background: linear-gradient(90deg, #282828, #343434, #272727);
+	border-radius: .25vw;
+	padding: 1vh 1.5vw;
+	padding-bottom: 1.25vh;
+	padding-left: 1.3vw;
+	transition: .33s ease-in-out;
+	box-shadow: 0 0 0 4.5px #28282850;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:first-of-type > .buy:hover{
+	box-shadow: 0 0 0 5.5px #23232385;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:first-of-type > .buy > img{
+	width: 30px;
+	margin-top: .5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:first-of-type > .buy > h1{
+	font-family: "Akrobat Black";
+	font-size: 3.5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:first-of-type > .buy > h1 > span{
+	color: #5c5c5c;
+	font-size: 3.6vh;
+}
+
+/* gun permit */
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(2){
+	background-image: url(https://cdn.armylegends.ro/shop/others/permisportarma2.png);
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+
+	padding: 0 1.15vw;
+	padding-bottom: 1.5vh;
+
+	min-width: 150px;
+	min-height: 240px;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(2) > .buy{
+	display: flex;
+	align-items: center;
+	gap: .7vw;
+	background: linear-gradient(90deg, #282828, #343434, #272727);
+	border-radius: .25vw;
+	padding: 1vh 1.5vw;
+	padding-bottom: 1.25vh;
+	padding-left: 1.3vw;
+	transition: .33s ease-in-out;
+	box-shadow: 0 0 0 4.5px #28282850;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(2) > .buy:hover{
+	box-shadow: 0 0 0 5.5px #23232385;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(2) > .buy > img{
+	width: 30px;
+	margin-top: .5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(2) > .buy > h1{
+	font-family: "Akrobat Black";
+	font-size: 3.5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(2) > .buy > h1 > span{
+	color: #5c5c5c;
+	font-size: 3.6vh;
+}
+
+/* clearwarn */
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(3){
+	background-image: url(https://cdn.armylegends.ro/shop/others/clearwarn.png);
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+
+	padding: 0 1.15vw;
+	padding-bottom: 1.5vh;
+
+	min-width: 150px;
+	min-height: 240px;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(3) > .buy{
+	display: flex;
+	align-items: center;
+	gap: .7vw;
+	background: linear-gradient(90deg, #282828, #343434, #272727);
+	border-radius: .25vw;
+	padding: 1vh 1.5vw;
+	padding-bottom: 1.25vh;
+	padding-left: 1.3vw;
+	transition: .33s ease-in-out;
+	box-shadow: 0 0 0 4.5px #28282850;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(3) > .buy:hover{
+	box-shadow: 0 0 0 5.5px #23232385;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(3) > .buy > img{
+	width: 30px;
+	margin-top: .5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(3) > .buy > h1{
+	font-family: "Akrobat Black";
+	font-size: 3.5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(3) > .buy > h1 > span{
+	color: #5c5c5c;
+	font-size: 3.6vh;
+}
+
+/* buynr */
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(4){
+	background-image: url(https://cdn.armylegends.ro/shop/others/buynr.png);
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+
+	padding: 0 1.15vw;
+	padding-bottom: 1.5vh;
+
+	min-width: 150px;
+	min-height: 240px;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(4) > .buy{
+	display: flex;
+	align-items: center;
+	gap: .7vw;
+	background: linear-gradient(90deg, #282828, #343434, #272727);
+	border-radius: .25vw;
+	padding: 1vh 1.5vw;
+	padding-bottom: 1.25vh;
+	padding-left: 1.3vw;
+	transition: .33s ease-in-out;
+	box-shadow: 0 0 0 4.5px #28282850;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(4) > .buy:hover{
+	box-shadow: 0 0 0 5.5px #23232385;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(4) > .buy > img{
+	width: 30px;
+	margin-top: .5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(4) > .buy > h1{
+	font-family: "Akrobat Black";
+	font-size: 3.5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(4) > .buy > h1 > span{
+	color: #5c5c5c;
+	font-size: 3.6vh;
+}
+
+/* buyxenon */
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(5){
+	background-image: url(https://cdn.armylegends.ro/shop/others/buyxenon.png);
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+
+	padding: 0 1.15vw;
+	padding-bottom: 1.5vh;
+
+	min-width: 150px;
+	min-height: 240px;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(5) > .buy{
+	display: flex;
+	align-items: center;
+	gap: .7vw;
+	background: linear-gradient(90deg, #282828, #343434, #272727);
+	border-radius: .25vw;
+	padding: 1vh 1.5vw;
+	padding-bottom: 1.25vh;
+	padding-left: 1.3vw;
+	transition: .33s ease-in-out;
+	box-shadow: 0 0 0 4.5px #28282850;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(5) > .buy:hover{
+	box-shadow: 0 0 0 5.5px #23232385;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(5) > .buy > img{
+	width: 30px;
+	margin-top: .5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(5) > .buy > h1{
+	font-family: "Akrobat Black";
+	font-size: 3.5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(5) > .buy > h1 > span{
+	color: #5c5c5c;
+	font-size: 3.6vh;
+}
+
+/* carplate permit */
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(6){
+	background-image: url(https://cdn.armylegends.ro/shop/others/carplate.png);
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+
+	padding: 0 1.15vw;
+	padding-bottom: 1.5vh;
+
+	min-width: 150px;
+	min-height: 240px;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(6) > .buy{
+	display: flex;
+	align-items: center;
+	gap: .7vw;
+	background: linear-gradient(90deg, #282828, #343434, #272727);
+	border-radius: .25vw;
+	padding: 1vh 1.5vw;
+	padding-bottom: 1.25vh;
+	padding-left: 1.3vw;
+	transition: .33s ease-in-out;
+	box-shadow: 0 0 0 4.5px #28282850;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(6) > .buy:hover{
+	box-shadow: 0 0 0 5.5px #23232385;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(6) > .buy > img{
+	width: 30px;
+	margin-top: .5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(6) > .buy > h1{
+	font-family: "Akrobat Black";
+	font-size: 3.5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(6) > .buy > h1 > span{
+	color: #5c5c5c;
+	font-size: 3.6vh;
+}
+
+/* resetcharacter */
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(7){
+	background-image: url(https://cdn.armylegends.ro/shop/others/resetcharacter.png);
+	background-size: 100%;
+    background-repeat: no-repeat;
+
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+
+	padding: 0 1.15vw;
+	padding-bottom: 1.5vh;
+
+	min-width: 150px;
+	min-height: 240px;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(7) > .buy{
+	display: flex;
+	align-items: center;
+	gap: .7vw;
+	background: linear-gradient(90deg, #282828, #343434, #272727);
+	border-radius: .25vw;
+	padding: 1vh 1.5vw;
+	padding-bottom: 1.25vh;
+	padding-left: 1.3vw;
+	transition: .33s ease-in-out;
+	box-shadow: 0 0 0 4.5px #28282850;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(7) > .buy:hover{
+	box-shadow: 0 0 0 5.5px #23232385;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(7) > .buy > img{
+	width: 30px;
+	margin-top: .5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(7) > .buy > h1{
+	font-family: "Akrobat Black";
+	font-size: 3.5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(7) > .buy > h1 > span{
+	color: #5c5c5c;
+	font-size: 3.6vh;
+}
+
+/* transfer */
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(8){
+	background-image: url(https://cdn.armylegends.ro/shop/others/transfer.png);
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+
+	padding: 0 1.15vw;
+	padding-bottom: 1.5vh;
+
+	min-width: 150px;
+	min-height: 240px;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(8) > .buy{
+	display: flex;
+	align-items: center;
+	gap: .7vw;
+	background: linear-gradient(90deg, #282828, #343434, #272727);
+	border-radius: .25vw;
+	padding: 1vh 1.5vw;
+	padding-bottom: 1.25vh;
+	padding-left: 1.3vw;
+	transition: .33s ease-in-out;
+	box-shadow: 0 0 0 4.5px #28282850;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(8) > .buy:hover{
+	box-shadow: 0 0 0 5.5px #23232385;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(8) > .buy > img{
+	width: 30px;
+	margin-top: .5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(8) > .buy > h1{
+	font-family: "Akrobat Black";
+	font-size: 3.5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.others > .row:last-of-type > .box:nth-of-type(8) > .buy > h1 > span{
+	color: #5c5c5c;
+	font-size: 3.6vh;
+}
+
+/* Category: For Beginners */
+
+.premiumshop-layout > .wrapper > .products.begginers{
+	display: flex;
+	flex-direction: column;
+	gap: 2vw;
+}
+
+.premiumshop-layout > .wrapper > .products.begginers > .box{
+	width: 100%;
+	height: 100%;
+	background-image: url(https://cdn.armylegends.ro/elements/newbie_set.png);
+	background-size: 100% 100%;
+
+	display: flex;
+}
+
+.premiumshop-layout > .wrapper > .products.begginers > .box > .learn-more{
+	width: 7.5vw;
+	height: 4vh;
+
+	background: rgba(0, 0, 0, .25);
+	border-radius: 10vw;
+	
+	margin-top: auto;
+	margin-left: auto;
+	margin-right: 8.5%;
+	margin-bottom: 8.5%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	transition: .33s ease-in-out;
+}
+
+
+.premiumshop-layout > .wrapper > .products.begginers > .box > .learn-more:hover{
+	background: rgba(0, 0, 0, .3);
+}
+
+.premiumshop-layout > .wrapper > .products.begginers > .box > .learn-more > p{
+	font-family: "Akrobat ExtraBold";
+	font-size: 1.7vh;
+}
+
+.premiumshop-layout > .wrapper > .products.begginers > .box > .buy{
+	background: #ffde2a;
+
+	width: 10.5vw;
+	height: 7.5vh;
+
+	margin-top: auto;
+	margin-right: auto;
+	margin-left: 5vw;
+	margin-bottom: 20%;
+
+	transform: skew(-8deg);
+
+	display: flex;
+	align-items: center;
+
+	padding-left: 2.5vw;
+
+	transition: .5s;
+}
+
+.premiumshop-layout > .wrapper > .products.begginers > .box > .buy:hover{
+	width: 11.5vw;
+}
+
+.premiumshop-layout > .wrapper > .products.begginers > .box > .buy > p{
+	color: #242424;
+	font-family: "Akrobat Black";
+	font-size: 2.25vh;
+}
+
+.premiumshop-layout > .wrapper > .products.begginers > .box > .buy > .price{
+	position: absolute;
+	margin-left: 4.5vw;
+	
+	height: 6vh;
+	width: 9vw;
+
+	transform: skew(8deg);
+	
+	background: linear-gradient(90deg, #282828, #343434, #282828);
+
+	border-radius: .35vw;
+
+	display: flex;
+	align-items: center;
+	gap: .6vw;
+	
+	padding: 1vh 1.5vw;
+	padding-bottom: 1.25vh;
+
+	transition: .5s;
+}
+
+.premiumshop-layout > .wrapper > .products.begginers > .box > .buy:hover > .price{
+	margin-left: 5vw;
+	opacity: .95;
+}
+
+.premiumshop-layout > .wrapper > .products.begginers > .box > .buy > .price > img{
+	width: 30px;
+	margin-top: .4vh;
+}
+
+.premiumshop-layout > .wrapper > .products.begginers > .box > .buy > .price > h1{
+	font-family: "Akrobat Black";
+	font-size: 3vh;
+}
+
+.premiumshop-layout > .wrapper > .products.begginers > .box > .buy > .price > h1 > span{
+	color: #5c5c5c;
+	font-size: 3vh;
+}
+
+/* Category: Prime */
+
+.premiumshop-layout > .wrapper > .products.prime{
+	position: absolute;
+	margin-left: 0;
+	margin-top: 0;
+	inset: 0;
+	
+	width: 100%;
+	height: 100%;
+
+	background-image: url(https://cdn.armylegends.ro/shop/primebg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.premiumshop-layout > .wrapper > .products.prime > .benefits{
+	position: absolute;
+	bottom: 19%;
+	
+	width: 30%;
+	height: 60%;
+
+	display: flex;
+}
+
+.premiumshop-layout > .wrapper > .products.prime > .benefits:not(.platinum){
+	left: 4.5%;
+}
+
+.premiumshop-layout > .wrapper > .products.prime > .benefits.platinum{
+	right: 1.5%;
+	height: 50%;
+	bottom: 26%;
+}
+
+.premiumshop-layout > .wrapper > .products.prime > .buy-layout{
+	position: absolute;
+	bottom: 10%;
+	
+	width: 31%;
+	height: 7.5%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+}
+
+.premiumshop-layout > .wrapper > .products.prime > .buy-layout:not(.platinum){
+	left: 4%;
+}
+
+.premiumshop-layout > .wrapper > .products.prime > .buy-layout.platinum{
+	right: 1%;
+	bottom: 17%;
+}
+
+.premiumshop-layout > .wrapper > .products.prime > .buy-layout > .buy{
+	width: 14vw;
+	height: 100%;
+	
+	background: #7fbefe;
+
+	border-radius: 10vw;
+
+	transition: .5s;
+
+	display: flex;
+	align-items: center;
+	padding: 0 2vw;
+}
+
+.premiumshop-layout > .wrapper > .products.prime > .buy-layout.platinum > .buy{
+	background: linear-gradient(90deg, #33b496, #5f52ff, #b94eff);
+}
+
+.premiumshop-layout > .wrapper > .products.prime > .buy-layout > .buy:hover{
+	width: 14.5vw;
+}
+
+.premiumshop-layout > .wrapper > .products.prime > .buy-layout > .buy > p{
+	color: #182143;
+	font-family: "Akrobat ExtraBold";
+	font-size: 2.25vh;
+}
+
+.premiumshop-layout > .wrapper > .products.prime > .buy-layout.platinum > .buy > p{
+	color: #fff;
+}
+
+.premiumshop-layout > .wrapper > .products.prime > .buy-layout > .buy > .price{
+	margin-left: auto;
+	
+	width: 7vw;
+	height: 65%;
+
+	background: linear-gradient(90deg, #292929, #343434, #292929);
+
+	border: .2vh solid #494949;
+	border-radius: 10vw;
+
+	display: flex;
+	align-items: center;
+	gap: .6vw;
+	
+	padding: 1vh 1vw;
+	padding-bottom: 1.25vh;
+}
+
+.premiumshop-layout > .wrapper > .products.prime > .buy-layout > .buy > .price > img{
+	width: 25px;
+	margin-top: .25vh;
+}
+
+.premiumshop-layout > .wrapper > .products.prime > .buy-layout > .buy > .price > h1{
+	font-family: "Akrobat Black";
+	font-size: 2vh;
+}
+
+.premiumshop-layout > .wrapper > .products.prime > .buy-layout > .buy > .price > h1 > span{
+	color: #5c5c5c;
+	font-size: 2.25vh;
+}
+
+.premiumshop-layout > .wrapper > .products.prime > .benefits > .col{
+	width: 50%;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	gap: 1vh;
+	padding-left: .5vw;
+}
+
+.premiumshop-layout > .wrapper > .products.prime > .benefits > .col > .benefit{
+	display: flex;
+	align-items: center;
+	gap: .8vw;
+	padding: 1vh;
+}
+
+.premiumshop-layout > .wrapper > .products.prime > .benefits:not(.platinum) > .col:first-of-type > .benefit > img{
+	width: 15px;
+	height: 13px;
+	margin-top: .15vh;
+}
+
+.premiumshop-layout > .wrapper > .products.prime > .benefits:not(.platinum) > .col:last-of-type > .benefit > img{
+	width: 15px;
+	height: 16px;
+	margin-top: .15vh;
+}
+
+.premiumshop-layout > .wrapper > .products.prime > .benefits:not(.platinum) > .col:last-of-type > .benefit > p{
+	color: #4e4e53;
+	font-weight: 600;
+}
+
+.premiumshop-layout > .wrapper > .products.prime > .benefits > .col > .benefit > p{
+	font-family: "Akrobat Light";
+	letter-spacing: .8px;
+}
+
+.premiumshop-layout > .wrapper > .products.prime > .benefits > .col > .benefit > p > span{
+	opacity: .5;
+	letter-spacing: 1px;
+}
+
+/* Category: Cars */
+
+.premiumshop-layout > .wrapper > .products.cars{
+	display: flex;
+	flex-direction: row;
+	gap: 2vw;
+	
+	width: 60%;
+}
+
+.premiumshop-layout > .wrapper > .products.cars > .grid{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 10px;
+	width: 100%;
+	height: 0;
+}
+
+.premiumshop-layout > .wrapper > .products.cars > .grid > .box{
+	width: 100%;
+	height: 265px;
+	background-size:100%;
+	background-position: center;
+	background-repeat: no-repeat;
+
+		
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+
+	padding: 0 2vw;
+	padding-bottom: 2.5vh;
+
+	border:1px solid #4493ff;
+	border-radius: 30px;
+}
+
+.premiumshop-layout > .wrapper > .products.cars > .grid > .box:hover{
+	border:2px solid #4493ff;
+	border-radius: 30px;
+
+	cursor: pointer;
+}
+
+
+.premiumshop-layout > .wrapper > .products.cars > .grid > .box > .buy{
+	display: flex;
+	align-items: center;
+	gap: .7vw;
+	background: linear-gradient(90deg, #282828, #343434, #272727);
+	border-radius: .25vw;
+	padding: 1.35vh 1.5vw;
+	transition: .33s ease-in-out;
+	box-shadow: 0 0 0 4.5px #28282850;
+}
+
+.premiumshop-layout > .wrapper > .products.cars > .grid > .box > .buy:hover{
+	box-shadow: 0 0 0 5.5px #23232385;
+}
+
+.premiumshop-layout > .wrapper > .products.cars > .grid > .box > .buy > img{
+	width: 30px;
+	margin-top: .5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.cars > .grid > .box > .buy > h1{
+	font-family: "Akrobat Black";
+	font-size: 3.5vh;
+}
+
+.premiumshop-layout > .wrapper > .products.cars > .grid > .box > .buy > h1 > span{
+	color: #5c5c5c;
+	font-size: 3.6vh;
+}

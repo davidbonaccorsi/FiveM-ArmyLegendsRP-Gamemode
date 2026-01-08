@@ -1,0 +1,30 @@
+<div class="bank-robbery">
+    <div class="robbery-interface" v-if="active">
+        <div class="timer">
+            <i class="fa-solid fa-clock"></i>
+            <p>{{time}}</p>
+        </div>
+    
+        <div class="list-wrapper">
+            <div class="title">JAF BANCA PACIFIC</div>
+    
+              <div class="item" v-for="(item, index) in actions">
+                  <div class="status" :class="{active: item.looted}"></div>
+                  <div class="text">{{item.text}}</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="robbery-alert center" style="display: none;">
+        <div class="alert-img">
+            <img src="https://cdn.armylegends.ro/elements/robbery.png" alt="">
+        </div>
+    
+        <div class="info-box">
+            <div class="box-content">
+                <div class="title">JAF IN DESFASURARE</div>
+                <div class="alert-text">A fost activata alarma bancii Pacific. Toate unitatile sunt rugate sa se deplaseze de urganta la locatia incidentului.</div>
+            </div>
+        </div>
+    </div>
+</div>

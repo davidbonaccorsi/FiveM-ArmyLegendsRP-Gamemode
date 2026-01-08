@@ -1,0 +1,183 @@
+.main-barbut, .barbut-flex {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.main-barbut {
+    position: absolute;
+    inset: 0;
+    
+    background: url(https://cdn.armylegends.ro/bg/barbutbg2.png) no-repeat;
+    background-size: 100% 100%;
+
+    font-family: "TT Norms";
+}
+
+.barbut-flex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.barbut-flex .score {
+    position: absolute;
+    bottom: 86px;
+    text-align: center;
+    font-size: 165px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    background: radial-gradient(50% 50.00% at 50% 50.00%, #FDE053 0%, rgba(253, 224, 83, 0.00) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.barbut-flex .score.score-player {
+    left: 387px;
+}
+.barbut-flex .score.score-enemy {
+    right: 387px;
+}
+
+
+.barbut-flex .dice {
+    position: absolute;
+    bottom: 470px;
+    width: 145px;
+    height: 145px;
+    background-image: url(../../public/dices/1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.barbut-flex .dice.dice-player {
+    left: 273px;
+}
+.barbut-flex .dice.dice-player.dice-two {
+    left: 460px;
+}
+
+.barbut-flex .dice.dice-enemy {
+    right: 272px;
+}
+.barbut-flex .dice.dice-enemy.dice-two {
+    right: 459px;
+}
+
+
+.barbut-flex .bet {
+    position: absolute;
+    top: 539px;
+    text-align: center;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.barbut-flex .help-button {
+    position: absolute;
+    top: 660px;
+    width: 215px;
+    height: 60px;
+    border-radius: 20px;
+    background: rgba(39, 174, 96, 0.10);
+    color: #27AE60;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    display: grid;
+    place-items: center;
+    /* cursor: pointer; */
+    transition: .232323s ease-in-out;
+}
+.barbut-flex .help-button:hover {
+    transform: translateY(-5px);
+}
+
+.barbut-flex .help-button.leave {
+    background: none;
+    color: #FF552A;
+    border: 2px solid #FF552A;
+}
+
+
+.barbut-flex .leave:not(.help-button) {
+    position: absolute;
+    bottom: 309px;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 85, 42, 0.65) 0%, rgba(255, 85, 42, 0.15) 90.63%, rgba(255, 85, 42, 0.09) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: .161616s ease-in-out;
+}
+.barbut-flex .leave:not(.help-button):hover {
+    opacity: .6;
+}
+
+
+.barbut-flex .start-game {
+    position: absolute;
+    top: 790px;
+    width: 238px;
+    height: 207px;
+    background: url(https://cdn.armylegends.ro/elements/startgame.webp) no-repeat;
+    background-size: 100% 100%;
+    transition: .232323s ease-in-out;
+    cursor: pointer;
+}
+
+.barbut-flex .start-game:hover {
+    opacity: .6;
+}
+
+
+.barbut-flex .player-tags {
+    position: absolute;
+    top: 117px;
+    height: 118px;
+    text-align: center;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    background: radial-gradient(50% 50.00% at 50% 50.00%, #FDE053 0%, rgba(253, 224, 83, 0.00) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+}
+
+
+.barbut-flex .win-feedback {
+    position: absolute;
+    bottom: 138px;
+    color: #FDE053;
+    text-align: center;
+    font-size: 75px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}

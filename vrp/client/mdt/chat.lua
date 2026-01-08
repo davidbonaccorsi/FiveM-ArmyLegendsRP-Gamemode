@@ -1,0 +1,11 @@
+RegisterNUICallback("chat:message", function(data, cb)
+    triggerCallback('addMdtChatMessage', function(chatData)
+        cb(chatData)
+    end, data)
+end)
+
+RegisterNUICallback('chat:set-messages', function(data, cb)
+    triggerCallback('getMDTMessages', function(chatData)
+        cb(chatData)
+    end)
+end)

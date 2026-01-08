@@ -1,0 +1,19 @@
+<div class="main-achievements" v-if="active">
+    <div class="achievements-flex" :style="{zoom: zoom}">
+        <div class="esc" @click="destroy()"></div>
+
+        <div class="welcome">Distractie placuta, {{username}}!</div>
+
+        <div :class="{'achievements-slots': true, rtl: getShownAchievements() > 8}">
+            <div :class="{unlocked: userAchievements[index] && userAchievements[index].completed}" v-for="(item, index) in achievements">
+                <div class="bg-image" :style="{'background-image': 'url(' + item.photo + ')'}"></div>
+                <div class="reward">+ ${{item.reward | formatnum}}</div>
+
+                <p>
+                    {{item.name}}
+                    <span>{{ formatString(item.desc, (userAchievements[index] && userAchievements[index].progress || 0) + '/' + item.task) }}</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

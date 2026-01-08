@@ -1,0 +1,43 @@
+.useful-keys {
+    position:absolute;
+    top:0;
+    left:0;
+    width:20%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    gap:1vh;
+    align-items:flex-start;
+    justify-content:center;
+    padding:0 1vw;
+    font-family:"Akrobat"
+}
+
+.useful-keys > .key {
+    display:flex;
+    align-items:center;
+    gap:1vw;
+    padding:1vh
+}
+
+.useful-keys > .key:nth-child(1) {
+    margin-top:2.5vh
+}
+
+.useful-keys > .key > i {
+    font-size:2.5910656620022vh;
+    width:25%
+}
+
+.useful-keys > .key > p {
+    border:3px solid rgba(255,255,255,0.521);
+    background:rgba(255,255,255,0);
+    border-radius:10vw;
+    font-size:.95em;
+    font-weight:700;
+    text-align:center;
+    width:1.75vw;
+    height:3vh;
+    padding:0;
+    line-height:2.25vh
+}

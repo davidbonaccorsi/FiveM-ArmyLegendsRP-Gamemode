@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300&family=Tangerine&display=swap');
+
+.fine {
+    background-color: white;
+    border: solid 2px rgb(51, 51, 51);
+    width: 750px;
+    position: absolute;
+    top: 55%;
+    right: 20px;
+    transform: translateY(-50%);
+    opacity: 0.9;
+    margin: 0;
+    
+    padding-inline: 10px;
+    padding: 0px 10px;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.fine header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 20px);
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.fine header .left {
+    display: flex;
+    align-items: center;
+    width: 42.5%;
+    justify-content: space-between;
+}
+
+.fine header .left .department {
+    font-weight: 600;
+    text-align: center;
+    color: black;
+}
+
+.fine header .left .title {
+    font-size: .8em;
+    text-align: center;
+    color: black;
+}
+
+.fine header .currentDate {
+    text-align: right;
+    font-size: .8em;
+    color: black;
+}
+
+.fine header .city {
+    font-weight: 600;
+    color: black;
+}
+
+.fine .category {
+    display: flex;
+    justify-content: space-between;
+    padding: 5.67px 12.15px 10.125px;
+}
+
+.fine .category .catType {
+    font-weight: bold;
+    color: black;
+}
+
+.fine .category fieldset {
+    flex: 0 0 27.5%;
+    display: flex;
+    align-items: center;
+    padding: 5.67px 12.15px 10.125px;
+}
+
+.fine .category fieldset.larger {
+    padding: 0.67px 9.15px 10.125px;
+}
+
+.fine .category fieldset.larger textarea {
+    border: 0;
+}
+
+.fine .category fieldset legend {
+    padding: 0px 2px;
+    color: black;
+}
+
+.fine .category fieldset div {
+    color: black;
+    font-family: 'Architects Daughter', cursive;
+}
+
+.fine .category fieldset div, .fine .category fieldset input, .fine .category fieldset textarea {
+    resize: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.fine .category fieldset input {
+    pointer-events: none;
+    padding: 1px 2px;
+}
+
+.fine .category fieldset input, .fine .category fieldset textarea {
+    resize: none;
+    text-align: left;
+}
+
+.fine .category fieldset button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.fine .category fieldset button.notSelected {
+    text-decoration: line-through;
+}
+
+.fine .category fieldset button:disabled {
+    cursor: none;
+    opacity: 1;
+    color: black;
+}
+
+.fine footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 10px;
+}
+
+.fine footer button {
+    background-color: transparent;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+    font-family: 'Architects Daughter', cursive;
+    transition: 1s all;
+
+    padding: 1px 6px;
+}
+
+.fine footer button:hover {
+    opacity: .5;
+}
+
+.fine footer fieldset {
+    padding: 10px;
+    text-align: right;
+    width: 50%;
+    margin-left: auto;
+}
+
+.fine footer fieldset legend {
+    color: black
+}
+
+.fine footer fieldset input {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Tangerine', cursive;
+    width: 100%;
+
+    pointer-events: none;
+    padding: 1px 2px;
+}
+
+.fine input, .fine textarea {
+    resize: none;
+    font-family: 'Architects Daughter', cursive;
+    color: black;
+}
+
+.fine input {
+    border-top: none;
+    border-inline: none;
+}
+
+.fine input:focus {
+    outline: none;
+}
+
+.fine textarea:focus {
+    outline: none;
+}

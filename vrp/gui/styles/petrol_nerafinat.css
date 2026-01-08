@@ -1,0 +1,29 @@
+
+.petrol-minigame {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+}
+.petrol-minigame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://cdn.armylegends.ro/bg/BG_JOB_petrol.png) no-repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+}
+
+.petrol-minigame .petrol-nerafinat{
+    width: 400px;
+    height: 400px;
+
+    background: url(https://cdn.armylegends.ro/elements/gastankilegalminigame.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 1000;
+
+}

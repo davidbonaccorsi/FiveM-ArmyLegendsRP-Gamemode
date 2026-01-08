@@ -1,0 +1,40 @@
+.key-press {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.7vh;
+}
+
+.key-press h1 {
+    font-family: 'Akrobat ExtraBold';
+    font-size: 1.6rem;
+    font-weight: 600;
+    transform: rotateY(25deg);
+}
+
+.key-press-progress {
+    width:50px!important;
+    height:45px!important;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    font-family: 'Akrobat ExtraBold';
+    font-weight: 600;
+    color: #ffffff !important;
+    font-size: 5vh;
+}
+
+.circle-progress-circle1{
+    stroke-width: 7px;
+    stroke: rgba(255, 255, 255, 0.493);
+}
+
+.circle-progress-value1 {
+    stroke-width: 7px;
+    stroke: #fff;
+}
+
+.circle-progress-text1 {
+    fill: #ffffff;
+}

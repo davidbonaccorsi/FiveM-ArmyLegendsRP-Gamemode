@@ -1,0 +1,11 @@
+RegisterNUICallback('create:warrant', function(data, callback)
+    triggerCallback('createWarrant', function(info)
+        callback(info)
+    end, data.warrant)
+end)
+
+RegisterNUICallback('delete:warrant', function(data, callback)
+    triggerCallback('deleteWarrant', function(info)
+        callback(info)
+    end, data.id)
+end)

@@ -1,0 +1,85 @@
+<html>
+  <body>
+    <!-- 
+     -- ==================== --
+     --      SCOREBOARD    --
+     -- ==================== --
+                                -->
+    
+    <div class="main-scoreboard">
+        <div class="scoreboard-flex">
+            <div class="close" @click="destroy()">
+                Inchidere
+                <div @click="destroy()">ESC</div>
+            </div>
+
+            <div class="scoreboard-header">
+                ArmyLegends
+                <img src="https://cdn.armylegends.ro/elements/logo1.png">
+                Roleplay
+            </div>
+
+            <div class="scoreboard-title">Statisticile contului</div>
+
+            <div class="scoreboard-stats">
+                <div>
+                    <p>Username:</p>
+                    {{name}}
+                </div>
+
+                <div>
+                    <p>Factiune:</p>
+                    {{faction}}
+                </div>
+
+                <div>
+                    <p>Ore jucate:</p>
+                    {{hoursPlayed}} ore
+                </div>
+
+                <div>
+                    <p>ID:</p>
+                    #{{user_id}}
+                </div>
+
+                <div>
+                    <p>Ore pe sesiune:</p>
+                    {{sessionTime}}
+                </div>
+
+                <div>
+                    <p>Warnuri:</p>
+                    {{warns}} / 3
+                </div>
+            </div>
+
+            <div class="scoreboard-player-block">
+                <div class="scoreboard-player-header">
+                    <div class="title">jucatori online</div>
+                    
+                    <div class="search-player">
+                        <input v-model="search" @keyup="refreshSearch" placeholder="Cauta dupa nume...">
+
+                        <div class="icon">
+                            <i class="fa-duotone fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scoreboard-players">
+                    <div class="scoreboard-players-list">
+                        <div :class="{Politie: player.faction == 'Politie', Smurd: player.faction == 'Smurd'}" v-for="player of filter">
+                            ID {{player.uid}}
+                            <div>
+                                <p>{{player.name}}</p>
+                                <span>{{player.faction}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+  </body>
+</html>

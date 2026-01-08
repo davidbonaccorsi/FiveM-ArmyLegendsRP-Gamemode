@@ -1,0 +1,331 @@
+{
+    "Locale": "en-US",
+    "ShowResultsMounted": true,
+    "MaxPerRequest": 15,
+    "MaxAutocomplete": 3,
+    "MaxSelected": 3,
+    "MaxHeight": 230,
+    "AlertNotification": {
+        "Enabled": false,
+        "WhileClosed": false
+    },
+    "Pages": [
+        { "id": "dashboard", "icon": "fa-solid fa-table-cells-large", "label": "Pagina Principala", "disabled": false },
+        { "id": "incidents", "icon": "fa-solid fa-shield-halved", "label": "Dosare Penale", "disabled": false },
+        { "id": "warrants", "icon": "fa-solid fa-folder-minus", "label": "Caziere", "disabled": false },
+        { "id": "evidences", "icon": "fa-solid fa-folder-open", "label": "Amenzi", "disabled": false },
+        { "id": "officers", "icon": "fa-solid fa-users", "label": "Politisti", "disabled": false },
+        { "id": "alerts", "icon": "fa-solid fa-mobile-screen", "label": "Alerte", "disabled": true },
+        { "id": "calls", "icon": "fa-solid fa-phone", "label": "Apeluri", "disabled": true },
+        { "id": "citizens", "icon": "fa-solid fa-address-card", "label": "Cetateni", "disabled": false },
+        { "id": "vehicles", "icon": "fa-solid fa-car", "label": "Vehicule", "disabled": false },
+        { "id": "houses", "icon": "fa-solid fa-house-chimney", "label": "Case", "disabled": true },
+        { "id": "fines", "icon": "fa-solid fa-money-bills", "label": "Lista Amenzi", "disabled": false },
+        { "id": "codes", "icon": "fa-solid fa-clipboard-list", "label": "Coduri", "disabled": false },
+        { "id": "charges", "icon": "fa-solid fa-user-ninja", "label": "Preset Inchisoare", "disabled": false },
+        { "id": "config", "icon": "fa-solid fa-cogs", "label": "Config", "disabled": false }
+    ],
+    "Colors": {
+	    "main": "#202128",
+	    "secondary": "#1c1d24",
+	    "mainlight": "#30313a",
+	    "secondarylight": "#22242a",
+	    "highlight": "#3e3f4b",
+	    "text": "#807f7f",
+	    "textdark": "#5d5d5d",
+	    "light": "#9e9e9e",
+	    "contrast": "#0e4ef0"
+    },
+    "Messages": {
+        "modal": {
+            "error": "A aparut o eroare, te rugam incearca din nou!",
+            "confirm": "Esti sigur ca vrei sa faci asta?",
+            "delete": "Ai sters cu success {{name}}!",
+            "deleted": "{{name}} a fost stearsa cu success!",
+            "choose": "Ce vrei sa faci cu aceasta {{name}}?",
+            "see": "Vrei să vezi asta {{type}}?"
+        },
+        "list": {
+            "no_results": "Nu s-au gasit rezultate"
+        },
+        "words": {
+            "error": "Eroare",
+            "success": "Success",
+            "close": "Inchide",
+            "cancel": "Cancel",
+            "confirm": "Confirm",
+            "none": "None",
+            "view": "Vizualizeaza",
+            "delete": "Sterge",
+            "exit": "Exit",
+            "months": "luni",
+            "details": "Detalii",
+            "name": "Nume",
+            "code_format": "Cod (d-ddd)",
+            "code": "Cod",
+            "amount": "Amount",
+            "codes": "Coduri",
+            "citizen": "Cetatenii",
+            "info": "Informatii",
+            "address": "Adresa",
+            "reason": "Motiv",
+            "starting": "Starting",
+            "createdAt": "Creat la",
+            "vehicle": "Vehicul",
+            "suspects": "Suspectii",
+            "evidence": "Dovada",
+            "evidences": "Dovezii",
+            "incident": "Incident",
+            "incidents": "Incidente",
+            "properties": "Proprietati",
+            "fines": "Amenda",
+            "fine": "Amenda",
+            "chat": "Chat",
+            "jail": "Inchisoare",
+            "owner": "Proprietar",
+            "brand": "Marca",
+            "search": "Cauta",
+            "house": "Casa",
+            "yes": "Da",
+            "no": "Nu",
+            "category": "Categorie",
+            "finished": "Terminat",
+            "warrant": "Mandat",
+            "warrants": "Mandate",
+            "vehicles": "Vehicule",
+            "license": "Licente",
+            "citizenid": "ID",
+            "forename": "Prenume",
+            "surname": "Nume",
+            "nationality": "Nationalitate",  
+            "description": "Descriere",
+            "cops": "Politisti",
+            "alerts": "Alerte",
+            "calls": "Apeluri",
+            "type": "Tip"
+        },
+        "notification": {
+            "error": "A aparut o eroare, va rog sa verificati toate casutele si sa incercati din nou!",
+            "chief_only": "Doar leaderul poate face aceasta actiune!"
+        },
+        "alert": {
+            "new": "Alerta noua!",
+            "label": "Alerta #{{id}}",
+            "take": "Locația alertei a fost setată la GPS",
+            "description": "Pentru a vedea alerta, deschideți tableta și intrați în pagina de alerte!"
+        },
+        "alerts": {
+            "title": "Alerts",
+            "description": "Vezi alertele politie in timp real!"
+        },
+        "calls": {
+            "title": "Apeluri",
+            "description": "Vezi apelurile politiei"
+        },
+        "jail": {
+            "title": "Inchisoare",
+            "description": "Cauta sau creaza un preset de inchisoare",
+            "search": "Cauta preseturi",
+            "time": "Timp (luni)",
+            "button": "Creaza",
+            "create": "Creaza un preset",
+            "notification_title": "Preset creat cu success",
+            "notification_description": "Ai creat cu succes presetul #{{id}}!"
+        },
+        "charge": {
+            "title": "Preset Inchisoare #{{id}}",
+            "description": "Poti edita acest document",
+            "notification_title": "Preset Inchisoare actualizat",
+            "notification_description": "Ai actualizat cu success Preset Inchisoare #{{id}}!"
+        },
+        "config": {
+            "title": "Configuration",
+            "description": "Change the look of the tablet to your liking!",
+            "reset": "Reset settings",
+            "confirm": "Are you sure you want to reset the settings?"
+        },
+        "codes": {
+            "title": "Coduri",
+            "description": "Cauta sau creaza un cod",
+            "create": "Creaza cod",
+            "search": "Cauta cod",
+            "unique": "Codul trebuie sa fie unic!",
+            "notification_title": "Cod creat",
+            "notification_description": "Ai creat cu success codul {{code}}!"
+        },
+        "fines": {
+            "title": "Lista Amenzi",
+            "description": "Cauta sau creaza un tip de amenda",
+            "create": "Creaza amenda",
+            "search": "Cauta o amenda",
+            "notification_title": "Amenda creata",
+            "notification_description": "Ai creat cu succes amenda #{{id}}!"
+        },
+        "fine": {
+            "title": "Amenda #{{id}}",
+            "description": "Poti edita acest document",
+            "notification_title": "Amenda actualizata",
+            "notification_description": "Ai actualizat cu succes amenda #{{id}}!"
+        },
+        "houses": {
+            "title": "Proprietati",
+            "description": "Cauta o proprietate dupa proprietar sau id",
+            "search": "Cauta case"
+        },
+        "vehicles": {
+            "title": "Vehicule",
+            "description": "Cauta o masina dupa numarul de inmatriculare sau id",
+            "search": "Cauta vehicule"
+        },
+        "vehicle": {
+            "title": "Vehicle",
+            "description": "Nu poti edita acest document",
+            "veh_description": "Descrierea vehiculului",
+            "change_image": "Schimba poza",
+            "changed": "Date schimbate cu success",
+            "notification_title": "Poza schinbata",
+            "notification_description": "Ai schimbat cu success aceasta poza!"
+        },
+        "officers": {
+            "title": "Politisti",
+            "description": "Vezi toti politisti online"
+        },
+        "warrants": {
+            "title": "Mandate",
+            "description": "Cauta mandate dupa id sau nume",
+            "search": "Cauta mandate",
+            "create": "Creaza un mandat",
+            "reason": "Motiv *",
+            "players": "Persoane implicate *",
+            "address": "Adresa *",
+            "type": "Tipul Mandatului *",
+            "search_type": "Mandat de cautare",
+            "arrest_type": "Mandat de arestare",
+            "start_time": "Incepe (zile) *",
+            "warrant_description": "Descriere Mandat *",
+            "notification_title": "Mandat creat",
+            "notification_description": "Ai creat mandatul cu numarul #{{id}}!"
+        },
+        "warrant": {
+            "title": "Mandat #{{id}}",
+            "description": "Nu poti edita acest document",
+            "mark": "Marcați ca terminat",
+            "players": "Persoane implicate",
+            "notification_title": "Mandat terminat",
+            "notification_description": "Ai marcat cu success acest mandat ca terminat!"
+        },
+        "dashboard": {
+            "code": "Cod ({{code}})",
+            "title": "Bine ai revenit, {{name}}",
+            "chat_message": "Scrie un mesaj.."
+        },
+        "evidence": {
+            "title": "Dovada #{{id}}",
+            "description": "Nu poti edita acest document"
+        },
+        "evidences": {
+            "title": "Dovezi",
+            "description": "Cauta dovezi dupa nume sau id",
+            "search": "Cauta dovezi",
+            "create": "Creaza o dovada",
+            "add_image": "Adauga imagine",
+            "players": "Persoane implicate *",
+            "image_link": "Link de la imagine (optional)",
+            "evidence_description": "Descrierea dovezi *",
+            "notification_title": "Dovada creata",
+            "notification_description": "Ai creat cu success dovada #{{id}}!"
+        },
+        "citizens": {
+            "title": "Cetatenii",
+            "description": "Cauta cetatenii dupa nume sau id",
+            "search": "Cauta cetatenii"
+        },
+        "citizen": {
+            "title": "Cetatean",
+            "description": "Poti vedea toate informatiile despre acest cetatean",
+            "change_image": "Schimba poza",
+            "wanted": "★ In Urmarire",
+            "person_description": "Descrierea persoanei",
+            "person_height": "Inaltimea persoanei",
+            "height_error": "You cannot set a height greater than {{height}}",
+            "data_success": "Date actualizate cu success!",
+            "photo_changed": "Poza schimbata",
+            "photo_changed_description": "Ai schimbat cu success aceasta poza!"
+        },
+        "incident": {
+            "title": "Incident #{{id}}",
+            "description": "Nu poti edita acest document",
+            "players": "Persoane implicate",
+            "cops": "Politisti implicati", 
+            "vehicles": "Vehicule implicate",
+            "evidences": "Dovezi implicate"
+        },
+        "incidents": {
+            "title": "Incidents",
+            "description": "Cauta incidentele unui cetatean dupa id sau nume",
+            "search": "Cauta incidente",
+            "create": "Creaza incident",
+            "players": "Persoane implicate *",
+            "cops": "Politisti implicati",
+            "vehicles": "Vehicule implicate",
+            "evidences": "Dovezii",
+            "fine_reduction": "Reducere amenda",
+            "jail_reduction": "Reducere inchisoare",
+            "incident_name": "Numele incidentului *",
+            "incident_description": "Descrierea incidentului *",
+            "notification_title": "Incident creat",
+            "notification_description": "Ai creat cu success incidentul #{{id}}!"
+        },
+        "colors": {
+            "main": "Main",
+            "secondary": "Secondary",
+            "mainlight": "Main (light)",
+            "secondarylight": "Secondary (light)",
+            "highlight": "Highlight",
+            "text": "Text",
+            "textdark": "Text (dark)",
+            "light": "Light",
+            "contrast": "Contrast"
+        },
+        "offline": {
+            "notification_title": "Jucator Offline",
+            "notification_description": "Jucatorul este offline!"
+        },
+        "takeapel": {
+            "notification_title": "Apel",
+            "notification_description": "Ai preluat cu succes acest apel!"
+        },
+        "apelpreluat": {
+            "notification_title": "Apel Preluat",
+            "notification_description": "Acest apel a fost deja preluat de alta persoana!"
+        },
+        "succescancel": {
+            "notification_title": "Apel Anulat",
+            "notification_description": "Ai anulat cu success acest apel!"
+        },
+        "cancelapel": {
+            "notification_title": "Erroare",
+            "notification_description": "Doar persoana care a acceptat acest apel il poate anula!"
+        },
+        "requestbackup": {
+            "notification_title": "Backup Request",
+            "notification_description": "Ai cerut cu success intariri!"
+        },
+        "cantrequestbackup": {
+            "notification_title": "Erroare",
+            "notification_description": "Doar persoana care a acceptat acest apel poate solicita intariri!"
+        },
+        "requestparamedic": {
+            "notification_title": "Paramedic Request",
+            "notification_description": "Ai solicitat cu succes asistenta paramedicilor!"
+        },
+        "cantrequestparamedic": {
+            "notification_title": "Erroare",
+            "notification_description": "Doar persoana care a acceptat acest apel poate solicita asistenta paramedicilor!"
+        },
+        "setLocation": {
+            "notification_title": "Locatie Setata",
+            "notification_description": "Locatia ti-a fost setata pe gps!"
+        }
+    }
+}

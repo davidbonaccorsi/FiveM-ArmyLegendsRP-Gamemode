@@ -1,0 +1,107 @@
+
+.hud-top-right-flex .beginner-quests {
+    margin-left: auto;
+    margin-top: 32px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    font-family: "TT Norms";
+    
+    transition: .232323s ease-in-out;
+}
+
+.hud-top-right-flex .beginner-quests .quest {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    margin-bottom: 17px;
+}
+
+.hud-top-right-flex .beginner-quests .quest:last-of-type {
+    margin-bottom: none;
+}
+
+.hud-top-right-flex .beginner-quests .quest > img {
+    width: 20px;
+    height: 20px;
+}
+
+.hud-top-right-flex .beginner-quests .quest p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    
+    text-align: right;
+
+    color: rgba(255, 255, 255, 0.35);
+
+    margin-right: 10px;
+}
+
+.hud-top-right-flex .beginner-quests .quest p.active {
+    color: #a1c9ff;
+}
+
+
+.hud-top-right-flex .beginner-quests .quest p > span {
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    color: #fff;
+}
+
+
+.beginner-complete {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    top: 150px;
+
+    animation: fadeIn 2s ease-in-out;
+
+    font-family: "TT Norms";
+}
+
+.beginner-complete img {
+    width: 60px;
+    height: 60px;
+
+    margin-bottom: 15px;
+}
+
+.beginner-complete p {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 25px;
+    
+    letter-spacing: .1px;
+}
+
+.beginner-complete p > span {
+    text-transform: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    max-width: 300px;
+
+    display: block;
+}
+
+.beginner-complete p span {
+    color: hsla(0, 0%, 100%, .6);
+}
+
+
+.beginner-complete p span > span {
+    color: hsla(0, 0%, 100%, .7);
+}

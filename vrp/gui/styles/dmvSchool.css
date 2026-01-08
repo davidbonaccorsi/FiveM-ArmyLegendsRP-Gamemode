@@ -1,0 +1,107 @@
+.dmv-layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://cdn.armylegends.ro/bg/bg_permis.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-family: "Akrobat";
+    display: none;
+}
+
+.dmv-layout > .wrapper{
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5vh;
+    
+}
+
+.dmv-layout > .wrapper > header{
+    display: flex;
+    flex-direction: column;
+    gap: .5vh;
+    align-items: center;
+    margin-top:8.55%;
+}
+
+.dmv-layout > .wrapper > header > h1{
+    font-family: "Akrobat ExtraBold";
+    font-size: 6em;
+}
+
+.dmv-layout > .wrapper > header > p{
+    font-size: 3em;
+    font-family: "Akrobat Bold";
+    border: 2.5px solid #ffffff20;
+    padding: 1.5vh 2vw;
+    border-radius: .45vw;
+}
+
+.dmv-layout > .wrapper > p{
+    font-family: "Akrobat Light";
+    letter-spacing: .5px;
+    font-size: 1.52em;
+    width: 40vw;
+    text-align: center;
+    opacity: .5;
+    line-height: 1.35;
+}
+
+.dmv-layout > .wrapper > .line{
+    width: 50%;
+    height: .5vh;
+    background: linear-gradient(90deg, transparent, #ffffff20, transparent);
+}
+
+.dmv-layout > .wrapper > .responses{
+    width: 50%;
+    height: 30%;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.dmv-layout > .wrapper > .responses > .item-layout{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    padding: 0 1.5vw;
+}
+
+.dmv-layout > .wrapper > .responses > .item-layout > .check{
+    height: 2.25vh;
+    width: 1.25vw;
+    border-radius: .25vw;
+    border: 2px solid #f8c647;
+    font-size: .65em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+}
+
+.dmv-layout > .wrapper > .responses > .item-layout > .check:not(.ok) > i{
+    display: none;
+}
+
+.dmv-layout > .wrapper > .responses > .item-layout > .check:hover{
+    background: #735fab60;
+}
+
+.dmv-layout > .wrapper > .responses > .item-layout > p{
+    background: #ffffff10;
+    padding: 1.5vh 1.5vw;
+    padding-right: 2vw;
+    border-radius: .3vw;
+    border: 2px solid rgba(255, 255, 255, .25);
+    letter-spacing: 1.2px;
+}

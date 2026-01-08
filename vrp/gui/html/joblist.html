@@ -1,0 +1,124 @@
+<div class="main-joblist" style="display: none;">
+    <div class="joblist-flex" :style="{zoom: zoom}">
+        <div class="wiki-btn" @click="window.invokeNative('openUrl', 'https://wiki.armylegends.ro');">WIKI SERVER</div>
+
+        <div class="job-list">
+            <div class="big">
+                <div class="tag"></div>
+                <img src="https://cdn.armylegends.ro/elements/Rectangle_111.webp">
+                <div class="title">MEDIC</div>
+                <div class="description">Un medic intervine rapid in situatii de urgenta, asigurandu-se ca fiecare persoana este in siguranta si primeste ingrijirea medicala de care are nevoie.</div>
+                <div class="action-btn" @click="window.invokeNative('openUrl', 'https://discord.gg/armylegendsrp');">DEPUNE APLICATIE</div>
+            </div>
+            <div class="big">
+                <img src="https://cdn.armylegends.ro/elements/Rectangle_110.webp">
+                <div class="title">TAXIMETRIST</div>
+                <div class="description">Transporta cetatenii orasului Los Santos dintr-un loc in altul si vei fi platit de catre acestia. Taxi galben si frumos, ori urci, ori mergi pe jos!</div>
+                <div class="action-btn" @click="setWaypoint('Taxi')">SETEAZA WAYPOINT</div>
+            </div>
+            <div class="big">
+                <div class="tag"></div>
+                <img src="https://cdn.armylegends.ro/elements/Rectangle_1209.webp">
+                <div class="title">POLITIST</div>
+                <div class="description">Politia se angajeaza sa mentina ordinea si securitatea cetatenilor, garantand un mediu sigur si protejat. Pentru ei, cetatenii orasului sunt pe primul loc.</div>
+                <div class="action-btn" @click="window.invokeNative('openUrl', 'https://discord.gg/armylegendsrp');">DEPUNE APLICATIE</div>
+            </div>
+            <div>
+                <div class="title">Taietor de iarba</div>
+                <div class="min-level">
+                    <div class="lvl-box">MIN. LEVEL 1</div>
+                </div>
+                <div class="description">Taie iarba sau aduna pietre si poti castiga atat bani cat si XP (mai mult sau mai putin, in functie de cate pietre aduni).</div>
+                <div class="action-btn" @click="setWaypoint('Taietor de iarba')">SETEAZA WAYPOINT</div>
+            </div>
+            <div>
+                <div class="title">Constructor</div>
+                <div class="min-level">
+                    <div class="lvl-box">MIN. LEVEL 25</div>
+                </div>
+                <div class="description">Executa fiecare lucrare primita si ajuta la infrumutesarea orasului, vei castiga bani frumosi, prin munca cinstita.</div>
+                <div class="action-btn" @click="setWaypoint('Constructor')">SETEAZA WAYPOINT</div>
+            </div>
+            <div>
+                <div class="title">Pilot Los Santos</div>
+                <div class="min-level">
+                    <div class="lvl-box">MIN. LEVEL 50</div>
+                </div>
+                <div class="description">Transporta cetatenii orasului dintr-un loc in altul si vei fi platit de catre acestia. Avion cu motor; ia-ma si pe mine in zbor!</div>
+                <div class="action-btn" @click="setWaypoint('Pilot Los Santos')">SETEAZA WAYPOINT</div>
+            </div>
+            <div>
+                <div class="title">Pilot Cayo Perico</div>
+                <div class="min-level">
+                    <div class="lvl-box">MIN. LEVEL 50</div>
+                </div>
+                <div class="description">Transporta cetatenii orasului dintr-un loc in altul si vei fi platit de catre acestia. Avion cu motor; ia-ma si pe mine in zbor!</div>
+                <div class="action-btn" @click="setWaypoint('Pilot Cayo Perico')">SETEAZA WAYPOINT</div>
+            </div>
+            <div>
+                <div class="title">Pilot Grapeseed</div>
+                <div class="min-level">
+                    <div class="lvl-box">MIN. LEVEL 50</div>
+                </div>
+                <div class="description">Transporta cetatenii orasului dintr-un loc in altul si vei fi platit de catre acestia. Avion cu motor; ia-ma si pe mine in zbor!</div>
+                <div class="action-btn" @click="setWaypoint('Pilot Grapeseed')">SETEAZA WAYPOINT</div>
+            </div>
+            <div>
+                <div class="title small-font">Culegator de portocale</div>
+                <div class="min-level">
+                    <div class="lvl-box">MIN. LEVEL 10</div>
+                </div>
+                <div class="description">Culege portocalele fermierului pentru a face loc altora sa creasca si vei fi recompensat pe masura muncii tale.</div>
+                <div class="action-btn" @click="setWaypoint('Culegator de portocale')">SETEAZA WAYPOINT</div>
+            </div>
+            <div>
+                <div class="title">Sofer de autobuz</div>
+                <div class="min-level">
+                    <div class="lvl-box">MIN. LEVEL 1</div>
+                </div>
+                <div class="description">Transporta cetatenii orasului dintr-un loc in altul si vei fi platit de catre acestia. Nu rata nici o statie, deoarece nu vrem intarzieri!</div>
+                <div class="action-btn" @click="setWaypoint('Sofer de autobuz')">SETEAZA WAYPOINT</div>
+            </div>
+            <div>
+                <div class="title">Pescar</div>
+                <div class="min-level">
+                    <div class="lvl-box">MIN. LEVEL 1</div>
+                </div>
+                <div class="description">Pescuitul este unul dintre cele mai relaxante sporturi recreative, iar noi ti-l punem la dispozitie pe server.</div>
+                <div class="action-btn" @click="setWaypoint('Pescar')">SETEAZA WAYPOINT</div>
+            </div>
+            <div>
+                <div class="title small-font">Curatator de strazi</div>
+                <div class="min-level">
+                    <div class="lvl-box">MIN. LEVEL 1</div>
+                </div>
+                <div class="description">Curata strazile pentru un oras mai frumos, un loc mai placut iti poate face ziua mai buna. Cu siguranta iti va placea sa faci asta!</div>
+                <div class="action-btn" @click="setWaypoint('Curatator de strazi')">SETEAZA WAYPOINT</div>
+            </div>
+            <div>
+                <div class="title">Mecanic</div>
+                <div class="min-level">
+                    <div class="lvl-box">MIN. LEVEL 1</div>
+                </div>
+                <div class="description">Repara sau tracteaza vehiculele cetatenilor din orasul nostru si castiga bani pentru pasiunea ta pentru automobile.</div>
+                <div class="action-btn" @click="setWaypoint('Mecanic')">SETEAZA WAYPOINT</div>
+            </div>
+            <div>
+                <div class="title">Vanator</div>
+                <div class="min-level">
+                    <div class="lvl-box">MIN. LEVEL 1</div>
+                </div>
+                <div class="description">Vaneaza animalele ca un vanator profesionist si vinde atat blana cat si carnea sau alte membre pentru bani.</div>
+                <div class="action-btn" @click="setWaypoint('Vanator')">SETEAZA WAYPOINT</div>
+            </div>
+            <div>
+                <div class="title small-font">Furnizor de stocuri</div>
+                <div class="min-level">
+                    <div class="lvl-box">MIN. LEVEL 1</div>
+                </div>
+                <div class="description">Alimenteaza magazinele din oras cu produse pentru un trai mai bun pentru toti cetatenii orasului.</div>
+                <div class="action-btn" @click="setWaypoint('Furnizor de stocuri')">SETEAZA WAYPOINT</div>
+            </div>
+        </div>
+    </div>
+</div>

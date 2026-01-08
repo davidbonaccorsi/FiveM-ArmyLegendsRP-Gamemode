@@ -1,0 +1,71 @@
+
+<div class="main-investments" v-if="active">
+    <div class="investments-flex" :style="{zoom: zoom}">
+        <div class="investments-body">
+            <div :class="{wrap: true, cooldown: cooldown}">
+                <div>
+                    <p class="price">$25,000</p>
+                    <div class="investment-footer">
+                        <p>1 ORE</p>
+                        <i @click="start(1)" class="start-investment fa-solid fa-circle-play"></i>
+                    </div>
+                </div>
+                <div>
+                    <p class="price">$35,000</p>
+                    <div class="investment-footer">
+                        <p>3 ORE</p>
+                        <i @click="start(2)" class="start-investment fa-solid fa-circle-play"></i>
+                    </div>
+                </div>
+                <div>
+                    <p class="price">$50,000</p>
+                    <div class="investment-footer">
+                        <p>5 ORE</p>
+                        <i @click="start(3)" class="start-investment fa-solid fa-circle-play"></i>
+                    </div>
+                </div>
+                <div>
+                    <p class="price">$75,000</p>
+                    <div class="investment-footer">
+                        <p>6 ORE</p>
+                        <i @click="start(4)" class="start-investment fa-solid fa-circle-play"></i>
+                    </div>
+                </div>
+                <div>
+                    <p class="price">$100,000</p>
+                    <div class="investment-footer">
+                        <p>8 ORE</p>
+                        <i @click="start(5)" class="start-investment fa-solid fa-circle-play"></i>
+                    </div>
+                </div>
+                <div>
+                    <p class="price">$125,000</p>
+                    <div class="investment-footer">
+                        <p>10 ORE</p>
+                        <i @click="start(6)" class="start-investment fa-solid fa-circle-play"></i>
+                    </div>
+                </div>
+                <div>
+                    <p class="price">$200,000</p>
+                    <div class="investment-footer">
+                        <p>12 ORE</p>
+                        <i @click="start(7)" class="start-investment fa-solid fa-circle-play"></i>
+                    </div>
+                </div>
+                <div>
+                    <p class="price">$250,000</p>
+                    <div class="investment-footer">
+                        <p>14 ORE</p>
+                        <i @click="start(8)" class="start-investment fa-solid fa-circle-play"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="active-investment" v-if="remaining">
+            <div :class="{fill: true, right: progress < 20}" :style="{width: progress + '%'}"></div>
+            <span>{{remaining}}<p>pana la pierdere</p></span>
+        </div>
+
+    </div>
+</div>

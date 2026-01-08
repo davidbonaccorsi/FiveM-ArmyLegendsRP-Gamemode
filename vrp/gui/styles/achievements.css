@@ -1,0 +1,239 @@
+.main-achievements, .achievements-flex {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.main-achievements {
+    position: absolute;
+    inset: 0;
+
+    background: url(https://cdn.armylegends.ro/bg/Achievments_Copy.webp) no-repeat;
+    background-size: 100% 100%;
+
+    font-family: "TT Norms";
+
+    z-index: 999;
+}
+
+
+.achievements-flex .esc {
+    position: absolute;
+    top: 45px;
+    right: 88px;
+    width: 133px;
+    height: 45px;
+    background: url(https://cdn.armylegends.ro/elements/esc.png) no-repeat;
+    background-size: 100% 100%;
+    transition: .232323s ease-in-out;
+    cursor: pointer;
+}
+.achievements-flex .esc:hover {
+    opacity: .5;
+}
+
+
+.achievements-flex .welcome {
+    position: absolute;
+    left: 293px;
+    top: 33px;
+    font-family: "Madinah Authentic";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    background: linear-gradient(to bottom right, #798CC2 0%, rgba(121, 140, 194, 0.30) 50%) bottom right / 50% 50% no-repeat, linear-gradient(to bottom left, #798CC2 0%, rgba(121, 140, 194, 0.30) 50%) bottom left / 50% 50% no-repeat, linear-gradient(to top left, #798CC2 0%, rgba(121, 140, 194, 0.30) 50%) top left / 50% 50% no-repeat, linear-gradient(to top right, #798CC2 0%, rgba(121, 140, 194, 0.30) 50%) top right / 50% 50% no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.achievements-flex .achievements-slots {
+    position: absolute;
+    top: 183px;
+    left: 248px;
+    max-width: calc(1440px);
+    max-height: 784px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 20px 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.achievements-flex .achievements-slots.rtl {
+    direction: rtl;
+    max-width: calc(1440px + 20px + 20px);
+    padding-left: 20px;
+}
+
+.achievements-flex .achievements-slots::-webkit-scrollbar {
+    width: 4px;
+}
+
+.achievements-flex .achievements-slots::-webkit-scrollbar-track {
+    border-radius: 0.25vw;
+    background: transparent;
+}
+
+.achievements-flex .achievements-slots::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #23232329;
+}
+
+.achievements-flex .achievements-slots > div {
+    position: relative;
+
+    width: 345px;
+    height: 382px;
+
+    background-image: url(https://cdn.armylegends.ro/elements/unlocked_achievement.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    direction: ltr;
+}
+
+.achievements-flex .achievements-slots > div:not(.unlocked) {
+    background-image: url(https://cdn.armylegends.ro/elements/locked_achievement.webp);
+}
+
+.achievements-flex .achievements-slots > div .bg-image {
+    position: absolute;
+    inset: 0;
+    width: 345px;
+    height: 154px;
+    background-image: url(https://cdn.armylegends.ro/bg/achivements_img.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100% /*cover*/;
+    border-radius: 19px 19px 0px 0px;
+}
+
+.achievements-flex .achievements-slots > div .reward {
+    position: absolute;
+    top: 130px;
+    left: 20px;
+    min-width: 140px;
+    padding: 0 12px;
+    height: 30px;
+    background-image: url(https://cdn.armylegends.ro/elements/Rectangle_120.webp);
+    background-repeat: no-repeat;
+    background-size: 100 100%;
+    display: grid;
+    place-items: center;
+    color: #FFF;
+    font-feature-settings: 'liga' off;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 100px;
+}
+
+.achievements-flex .achievements-slots > div:not(.unlocked) .reward {
+    background-image: url(https://cdn.armylegends.ro/elements/Rectangle_119.webp);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+.achievements-flex .achievements-slots > div > p {
+    position: absolute;
+    top: 171px;
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    width: 281px;
+}
+
+.achievements-flex .achievements-slots > div > p span {
+    display: block;
+    color: rgba(255, 255, 255, 0.40);
+    text-align: center;
+    font-feature-settings: 'liga' off;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.hud-top-right-flex .achievement-info {
+    position: relative;
+    right: -500px;
+    margin-top: 20px;
+
+    min-width: 360px;
+    min-height: 80px;
+    
+    border-radius: 10px;
+
+    background-image: url(https://cdn.armylegends.ro/elements/iapaluzoro.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding-right: 43px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.hud-top-right-flex .achievement-info.complete {
+    background-image: url(https://cdn.armylegends.ro/elements/iapaluzoro_green.webp);
+}
+
+.hud-top-right-flex .achievement-info > div:not(.state) {
+    margin-left: 92px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.hud-top-right-flex .achievement-info > div:not(.state) p {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    max-width: 222px;
+}
+
+.hud-top-right-flex .achievement-info > div:not(.state) p span {
+    display: block;
+    max-width: 222px;
+    color: #A1C9FF;
+    font-feature-settings: 'liga' off;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 3px;
+}
+
+.hud-top-right-flex .achievement-info .progress {
+    margin-top: 7px;
+    color: #FFF;
+    text-align: right;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.hud-top-right-flex .achievement-info .progress > span {
+    color: #7FB5FF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+} 

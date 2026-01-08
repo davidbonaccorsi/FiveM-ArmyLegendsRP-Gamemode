@@ -1,0 +1,67 @@
+@import url('https://fonts.cdnfonts.com/css/akrobat');
+
+.robbery-interface {
+    position: absolute;
+    top: 5%;
+    right: 25vw;
+    display: inline-flex;
+    gap: 25px;
+    font-family: "Akrobat";
+    font-weight: 600;
+    color: white;
+}
+
+.robbery-interface .timer {
+    margin-bottom: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.robbery-interface .timer i {
+    font-size: 1.6rem;
+    color: #ffd759;
+}
+
+.robbery-interface .timer p {
+    color: #ffd759; 
+    font-size: 1.2rem;
+}
+
+
+.robbery-interface .list-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    gap: 10px;
+}
+
+.robbery-interface .list-wrapper .title {
+    font-size: 1.2em;
+    margin-right: 29%;
+    text-transform: uppercase;   
+}
+
+.robbery-interface .list-wrapper .item {
+    display: flex;
+    gap: 10px;
+    justify-content: left;
+    align-items: left;
+    flex: 0 0 auto;
+}
+
+.robbery-interface .list-wrapper .item .status {
+    width: 1vw;
+    height: 1vw;
+    background-color: rgb(235, 102, 102);
+    border-radius: 50%;
+    border: 1px solid white;
+    transition: 1s all;
+}
+
+.robbery-interface .list-wrapper .item .status.active {
+    background-color: rgb(79, 211, 79) !important;
+    transition: 1s all;
+}

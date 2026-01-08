@@ -1,0 +1,16 @@
+
+<div class="main-discord-login" style="display: none;">
+    <div class="discord-login-flex" :style="{zoom: zoom}">
+        <div class="login-form">
+            <div>
+                <i class="fa-duotone fa-user"></i>
+            </div>
+        
+            <p>Nume de utilizator<span>{{username ? ('@' + username) : 'In curs de conectare...'}}</span></p>
+        
+            <i :class="{far: true, 'fa-circle-check': true, active: username}"></i>
+        </div>
+
+        <div class="sign-in" v-if="!username" @click="loginDiscord()">AUTENTIFICARE</div>
+    </div>
+</div>

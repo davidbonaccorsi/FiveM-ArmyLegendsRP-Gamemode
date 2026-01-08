@@ -1,0 +1,138 @@
+.faction-store-layout {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(50% 100% at 50% 50%, rgba(22, 21, 35, 0) 0%, rgba(22, 21, 35, .75) 100%);
+    cursor: none;
+    display: none
+}
+
+.faction-store-title {
+    top: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 70vw;
+    height: 14vh;
+    background: linear-gradient(to right, #2277fa01, #2277fa15, #2277fa20, #2277fa30, #2277fa35, #2277fa45, #2277fa35, #2277fa30, #2277fa20, #2277fa15, #2277fa01);
+    animation: -anim-faction-store-layout .5s
+}
+
+.faction-store-title.medicalshop {
+    background: linear-gradient(to right, #d5505c01, #d5505c15, #d5505c20, #d5505c30, #d5505c35, #d5505c45, #d5505c35, #d5505c30, #d5505c20, #d5505c15, #d5505c01)
+}
+
+.faction-store-title.medicalshop>h1 {
+    text-shadow: 0 0 55px #f50d2290, 0 0 20px #000
+}
+
+.faction-store-title>img {
+    width: 25vw;
+    height: 50vh;
+    margin-top: -2vh;
+    margin-right: auto
+}
+
+.faction-store-title>h1 {
+    font-family: "Akrobat Bold";
+    font-size: 4em;
+    text-shadow: 0 0 55px #2277fa90, 0 0 20px #000;
+    margin-right: 25.5%;
+    margin-top: -2vh
+}
+
+.faction-store-theFaction {
+    text-align: center;
+    top: 28%;
+    left: 55%;
+    opacity: .6
+}
+
+.faction-store-items-wrapper {
+    top: 63.5%;
+    width: 66%;
+    left: 52.5%;
+    height: 60%;
+    padding: .9vh .5vw;
+    animation: -anim-faction-store-layout .5s
+}
+
+.faction-store-items {
+    display: grid;
+    grid-template-columns: 0fr 0fr 0fr 0fr 0fr;
+    gap: 1.5%;
+    height: 49.5vh;
+    overflow-y: scroll
+}
+
+.faction-store-items::-webkit-scrollbar {
+    display: none
+}
+
+.faction-store-item {
+    width: 12vw;
+    height: 24vh;
+    background-color: #ffffff15;
+    border: 2px solid #ffffff10;
+    border-radius: .25vw;
+    padding: 1.5vh .78125vw;
+    text-align: center
+}
+
+.faction-store-item>img {
+    width: 65%
+}
+
+.faction-store-title>img.medical-shield {
+    margin-top: .1vh;
+    margin-left: 3.5vw;
+    width: 20%;
+    height: 18vh
+}
+
+.faction-store-item>.fs-item-amount {
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(to right, #ffffff01, #ffffff03, #ffffff05, #ffffff08, #ffffff10, #ffffff11, #ffffff12, #ffffff13, #ffffff14, #ffffff13, #ffffff12, #ffffff11, #ffffff10, #ffffff08, #ffffff05, #ffffff03, #ffffff01);
+    border: none;
+    border-radius: .2vw;
+    padding: .5vh;
+    font-family: "Akrobat Bold"
+}
+
+.faction-store-item>.fs-item-amount:focus {
+    outline: none
+}
+
+.faction-store-item>.fs-item-amount::-webkit-outer-spin-button,
+.faction-store-item>.fs-item-amount::-webkit-inner-spin-button {
+    margin: 0
+}
+
+.faction-store-item>.fs-item-buy {
+    margin-top: 1vh;
+    background: #2dcf7660;
+    border-radius: .15vw;
+    padding: .5vh;
+    transition: .3s
+}
+
+.faction-store-item>.fs-item-buy:hover {
+    background: #2dcf7620;
+    cursor: pointer;
+    transition: .3s
+}
+
+@keyframes -anim-faction-store-layout {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}

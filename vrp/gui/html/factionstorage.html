@@ -1,0 +1,12 @@
+<div class="main-factionstorage" :class="{pd: faction == 'Politie'}" v-if="active">
+    <div class="factionstorage-flex" :style="{zoom: zoom}">
+        <div class="storage-box">
+            <div class="storage-box-wrap">
+                <div v-for="(item, index) in items[faction]" @click="this.post('vrp:triggerServerEvent', ['police:getStorageItem', index, faction])">
+                    <img :src="'https://cdn.armylegends.ro/items/' + getCorrectImage(index) + '.webp'" draggable="false">
+                    <p>{{item.name}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  

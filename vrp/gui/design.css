@@ -1,0 +1,382 @@
+@import "https://fonts.cdnfonts.com/css/akrobat";
+@import "https://fonts.googleapis.com/css2?family=Poppins";
+@import "https://fonts.cdnfonts.com/css/technology";
+
+:root {
+    --prompt-blue: #a1c9ff;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    user-select: none;
+}
+
+::selection {
+    background: #ff6201;
+    color: #fff;
+}
+
+* {
+    color: rgb(255, 255, 255);
+}
+
+button{
+    font-family: "Akrobat";
+}
+
+body {
+    margin: 0px;
+    height: 100%;
+    font-size: 1.5vh;
+    font-family: "Akrobat";
+    padding: 3vh;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    /* background: rgba(0, 0, 0, 0.13); */
+    cursor: none;
+}
+
+.console {
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+
+
+.hud-bottom-right-flex .k-description {
+    align-self: flex-start;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 300px;
+    margin-top: 10px;
+    margin-right: 20px;
+    /* background: #34353a90; */
+    padding: 16px 26px;
+    /* position: absolute; */
+    transform: skew(-6deg, 0);
+}
+
+.hud-bottom-right-flex .k-description .wrap {
+    transform: skew(6deg, 0);
+    font-variant-ligatures: none;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "TT Norms";
+}
+
+.hud-bottom-right-flex .menu-main {
+    height: 430px;
+    width: 300px;
+    background-color: rgba(0, 163, 255, 0.2); /* 0.7 is 70% opacity */
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    outline: none !important;
+    margin-left: 20px;
+}
+
+.hud-bottom-right-flex .menu-main .choice-list {
+    width: 100%;
+    height: 100%;
+    /* padding-right: 12px; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: none !important;
+}
+
+.hud-bottom-right-flex .menu-main .choice-list::-webkit-scrollbar {
+    display: none;
+}
+
+.hud-bottom-right-flex .menu-main .choice-list::-webkit-scrollbar-thumb:window-inactive {
+    background: hsla(0, 0%, 100%, 0.085);
+}
+
+.hud-bottom-right-flex .menu-main .choice {
+    /* background-color: #34353a90; */
+    border: 2px solid #ffffff00;
+    border-radius: 10px;
+    transform: skew(-6deg, 0deg) translateX(-50%);
+    margin-bottom: 16px;
+    margin-left: 50%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    width: calc(100% - 15px);
+    min-height: 50px;
+}
+
+.hud-bottom-right-flex .menu-main .choice.active {
+    border-color: #fff;
+    border-radius: 2px;
+}
+
+.hud-bottom-right-flex .menu-main .choice:last-of-type {
+    margin-bottom: 0;
+}
+
+.hud-bottom-right-flex .menu-main .choice div {
+    transform: skew(6deg, 0deg);
+
+    transition: .232323s ease-in-out;
+    
+    text-transform: capitalize;
+    
+    display: flex;
+    align-items: center;
+
+    font-variant-ligatures: none;
+}
+
+.hud-bottom-right-flex .menu-main .choice div i {
+    margin-right: 10px;
+    color: hsla(0, 0%, 100%, .4);
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.full-scale {
+    width: 100%;
+    height: 100%;
+}
+
+
+.hud-dialog, .hud-prompt, .hud-selector {
+	position: absolute;
+	inset: 0;
+	
+    height: 100%;
+    width: 100%;
+
+	font-family: 'TT Norms';
+    z-index: 99999;
+    
+	background: radial-gradient(50% 90% at 50% 50%, rgba(23, 28, 28, .15) 0%, rgba(22, 21, 35, .30) 100%);
+	background-color: rgba(6, 14, 22, .85);
+
+    animation: fadeIn 0.2s linear;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dialog-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.dialog-flex .title {
+    font-size: 2.2vw;
+    font-variant-ligatures: none;
+    text-transform: capitalize;
+}
+
+.hud-selector .dialog-flex .title {
+    text-transform: none;
+}
+
+.dialog-flex p {
+    font-size: 1vw;
+    padding-bottom: 1vw;
+    padding-top: 1vw;
+    font-weight: 400;
+    max-width: 440px;
+    text-align: center;
+    line-height: 26px;
+}
+
+.hud-dialog .dialog-flex p {
+    font-variant-ligatures: none;
+}
+
+.dialog-flex p.prompt {
+    color: hsla(0, 0%, 100%, .5);
+}
+
+.dialog-flex .available-res {
+    width: 100%;
+    max-height: 540px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.dialog-flex .available-res div {
+    margin-bottom: 10px;
+    background: hsla(0, 0%, 100%, .05);
+    padding: 22px;
+    width: 100%;
+    max-width: 460px;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    transition: .232323s ease-in-out;
+}
+
+
+.dialog-flex .available-res div:hover {
+    color: #fff;
+    background: hsla(0, 0%, 100%, .1);
+}
+
+.dialog-flex .available-res div.active {
+    background: #a1c9ff;
+    color: #232323;
+}
+
+/* .dialog-flex .available-res */
+
+.dialog-flex .available-res::-webkit-scrollbar {
+    width: 0.2vw;
+}
+
+.dialog-flex .available-res::-webkit-scrollbar-track {
+    border-radius: 0.25vw;
+    background: rgba(255, 255, 255, 0.125);
+}
+
+.dialog-flex .available-res::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgb(230, 210, 136);
+}
+
+/* .dialog-flex .dialog-btns {
+    margin-top: 15px;
+    
+    display: flex;
+    gap: 0.1vw;
+} */
+.dialog-flex .dialog-btns {
+    margin-top: 15px;
+    display: flex;
+    gap: 0;
+}
+
+.hud-prompt .dialog-flex .dialog-btns, .hud-selector .dialog-flex .dialog-btns {
+    gap: 0.1vw;
+}
+
+.hud-dialog .dialog-flex .dialog-btns > div {
+    width: 230px;
+    height: 5vw;
+    font-size: 0.8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s ease-in-out;
+    border: 1px solid hsla(0, 0%, 100%, .2);
+    /* background: #ffffff10; */
+    border-radius: 2px;
+}
+
+.hud-prompt .dialog-flex .dialog-btns > div, .hud-selector .dialog-flex .dialog-btns > div {
+	width: 230px;
+	height: 3vw;
+
+	font-size: 0.8vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+	transition: background .2s;
+	background: #ffffff10;
+    border-radius: 2px;
+}
+
+.hud-prompt .dialog-flex .dialog-btns > div:hover, .hud-selector .dialog-flex .dialog-btns > div:hover {
+	background: #a1c9ff;
+    color: #232323;
+}
+
+.hud-dialog .dialog-flex .dialog-btns > div:first-of-type {
+    border-right: none;
+    background: #fff;
+    color: #232323;
+}
+.hud-dialog .dialog-flex .dialog-btns > div:first-of-type:hover {
+    cursor: pointer;
+    color: #23232350;
+}
+
+.hud-dialog .dialog-flex .dialog-btns > div:last-of-type {
+    border-left: none;
+}
+
+.hud-dialog .dialog-flex .dialog-btns > div:last-of-type:hover {
+    opacity: .3;
+}
+
+
+.dialog-flex input {
+    border: none;
+    background: rgba(97, 96, 96, 0.15);
+    width: 20vw;
+    height: 6vh;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 2vh;
+    font-family: "TT Norms";
+    color: rgb(255, 255, 255);
+    padding: 16px 1.5vw;
+    font-variant-ligatures: none;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.dialog-flex input:focus {
+    outline: none;
+}
+
+.dialog-flex input::-webkit-outer-spin-button, .dialog-flex input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0px;
+}
+
+
+/* .dialog-flex .dialog-btns > div.no:hover {
+    background: hsla(0, 0%, 100%, .15);
+} */
+
+.headbag {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: url(https://cdn.armylegends.ro/elements/headbag.jpg) no-repeat;
+    background-size: 100% 100%;
+    display: none;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}

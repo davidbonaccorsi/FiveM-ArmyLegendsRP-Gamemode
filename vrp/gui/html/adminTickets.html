@@ -1,0 +1,80 @@
+<div class="admin-tickets-layout" v-if="active">
+    <div class="wrapper center">
+
+        <header>
+            <div class="exit" @click="exit()">
+                <i class="bi bi-arrow-left"></i>
+            </div>
+
+            <p>{{page == 1 ? "CONTACTEAZĂ ECHIPA STAFF" : "LISTA CU TICKETELE DISPONIBILE"}}</p>
+        </header>
+
+        <!-- Create a Ticket -->
+        <div :class="{lists: true, hidden: page != 1}">
+
+            <div class="subjects">
+                <div @click="setSubject('Questions')" :class="{subject: true, selected: subject == 'Questions'}">
+                    <p>ÎNTREBARE</p>
+                </div>
+
+                <div @click="setSubject('Player report')" :class="{subject: true, selected: subject == 'Player report'}">
+                    <p>RAPORTEAZĂ UN JUCĂTOR</p>
+                </div>
+
+                <div @click="setSubject('Bug report')" :class="{subject: true, selected: subject == 'Bug report'}">
+                    <p>BUG REPORT</p>
+                </div>
+            </div>
+
+            <div class="data">
+                <textarea v-model="description" placeholder="Explica-ne problema aici . . ."></textarea>
+
+                <div class="confirm" @click="confirm()">
+                    <p>TRIMITE</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Admin Tickets List -->
+        <div :class="{lists: true, hidden: page != 2}">
+            <div class="tickets">
+
+                <div class="ticket" v-for="(data, uid) of tickets">
+            
+                    <div class="data">
+                        <header>
+                            <i class="bi bi-person"></i>
+                            <p>Jucător</p>
+                        </header>
+                
+                        <p>{{data.name}} ({{data.id}})</p>
+                    </div>
+                
+                    <div class="data">
+                        <header>
+                            <i class="bi bi-bookmark-star"></i>
+                            <p>Subiect</p>
+                        </header>
+                
+                        <p>{{data.subject}}</p>
+                    </div>
+                
+                    <div class="data">
+                        <header>
+                            <i class="bi bi-three-dots"></i>
+                            <p>Descriere</p>
+                        </header>
+                    
+                        <p>{{data.description}}</p>
+                    </div>
+
+                    <i class="bi bi-check2-circle take" @click="answer(data.id)"></i>
+                    <i class="bi bi-recycle skip" @click="skip(data.id)"></i>
+                </div>
+            </div>   
+        </div>
+    </div>
+</div>
+
+<div class="admintk-alert-layout"></div>

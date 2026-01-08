@@ -1,0 +1,91 @@
+
+.main-screenshot {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(25,32,38,.9);
+}
+
+.main-screenshot, .screenshot-flex {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.screenshot-flex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+
+.screenshot-flex > p {
+    font-family: "Akrobat ExtraBold";
+    text-transform: uppercase;
+    font-size: 60px;
+    text-align: center;
+
+    margin-top: 32px;
+}
+
+.screenshot-flex > p > span {
+    display: block;
+    margin-top: 5px;
+}
+
+.screenshot-flex > img {
+    max-width: 1280px;
+    margin-top: 60px;
+    border-radius: 6px;
+}
+
+
+
+.main-screenshot > .screenshot-flex > .close{
+	position: absolute;
+	right: 2.5vw;
+	top: 1.5vw;
+
+	display: flex;
+	align-items: center;
+	gap: 1vw;
+	
+	z-index: 1;
+}
+
+.main-screenshot > .screenshot-flex > .close > p{
+	font-family: "Akrobat ExtraBold";
+	color: #737374;
+	font-size: 1.8vh;
+	transition: .33s ease-in-out;
+}
+
+.main-screenshot > .screenshot-flex > .close:hover > p{
+	color: #ffffff99;
+}
+
+.main-screenshot > .screenshot-flex > .close > .key{
+	width: 2.1vw;
+	height: 2vw;
+	background: #777779;
+	border-radius: .25vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: .33s ease-in-out;
+}
+
+.main-screenshot > .screenshot-flex > .close:hover > .key{
+	background: #9c9c9f;
+}
+
+.main-screenshot > .screenshot-flex > .close > .key > p{
+	color: #212124;
+	font-family: "Akrobat ExtraBold";
+	font-size: 1.8
+}
+

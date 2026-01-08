@@ -1,0 +1,395 @@
+.main-auctions, .auctions-flex {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.main-auctions {
+    position: absolute;
+    inset: 0;
+
+    background: url(https://cdn.armylegends.ro/bg/Auctions2.png) no-repeat;
+    background-size: 100% 100%;
+
+    font-family: "TT Norms";
+
+    z-index: 999;
+}
+
+.auctions-flex {
+    align-items: center;
+    justify-content: center;
+}
+
+.auctions-flex .close {
+    position: absolute;
+    top: 50px;
+    right: 69.83px;
+
+    width: 194.168px;
+    height: 59.256px;
+
+    background: url(https://cdn.armylegends.ro/elements/esc.png) no-repeat;
+    background-size: 100% 100%;
+
+    transition: .232323s ease-in-out;
+}
+
+.auctions-flex .close:hover {
+    opacity: .6;
+}
+
+.auctions-flex .watchers {
+    position: absolute;
+    top: 144px;
+    left: 136px;
+
+    width: 307px;
+    height: 33px;
+
+    display: flex;
+    align-items: center;
+}
+
+.auctions-flex .watchers > div {
+    position: relative;
+
+    width: 37px;
+    height: 28px;
+
+    background: url(https://cdn.armylegends.ro/elements/watchers.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.auctions-flex .watchers > div::after {
+    content: attr(count);
+    position: absolute;
+    top: -5px;
+    left: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    padding: 4px 5px;
+    border-radius: 100px;
+    background: rgba(81, 184, 209, 0.50);
+    color: #EEE;
+    text-align: center;
+    font-feature-settings: 'liga' off;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: grid;
+    place-items: center;
+}
+
+.auctions-flex .watchers span {
+    margin-left: 18px;
+    font-feature-settings: 'liga' off;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: linear-gradient(8deg, rgba(255, 255, 255, 0.50) -79.58%, rgba(255, 255, 255, 0.00) 205.64%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+.auctions-flex .bid {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 432px;
+    height: 432px;
+
+    background: url(https://cdn.armylegends.ro/elements/Group_18.webp) no-repeat;
+    background-size: 100% 100%;
+}
+
+.auctions-flex .bid .last-bid {
+    color: rgba(255, 255, 255, 0.50);
+    text-align: center;
+    font-variant-ligatures: none;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.auctions-flex .bid .last-bid span {
+    display: block;
+    color: rgba(255, 255, 255, 0.70);
+    font-variant-ligatures: none;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.auctions-flex .bid .time-remaining {
+    margin-top: 32px;
+    color: #FFF;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+
+    transition: 1s all;
+}
+
+.auctions-flex .bid .time-remaining span {
+    display: block;
+    color: rgba(255, 255, 255, 0.50);
+    text-align: center;
+    font-variant-ligatures: none;
+    font-size: 20.5px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.auctions-flex .bid .winner {
+    margin-top: 26px;
+    color: #51B8D1;
+    text-align: center;
+    font-variant-ligatures: none;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.auctions-flex .last-bids {
+    position: absolute;
+    width: 422.076px;
+    height: 340px;
+    right: 60.92px;
+    top: 370px;
+    overflow: hidden;
+}
+
+.auctions-flex .last-bids > div {
+    width: 405px;
+    height: 60px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.10);
+    position: relative;
+    margin-bottom: 10px;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 20px;
+}
+
+.auctions-flex .last-bids > div:last-of-type {
+    margin-bottom: 0;
+}
+
+.auctions-flex .last-bids > div:nth-of-type(1) {
+    background: rgba(72, 137, 47, 0.10);
+}
+
+.auctions-flex .last-bids > div:nth-of-type(1)::after {
+    content: "";
+    position: absolute;
+    right: -8.6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 23.824px;
+    height: 27.247px;
+    background: url(https://cdn.armylegends.ro/elements/top1vector.webp) no-repeat;
+    background-size: 100%;
+}
+
+.auctions-flex .last-bids > div:nth-of-type(2) {
+    background: rgba(204, 174, 58, 0.10);
+}
+
+.auctions-flex .last-bids > div:nth-of-type(2)::after {
+    content: "";
+    position: absolute;
+    right: -8.6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 23.824px;
+    height: 27.247px;
+    background: url(https://cdn.armylegends.ro/elements/top2vector.webp) no-repeat;
+    background-size: 100%;
+}
+
+.auctions-flex .last-bids > div span {
+    margin: 0 11px;
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.auctions-flex .bid-image {
+    --url: url("https://cdn.armylegends.ro/bg/GTA_Online_-_12_15_2020_-_Taking_Down_El_Rubio_5.webp");
+    position: absolute;
+    top: 284px;
+    left: 116px;
+    width: 360px;
+    height: 180px;
+    background: var(--url) no-repeat;
+    background-size: 100% 100%;
+}
+
+.auctions-flex .set-position {
+    position: absolute;
+    top: 442px;
+    left: 454px;
+    width: 47px;
+    height: 47px;
+    border-radius: 100px;
+    background: #FFFFFF05;
+    display: grid;
+    place-items: center;
+}
+.auctions-flex .set-position:hover {
+    background: #FFFFFF26;
+}
+
+.auctions-flex .bid-title {
+    position: absolute;
+    top: 484px;
+    left: 79px;
+
+    width: 422.457px;
+    height: 109.366px;
+    background: url(https://cdn.armylegends.ro/elements/Group_34930.webp) no-repeat;
+    background-size: 100% 100%;
+
+    display: grid;
+    place-items: center;
+
+    color: #000;
+    text-align: center;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.25px;
+
+    z-index: 3;
+}
+
+.auctions-flex .bid-description {
+    position: absolute;
+    top: 570px;
+    left: 96px;
+    
+    width: 390px;
+    min-height: 100px;
+    padding: 29px 21px;
+    
+    background: linear-gradient(181deg, #51B8D1 -1533.59%, rgba(81, 184, 209, 0.00) 82.17%, rgba(81, 184, 209, 0.00) 82.17%);
+
+    color: rgba(255, 255, 255, 0.50);
+    text-align: center;
+    font-variant-ligatures: none;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.9px;
+}
+
+
+.auctions-flex .place-bid {
+    position: absolute;
+    top: 676px;
+    left: 96px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auctions-flex .place-bid p {
+    text-align: center;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.auctions-flex .place-bid > div {
+    margin-top: 10px;
+    width: 400px;
+    height: 70px;
+    background: url(https://cdn.armylegends.ro/elements/placebid.png) no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 11px;
+    color: #FFF;
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+    transition: .161616s ease-in-out;
+}
+
+.auctions-flex .place-bid > div:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+
+.auctions-flex .time-until-end {
+    position: absolute;
+    top: 883px;
+    left: 113px;
+    width: fit-content;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.auctions-flex .time-until-end img {
+    width: 31px;
+    height: 33px;
+    margin-right: 27px;
+}
+
+.auctions-flex .time-until-end p {
+    font-feature-settings: 'liga' off;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: linear-gradient(to bottom right, #FFF 0%, rgba(255, 255, 255, 0.89) 0%, rgba(255, 255, 255, 0.15) 50%) bottom right / 50% 50% no-repeat, linear-gradient(to bottom left, #FFF 0%, rgba(255, 255, 255, 0.89) 0%, rgba(255, 255, 255, 0.15) 50%) bottom left / 50% 50% no-repeat, linear-gradient(to top left, #FFF 0%, rgba(255, 255, 255, 0.89) 0%, rgba(255, 255, 255, 0.15) 50%) top left / 50% 50% no-repeat, linear-gradient(to top right, #FFF 0%, rgba(255, 255, 255, 0.89) 0%, rgba(255, 255, 255, 0.15) 50%) top right / 50% 50% no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.auctions-flex .time-until-end p > span {
+    display: block;
+    font-feature-settings: 'liga' off;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: linear-gradient(to bottom right, #51B8D1 0%, rgba(81, 184, 209, 0.89) 0%, rgba(81, 184, 209, 0.15) 50%) bottom right / 50% 50% no-repeat, linear-gradient(to bottom left, #51B8D1 0%, rgba(81, 184, 209, 0.89) 0%, rgba(81, 184, 209, 0.15) 50%) bottom left / 50% 50% no-repeat, linear-gradient(to top left, #51B8D1 0%, rgba(81, 184, 209, 0.89) 0%, rgba(81, 184, 209, 0.15) 50%) top left / 50% 50% no-repeat, linear-gradient(to top right, #51B8D1 0%, rgba(81, 184, 209, 0.89) 0%, rgba(81, 184, 209, 0.15) 50%) top right / 50% 50% no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type='text/javascript' src='jquery.js'></script>
+    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/88f408cb9c.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+<div class="spawn-wrapper">
+    <div class="map-wrapper">
+        <div class="spawn-markers">
+            <i class="fas fa-map-marker-alt Sbtn markerBtn mrpd tooltipped" data-position="top" data-tooltip="MRPD" data-location="mrpd" data-info="Mission Row Police Department"></i>
+            <i class="fas fa-map-marker-alt Sbtn markerBtn mirror tooltipped" data-position="top" data-tooltip="Davis PD" data-location="mirror" data-info="Davis PD"></i>
+            <i class="fas fa-map-marker-alt Sbtn markerBtn beach tooltipped" data-position="top" data-tooltip="Parking" data-location="beach" data-info="Parking"></i>
+            <i class="fas fa-map-marker-alt Sbtn markerBtn paleto tooltipped" data-position="top" data-tooltip="Sheriff HQ" data-location="paleto" data-info="Sheriff HQ"></i>
+            <i class="fas fa-map-marker-alt Sbtn markerBtn hospital tooltipped" data-position="top" data-tooltip="Hospital" data-location="hospital" data-info="Hospital"></i>
+            <i class="fas fa-map-marker-alt Sbtn markerBtn motel tooltipped" data-position="top" data-tooltip="Casino" data-location="motel" data-info="Casino"></i>
+        </div>
+        <button type="button" class="Sbtn lastLocation" data-location="last" data-info="Ultima ta locatie salvata"><i class="fas fa-map-marker-alt" ></i>Ultima locatie salvata</button>
+    </div>
+</div>
+<div class="spawn-box">
+    <div class="box-details">
+        <span class="spawn-name"></span>
+        <div class="spawn-buttons">
+            <button class="spawn-btn green spawnBtn" onclick="Spawn(this)"><i class="fas fa-map-marked-alt"></i>Spawneaza</button>
+            <button class="spawn-btn red" onclick="GoBack()"><i class="fas fa-exclamation-circle"></i>Inapoi</button>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>

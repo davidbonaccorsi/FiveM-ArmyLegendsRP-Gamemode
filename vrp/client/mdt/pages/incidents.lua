@@ -1,0 +1,11 @@
+RegisterNUICallback('create:incident', function(data, callback)
+    triggerCallback('createIncident', function(data)
+        callback(data)
+    end, data.incident)
+end)
+
+RegisterNUICallback('delete:incident', function(data, callback)
+    triggerCallback('deleteIncident', function(info)
+        callback(info)
+    end, data.id)
+end)

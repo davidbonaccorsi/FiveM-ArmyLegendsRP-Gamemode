@@ -1,0 +1,89 @@
+<div class="main-markets" v-show="active">
+    <div class="markets-flex" :style="{zoom: zoom}">
+
+        <div class="markets-header">
+            <div class="header-left">
+                <img src="https://cdn.armylegends.ro/markets/comment.svg">
+                <p>Bun venit !<span>{{name}}</span></p>
+            </div>
+            <div class="header-center">
+                <div class="search">
+                    <input type="text" @keyup="refreshSearch" v-model="search" placeholder="Cauta dupa nume...">
+                    
+                    <i class="far fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="buy">
+                    <div class="icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    Magazin {{gtype}}
+                </div>
+
+                <div class="balance">
+                    <span>$</span>
+
+                    {{balance | formatnum}}
+                </div>
+            </div>
+        </div>
+
+        <div class="markets-box">
+            <div class="categories">
+                <div :class="{category: true, active: category == active}" v-for="category of categories" @click="setCategory(category)">
+                    {{category}}
+                </div>
+            </div>
+
+            <div class="products-wrap">
+                <div class="products">
+                    <div :class="{product: true, 'no-stock': item.stock < 1}" v-for="(item, index) in filtered">
+                        <div class="stock" v-if="bizPos && item.stock > 0">Stock: {{item.stock}}</div>
+                        <div class="stock" v-else>{{!bizPos ? 'Stoc suficient' : 'Out of stock'}}</div>
+                        <div class="title">{{item.label}}</div>
+                        <div class="img">
+                            <img :src="'https://cdn.armylegends.ro/items/' + index + '.webp'">
+                        </div>
+
+                        <div class="info">
+                            <div class="buy" @click="buy(index)">Cumpara</div>
+                            <div class="price"><span>$</span>{{item.price | formatnum}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="main-market-biz" v-show="active">
+    <div class="market-biz-flex" :style="{zoom: zoom}">
+        <div class="profit">{{profit | formatnum}}$</div>
+        <div class="withdraw-profit" @click="withdraw()">RETRAGE PROFIT</div>
+        <div class="sell-biz" @click = "sellMarket()">VINDE-TI MAGAZINUL</div>
+        <div class="market-items">
+            <div v-for="(item, index) in items">
+                <div class="item-details">
+                    <img :src="'https://cdn.armylegends.ro/items/' + index + '.webp'">
+                    <p>{{item.label}}</p>
+                    <span>{{item.biz_price}}$/buc</span>
+                </div>
+                <div class="buy" @click="setOverlay(true, item, index)">COMANDA</div>
+            </div>
+        </div>
+
+        <div class="buy-overlay" v-show="overlay">
+            <div class="quantity to-show">
+                <input type="number" @keyup="getCost" v-model="overlay.model" placeholder="Cantitate">
+            </div>
+            <div class="cost to-show" style="display: none;">{{cost | formatnum}}$</div>
+            
+            <div class="confirmations to-show">
+                <i class="far fa-circle-check" @click="buy()"></i>
+                <i class="far fa-circle-x" @click="setOverlay(false)"></i>
+            </div>
+        </div>
+    </div>
+</div>

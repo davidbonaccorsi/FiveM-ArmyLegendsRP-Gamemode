@@ -1,0 +1,122 @@
+
+/* Hud Speedometer */
+
+.hud-speedometer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "TT Norms";
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin-bottom: -30px;
+}
+.hud-speedometer svg {
+    position: absolute;
+}
+
+.hud-speedometer svg path {
+    transition: .5s all;
+}
+
+.hud-speedometer .speedo-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.hud-speedometer .speedo-center .speed {
+    font-size: 58px;
+    font-weight: 500;
+    display: flex;
+    gap: 0;
+}
+
+.hud-speedometer .speedo-center .speed > span {
+    color: hsla(0, 0%, 100%, .3);
+    /* transition: .232323s ease-in-out; */
+}
+
+.hud-speedometer .speedo-right {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 15px;
+}
+
+.hud-speedometer .odometer {
+    /* background: #ffffff20; */
+    color: hsla(0, 0%, 100%, .4);
+	
+    font-weight: 500;
+    font-size: 14px;
+	
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hud-speedometer .icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 2.5px;
+}
+
+.hud-speedometer .icons i {
+    transition: .232323s;
+}
+
+.hud-speedometer i.sbt:not(.good) {
+    animation: blinkSeatbelt 2.5s infinite;
+}
+
+.hud-speedometer i.good {
+    color: #A5DC30;
+}
+.hud-speedometer i.electric.good {
+    color: #30aedc;
+}
+
+.hud-speedometer i.sbt.good {
+    background: -webkit-linear-gradient(#eee, #8cdc30);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+}
+
+.hud-speedometer i.warning {
+    color: #c5b356;
+}
+.hud-speedometer i.bad {
+    color: #c55f56;
+}
+
+@keyframes blinkSeatbelt {
+    0% {
+        opacity: 1;
+        color: #c55f56;
+    }
+
+    25% {
+        opacity: .5;
+        color: #fff;
+    }
+
+    50% {
+        opacity: 1;
+        color: #c55f56;
+    }
+
+    75% {
+        opacity: .5;
+        color: #fff;
+    }
+
+    100% {
+        opacity: 1;
+        color: #c55f56;
+    }
+}

@@ -1,0 +1,690 @@
+
+.main-dealership, .dealership-flex {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.main-dealership {
+  position: absolute;
+  inset: 0;
+
+  background: url(https://cdn.armylegends.ro/bg/showroom.png) no-repeat;
+  background-size: 100% 100%;
+
+  font-family: "TT Norms";
+}
+
+.main-dealership::after {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  content: "";
+
+  background: url(https://cdn.armylegends.ro/bg/showroom.png) no-repeat;
+  background-size: 100% 100%;
+
+  opacity: 0;
+  z-index: -1;
+}
+
+.dealership-flex {
+  padding: 60px;
+  padding-bottom: 80px;
+  z-index: 1;
+}
+
+.dealership-flex .dealership-left {
+  width: 400px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.dealership-flex .dealership-left .stats {
+  margin-top: 202px;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 200px;
+  width: 100%;
+}
+
+.dealership-flex .dealership-left .stats > div {
+  display: flex;
+  align-items: center;
+
+  margin-top: 32px;
+}
+
+.dealership-flex .dealership-left .stats > div:last-of-type {
+  margin-top: none;
+}
+
+.dealership-flex .dealership-left .stats > div .icon {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 100px;
+  border: 1px solid #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dealership-flex .dealership-left .stats > div .icon img {
+  width: 22.5px;
+  height: 22.5px;
+}
+
+
+.dealership-flex .dealership-left .stats > div .icon.smaller img {
+  width: 16.5px;
+  height: 16.5px;
+}
+
+.dealership-flex .dealership-left .stats > div:nth-of-type(3) .icon.smaller img {
+  width: 19px;
+  height: 12px;
+}
+
+.dealership-flex .dealership-left .stats > div:nth-of-type(4) .icon.smaller img {
+  width: 13.5px;
+  height: 14.5px;
+}
+
+.dealership-flex .dealership-left .stats > div > div {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 26px;
+  margin-left: 15px;
+}
+
+.dealership-flex .dealership-left .stats > div > div .title {
+  font-size: 16px;
+  font-weight: 400;
+  color: #aeadaf;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.dealership-flex .dealership-left .stats > div > div .subtitle {
+  display: flex;
+  align-items: flex-end;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.dealership-flex .dealership-left .stats > div > div .subtitle > span, .dealership-flex .dealership-left .stats > div > div .title > span {
+  font-size: 10px;
+  font-weight: 500;
+  color: #aeadaf;
+  margin-left: 6px;
+}
+
+
+.dealership-flex .dealership-left .buy {
+  margin-top: auto;
+
+  display: flex;
+  flex-direction: column;
+  
+  margin-left: 20px;
+}
+
+.dealership-flex .dealership-left .buy .b-acts {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  margin-top: 20px;
+}
+
+.dealership-flex .dealership-left .buy .b-testdrive {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: .025em;
+
+  transition: color .161616s ease-in-out;
+
+  margin-left: 20px;
+}
+
+.dealership-flex .dealership-left .buy .b-testdrive:hover {
+  color: #1f83f6;
+}
+
+.dealership-flex .dealership-left .buy .b-buy {
+  width: 142px;
+  height: 42px;
+
+  background-color: #1f83f6;
+  box-shadow: 0 0 6px 0 rgba(31, 88, 246, 0.46), 0 0 40px 0 rgba(31, 63, 246, 0.46);
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  letter-spacing: .035em;
+  
+  transition: .212121s ease-in-out;
+}
+
+.dealership-flex .dealership-left .buy .b-buy:hover {
+  box-shadow: 0 0 6px 0 rgba(31, 124, 246, 0.16), 0 0 40px 0 rgba(31, 70, 246, 0.26);
+  opacity: .85;
+  letter-spacing: initial;
+}
+
+
+.dealership-flex .dealership-left .buy .header {
+  display: flex;
+  align-items: center;
+}
+
+
+.dealership-flex .dealership-left .buy .header .icon {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 100px;
+  border: 1px solid #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.dealership-flex .dealership-left .buy .header > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 24px;
+  margin-left: 15px;
+}
+
+.dealership-flex .dealership-left .buy .header > div:nth-of-type(2) .title {
+  font-size: 16px;
+  font-weight: 400;
+  color: #aeadaf;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.dealership-flex .dealership-left .buy .header > div:nth-of-type(2) .subtitle {
+  display: flex;
+  align-items: flex-end;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+.dealership-flex .dealership-right {
+  width: 400px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-left: auto;
+}
+
+.dealership-flex .dealership-right .header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 20px;
+}
+
+.dealership-flex .dealership-right .header .title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.dealership-flex .dealership-right .header .balance {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  margin-top: 6px;
+}
+
+.dealership-flex .dealership-right .header .balance .icon {
+  width: 32px;
+  height: 32px;
+
+  background-color: #1f83f6;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dealership-flex .dealership-right .header .balance .icon > i {
+  font-size: 16px;
+}
+
+.dealership-flex .dealership-right .header .balance > p {
+  margin-right: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: .025em;
+  opacity: .75;
+}
+
+.dealership-flex .dealership-right .header .balance > p > span {
+  margin-left: 5px;
+  color: #5c5e73;
+}
+
+.dealership-flex .dealership-right .helpers {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  height: 60px;
+  margin-top: 20px;
+  padding-right: 20px;
+}
+
+.dealership-flex .dealership-right .helpers .search {
+  height: 40px;
+  /* width: 250px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+}
+
+.dealership-flex .dealership-right .helpers .search > input {
+  background: none;
+  border: none;
+  outline: none !important;
+
+  font-family: "TT Norms";
+  font-size: 20px;
+
+  width: 65%;
+  margin-right: 10px;
+
+  color: rgba(255, 255, 255, .65);
+
+  text-align: right;
+}
+
+.dealership-flex .dealership-right .helpers .search > input::placeholder {
+  font-family: "TT Norms";
+  font-size: 20px;
+  color: hsla(0,0%,99%,.6);
+}
+
+
+.dealership-flex .dealership-right .helpers .search .icon {
+  width: 32px;
+  height: 32px;
+
+  background-color: #1f83f6;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dealership-flex .dealership-right .helpers .search .icon > i {
+  font-size: 16px;
+}
+
+.dealership-flex .dealership-right .class-selector {
+  padding-right: 20px;
+  margin-top: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.dealership-flex .dealership-right .class-selector .icon {
+  margin-right: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 100px;
+  border: 1px solid #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.dealership-flex .dealership-right .class-selector .icon:hover {
+  border-color: #1f83f6;
+}
+.dealership-flex .dealership-right .class-selector .icon:hover > i {
+  color: #1f83f6;
+}
+
+.dealership-flex .dealership-right .class-selector .icon:last-of-type {
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+.dealership-flex .dealership-center {
+  width: calc(100% - 400px - 400px);
+  height: 100px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  margin-top: auto;
+}
+
+.dealership-flex .dealership-center .color {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+
+  margin-left: 10px;
+
+  transition: .161616s ease-in-out;
+
+  background-color: var(--color);
+}
+
+.dealership-flex .dealership-center .color.active {
+  height: 70px;
+}
+
+.dealership-flex .dealership-center .color:hover {
+  padding: 6px;
+  box-shadow: 0 0 0 5.5px var(--color-25);
+}
+
+.dealership-center .color.gray {
+  --color: rgb(57, 54, 53);
+  --color-25: rgba(57, 54, 53, 0.145);
+}
+.dealership-center .color.white {
+  --color: rgb(255, 255, 255);
+  --color-25: rgba(255, 255, 255, 0.145);
+}
+.dealership-center .color.red {
+  --color: rgb(230, 46, 45);
+  --color-25: rgba(230, 46, 45, 0.145);
+}
+.dealership-center .color.orange {
+  --color: rgb(241, 145, 47);
+  --color-25: rgba(241, 145, 47, 0.145);
+}
+.dealership-center .color.blue {
+  --color: rgb(64, 73, 227);
+  --color-25: rgba(64, 73, 227, 0.145);
+}
+.dealership-center .color.purple {
+  --color: rgb(201, 49, 226);
+  --color-25: rgba(201, 49, 226, 0.145);
+}
+.dealership-center .color.yellow {
+  --color: rgb(232, 213, 43);
+  --color-25: rgba(232, 213, 43, 0.145);
+}
+.dealership-center .color.green {
+  --color: rgb(66, 200, 42);
+  --color-25: rgba(66, 200, 42, 0.145);
+}
+.dealership-center .color.cyan {
+  --color: rgb(50, 184, 215);
+  --color-25: rgba(50, 184, 215, 0.145);
+}
+.dealership-center .color.pink {
+  --color: rgb(216, 55, 130);
+  --color-25: rgba(216, 55, 130, 0.145);
+}
+
+.dealership-flex .dealership-center .color:first-of-type {
+  margin-left: none;
+}
+
+.dealership-flex .dealership-right .vehicles-list {
+  height: -webkit-fill-available;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-right: 32px;
+  margin-top: 45px;
+}
+
+.dealership-flex .dealership-right .vehicles-list::-webkit-scrollbar {
+  width: 4px;
+}
+.dealership-flex .dealership-right .vehicles-list::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+.dealership-flex .dealership-right .vehicles-list::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #1f83f6;
+}
+.dealership-flex .dealership-right .vehicles-list::-webkit-scrollbar-thumb:window-inactive {
+  background: #1f58f690;
+}
+
+.dealership-flex .dealership-right .vehicles-list .vehicle:first-of-type {
+  margin-top: 0;
+}
+
+.dealership-flex .dealership-right .vehicles-list .vehicle{
+  padding: 5px 22px;
+  padding-right: 26px;
+  max-width: 400px;
+  margin-top: 20px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+
+  opacity: .6;
+
+  transition: .232323s ease-in-out;
+}
+
+.dealership-flex .dealership-right .vehicles-list .vehicle::before {
+  position: absolute;
+  content: "\e343";
+  right: 0;
+
+  width: 3px;
+  height: 50%;
+
+  background-color: hsla(0,0%,99%,.05);
+  border-radius: 1px;
+
+  font-family: "Font Awesome 6 Pro";
+  font-size: 19px;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.dealership-flex .dealership-right .vehicles-list .vehicle.active, 
+.dealership-flex .dealership-right .vehicles-list .vehicle:hover {
+  opacity: 1;
+}
+
+.dealership-flex .dealership-right .vehicles-list .vehicle > img {
+  width: 165px;
+  height: 165px;
+  transform: rotate(5deg);
+}
+
+.dealership-flex .dealership-right .vehicles-list .vehicle > div:not(.price) {
+  font-size: 16px;
+  font-variant-ligatures: none;
+  /* letter-spacing: .05em; */
+}
+
+.dealership-flex .dealership-right .vehicles-list .vehicle > .price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 10px;
+
+  font-size: 22px;
+  font-weight: 400;
+}
+
+
+
+.dealership-flex .dealership-right .vehicles-list .vehicle .icon {
+  width: 26px;
+  height: 26px;
+
+  border-radius: 100px;
+  border: 1px solid #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  margin-right: 10px;
+}
+
+/* .dealership-flex .dealership-right .vehicles-list .vehicle > .icon {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 24px;
+  margin-left: 15px;
+} */
+
+/* test drive */
+
+.main-testdrive {
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translateX(-50%);
+  bottom: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  font-family: "TT Norms";
+
+  z-index: -1;
+}
+
+.main-testdrive .bg {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+  
+  background: url(https://media.discordapp.net/attachments/1041010030918508565/1041098692213616702/unknown.png) no-repeat;
+  background-size: 100% 100%;
+
+  /* z-index: -1; */
+}
+
+.main-testdrive .wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  padding-bottom: 40px;
+}
+
+.main-testdrive .title {
+  font-size: 16px;
+  color: #fff;
+  text-shadow: 0 0 0 15px #fff;
+  font-weight: 500;
+  font-variant-ligatures: none;
+  letter-spacing: .025em;
+  z-index: 1;
+}
+
+.main-testdrive .subtitle {
+  font-size: 12px;
+  font-weight: 400;
+  font-variant-ligatures: none;
+  color: hsla(0, 0%, 100%, .4);
+  z-index: 1;
+}
+
+.main-testdrive .wrap .data {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+
+.main-testdrive .wrap .data div {
+  min-width: 120px;
+  padding: 9px 20px;
+  border: 1px solid #fff;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: .025em;
+  opacity: .8;
+}
+
+.main-testdrive .wrap .data div:last-of-type {
+  opacity: .45;
+}
+

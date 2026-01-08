@@ -1,0 +1,663 @@
+
+.main-markets, .markets-flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.main-markets {
+    position: absolute;
+    inset: 0;
+
+    background-color: hsl(266, 14%, 10%);
+
+    font-family: "TT Norms";
+}
+
+.markets-flex {
+    flex-direction: column;
+
+    padding-top: 40px;
+    
+    padding-right: 100px;
+    padding-left: 100px;
+
+    z-index: 5;
+}
+
+.markets-flex .markets-header {
+    height: 100px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.markets-flex .markets-header .header-left {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.markets-flex .markets-header .header-left img {
+    width: 34px;
+    height: 33px;
+}
+
+.markets-flex .markets-header .header-left p {
+    font-size: 16px;
+    font-weight: 400;
+    font-variant-ligatures: none;
+    margin-left: 20px;
+}
+
+.markets-flex .markets-header .header-left p span {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.markets-flex .markets-header .header-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.markets-flex .markets-header .header-center .search {
+    width: 405px;
+    height: 60px;
+    background-color: #1d1c23;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.markets-flex .markets-header .header-center .search input {
+    font-family: "TT Norms";
+    font-size: 14px;
+    /* transform: skew(-6deg, 0); */
+    font-weight: 400;
+    color: hsla(0, 0%, 100%, .3);
+    background: none;
+    border: none;
+    outline: none !important;
+    width: 80%;
+}
+
+.markets-flex .markets-header .header-center .search input::placeholder {
+    font-family: "TT Norms";
+    font-size: 14px;
+    /* transform: skew(-6deg, 0); */
+    font-weight: 400;
+    color: hsla(0, 0%, 100%, .3);
+}
+
+
+.markets-flex .markets-header .header-center .search i {
+    color: hsla(0, 0%, 100%, .4);
+    font-size: 18px;
+    margin-left: auto;
+}
+
+.markets-flex .markets-header .header-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.markets-flex .markets-header .header-right .buy {
+    background: linear-gradient(90deg, #e0596d, #b9182f);
+    border-radius: 100px;
+    height: 60px;
+    padding: 0 40px;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    /* text-indent: 45%; */
+    font-weight: 600;
+    transition: padding .23232s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 24px 9px -1px rgb(214 70 91 / 2%), 0px 0 30px 0 rgb(214 70 91 / 30%);
+    /* text-align: center; */
+}
+
+.markets-flex .markets-header .header-right .buy:hover {
+    padding-right: 35px;
+}
+
+.markets-flex .markets-header .header-right .buy .icon {
+    height: 100%;
+    width: 60px;
+    background-color: #d63b4f;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-indent: 0;
+    margin-right: 20px;
+}
+
+.markets-flex .markets-header .header-right .buy .icon > i {
+    font-size: 20px;
+}
+
+.markets-flex .markets-header .header-right .balance {
+    height: 60px;
+    padding: 0 24px;
+    background: linear-gradient(90deg, #26252f, #3a393f);
+    box-shadow: 14px 6px 5px 10px rgb(255 255 255 / 0.5%), 14px 6px 25px 10px rgb(255 255 255 / 2%);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.markets-flex .markets-header .header-right .balance span {
+    color: #65c763;
+    font-size: 16px;
+    margin-right: 5px;
+    font-weight: 400;
+}
+
+
+.markets-flex .markets-box {
+    height: -webkit-fill-available;
+    width: 100%;
+    margin-top: 35px;
+    display: flex;
+}
+
+.markets-flex .markets-box .categories {
+    width: 240px;
+    height: 100%;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.markets-flex .markets-box .categories .category {
+    position: relative;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    border-radius: 100px;
+    transition: all .5s ease-in-out, box-shadow 0s, width 0s, height 0s;
+    /* background: red; */
+    overflow: hidden;
+    font-variant-ligatures: none;
+    font-weight: 500;
+    letter-spacing: .015em;
+    font-size: 18px;
+    padding-left: 50px;
+    cursor: pointer;
+    /* text-indent: 15%; */
+}
+
+.markets-flex .markets-box .categories .category::before {
+    content: "\f290";
+    height: 60px;
+    width: 60px;
+    background-color: #26252f;
+    font-size: 18px;
+    font-family: "Font Awesome 6 Pro";
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-right: 20px; */
+    /* text-indent: 0; */
+    position: absolute;
+    left: 0;
+    font-style: normal;
+    font-weight: 900;
+}
+
+.markets-flex .markets-box .categories .category:hover::before, .markets-flex .markets-box .categories .category.active::before {
+    background-color: #d63b4f;
+}
+
+
+.markets-flex .markets-box .categories .category:last-of-type {
+    margin-bottom: 0;
+}
+
+.markets-flex .markets-box .categories .category:hover,
+.markets-flex .markets-box .categories .category.active {
+    margin-left: 26px;
+    background: linear-gradient(90deg, #e0596d, #d63b4f);
+    box-shadow: 0px 24px 9px -1px rgb(214 70 91 / 2%), 0px 0 30px 0 rgb(214 70 91 / 30%), 20px 15px 30px rgb(214 70 91 / 30%), 0 60px 40px 20px rgb(214 70 91 / 06%);
+    /* text-indent: 6%; */
+}
+
+
+.markets-flex .markets-box .products-wrap {
+    width: calc(100% - 318px - 52px);
+    height: 100%;
+    margin-left: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 100px;
+}
+
+
+.markets-flex .markets-box .products-wrap::-webkit-scrollbar {
+    width: 4px;
+}
+.markets-flex .markets-box .products-wrap::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+.markets-flex .markets-box .products-wrap::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: hsla(0, 0%, 100%, .2);
+}
+.markets-flex .markets-box .products-wrap::-webkit-scrollbar-thumb:window-inactive {
+    background: hsla(0, 0%, 100%, .2);
+}
+
+.markets-flex .markets-box .products-wrap .products {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 30px 10px;
+    padding-left: 40px;
+}
+
+.markets-flex .markets-box .products-wrap .product {
+    width: 285px;
+    position: relative;
+
+    /* box-shadow: 0 0 60px 0 #f6ff8b20; */
+}
+
+.markets-flex .markets-box .products-wrap .product .stock {
+    position: absolute;
+    top: 25px;
+    right: -10px;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 12px;
+    background: #c74256;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-variant-ligatures: none;
+    box-shadow: 0px 24px 9px -1px rgb(214 70 91 / 2%), 0px 0 30px 0 rgb(214 70 91 / 30%), inset -11px 15px 20px 0px rgb(214 70 91 / 30%), 0 20px 20px 20px rgb(214 70 91 / 6%);
+}
+.markets-flex .markets-box .products-wrap .product.no-stock .stock {
+    background: #939393;
+    box-shadow: 0px 24px 9px -1px rgb(147 147 147 / 2%), 0px 0 30px 0 rgb(147 147 147 / 30%), inset -11px 15px 20px 0px rgb(147 147 147 / 30%), 0 20px 20px 20px rgb(147 147 147 / 6%);
+}
+
+.markets-flex .markets-box .products-wrap .product .img {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #24222699;
+    border-radius: 10px;
+}
+.markets-flex .markets-box .products-wrap .product.no-stock .img img {
+    filter: grayscale(1);
+}
+
+.markets-flex .markets-box .products-wrap .product .img img {
+    width: 145px;
+    height: 145px;
+    opacity: .95;
+}
+
+
+.markets-flex .markets-box .products-wrap .product .title {
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 8px;
+    position: relative;
+    width: fit-content;
+}
+/* .markets-flex .markets-box .products-wrap .product .title::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    z-index: 1;
+    bottom: 5px;
+    background: linear-gradient(to top, #963446, #e2445b);
+} */
+
+
+.markets-flex .markets-box .products-wrap .product .info {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.markets-flex .markets-box .products-wrap .product .info .buy {
+    background: linear-gradient(to top, #8b3142, #c74256);
+    border-radius: 8px;
+    box-shadow: 0px 24px 9px -1px rgb(214 70 91 / 2%), 0px 0 30px 0 rgb(214 70 91 / 30%), 20px 15px 30px rgb(214 70 91 / 30%), 0 60px 40px 20px rgb(214 70 91 / 06%);
+    width: 180px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: .025em;
+    cursor: pointer;
+    transition: all .232323s ease-in-out, box-shadow 0s;
+}
+
+.markets-flex .markets-box .products-wrap .product.no-stock .info .buy {
+    background: linear-gradient(to top, #747273, #939393);
+    box-shadow: 0px 24px 9px -1px rgb(147 147 147 / 2%), 0px 0 30px 0 rgb(147 147 147 / 30%), 20px 15px 30px rgb(147 147 147 / 30%), 0 60px 40px 20px rgb(147 147 147 / 06%);
+    pointer-events: none;
+}
+
+.markets-flex .markets-box .products-wrap .product .info .buy:hover {
+    opacity: .85;
+}
+
+.markets-flex .markets-box .products-wrap .product .info .price {
+    margin-left: auto;
+    height: 55px;
+    width: calc(285px - 180px - 10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #e2445b;
+    background: linear-gradient(to top, #c5415585, #c5415590);
+    border-radius: 8px;
+    box-shadow: 0px 24px 9px -5px rgb(214 70 91 / 2%), 0px 0 30px 0 rgb(214 70 91 / 30%), -0px 15px 30px rgb(214 70 91 / 30%), 0 60px 40px 20px rgb(214 70 91 / 6%);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .025em;
+}
+
+.markets-flex .markets-box .products-wrap .product.no-stock .info .price {
+    background: linear-gradient(to top, #93939385, #93939390);
+    box-shadow: 0px 24px 9px -5px rgb(147 147 147 / 2%), 0px 0 30px 0 rgb(147 147 147 / 30%), -0px 15px 30px rgb(147 147 147 / 30%), 0 60px 40px 20px rgb(147 147 147 / 6%);
+    border: 2px dashed #aeadad;
+}
+
+.markets-flex .markets-box .products-wrap .product .info .price > span {
+    margin-right: 2.5px;
+}
+
+
+/* marketBiz.css */
+
+.main-market-biz, .market-biz-flex {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.main-market-biz {
+    position: absolute;
+    inset: 0;
+
+    background: url(https://cdn.armylegends.ro/bg/Group_1482.png) no-repeat;
+    background-size: 100% 100%;
+
+    font-family: "TT Norms";
+}
+
+.market-biz-flex .profit {
+    position: absolute;
+    left: 903px;
+    bottom: 160px;
+    color: #DFB58B;
+    font-family: "TT Norms";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.market-biz-flex .withdraw-profit {
+    position: absolute;
+    left: 1005px;
+    bottom: 90px;
+    font-family: "TT Norms";
+    font-size: 16px;
+    color: #eee;
+    font-weight: 500;
+    width: fit-content;
+    padding: 0 18px;
+    height: 60px;
+    background: #DFB58B;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: grid;
+    place-items: center;
+    transition: .232323s ease-in-out;
+}
+
+.market-biz-flex .withdraw-profit:hover {
+    box-shadow: 0 0 0 5px #DFB58B20;
+}
+
+.market-biz-flex .market-items {
+    position: absolute;
+    max-width: 1618px;
+    max-height: 637px;
+    left: 149px;
+    top: 112px;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 21px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-right: 20px;
+}
+
+.market-biz-flex .market-items::-webkit-scrollbar {
+    width: 4px;
+}
+.market-biz-flex .market-items::-webkit-scrollbar-track {
+    background: rgb(255 255 255 / 10%);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+.market-biz-flex .market-items::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #DFB58B40;
+}
+
+.market-biz-flex .market-items > div {
+
+    position: relative;
+
+    width: 300px;
+    height: 300px;
+
+    background: url(https://cdn.armylegends.ro/elements/marketitembg.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.market-biz-flex .market-items > div .buy {
+    position: absolute;
+    right: -5px;
+    bottom: -15px;
+    width: 116px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    background: #DFB58B;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #FFF;
+    text-align: center;
+    font-family: "TT Norms";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.market-biz-flex .market-items > div .buy {
+    transition: .232323s ease-in-out;
+}
+
+.market-biz-flex .market-items > div .buy:hover {
+    opacity: .8;
+    background: #dd9e60;
+    cursor: pointer;
+}
+
+.market-biz-flex .market-items > div {
+    display: grid;
+    place-items: center;
+}
+
+.market-biz-flex .market-items > div .buy {
+    transition: .232323s ease-in-out;
+}
+
+.market-biz-flex .market-items > div .buy:hover {
+    opacity: .8;
+    background: #dd9e60;
+    cursor: pointer;
+}
+
+.market-biz-flex .market-items > div .item-details {
+    width: 220px;
+    height: 180px;
+    text-align: center;
+}
+
+.market-biz-flex .market-items > div .item-details img {
+    width: 143px;
+    height: 143px;
+}
+
+.market-biz-flex .market-items > div .item-details p {
+    color: #DFB58B;
+    font-family: "TT Norms";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.market-biz-flex .market-items > div .item-details span {
+    color: #FFF;
+    font-family: "TT Norms";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.market-biz-flex .buy-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://cdn.armylegends.ro/bg/New_business_-_buy.png) no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.market-biz-flex .buy-overlay .quantity {
+    margin-top: 403px;
+    width: 472px;
+    height: 123px;
+    border-radius: 100px;
+    background: hsla(30, 57%, 71%, .05);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    padding: 0 20px;
+}
+.market-biz-flex .buy-overlay .quantity > input {
+    background: none;
+    outline: none !important;
+    border: none;
+    font-family: "TT Norms";
+    font-size: 32px;
+    text-align: center;
+    color: #fff;
+}
+.market-biz-flex .buy-overlay .quantity > input::placeholder {
+    color: hsla(0, 0%, 100%, .15);
+    font-family: "TT Norms";
+}
+
+.market-biz-flex .buy-overlay .quantity > input[type=number]::-webkit-inner-spin-button,
+.market-biz-flex .buy-overlay .quantity > input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.market-biz-flex .buy-overlay .cost {
+    color: #DFB58B;
+    text-align: center;
+    text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.45);
+    font-family: TT Norms;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-top: 40px;
+    backdrop-filter: blur(2px);
+}
+
+.market-biz-flex .buy-overlay .confirmations {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    z-index: 3;
+    backdrop-filter: blur(5px);
+    width: 20px;
+    height: 20px;
+}
+
+.market-biz-flex .buy-overlay .confirmations i {
+    font-size: 32px;
+    cursor: pointer;
+    transition: .232323s ease-in-out;
+}
+
+.market-biz-flex .buy-overlay .confirmations i:hover {
+    color: hsla(0, 0%, 100%, .2);
+    transform: translateY(-3px);
+}
+
+.market-biz-flex .buy-overlay .confirmations i:last-of-type {
+    color: #ef6060;
+}
+
+.market-biz-flex .buy-overlay .confirmations i:last-of-type:hover {
+    color: #ef606020;
+}

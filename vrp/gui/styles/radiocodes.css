@@ -1,0 +1,21 @@
+
+.hud-top-right .radio-codes {
+    margin-right: 100px;
+    position: relative;
+}
+
+.hud-top-right .radio-codes.smurd {
+    width: 254px;
+    height: 295px;
+    
+    background: url(https://cdn.armylegends.ro/elements/Coduri_Smurd.webp) no-repeat;
+    background-size: 100% 100%;
+}
+
+.hud-top-right .radio-codes.politie {
+    width: 254px;
+    height: 530px;
+
+    background: url(https://cdn.armylegends.ro/elements/Coduri_PD.webp) no-repeat;
+    background-size: 100% 100%;
+}

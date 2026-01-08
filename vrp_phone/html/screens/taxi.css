@@ -1,0 +1,133 @@
+
+.phone-layout > .taxi{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1.5vh;
+    
+    padding-top: 2.5vh;
+
+    backdrop-filter: blur(10px);
+}
+
+.phone-layout > .taxi.visible{
+    display: flex;
+    animation: fadeIn 1.5s;
+}
+
+.phone-layout > .taxi > .map{
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+    
+    background-image: url(https://cdn.armylegends.ro/elements/taxiMap.png);
+    background-position: center;
+    background-size: 105% 120%;
+    
+    z-index: -1;
+    opacity: .8;
+}
+
+
+.phone-layout > .taxi > header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+        padding-right: 1.25vw;
+    padding-left: 1.5vw;
+}
+
+.phone-layout > .taxi > header > p{
+    font-family: "Akrobat Light";
+    font-size: 3vh;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.phone-layout > .taxi > header > .actions{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    gap: .5vw;
+}
+
+.phone-layout > .taxi > header > .actions > .btn{
+    padding: 1.45vh .95vw;
+    border-radius: .75vw;
+    background: #ffffff20;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .15s ease-in-out;
+}
+
+.phone-layout > .taxi > header > .actions > .btn:hover{
+    background: #ffffff30;
+}
+
+.phone-layout > .taxi > .box{
+    width: 100%;
+    height: 100%;
+    
+    border-radius: 1vw;
+    opacity: .9;
+
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-layout > .taxi > .box > img{
+    width: 100%;
+    height: 51%;
+    margin-top: auto;
+}
+
+.phone-layout > .taxi > .box > .fly{
+    margin-top: -15%;
+    
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: center;
+    
+    gap: 2vh;
+    padding: 12vh 9vh;
+    border-radius: .5vw;
+    backdrop-filter: blur(10px);
+
+    background-image: url(https://cdn.armylegends.ro/elements/phonelayouttaxibox.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.phone-layout > .taxi > .box > .fly > img{
+    width: 80px;
+}
+
+.phone-layout > .taxi > .box > .fly > .text{
+    display: flex;
+    flex-direction: column;
+    gap: .25vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-layout > .taxi > .box > .fly > .text > p{
+    font-family: "Akrobat Bold";
+    font-size: 3.5vh;
+}
+
+.phone-layout > .taxi > .box > .fly > .text > p:nth-of-type(2){
+    color: #ecc655;
+}

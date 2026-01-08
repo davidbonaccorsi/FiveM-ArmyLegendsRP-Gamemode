@@ -1,0 +1,84 @@
+<div class="main-statistics" v-if="active">
+    <div class="statistics-flex" :style="{zoom: zoom}">
+        <div class="esc" @click="destroy()"></div>
+
+        <div class="top-players">
+            <div v-for="(player, index) in top">
+                <span>{{index + 1}}</span>
+                <p>{{player.username}} ({{player.id}})</p>
+                <div>{{Math.floor(player.hoursPlayed)}} (de) ore</div>
+            </div>
+        </div>
+
+        <div class="statistics-body">
+            <div class="statistics-body-header">
+                <div class="header-flex">
+                    <div class="title">{{username}} ({{id}}) <span>Aici poti vedea un sumar al contului tau.</span></div>
+                    <div class="playtime">Esti conectat de {{playtime}}</div>
+                </div>
+            </div>
+
+            <div class="statistics-body-content">
+                <div class="group">
+                    <div>
+                        {{id}}
+                        <span>ID</span>
+                    </div>
+                    <div>
+                        {{hours}}
+                        <span>Ore jucate</span>
+                    </div>
+                    <div>
+                        {{weekHours}}
+                        <span>Ore saptamanale</span>
+                    </div>
+                    <div>
+                        {{warns}}/3
+                        <span>Warnuri</span>
+                    </div>
+                    <div>
+                        {{bans}}
+                        <span>Banuri</span>
+                    </div>
+                    <div>
+                        {{investments}}
+                        <span>Investitii</span>
+                    </div>
+                    <div>
+                        {{houses}}
+                        <span>Case</span>
+                    </div>
+                    <div>
+                        {{markets}}
+                        <span>Magazine</span>
+                    </div>
+                    <div>
+                        {{countVehicles()}}
+                        <span>Vehicule</span>
+                    </div>
+                    <div>
+                        {{prime ? 'Da' : 'Nu'}}
+                        <span>Prime</span>
+                    </div>
+                    <div>
+                        {{doubleXp ? 'Da' : 'Nu'}}
+                        <span>Double XP</span>
+                    </div>
+                    <div>
+                        {{level}}
+                        <span>Level</span>
+                    </div>
+                </div>
+                <div class="group" v-show="countVehicles() > 0">
+                    <div class="vehicles-list">
+                        <div v-for="(name, model) in vehicles">
+                            <img :src="'https://cdn.armylegends.ro/vehicles/' + model + '.webp'" onerror="this.src='https://cdn.armylegends.ro/inventory/noimg.svg'" class="vehicle">
+                            <p>{{truncateText(name, 23)}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

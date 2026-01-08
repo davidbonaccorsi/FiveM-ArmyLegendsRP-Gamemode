@@ -1,0 +1,316 @@
+
+<div class="faction-menu-wrapper" v-if="active">
+    <div class="menu-wrapper center">
+       <header>
+          <div class="left-data">
+             <img src="https://cdn.armylegends.ro/elements/go-back.webp">
+             <h1>{{ faction }}</h1>
+          </div>
+          <div class="right-data">
+             <div class="money-data">
+                <p>{{ cashMoney }}</p>
+                <i class="fa-solid fa-wallet"></i>
+             </div>
+             <div class="money-data">
+                <p>{{ bankMoney }}</p>
+                <i class="fa-solid fa-dollar-sign"></i>
+             </div>
+          </div>
+       </header>
+                    
+       <div class="faction-menu-selectors-wrapper">
+          <div class="faction-menu-selectors">
+             <div @click="changePage('main')"  :class="{selector: true, selected: currentPage == 'main'}">Informatii</div>
+             <div @click="changePage('members')"  :class="{selector: true, selected: currentPage == 'members'}">Membrii</div>
+             <div @click="changePage('ranks')"  :class="{selector: true, selected: currentPage == 'ranks'}">Ranguri</div>
+             <div @click="changePage('tasks')" v-if="tasks.length > 1"  :class="{selector: true, selected: currentPage == 'tasks'}">Tasks</div>
+          </div>
+          
+          <div class="add-player" @click="invitePlayer()" v-show="isLeader">
+             <i class="fa-regular fa-user-plus"></i>
+             <p>Adauga in factiune</p>
+          </div>
+       </div>
+
+       <div class="faction-menu" v-if="currentPage == 'main'">                          
+          <div class="faction-one">
+             <div class="data">
+                <h1>{{ faction }}</h1>
+                <p>Explorând factiunile, te afunzi într-un univers plin de intrigi și conflicte. Îți alegi alianțele și îți stabilești propriile obiective, într-o competiție pentru dominație și influență. Înconjurați de rivali, vei testa loialitatea, priceperea și curajul în căutarea ta de a deveni legendar în această lume implacabilă.</p>
+             </div>
+             <div class="icon">
+                <h1>{{ factionLevel.level }}</h1>
+                <p>Level</p>
+             </div>
+          </div>
+                         
+          <div class="faction-two">
+             <i class="fa-regular fa-crown"></i>
+             <div class="data">
+                <p>Lider</p>
+                <h1>{{ factionLeader }}</h1>
+             </div>
+          </div>
+                         
+          <div class="faction-three" v-if="fType == 'Mafie'">
+             <div class="title">WAR EVENT</div>
+             
+             <div class="war-desc">
+                <h1>CAYO WAR</h1>
+                <p>Sistemul de Cayo War ofera o batalie intre cel putin doua mafii rivale pentru dobandirea accesului la pachetul de arme.</p>
+             </div>
+          </div>
+                         
+          <div class="faction-three EMS" v-if="faction == 'Smurd'">
+            <div class="title">SMURD</div>
+            
+            <div class="war-desc">
+               <h1>SAFETY FIRST</h1>
+               <p>Factiunea se dedica protejarii si salvarii de vieti, punand siguranta pe primul loc. Echipa lor specializata intervine rapid in situatii de urgenta, asigurandu-se ca fiecare persoana este in siguranta si primeste ingrijirea medicala de care are nevoie.</p>
+            </div>
+         </div>
+                         
+         <div class="faction-three LSPD" v-if="faction == 'Politie'">
+            <div class="title">POLITIE</div>
+            
+            <div class="war-desc">
+               <h1>SAFETY FIRST</h1>
+               <p>Factiunea se angajează să mențină ordinea și securitatea cetățenilor, garantând un mediu sigur și protejat. Cu profesionalism și integritate, ei răspund la chemările cetățenilor și acționează ferm împotriva oricărui act de ilegalitate, având ca prioritate supremă siguranța comunității.</p>
+            </div>
+         </div>
+                         
+          <div class="faction-four">
+             <div class="faction-data">
+                <div class="level">
+                   <h1>{{ factionLevel.level }}</h1>
+                   <p>Level</p>
+                </div>
+                <div class="text">
+                   <h1>Progresul factiunii</h1>
+                   <p>Luptă pentru supremație, colaborare și evoluare într-un sistem complex de facțiuni și teritorii.</p>
+                </div>
+             </div>
+                         
+             <div class="level-progress-wrapper">
+                <div class="level-progress">
+                   <div class="progress" :style="{width: levelProgress + '%'}"></div>
+                </div>
+                <div class="progress-data">
+                   <p>Pana la urmatorul nivel</p>
+                   <h1>{{ factionLevel.nextLevelXP }}<span>XP</span></h1>
+                </div>
+             </div>
+          </div>
+                         
+          <div class="faction-five">
+             <div class="users-data">
+                <i class="fa-light fa-users"></i>
+                <div class="text">
+                   <p>Total membrii</p>
+                   <h1>{{ totalMembers }}</h1>
+                </div>
+             </div>
+             
+             <div class="level-progress-wrapper">
+                <div class="level-progress">
+                   <div class="progress" :style="{width: membersProgress + '%'}"></div>
+                </div>
+                <div class="progress-data">
+                   <p>Locuri in factiune</p>
+                   <h1>{{ totalMembers }}<span>/{{ maxSlots }}</span></h1>
+                </div>
+             </div>
+          </div>
+                         
+          <div class="six">
+             <header>
+                <i class="fa-regular fa-building-columns"></i>
+                <div class="transaction-title">
+                   <p>Balanta factiunii</p>
+                   <p>Distribuția echitabilă a resurselor financiare între factiuni creează oportunități egale de câștig, stimulând prosperitatea personală și oferind acces la o piață dinamică pentru o administrare eficientă a capitalului.</p>
+                </div>
+             </header>
+             <main>
+                <div class="money">
+                   <p>Bani in factiune</p>
+                   <h1>${{ balance }}</h1>
+                </div>
+                <input id="faction-menu-bank-amount" class="bigger-size" type="number" min="1" placeholder="Suma">
+             </main>
+             <footer>
+                <div class="btn" @click="factionDeposit()">ADAUGA</div>
+                <div class="btn" @click="factionWithdraw()">RETRAGE</div>
+             </footer>
+          </div>
+                         
+       </div>
+                    
+       <!-- Faction Members -->
+       <div class="faction-members" v-if="currentPage == 'members'">
+          <div class="faction-members-header">
+             <div class="left-data">
+                <i class="fa-regular fa-users"></i>
+                <div class="member-text">
+                   <h1>Total membrii: <span>{{ totalMembers }}</span></h1>
+                   <p>Împreună formăm o forță imbatibilă, abilitățile noastre diverse și coordonarea eficientă fiind cheia succesului și a obținerii victoriei garantate.</p>
+                </div>
+             </div>
+
+               <div class="right-data">
+                  <div class="search-input">
+                     <input type="text" placeholder="Cauta membru...">
+                     <i class="fa-regular fa-magnifying-glass"></i>
+                  </div>
+
+                  <div class="online-count">
+                     <div class="circle"></div>
+                     <h1>{{ onlineMembers }} online</h1>
+                  </div>
+               </div>
+          </div>
+
+          <div class="faction-list">
+             <div class="faction-list-overflow">
+                <table>
+                   <thead>
+                      <tr>
+                         <th>STATUS</th>
+                         <th>NUME</th>
+                         <th>ID</th>
+                         <th>RANG</th>
+                         <th>ORE PE SAPTAMANA</th>
+                         <th>ADITIONALE</th>
+                         <th></th>
+                      </tr>
+                   </thead>
+                   <tbody>
+                      <tr v-for="(data, index) of members">
+                         <td>
+                            <div class="online-status" :class="{offline: !data.online}"> 
+                               <div class="circle"></div>
+                               <p>{{ data.online && 'Conectat' || 'Deconectat' }}</p>
+                            </div>
+                         </td>
+                         <td class="name">{{ data.username }}</td>
+                         <td>{{ data.id }}</td>
+                         <td>{{ data.userFaction && data.userFaction.rank || 'Unknown' }}</td>
+                         <td>
+                            <div class="member-hours">{{ data && data.lastHours && data.lastHours.toFixed(2) || '0' }}<span>H</span></div>
+                         </td>
+                         <td>
+                            <div class="last-activity">
+                               <p>Ultima conectare: <span>{{ formatData(data.last_login) }}</span></p>
+                               <p>S-a alaturat pe: <span>23.02.2022 12:43</span></p>
+                            </div>
+                         </td>
+                         <td>
+                            <div  v-show="isLeader" class="settings-icon" @click="managePlayer(index)">
+                               <i class="fa-regular fa-gear"></i>
+                            </div>
+                         </td>
+                      </tr>
+                   </tbody>
+                </table>
+             </div>
+          </div>
+       </div>
+                    
+       <div class="faction-ranks" v-if="currentPage == 'ranks'">
+          <div class="faction-ranks-header">
+             <div class="left-data">
+                <i class="fa-solid fa-ranking-star"></i>
+                <div class="text">
+                   <h1>Ranguri</h1>
+                   <p>Încurajează colaborarea în echipă, abilitățile strategice și angajamentul prin promovări și avantaje crescânde. Jucătorii pot evolua și obține statuturi superioare, reflectând experiența și succesul lor în comunitatea gaming.</p>
+                </div>
+             </div>
+             <div class="right-data" v-show="fType != 'Lege'">
+                <div class="create-rank" @click="createRank()" v-show="isLeader">Creaza un rang</div>
+                <div class="ranks-count">
+                   <!-- <div class="circle"></div> -->
+                   <h1>#{{ Object.keys(ranks).length }}</h1>
+                </div>
+             </div>
+          </div>
+          <div class="faction-ranks-list">
+             <div class="faction-rank" v-for="(number, rank) of ranks">
+                <div class="left-data">
+                   <i class="fa-regular fa-ranking-star"></i>
+                   <div class="text">
+                      <h1>{{ rank }} (${{number.payday | formatnum }})</h1>
+                      <p>Membrii cu acest rank <span>{{ number.total }}</span></p>
+                   </div>
+                </div>
+                <i class="fa-regular fa-trash-can" v-show="isLeader && fType != 'Lege'" @click="deleteRank(rank)"></i>
+             </div>
+          </div>
+       </div>
+                    
+       <div class="faction-tasks" v-if="currentPage == 'tasks'">
+          <div class="faction-tasks-header">
+             <i class="fa-solid fa-clipboard-check"></i>
+             <div class="text">
+                <h1>Misiuni</h1>
+                <p>Împreună formăm o forță imbatibilă, abilitățile noastre diverse și coordonarea eficientă fiind cheia succesului și a obținerii victoriei garantate.</p>
+             </div>
+          </div>
+          <div class="faction-tasks-grid">
+             <div class="faction-task" v-for="(data, index) of tasks">
+                <div class="prize">
+                   <p>CASTIG</p>
+                   <h1>${{ data.reward }}</h1>
+                </div>
+                <div class="title">
+                   <h1>Misiune</h1>
+                   <p>{{ formatString(data.text, data.progress + '/' + data.task) }}</p>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+                    
+    <div class="create-rank-wrapper" v-if="createRankMenu">
+       <div class="create-rank">
+          <div class="rank-title">
+             <i class="fa-solid fa-ranking-star"></i>
+             <div class="text">
+                <h1>Rang nou</h1>
+                <p>Creaza un rang nou pentru factiune</p>
+             </div>
+          </div>
+          <input id="faction-menu-create-rank" type="text" placeholder="Numele rangului">
+          <div class="button" @click="confirmCreateRank()">Creare</div>
+       </div>
+    </div>
+                    
+    <div class="player-management-wrapper" v-if="managePlayerMenu">
+       <div class="player-management">
+          <div class="player-management-header">
+             <div class="user-data">
+                <p>Nume</p>
+                <h1>{{ playerData.username }} <span><b>ID</b> {{ playerData.id }}</span></h1>
+                <div class="online-status" :class="{offline: !playerData.online}"> 
+                    <div class="circle"></div>
+                    <p>{{ playerData.online && 'Online' || 'Offline' }}</p>
+                </div>
+             </div>
+             <div class="change-rank">
+                <i class="fa-solid fa-arrow-left" @click="previousRank()"></i>
+                <p>{{ menuRanks[currentRank] && menuRanks[currentRank].rank || "Necunoscut"}}</p>
+                <i class="fa-solid fa-arrow-right" @click="nextRank()"></i>
+             </div>
+          </div>
+          <div class="faction-data">
+             <div class="user-data">
+                <h1>Aditionale</h1>
+                <div class="datas">
+                   <p>Ultima conectare: <span>{{ formatData(playerData.last_login) }}</span></p>
+                   <p>S-a alaturat pe: <span>23.03.2022 14:43</span></p>
+                </div>
+             </div>
+             <i class="fa-solid fa-ban" @click="kickPlayer()"></i>
+          </div>
+          <div class="confirm-button" @click="confirmManagePlayer()">Confirmare</div>
+       </div>
+    </div>                 
+ </div>

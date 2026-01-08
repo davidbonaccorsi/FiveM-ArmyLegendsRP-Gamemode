@@ -1,0 +1,23 @@
+RegisterNUICallback('search:jail', function(data, callback)
+    triggerCallback('searchJail', function(data)
+        callback(data)
+    end, data.query)
+end)
+
+RegisterNUICallback('create:jail', function(data, callback)
+    triggerCallback('createJail', function(data)
+        callback(data)
+    end, data.jail)
+end)
+
+RegisterNUICallback('delete:jail', function(data, callback)
+    triggerCallback('deleteJail', function(data)
+        callback(data)
+    end, data.id)
+end)
+
+RegisterNUICallback('update:jail', function(data, callback)
+    triggerCallback('updateJail', function(data)
+        callback(data)
+    end, data)
+end)

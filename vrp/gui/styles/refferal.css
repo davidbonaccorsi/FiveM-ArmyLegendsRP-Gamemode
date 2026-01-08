@@ -1,0 +1,376 @@
+.referal-wrapper {
+    font-family: inherit;
+
+    user-select: none !important;
+    line-height: 1;
+
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+}
+
+.main-referal {
+    justify-content: center;
+}
+
+.main-referal, .referal-flex {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.dark-wrapper {
+    background: #203939;
+    background: linear-gradient(135deg,#203939,#394160);
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    z-index: 1;
+}
+
+.dark-wrapper.referal-wrapper {
+    background: linear-gradient(107.08deg,#133321,#020d28 102.29%);
+    opacity: .9;
+    z-index: -10;
+}
+
+.referal-flex {
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.main-referal, .referal-flex {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.referal-flex .referal-left {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.referal-flex .referal-left .referal-list-tasks-wrapper {
+    height: 100%;
+    overflow: auto;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.referal-flex .referal-left .referal-list-tasks-wrapper .referal-list-tasks {
+    height: 100%;
+    overflow: auto;
+    padding-right: 20px;
+}
+
+.referal-flex .referal-left .referal-list-tasks-wrapper .referal-list-tasks::-webkit-scrollbar {
+    width: 4px;
+}
+
+.referal-flex .referal-left .referal-list-tasks-wrapper .referal-list-tasks::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: hsla(0,0%,100%,.05);
+}
+
+.referal-flex .referal-left .referal-list-tasks-wrapper .referal-list-tasks::-webkit-scrollbar-thumb {
+    background: #9bcf49;
+    border-radius: 10px;
+}
+
+.referal-flex .referal-left .referal-list-tasks-wrapper .referal-list-tasks .referal-list-tasks-item {
+    margin-bottom: 20px;
+}
+
+.referal-flex .referal-left .referal-list-tasks-wrapper .referal-list-tasks .referal-list-tasks-item .referal-list-tasks-item-box {
+    width: 1028px;
+    height: 221px;
+    border: 2px solid hsla(0,0%,100%,.2);
+    border-radius: 10px;
+    opacity: .4;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    position: relative;
+}
+
+.referal-flex .referal-left .referal-list-tasks-wrapper .referal-list-tasks .referal-list-tasks-item.collected .referal-list-tasks-item-box {
+    border: 1px solid #9bcf49;
+    opacity: .6;
+}
+
+.referal-flex .referal-left .referal-list-tasks-wrapper .referal-list-tasks .referal-list-tasks-item .referal-list-tasks-item-box .referal-list-tasks-item-fly-name {
+    position: absolute;
+    right: -39px;
+    transform: rotate(90deg);
+}
+
+.referal-flex .referal-left .referal-list-tasks-wrapper .referal-list-tasks .referal-list-tasks-item .referal-list-tasks-item-box .referal-list-tasks-item-fly-name > p {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .2em;
+    font-size: 16px;
+}
+
+.referal-flex .referal-left .referal-list-tasks-wrapper .referal-list-tasks .referal-list-tasks-item .referal-list-tasks-item-box .referal-list-tasks-item-name {
+    width: 294px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.referal-flex .referal-left .referal-list-tasks-wrapper .referal-list-tasks .referal-list-tasks-item .referal-list-tasks-item-box .referal-list-tasks-item-description {
+    display: block;
+    width: 265px;
+    font-size: 16px;
+    letter-spacing: .03em;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-left: 60px;
+    color: hsla(0,0%,100%,.6);
+}
+
+.referal-flex .referal-left .referal-list-tasks-wrapper .referal-list-tasks .referal-list-tasks-item .referal-list-tasks-item-box .referal-list-tasks-item-model {
+    position: absolute;
+    right: 72px;
+    width: 140px;
+    height: 140px;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.referal-flex .referal-left .referal-list-tasks-wrapper .referal-list-tasks .referal-list-tasks-item .referal-list-tasks-item-box .referal-list-tasks-item-model > img {
+    max-width: 110px;
+    max-height: 110px;
+}
+
+.referal-flex .referal-left .referal-list-tasks-wrapper .referal-list-tasks .referal-list-tasks-item .referal-list-tasks-item-box .referal-list-tasks-item-model .referal-list-tasks-item-model-rarity.b-rare {
+    background-color: #2acaff;
+    box-shadow: 0 0 20px rgba(42,202,255,.65);
+}
+
+.referal-flex .referal-left .referal-list-tasks-wrapper .referal-list-tasks .referal-list-tasks-item .referal-list-tasks-item-box .referal-list-tasks-item-model .referal-list-tasks-item-model-rarity {
+    position: absolute;
+    left: 13px;
+    bottom: -3px;
+    width: 50px;
+    height: 5px;
+}
+
+.referal-flex .referal-left .referal-list-tasks-wrapper .referal-list-tasks .referal-need-level {
+    display: flex;
+    align-items: center;
+    margin-top: 19px;
+    z-index: 111;
+}
+
+
+.referal-flex .referal-left .referal-list-tasks-wrapper .referal-list-tasks .referal-need-level::before {
+    content: "";
+    background: url(http://minicdn.undercover.mp/referal/referal.svg) no-repeat;
+    background-size: auto;
+    background-size: 100% 100%;
+    width: 24px;
+    height: 24px;
+    margin-right: 17px;
+}
+
+.referal-flex .referal-left .referal-url-info {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.referal-flex .referal-left .referal-url-info::before {
+    content: "";
+    background: url(http://minicdn.undercover.mp/referal/referal-bg.svg) no-repeat;
+    background-size: auto;
+    background-size: 100% 100%;
+    position: absolute;
+    left: -102px;
+    bottom: 0;
+    width: 844px;
+    height: 578px;
+    z-index: -1;
+}
+
+.referal-flex .referal-left .referal-url-info .referal-url-fly {
+    background: url(https://cdn.armylegends.ro/elements/referal-characters.webp) no-repeat;
+    background-size: auto;
+    background-size: 100% 100%;
+    width: 548px;
+    height: 384px;
+    margin-bottom: -36px;
+    z-index: -1;
+  }
+
+.referal-flex .referal-left .referal-url-info .referal-url-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.referal-flex .referal-left .referal-url-info .referal-url-content > p {
+    font-weight: 800;
+    width: 499px;
+    font-size: 32px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.referal-flex .referal-left .referal-url-info .referal-url-content > span {
+    display: block;
+    width: 450px;
+    color: hsla(0,0%,100%,.6);
+    letter-spacing: .03em;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.referal-flex .referal-left .referal-url-info .referal-url-content .referal-url-input {
+    width: 498px;
+    height: 58px;
+    border-radius: 6px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 22px;
+    position: relative;
+}
+
+.referal-flex .referal-left .referal-url-info .referal-url-content .referal-url-input > input {
+    color: #232a43;
+    font-size: 18px;
+    font-weight: 700;
+    background: 0;
+    border: 0;
+    width: 267px;
+    pointer-events: none;
+}
+
+.referal-flex .referal-left .referal-url-info .referal-url-content .referal-url-input > button {
+    background: linear-gradient(90deg,#9ed347,#7fa95e);
+    width: 202px;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    border-radius: 6px;
+    border: 0;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.referal-flex .referal-left .referal-url-info .referal-url-content .referal-url-input > button::before {
+    content: "";
+    background: url(http://minicdn.undercover.mp/referal/referal-svg1.svg) no-repeat;
+    background-size: auto;
+    background-size: 100% 100%;
+    width: 24px;
+    height: 24px;
+    margin-right: 14px;
+    transition: all .3s ease-in-out;
+}
+
+.referal-flex .referal-right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 223px;
+}
+
+.referal-flex .referal-right .referal-present {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.referal-flex .referal-right .referal-present::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    background: url(http://minicdn.undercover.mp/referal/refferal-bg.svg) no-repeat;
+    background-size: auto;
+    background-size: 100% 100%;
+    width: 740px;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.referal-flex .referal-right .referal-present > img {
+    width: 357px;
+    height: 437px;
+    margin-left: 77px;
+    margin-bottom: -50px;
+}
+
+.referal-flex .referal-right .referal-present .referal-present-progress {
+    text-align: center;
+}
+
+.referal-flex .referal-right .referal-present .referal-present-progress > p {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 32px;
+    margin-bottom: 21px;
+}
+
+.referal-flex .referal-right .referal-present .referal-present-progress .referal-present-progress-full {
+    width: 420px;
+    height: 40px;
+    position: relative;
+    background: url(http://minicdn.undercover.mp/referal/referal-progres.svg) no-repeat;
+    background-size: auto;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+}
+
+.referal-flex .referal-right .referal-present .referal-present-progress .referal-present-progress-full > span {
+    position: absolute;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 0 30px hsla(0,0%,100%,.55);
+    height: 28px;
+}
+
+.referal-flex .referal-right .referal-present .referal-present-money {
+    font-weight: 800;
+    font-size: 64px;
+    color: #fee16d;
+    text-shadow: 0 13px 64px hsla(48,99%,71%,.65);
+    margin-top: 32px;
+    margin-bottom: 28px;
+}
+
+.referal-flex .referal-right .referal-present .referal-present-description {
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: .03em;
+    width: 481px;
+    text-align: center;
+    line-height: 1.4;
+}

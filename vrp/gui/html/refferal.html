@@ -1,0 +1,58 @@
+<div class="referal-wrapper">
+    <div class="main-referal">
+       <i class="dark-wrapper referal-wrapper"></i> 
+       <div class="referal-flex">
+          <div class="referal-left">
+             <div class="referal-list-tasks-wrapper">
+                <div class="referal-list-tasks">
+
+                   <div class="referal-list-tasks-item" v-for="(data, index) of refferalData" :class="{collected: index <= userinvites}">
+                      <div class="referal-list-tasks-item-box">
+                         <div class="referal-list-tasks-item-fly-name">
+                            <p>Rasplata</p>
+                         </div>
+                         <p class="referal-list-tasks-item-name">{{ data.name }}</p>
+                         <p class="referal-list-tasks-item-description">{{ data.text }}</p>
+                         <div class="referal-list-tasks-item-model">
+                            <img :src="data.img"> 
+                            <div class="referal-list-tasks-item-model-rarity b-rare"></div>
+                         </div>
+                      </div>
+                      <div class="referal-need-level">
+                         <p v-if="index <= userinvites">Completat</p>
+                         <p v-if="index == 1 && userinvites < index">A mai ramas o inscriere pana la deblocare</p>
+                         <p v-if="index > 1 && index < 10 && userinvites < index">Au mai ramas <span>{{ index - userinvites}} inscrieri</span> pana la deblocare</p>
+                         <p v-if="index > 10 && userinvites < index">Au mai ramas <span>{{ index - userinvites}} de inscrieri</span> pana la deblocare</p>
+                      </div>
+                   </div>
+                </div>
+             </div>
+             <div class="referal-url-info">
+                <i class="referal-url-fly"></i> 
+                <div class="referal-url-content">
+                   <p>Distribuie acest cod prietenilor tai. Acestia vor primii <span>$25 000</span></p>
+                   <span>Atunci când o persoană se înregistrează pe server folosind referal codul tau, acesta va primi suma de 25.000$</span> 
+                   <div class="referal-url-input">
+                      <input type="text" id="referal-code" value="R-01"> 
+                      <button @click="copyRefferal()">Copiaza</button>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div class="referal-right">
+             <div class="referal-present">
+                <img src="https://cdn.armylegends.ro/elements/gift.webp"> 
+                <div class="referal-present-progress">
+                   <p>{{ progress.toFixed(2) }}%</p>
+                   <svg width="420" height="40" viewBox="0 0 420 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M-1.74846e-06 20H420" stroke="white" stroke-opacity="0.2" stroke-width="40" stroke-linejoin="round" stroke-dasharray="4 4"/>
+                     <path id='refferal-line' d="M-1.74846e-06 20H420" stroke="#fee16d" stroke-opacity="0.5" stroke-width="40" stroke-linejoin="round" stroke-dasharray="4 4"/>
+                   </svg>
+                </div>
+                <p class="referal-present-money">$100 000</p>
+                <p class="referal-present-description">În fiecare săptămână, jucătorii care reușesc să depășească pragul de 80 de ore jucate sunt răsplătiți cu o recompensă săptămânală</p>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>

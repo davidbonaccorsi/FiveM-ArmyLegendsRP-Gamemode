@@ -1,0 +1,24 @@
+<div class="dmv-layout">
+    <div class="wrapper">
+
+        <header>
+            <h1>EXAMEN AUTO</h1>
+            <p>ÎNTREBAREA {{question+1}}/{{dmvQuestions.length}}</p>
+        </header>
+    
+        <p>{{dmvQuestions[question][0]}}</p>
+    
+        <div class="line"></div>
+    
+        <div class="responses">
+            <div class="item-layout" v-for="(text, index) in dmvQuestions[question][1]">
+                <div :class="['check', (responded == index) ? 'ok' : '']" @click="choose(index)">
+                    <i class="fas fa-check" aria-hidden="true"></i>
+                </div>
+            
+                <p>{{text}}</p>
+            </div>
+        </div>
+
+    </div>
+</div>

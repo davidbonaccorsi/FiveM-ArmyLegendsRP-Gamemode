@@ -1,0 +1,17 @@
+RegisterNUICallback('search:vehicle', function(data, callback)
+    triggerCallback('searchVehicle', function(info)
+        callback(info)
+    end, data.query)
+end)
+
+RegisterNUICallback('update:vehicle', function(data, callback)
+    triggerCallback('updateVehicle', function(info)
+        callback(info)
+    end, data.user_id, data.vehicle, data.description)
+end)
+
+RegisterNUICallback('update:vehicle_photo', function(data, callback)
+    triggerCallback('updateVehiclePhoto', function(info)
+        callback(info)
+    end, data.user_id, data.vehicle, data.url)
+end)

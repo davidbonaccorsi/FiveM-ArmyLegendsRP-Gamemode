@@ -1,0 +1,151 @@
+.main-postlocker, .postlocker-flex {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.main-postlocker {
+    position: absolute;
+    inset: 0;
+
+    background: url(https://cdn.armylegends.ro/bg/PostalLocker.png) no-repeat;
+    background-size: 100% 100%;
+
+    font-family: "TT Norms";
+}
+
+.postlocker-flex .welcome {
+    position: absolute;
+    bottom: 76px;
+    left: 198px;
+    color: rgba(255, 255, 255, 0.50);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    mix-blend-mode: overlay;
+}
+
+.postlocker-flex .packages-list {
+    background-blend-mode: overlay;
+    position: absolute;
+    top: 185px;
+    left: 221px;
+    max-width: 1477.527px;
+    max-height: 610px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, auto);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.postlocker-flex .packages-list.rtl {
+    direction: rtl;
+    padding-left: 20px;
+}
+
+.postlocker-flex .packages-list > div {
+    position: relative;
+    width: 460px;
+    height: 290px;
+    background: url(https://cdn.armylegends.ro/bg/post_locker_div.webp) no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    direction: ltr;
+    transition: .232323s ease-in-out;
+}
+
+.postlocker-flex .packages-list > div:hover {
+    transform: translateY(-5px);
+}
+
+.postlocker-flex .packages-list > div::after {
+    content: attr(count);
+    font-family: "TT Norms";
+    position: absolute;
+    top: 2.99px;
+    right: 58.6px;
+    transform: rotate(-1deg);
+    width: 40px;
+    height: 40px;
+    border-radius: 0px 0px 10px 10px;
+    background: linear-gradient(180deg, rgba(180, 29, 61, 0.00) 0%, #B41D3D 100%);
+    display: grid;
+    place-items: center;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.postlocker-flex .packages-list > div img {
+    position: absolute;
+    width: 211px;
+    height: 211px;
+    margin-right: 15px;
+    mix-blend-mode: overlay;
+    opacity: .5;
+}
+
+.postlocker-flex .packages-list > div p {
+    position: absolute;
+    bottom: 52px;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-right: 15px;
+    background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    max-width: 334px;
+    text-align: center;
+}
+
+
+
+.postlocker-flex .packages-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.postlocker-flex .packages-list::-webkit-scrollbar-track {
+    border-radius: 0.25vw;
+    background: rgba(55, 154, 224, 0.50);
+}
+
+.postlocker-flex .packages-list::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(205, 33, 69, 0.50);
+}
+
+.post-notify {
+    position: absolute;
+    right: -500px; /* 41px*/
+    top: 391px;
+
+    width: 500px;
+    height: 158px;
+    
+    background: url(https://cdn.armylegends.ro/bg/Group_28.webp) no-repeat;
+    background-size: 100% 100%;
+}
+
+.post-notify-dist {
+    position: absolute;
+    top: calc(501px + 10px);
+    left: 40px;
+    color: #000;
+    font-feature-settings: 'liga' off;
+    font-family: "TT Norms";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}

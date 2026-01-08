@@ -1,0 +1,201 @@
+.bank-layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://cdn.armylegends.ro/bg/bank.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-family: "Akrobat";
+}
+
+.bank-layout > .border{
+  width: 95%;
+  height: 90%;
+  border: .2vh solid #ffffff20;
+  border-radius: .15vw;
+}
+
+.bank-layout > header{
+  width: 50%;
+  height: 25%;
+  
+  top: 20%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bank-layout > header > .title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .35vh;
+}
+
+.bank-layout > header > .title > p:first-of-type{
+  font-family: "Akrobat Bold";
+  font-size: 3vh;
+  letter-spacing: 2px;
+}
+
+.bank-layout > header > .title > p:last-of-type{
+  color: #787a7c;
+  font-family: "Akrobat Bold";
+  letter-spacing: .5px;
+}
+
+.bank-layout > header > .statistics{
+  width: 100%;
+  margin-top: 5vh;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 5vw;
+}
+
+.bank-layout > header > .statistics > .data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bank-layout > header > .statistics > .data > p:first-of-type, .bank-layout > header > .location > p:first-of-type{
+  color: #b8b8b8;
+  font-family: "Akrobat Bold";
+  letter-spacing: 2px;
+}
+
+.bank-layout > header > .statistics > .data > p:last-of-type, .bank-layout > header > .location > p:last-of-type{
+  font-family: "Akrobat ExtraBold";
+  font-size: 2vh;
+  letter-spacing: .5px;
+}
+
+.bank-layout > header > .location{
+  margin-top: 4.5vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bank-layout > .actions{
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translateX(-50%);
+  
+  width: 38%;
+  height: 55%;
+
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+}
+
+.bank-layout > .actions > .grid{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 1vh .65vh;
+	width: 100%;
+	height: 0;
+}
+
+.bank-layout > .actions > .grid > .action{
+  width: 100%;
+  height: 9vh;
+
+  background: linear-gradient(to top right, transparent, #ffffff18);
+
+  border-radius: .15vw;
+
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  padding-left: 2vw;
+}
+
+.bank-layout > .actions > .grid > .action:nth-child(odd){
+  background: linear-gradient(to bottom right, #ffffff18, transparent);
+}
+
+.bank-layout > .actions > .grid > .action:hover{
+  background: linear-gradient(90deg, #927e3399, #d3b74f18);
+}
+
+.bank-layout > .actions > .grid > .action:nth-child(even):hover{
+  background: linear-gradient(90deg, #d3b74f18, #927e3399);
+}
+
+.bank-layout > .actions > .grid > .action > img{
+  width: 40px;
+}
+
+.bank-layout > .actions > .grid > .action > .text{
+  display: flex;
+  flex-direction: column;
+}
+
+.bank-layout > .actions > .grid > .action > .text > p{
+  font-family: "Akrobat Light";
+/*   font-weight: 600; */
+  letter-spacing: 3px;
+  font-size: 1.65vh;
+}
+
+.bank-layout > .actions > .grid > .action:nth-child(even){
+  justify-content: flex-end;
+  padding-right: 2vw;
+  padding-left: 0;
+}
+
+.bank-layout > .actions > .grid > .action:nth-child(even)> .text{
+  align-items: flex-end;
+}
+
+@keyframes animBankNotify{
+	from {
+		bottom: 5%;
+	} to {
+		bottom: 10%;
+	}
+}
+
+.bank-layout > .bank-notification{
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translateX(-50%);
+
+	padding: 0 1vw;
+	height: 8vh;
+
+	display: flex;
+	align-items: center;
+	gap: 1vw;
+
+	animation: animBankNotify 1.5s;
+
+	transition: 1s;
+}
+
+.bank-layout > .bank-notification.hidden{
+	display: none;
+}
+
+.bank-layout > .bank-notification > img{
+	width: 35px;
+}
+
+.bank-layout > .bank-notification > p{
+	font-family: "Akrobat Light";
+	font-size: 1.8vh;
+	color: #ffde2a;
+}

@@ -1,0 +1,53 @@
+
+<div class="main-weapdealer" v-if="active">
+    <div class="weapdealer-flex">
+
+        <div class="close">
+            Inchidere
+            <div @click="destroy()">ESC</div>
+        </div>
+
+        <div class="weapdealer-box">
+            <div class="header">
+                Categorii disponibile
+            
+                <div @click="active = 1" :class="{active: active == 1}">Arme</div>
+                <!-- <div @click="active = 2" :class="{active: active == 2}">Gloante</div> -->
+            </div>
+
+            <div class="deposit-items">
+                <div v-for="(item, index) in weapons" v-if="(active == 1) ? (item.weapon).toLowerCase().startsWith('weapon_') : (item.weapon).toLowerCase().startsWith('ammo')">
+                    <div :class="{icon: true, ammo: active == 2}">
+                        <img :src="active == 1 ? ('https://cdn.armylegends.ro/items/' + item.weapon + '.webp') : 'https://cdn.armylegends.ro/weapdealer/ammo.png'">
+                    </div>
+                    <div class="name">{{item.name}}{{active == 2 ? " Ammo" : ""}}</div>
+                    <div class="footer">
+                        <input type="number" v-model="item.amount" min="1" value="1">
+                        <div class="price" @click="buy(item)">{{item.price | formatnum}}$</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="weapdealer-info">
+            <img src="https://cdn.armylegends.ro/inventory/icons/click.png" alt="click">
+            
+            <span>
+                Click stanga pe pretul unei arme din lista de mai sus pentru
+                a o achizitiona.
+            </span>
+        </div>
+
+        <div class="weapdealer-player">
+            <p>{{name}}<span>ORGANIZATIE: {{faction}}</span></p>
+            <div class="icon">
+                <img src="https://cdn.armylegends.ro/weapdealer/avatar.png">
+            </div>
+        </div>
+
+        <div class="weapdealer-balance">
+            <p>BALANTA<span>DISPONIBILA</span></p>
+            <p>{{balance | formatnum}},<span>00<span>$</span></p>
+        </div>
+    </div>
+</div>

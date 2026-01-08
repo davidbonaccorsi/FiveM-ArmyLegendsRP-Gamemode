@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Phone System - Proxy#3805</title>
+
+		<link rel="stylesheet" type="text/css" href="tooltipster/tooltipster.bundle.min.css" />
+		<link rel="stylesheet" type="text/css" href="tooltipster/tooltipster-sideTip-borderless.min.css" />
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script type="text/javascript" src="tooltipster/tooltipster.bundle.min.js"></script>
+	    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.4.0/css/pro.min.css">
+    	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	    
+	    <link href="design.css" rel="preload" as="style" type="text/css" />
+	    <link href="design.css" rel="stylesheet" type="text/css" />
+
+		<link href="system/notifications.css" rel="preload" as="style" type="text/css" />
+		<link href="system/notifications.css" rel="stylesheet" type="text/css" />
+
+		<link href="system/calls.css" rel="preload" as="style" type="text/css" />
+		<link href="system/calls.css" rel="stylesheet" type="text/css" />
+
+		<link href="screens/home.css" rel="preload" as="style" type="text/css" />
+		<link href="screens/home.css" rel="stylesheet" type="text/css" />
+
+		<link href="screens/settings.css" rel="preload" as="style" type="text/css" />
+		<link href="screens/settings.css" rel="stylesheet" type="text/css" />
+
+		<link href="screens/gps.css" rel="preload" as="style" type="text/css" />
+		<link href="screens/gps.css" rel="stylesheet" type="text/css" />
+
+		<link href="screens/taxi.css" rel="preload" as="style" type="text/css" />
+		<link href="screens/taxi.css" rel="stylesheet" type="text/css" />
+
+		<link href="screens/lifeinvader.css" rel="preload" as="style" type="text/css" />
+		<link href="screens/lifeinvader.css" rel="stylesheet" type="text/css" />
+
+		<link href="screens/bank.css" rel="preload" as="style" type="text/css" />
+		<link href="screens/bank.css" rel="stylesheet" type="text/css" />
+
+		<link href="screens/ishare.css" rel="preload" as="style" type="text/css" />
+		<link href="screens/ishare.css" rel="stylesheet" type="text/css" />
+
+		<link href="screens/services.css" rel="preload" as="style" type="text/css" />
+		<link href="screens/services.css" rel="stylesheet" type="text/css" />
+
+		<link href="screens/messages.css" rel="preload" as="style" type="text/css" />
+		<link href="screens/messages.css" rel="stylesheet" type="text/css" />
+
+		<link href="screens/contacts.css" rel="preload" as="style" type="text/css" />
+		<link href="screens/contacts.css" rel="stylesheet" type="text/css" />
+
+		<link href="screens/providers.css" rel="preload" as="style" type="text/css" />
+		<link href="screens/providers.css" rel="stylesheet" type="text/css" />
+
+		<link href="screens/vignette.css" rel="preload" as="style" type="text/css" />
+		<link href="screens/vignette.css" rel="stylesheet" type="text/css" />
+
+		<link href="screens/auctions.css" rel="preload" as="style" type="text/css" />
+		<link href="screens/auctions.css" rel="stylesheet" type="text/css" />
+
+		<link href="https://cdn.armylegends.ro" rel="preconnect" crossorigin>
+	</head>
+    <body>
+
+        <div class="phone-layout">
+            <div class="frame"></div>
+            <div class="cover"></div>
+            <div class="top-line"></div>
+
+			<div class="notification">
+				<i class="fa-regular fa-bell"></i>
+
+				<div class="text">
+					<h1>Notificare de sistem</h1>
+					<p>Informatiile au fost actualizate.</p>
+				</div>
+			</div>
+
+			<div class="call-display">
+
+				<div class="text">
+					<p>In apel cu</p>
+					<p>Sebastian Proxy</p>
+				</div>
+			
+				<div class="actions">
+					<div class="action hidden ok">
+						<img src="https://cdn.armylegends.ro/phone/system/call-ok.svg">
+					</div>
+					
+					<div class="action end">
+						<img src="https://cdn.armylegends.ro/phone/system/call-end.svg">
+					</div>
+				</div>
+			
+			</div>
+
+
+			<div class="home new-screen visible">
+				<h1>11:52</h1>
+
+				<div class="your-number">
+					<div class="text">
+						<p>NUMAR</p>
+						<p>PERSONAL</p>
+					</div>
+				
+					<div class="number-field">
+						<i class="bi bi-telephone-outbound"></i>
+						<p>000-0000</p>
+					</div>
+				
+					<div class="suggest-contact">
+						<i class="bi bi-phone-flip"></i>
+					</div>
+				</div>
+
+				
+				<div class="apps-list">
+					<header>
+						<div class="wrap">
+							<div class="app-icon tooltip" title="Camera" data-app="camera">
+								<img src="https://cdn.armylegends.ro/phone/apps_icon/camera.svg">
+							</div>
+							<div class="app-icon tooltip" title="Setari" data-app="settings">
+								<img src="https://cdn.armylegends.ro/phone/apps_icon/settings.svg">
+							</div>
+							<div class="app-icon tooltip" title="Life Invader" data-app="lifeinvader">
+								<img src="https://cdn.armylegends.ro/phone/apps_icon/lifeinvader.svg">
+							</div>
+							<div class="app-icon tooltip" title="Servicii" data-app="services">
+								<img src="https://cdn.armylegends.ro/phone/apps_icon/services.svg">
+							</div>
+							<div class="app-icon tooltip" title="Banca" data-app="banking">
+								<img src="https://cdn.armylegends.ro/phone/apps_icon/banking.svg">
+							</div>
+							<div class="app-icon tooltip" title="Shop" data-app="shop">
+								<img src="https://cdn.armylegends.ro/elements/white_logo.png" style="width: 45px;">
+							</div>
+							<div class="app-icon tooltip" title="iShare" data-app="ishare">
+								<img src="https://cdn.armylegends.ro/phone/apps_icon/ishare.svg">
+							</div>
+							<div class="app-icon tooltip" title="Investitii" data-app="investments">
+								<img src="https://cdn.armylegends.ro/phone/apps_icon/investlullip.svg" style="width: 45px;">
+							</div>
+							<div class="app-icon tooltip" title="Furnizor de stocuri" data-app="providers">
+								<img src="https://cdn.armylegends.ro/elements/store.png" style="width: 45px;">
+							</div>
+							<div class="app-icon tooltip" title="E-Rovinieta" data-app="vignette">
+								<img src="https://cdn.armylegends.ro/elements/car-round-svgrepo-com.webp" style="width: 50px;">
+							</div>
+							<div class="app-icon tooltip" title="Licitatii" data-app="auctions">
+								<img src="https://cdn.armylegends.ro/elements/auctions.png" style="width: 40px;">
+							</div>
+							<div class="app-icon free"></div>
+						</div>
+					</header>
+				
+					<footer>
+						<div class="app-icon" data-app="contacts">
+							<img src="https://cdn.armylegends.ro/phone/apps_icon/phone.svg">
+						</div>
+
+						<div class="app-icon" data-app="messages">
+							<img src="https://cdn.armylegends.ro/phone/apps_icon/messages.svg">
+						</div>
+
+						<div class="app-icon" data-app="taxi">
+							<img src="https://cdn.armylegends.ro/phone/apps_icon/taxi.svg">
+						</div>
+						
+						<div class="app-icon" data-app="gps">
+							<img src="https://cdn.armylegends.ro/phone/apps_icon/gps.svg">
+						</div>
+					</footer>
+				</div>
+
+			</div>
+
+			<div class="settings new-screen">
+
+				<header>
+					<p>SETARI</p>
+								
+					<div class="actions">
+						<div class="btn exit-to-home">
+							<i class="fas fa-x" aria-hidden="true"></i>
+						</div>
+					</div>
+				</header>
+				
+				<main>
+				
+					<div class="splash-selector">
+						<p>SELECTEAZA FUNDAL</p>
+					
+						<div class="list">
+							<div class="item" data-wallpaper="1"></div>
+							<div class="item" data-wallpaper="2"></div>
+						</div>
+					</div>
+				
+					<div class="ringer-selector">
+						<p>SELECTEAZA TON DE APEL</p>
+				
+						<div class="selector">
+							<p>SUNET 1</p>
+						
+							<div class="btns">
+								<i class="fa-solid fa-play" data-direction="play"></i>
+								<i class="fas fa-chevron-up" aria-hidden="true" data-direction="next"></i>
+								<i class="fas fa-chevron-down" aria-hidden="true" data-direction="prev"></i>
+							</div>
+						</div>
+					</div>
+				
+					<div class="dnd-mode">
+						<div class="switcher">
+							<div class="check"></div>
+						</div>
+				
+						<p>MOD NU DERANJATI</p>
+					</div>
+					
+				</main>
+							
+			</div>
+
+			<div class="gps new-screen">
+
+				<header>
+					<p>GPS</p>
+								
+					<div class="actions">
+						<div class="btn return hidden">
+							<i class="bi bi-arrow-return-left"></i>
+						</div>
+						
+						<div class="btn exit-to-home">
+							<i class="fas fa-x" aria-hidden="true"></i>
+						</div>
+					</div>
+				</header>
+
+    			<div class="list visible"></div>
+
+			</div>
+
+			<div class="taxi new-screen">
+
+				<div class="map"></div>
+
+				<header>
+					<p>TAXI</p>
+								
+					<div class="actions">
+						<div class="btn exit-to-home">
+							<i class="fas fa-x" aria-hidden="true"></i>
+						</div>
+					</div>
+				</header>
+
+				<div class="box">
+					<div class="fly">
+						<img src="https://cdn.armylegends.ro/elements/flytaxi_2.png">
+				
+						<div class="text">
+							<p>SUNA UN</p>
+							<p>TAXI</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="lifeinvader new-screen">
+
+				<header>
+					<p>LIFE INVADER</p>
+
+					<div class="actions">
+                        <div class="btn position">
+							<i class="bi bi-geo-alt" aria-hidden="true"></i>
+						</div>
+						
+						<div class="btn exit-to-home">
+							<i class="fas fa-x" aria-hidden="true"></i>
+						</div>
+					</div>
+				</header>
+
+				<div class="list"></div>
+				
+				<footer></footer>
+			</div>
+
+			<div class="bank new-screen">
+
+				<header>
+					<p>BANCA ONLINE</p>
+								
+					<div class="actions">
+						<div class="btn exit-to-home">
+							<i class="fas fa-x" aria-hidden="true"></i>
+						</div>
+					</div>
+				</header>
+
+    			<div class="actions">
+					<div class="action" data-act="transfer">
+						<img src="https://cdn.armylegends.ro/phone/apps/bank/credit-cards.svg">
+					
+						<div class="text">
+							<p>TRANSFER</p>
+							<p>TRANSFERA BANI ONLINE</p>
+						</div>
+					</div>
+
+					<div class="action" data-act="charity">
+						<img src="https://cdn.armylegends.ro/phone/apps/bank/charity.svg">
+					
+						<div class="text">
+							<p>CARITATE</p>
+							<p>SCAPA DE KARMA ONLINE</p>
+						</div>
+					</div>
+
+					<div class="iban">
+						<p>IBANUL CONTULUI</p>
+						<p>RP21234</p>
+					</div>
+				</div>
+
+				<div class="balance">
+					<h1>$0</h1>
+					<p>BALANTA</p>
+				</div>
+
+				<div class="bank-prompt charity">
+					<header>								
+						<div class="actions">
+							<div class="btn">
+								<i class="fas fa-x" aria-hidden="true"></i>
+							</div>
+						</div>
+					</header>
+				
+					<h1>CARITATE</h1>
+				
+					<div class="fields">
+						<div class="box">
+							<p>SUMA DE BANI</p>
+						
+							<input>
+						</div>
+					</div>
+				
+					<div class="confirm">
+						<p>CONFIRM</p>
+					</div>
+				</div>
+
+				<div class="bank-prompt transfer">
+					<header>								
+						<div class="actions">
+							<div class="btn">
+								<i class="fas fa-x" aria-hidden="true"></i>
+							</div>
+						</div>
+					</header>
+				
+					<h1>TRANSFERA BANI</h1>
+				
+					<div class="fields">
+						<div class="box">
+							<p>SUMA DE BANI</p>
+						
+							<input>
+						</div>
+
+						<div class="box">
+							<p>IBAN BENEFICIAR</p>
+						
+							<input>
+						</div>
+					</div>
+				
+					<div class="confirm">
+						<p>CONFIRM</p>
+					</div>
+				</div>
+
+			</div>
+
+			
+			<div class="providers new-screen">
+
+				<header>
+					<p>FURNIZOR STOCURI</p>
+								
+					<div class="actions">
+						<div class="btn exit-to-home">
+							<i class="fas fa-x" aria-hidden="true"></i>
+						</div>
+					</div>
+				</header>
+
+				<div class="orders-list">
+					<!-- <div class="in-progress">
+						<i class="fa-duotone fa-spinner-third fa-spin" style="--fa-primary-color: #804000; --fa-secondary-color: #804000;"></i>
+
+						<div class="order-header">
+							Magazin 14
+							<span>castig: $15,000</span>
+							<i class="far fa-circle-check"></i>
+						</div>
+						<ul type="circle">
+							<li>Cafea 20x</li>
+							<li>Lays 4x</li>
+							<li>Punga Plastic 8x</li>
+							<li>Telefon 11x</li>
+						</ul>
+					</div> -->
+				</div>
+				
+				<!-- <div class="accept-order">
+					<svg xmlns="http://www.w3.org/2000/svg" width="171" height="133" viewBox="0 0 171 133" fill="none">
+						<g style="mix-blend-mode:difference" filter="url(#filter0_dddi_25_40)">
+						  <circle cx="85.5" cy="66.5" r="66.5" fill="#DFB58B"/>
+						</g>
+						<defs>
+						  <filter id="filter0_dddi_25_40" x="0" y="0" width="171" height="187" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+							<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+							<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+							<feOffset dx="-15" dy="5"/>
+							<feGaussianBlur stdDeviation="2"/>
+							<feComposite in2="hardAlpha" operator="out"/>
+							<feColorMatrix type="matrix" values="0 0 0 0 0.87451 0 0 0 0 0.709804 0 0 0 0 0.545098 0 0 0 0.65 0"/>
+							<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_25_40"/>
+							<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+							<feOffset dx="15" dy="5"/>
+							<feGaussianBlur stdDeviation="2"/>
+							<feComposite in2="hardAlpha" operator="out"/>
+							<feColorMatrix type="matrix" values="0 0 0 0 0.87451 0 0 0 0 0.709804 0 0 0 0 0.545098 0 0 0 0.65 0"/>
+							<feBlend mode="normal" in2="effect1_dropShadow_25_40" result="effect2_dropShadow_25_40"/>
+							<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+							<feOffset dy="50"/>
+							<feGaussianBlur stdDeviation="2"/>
+							<feComposite in2="hardAlpha" operator="out"/>
+							<feColorMatrix type="matrix" values="0 0 0 0 0.87451 0 0 0 0 0.709804 0 0 0 0 0.545098 0 0 0 0.65 0"/>
+							<feBlend mode="normal" in2="effect2_dropShadow_25_40" result="effect3_dropShadow_25_40"/>
+							<feBlend mode="normal" in="SourceGraphic" in2="effect3_dropShadow_25_40" result="shape"/>
+							<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+							<feOffset dy="60"/>
+							<feGaussianBlur stdDeviation="2"/>
+							<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+							<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/>
+							<feBlend mode="normal" in2="shape" result="effect4_innerShadow_25_40"/>
+						  </filter>
+						</defs>
+					</svg>
+				</div> -->
+
+			</div>
+
+
+			
+			<div class="vignette new-screen">
+				<header>
+					<p>e-rovinieta</p>
+					<img src="https://www.e-rovinieta.ro/img/logo_crop.e8d15c2d.png">
+								
+					<div class="actions">
+						<div class="btn exit-to-home">
+							<i class="fas fa-x" aria-hidden="true"></i>
+						</div>
+					</div>
+				</header>
+
+				<p class="title">Cumpara vinieta</p>
+				<span class="step">Pasul 1: Selecteaza categoria</span>
+
+                <div class="categories">
+					<div></div>
+					<div></div>
+				</div>
+				
+				<span class="step">Pasul 2: Selecteaza vehiculul</span>
+				<select id="vignette-cars">
+					<option>Lamborghini Mercedes</option>
+					<option>Test</option>
+				</select>
+
+				<div class="pay">$500</div>
+			</div>
+
+
+
+			<div class="auctions new-screen">
+				<header>
+					<p>LICITATII</p>
+								
+					<div class="actions">
+						<div class="btn exit-to-home">
+							<i class="fas fa-x" aria-hidden="true"></i>
+						</div>
+					</div>
+				</header>
+				
+				<div class="no-auctions" style="display: none;">
+					<i class="far fa-frown"></i>
+					Nu sunt licitatii active.
+				</div>
+
+				<div class="bid-rectangle bid-hide"></div>
+				<div class="bid-image bid-hide"></div>
+				
+
+				<div class="join-bid bid-hide">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28" fill="none">
+						<path d="M0 18.6667H3.2C3.2 20.3467 5.392 21.7778 8 21.7778C10.608 21.7778 12.8 20.3467 12.8 18.6667C12.8 16.9556 11.136 16.3333 7.616 15.5089C4.224 14.6844 0 13.6578 0 9.33333C0 6.54889 2.352 4.18444 5.6 3.39111V0H10.4V3.39111C13.648 4.18444 16 6.54889 16 9.33333H12.8C12.8 7.65333 10.608 6.22222 8 6.22222C5.392 6.22222 3.2 7.65333 3.2 9.33333C3.2 11.0444 4.864 11.6667 8.384 12.4911C11.776 13.3156 16 14.3422 16 18.6667C16 21.4511 13.648 23.8156 10.4 24.6089V28H5.6V24.6089C2.352 23.8156 0 21.4511 0 18.6667Z" fill="white"/>
+					</svg>
+				</div>
+				<div class="live bid-hide"></div>
+			</div>
+
+
+			<div class="ishare new-screen">
+
+				<header>
+					<img src="https://cdn.armylegends.ro/phone/apps_icon/ishare.svg">
+
+					<p>ISHARE</p>
+								
+					<div class="actions">
+						<div class="btn exit-to-home">
+							<i class="fas fa-x" aria-hidden="true"></i>
+						</div>
+					</div>
+				</header>
+
+    			<div class="list visible">
+    				<div class="post">
+						<header>
+							<div class="avatar">
+								<p>RG</p>
+							</div>
+
+							<p>Richard Gravitas</p>
+						</header>
+
+						<img src="https://cdn.discordapp.com/attachments/1006261661021245490/1067066131048824883/image.png">
+
+						<div class="reactions liked">
+							<i class="bi bi-heart"></i>
+
+							<div class="count">
+								<p>27</p>
+							</div>
+						</div>
+
+						<p>Bloods on TOP for ONE LAST DAY</p>
+
+						<div class="line"></div>
+					</div>
+
+				</div>
+
+				<div class="publish">
+					<div class="list">
+						<div class="item" style="background-image: url(https://cdn.discordapp.com/attachments/1006261661021245490/1067066131048824883/image.png)">
+							<div class="actions">
+								<input placeholder="Adauga o descriere...">
+								<i class="fa-regular fa-share-from-square"></i>
+							</div>
+						</div>
+					</div>
+
+					<div class="tutorial">
+						<p>Pentru a publica o postare trebuie să faceti o fotografie prin intermediul aplicatiei de pe ecranul de start al telefonului</p>
+					
+						<div class="the-app">
+					
+							<div class="image">
+								<img src="https://cdn.armylegends.ro/phone/apps_icon/camera.svg">
+							</div>
+					
+							<p>CAMERA</p>
+							
+						</div>
+					
+						<p>Faceti o poza si intoarceti-va aici</p>
+					</div>
+				</div>
+
+				<footer>
+					<div class="content active" data-tab="feed">
+						<i class="fa-solid fa-grip"></i>
+						<p>Feed</p>
+					</div>
+				
+					<div class="content" data-tab="publish">
+						<i class="fa-regular fa-image"></i>
+						<p>Publica</p>
+					</div>
+				</footer>
+
+
+			</div>
+
+			<div class="services new-screen">
+
+				<header>
+					<p>SERVICII SPECIALE</p>
+								
+					<div class="actions">
+						<div class="btn exit-to-home">
+							<i class="fas fa-x" aria-hidden="true"></i>
+						</div>
+					</div>
+				</header>
+
+				<div class="list">
+					<div class="service police" data-service="police">
+						<p>POLITIA</p>
+						<p>SUNA</p>
+					</div>
+
+					<div class="service ambulance" data-service="ambulance">
+						<p>MEDICII</p>
+						<p>SUNA</p>
+					</div>
+
+					<div class="service mechanic" data-service="mechanic">
+						<p>MECANIC</p>
+						<p>SUNA</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="messages new-screen">
+
+				<header>
+					<p>MESAJE</p>
+								
+					<div class="actions">
+
+						<div class="btn new-message">
+							<i class="bi bi-chat-left"></i>
+						</div>
+
+						<div class="btn exit-to-home">
+							<i class="fas fa-x" aria-hidden="true"></i>
+						</div>
+					</div>
+				</header>
+
+				<div class="messages-prompt">
+					<header>								
+						<div class="actions">
+							<div class="btn">
+								<i class="fas fa-x" aria-hidden="true"></i>
+							</div>
+						</div>
+					</header>
+				
+					<h1>SCRIE UN<br>MESAJ</h1>
+				
+					<div class="fields">
+						<div class="box">
+							<p>INTRODU NUMARUL</p>
+						
+							<input>
+						</div>
+
+						<div class="box">
+							<p>MESAJ</p>
+						
+							<textarea></textarea>
+						</div>
+					</div>
+				
+					<div class="confirm">
+						<p>TRIMITE</p>
+					</div>
+				</div>
+
+				<div class="list visible">
+
+					<div class="item">
+				
+						<div class="text">
+				
+							<header>
+								<p>329-5436</p>
+								<p>11:52 26.11.2002</p>
+							</header>
+				
+							<p>I will let u know</p>
+							
+						</div>
+				
+						<i class="fas fa-chevron-right" aria-hidden="true"></i>
+						
+					</div>
+				</div>
+
+			</div>
+
+			<div class="conversation new-screen">
+
+				<header>
+					<p>-1</p>
+											
+					<div class="actions">
+			
+						<!-- <div class="btn delete-conversation">
+							<i class="bi bi-trash-fill"></i>
+						</div> -->
+			
+						<div class="btn back-to-list">
+							<i class="bi bi-arrow-return-left" aria-hidden="true"></i>
+						</div>
+					</div>
+				</header>
+
+				<div class="chats"></div>
+			
+				<footer>
+					<input placeholder="Scrie un mesaj . . .">
+					
+					<div class="actions">
+						<i class="bi bi-geo-alt"></i>
+						
+						<div class="send">
+							<i class="bi bi-send"></i>
+						</div>
+					</div>
+						
+				</footer>
+			</div>
+
+			<div class="contacts new-screen">
+
+				<header>
+					<p>CONTACTE</p>
+								
+					<div class="actions">
+
+						<div class="btn hidden trash">
+							<i class="bi bi-trash-fill"></i>
+						</div>
+
+						<div class="btn hidden plus">
+							<i class="fas fa-plus"></i>
+						</div>
+
+						<div class="btn exit-to-home">
+							<i class="fas fa-x" aria-hidden="true"></i>
+						</div>
+					</div>
+				</header>
+
+
+				<div class="contacts-list visible" data-page="contacts-list">
+
+					<div class="contact" data-number="329-5463" data-name="Sebastian Proxy">
+						<i class="bi bi-person-fill"></i>
+					
+						<div class="data">
+							<p>Sebastian Proxy</p>
+							<p>329-5463</p>
+						</div>
+
+						<div class="actions">
+							
+							<div class="action tooltip" title="Suna" data-act="call">
+								<i class="fa-solid fa-phone"></i>
+							</div>
+
+							<div class="action tooltip" title="Scrie un mesaj" data-act="message">
+								<i class="fas fa-message" aria-hidden="true"></i>
+							</div>
+
+							<div class="action tooltip" title="Editeaza contact" data-act="edit">
+								<i class="fa-solid fa-pencil"></i>
+							</div>
+
+							<div class="action tooltip" title="Sterge contact" data-act="delete">
+								<i class="fa-solid fa-trash"></i>
+							</div>
+										
+						</div>
+					</div>
+
+				</div>
+
+				<div class="calls-list" data-page="calls">
+					<div class="call">
+						<p>329-5436</p>
+					
+						<div class="call-box">
+							<i class="fa-solid fa-phone-volume"></i>
+						</div>
+					</div>
+				</div>
+
+				<div class="shared-list" data-page="shared">
+					<div class="box">
+						<div class="text">
+							<p>Sebastian Proxy</p>
+							<p>329-5436</p>
+						</div>
+					
+						<div class="add-box">
+							<i class="fa-solid fa-user-plus"></i>
+						</div>
+					</div>
+					
+					<div class="box">
+						<div class="text">
+							<p>Sebastian Proxy</p>
+							<p>329-5436</p>
+						</div>
+					
+						<div class="add-box">
+							<i class="fa-solid fa-user-plus"></i>
+						</div>
+					</div>
+					
+					<div class="box">
+						<div class="text">
+							<p>Sebastian Proxy</p>
+							<p>329-5436</p>
+						</div>
+					
+						<div class="add-box">
+							<i class="fa-solid fa-user-plus"></i>
+						</div>
+					</div>
+					
+					<div class="box">
+						<div class="text">
+							<p>Sebastian Proxy</p>
+							<p>329-5436</p>
+						</div>
+					
+						<div class="add-box">
+							<i class="fa-solid fa-user-plus"></i>
+						</div>
+					</div>
+					
+					<div class="box">
+						<div class="text">
+							<p>Sebastian Proxy</p>
+							<p>329-5436</p>
+						</div>
+					
+						<div class="add-box">
+							<i class="fa-solid fa-user-plus"></i>
+						</div>
+					</div>
+				</div>
+
+				<div class="keypad" data-page="keys">
+
+					<h1></h1>
+				
+					<div class="keyboard">
+				
+						<div class="rows">
+							<div class="row"> 
+								<div class="key" data-key="1">
+									<p>1</p>
+								</div>
+								
+								<div class="key" data-key="2">
+									<p>2</p>
+								</div>
+										
+								<div class="key" data-key="3">
+									<p>3</p>
+								</div>
+							</div>
+					
+							<div class="row">
+								<div class="key" data-key="4">
+									<p>4</p>
+								</div>
+						
+								<div class="key" data-key="5">
+									<p>5</p>
+								</div>
+						
+								<div class="key" data-key="6">
+									<p>6</p>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="key" data-key="7">
+									<p>7</p>
+								</div>
+								
+								<div class="key" data-key="8">
+									<p>8</p>
+								</div>
+							
+								<div class="key" data-key="9">
+									<p>9</p>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="key" data-key="-">
+									<i class="bi bi-dash"></i>
+								</div>
+						
+								<div class="key" data-key="0">
+									<p>0</p>
+								</div>
+						
+								<div class="key" data-key="*">
+									<i class="bi bi-backspace"></i>
+								</div>
+							</div>
+						</div>
+				
+						<div class="call-box">
+							<i class="fa-solid fa-phone"></i>
+						</div>
+						
+					</div>
+					
+				</div>
+
+				
+				<div class="contacts-prompt add-contact">
+					<header>								
+						<div class="actions">
+							<div class="btn">
+								<i class="fas fa-x" aria-hidden="true"></i>
+							</div>
+						</div>
+					</header>
+				
+					<h1>ADAUGA UN<br>CONTACT</h1>
+				
+					<div class="fields">
+						<div class="box">
+							<p>NUME</p>
+						
+							<input>
+						</div>
+
+						<div class="box">
+							<p>NUMAR DE TELEFON</p>
+						
+							<input>
+						</div>
+					</div>
+				
+					<div class="confirm">
+						<p>ADAUGA LA CONTACTE</p>
+					</div>
+				</div>
+
+				<div class="contacts-prompt edit-contact">
+					<header>								
+						<div class="actions">
+							<div class="btn">
+								<i class="fas fa-x" aria-hidden="true"></i>
+							</div>
+						</div>
+					</header>
+				
+					<h1>EDITARE CONTACT</h1>
+				
+					<div class="fields">
+						<div class="box">
+							<p>NUME</p>
+						
+							<input>
+						</div>
+
+						<div class="box">
+							<p>NUMAR DE TELEFON</p>
+						
+							<input>
+						</div>
+					</div>
+				
+					<div class="confirm">
+						<p>SALVARE MODIFICARI</p>
+					</div>
+				</div>
+
+				<footer>
+					<div class="tab" data-tab="contacts-list">
+						<i class="bi bi-person-fill"></i>
+						<p>CONTACTS</p>
+					</div>
+					
+					<div class="tab" data-tab="calls">
+						<i class="bi bi-telephone-fill"></i>
+						<p>CALLS</p>
+					</div>
+
+					<div class="tab" data-tab="shared">
+						<i class="bi bi-list-ul"></i>
+						<p>SHARED</p>
+					</div>
+
+					<div class="tab" data-tab="keys">
+						<i class="bi bi-grid-3x3-gap-fill"></i>
+						<p>KEYS</p>
+					</div>
+				</footer>
+    
+
+			</div>
+
+        </div>
+
+		<div class="sms-notify">
+			<img src="https://cdn.armylegends.ro/elements/mobile-screen-button-solid.png">
+
+			<div class="content">
+				<div class="header">
+					<p>SMS de la</p>
+					<span>401-4687</span>
+				</div>
+
+				<p class="sms-text">salut robert te chem sa mi sugi pula...</p>
+			</div>
+		</div>
+
+        <script>
+            Vue.filter('formatnum', (x) => {
+                return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            })
+        </script>
+
+        <script src="app.js" type="text/javascript"></script>
+		<script src='screens/home.js' defer></script>
+		<script src='screens/settings.js' defer></script>
+		<script src='screens/camera.js' defer></script>
+		<script src='screens/shop.js' defer></script>
+		<script src='screens/investments.js' defer></script>
+		<script src='screens/gps.js' defer></script>
+		<script src='screens/taxi.js' defer></script>
+		<script src='screens/lifeinvader.js' defer></script>
+		<script src='screens/bank.js' defer></script>
+		<script src='screens/ishare.js' defer></script>
+		<script src='screens/services.js' defer></script>
+		<script src='screens/messages.js' defer></script>
+		<script src='screens/contacts.js' defer></script>
+		<script src='screens/providers.js' defer></script>
+		<script src='screens/vignette.js' defer></script>
+		<script src='screens/auctions.js' defer></script>
+    </body>
+</html>

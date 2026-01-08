@@ -1,0 +1,123 @@
+
+.phone-layout > .gps{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1.5vh;
+    
+    padding-top: 2.5vh;
+    padding-right: 1.25vw;
+    padding-left: 1.5vw;
+
+    backdrop-filter: blur(10px);
+}
+
+.phone-layout > .gps.visible{
+    display: flex;
+    animation: fadeIn 1.5s;
+}
+
+.phone-layout > .gps > header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.phone-layout > .gps > header > p{
+    font-family: "Akrobat Light";
+    font-size: 3vh;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.phone-layout > .gps > header > .actions{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    gap: .5vw;
+}
+
+.phone-layout > .gps > header > .actions > .btn{
+    padding: 1.45vh .95vw;
+    border-radius: .75vw;
+    background: #ffffff20;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .15s ease-in-out;
+}
+
+.phone-layout > .gps > header > .actions > .btn.hidden{
+    display: none;
+}
+
+.phone-layout > .gps > header > .actions > .btn:hover{
+/*     box-shadow: 0 0 0 5.5px #ffffff09; */
+    background: #ffffff30;
+}
+
+.phone-layout > .gps > .list{
+    height: 82%;
+    width: 100%;
+    margin-top: 5%;
+    display: none;
+    flex-direction: column;
+    gap: .65vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.phone-layout > .gps > .list::-webkit-scrollbar{
+    display: none;
+}
+
+.phone-layout > .gps > .list.visible{
+    display: flex;
+}
+
+.phone-layout > .gps > .list > .item{
+    padding: 2.5vh 1.25vw;
+    background: #ffffff20;
+    border-radius: 25px;
+
+    display: flex;
+    align-items: center;
+    transition: .3s ease-in-out;
+}
+
+.phone-layout > .gps > .list > .item.sub-category{
+    padding: 1.2vh 1.25vw;
+}
+
+.phone-layout > .gps > .list > .item:hover{
+    background: #ffffff30;
+}
+
+.phone-layout > .gps > .list > .item > p{
+    font-family: "Akrobat Bold";
+    letter-spacing: .5px;
+    font-size: 2.15vh;
+    font-weight: 700;
+}
+
+.phone-layout > .gps > .list > .item.sub-category > p{
+    font-size: 2vh;
+}
+
+.phone-layout > .gps > .list > .item > .location-box{
+    margin-left: auto;
+    padding: 1.45vh 1vw;
+    border-radius: .85vw;
+    background: #ffffff20;
+}
+
+.phone-layout > .gps > .list > .item.sub-category > .location-box:hover{
+    background: #ffffff30;
+}
+
+.phone-layout > .gps > .list > .item > .location-box > i{
+    font-size: 2vh;
+}

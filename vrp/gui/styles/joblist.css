@@ -1,0 +1,223 @@
+.main-joblist, .joblist-flex {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.main-joblist {
+    position: absolute;
+    inset: 0;
+
+    background: url(https://cdn.armylegends.ro/bg/bg_jobsel.png) no-repeat;
+    background-size: 100% 100%;
+
+    font-family: "TT Norms";
+}
+
+.joblist-flex .wiki-btn {
+    position: absolute;
+    left: 315px;
+    top: 582px;
+    width: 268px;
+    height: 81px;
+    border-radius: 2px;
+    background: rgba(255, 85, 85, 0.74);
+    color: rgba(255, 255, 255, 0.47);
+    text-align: center;
+    font-family: TT Norms;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%; /* 18px */
+    text-transform: uppercase;
+    display: grid;
+    place-items: center;
+    transition: .232323s ease-in-out;
+}
+
+.joblist-flex .wiki-btn:hover {
+    transform: translateY(-5px);
+}
+
+
+.joblist-flex .job-list {
+    position: absolute;
+    top: 182px;
+    left: 634px;
+
+    max-width: 1003px;
+    max-height: 715px;
+
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 20px 18px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    padding-right: 20px;
+}
+
+
+.joblist-flex .job-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.joblist-flex .job-list::-webkit-scrollbar-track {
+    border-radius: 0.25vw;
+    background: rgba(84, 131, 243, .2);
+}
+
+.joblist-flex .job-list::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgb(84, 131, 243);
+}
+
+.joblist-flex .job-list > div {
+    position: relative;
+
+    width: 311px;
+    height: 436px;
+
+    background: url(https://cdn.armylegends.ro/elements/Rectangle_116.webp) no-repeat;
+    background-size: 100% 100%;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.joblist-flex .job-list > div:not(.big) {
+    width: 311px;
+    height: 259px;
+    background: url(https://cdn.armylegends.ro/elements/Rectangle_116.webp) no-repeat;
+    background-size: 100% 100%;
+}
+
+.joblist-flex .job-list > div img {
+    width: 297px;
+    height: 210px;
+    margin-top: 8px;
+}
+
+
+.joblist-flex .job-list > div .tag {
+    position: absolute;
+    top: -14px;
+    right: 13px;
+    width: calc(95px + 16px);
+    height: calc(45px + 29px);
+    background: url(https://cdn.armylegends.ro/elements/Group_735.webp) no-repeat;
+    background-size: 100% 100%;
+}
+
+
+.joblist-flex .job-list > div .title {
+    position: absolute;
+    top: 237px;
+    left: 23px;
+    color: #FFF;
+    text-align: center;
+    font-family: "TT Norms";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 24px */
+    text-transform: uppercase;
+}
+.joblist-flex .job-list > div:not(.big) .title {
+    top: 23px;
+}
+
+.joblist-flex .job-list > div:not(.big) .title.small-font {
+    font-size: 18px;
+    top: 27px;
+}
+
+.joblist-flex .job-list > div .description {
+    position: absolute;
+    top: 269px;
+    left: 23px;
+    width: 267px;
+    color: rgba(255, 255, 255, 0.50);
+    font-feature-settings: 'liga' off;
+    font-family: TT Norms;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 132%; /* 18.48px */
+}
+
+.joblist-flex .job-list > div:not(.big) .description {
+    top: 111px;
+}
+
+
+.joblist-flex .job-list > div .action-btn {
+    position: absolute;
+    top: 364px;
+    width: 192px;
+    height: 43px;
+    border-radius: 2px;
+    background: #FFF;
+    display: grid;
+    place-items: center;
+    color: #252525;
+    text-align: center;
+    font-family: "TT Norms";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0);
+    outline: 2px solid #fff;
+    outline-offset: 5px;
+    cursor: pointer;
+    transition: background .323232s;
+}
+
+.joblist-flex .job-list > div:not(.big) .action-btn {
+    top: 189px;
+}
+
+.joblist-flex .job-list > div .action-btn:not(:hover) {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.10);
+    color: #FFF;
+    text-align: center;
+    font-family: TT Norms;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 18.2px */
+    text-transform: uppercase;
+    outline: none;
+}
+
+
+.joblist-flex .job-list > div .min-level {
+    position: absolute;
+    top: 63px;
+    left: 23px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.joblist-flex .job-list > div .min-level .lvl-box {
+    min-width: 97px;
+    padding: 0 10px;
+    height: 31px;
+    border-radius: 4px;
+    background: #FFED4A;
+    color: #252525;
+    font-family: TT Norms;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 14px */
+    display: grid;
+    place-items: center;
+}

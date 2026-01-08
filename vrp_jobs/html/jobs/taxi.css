@@ -1,0 +1,150 @@
+.main-taxi, .taxi-flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.main-taxi {
+
+    --bg: url("https://cdn.armylegends.ro/bg/Taxi.webp?width=1193&height=671");
+    --clr: 255, 222, 42;
+
+    position: absolute;
+    inset: 0;
+    
+    background: var(--bg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.taxi-flex {
+    padding: 120px;
+    flex-direction: column;
+}
+
+.taxi-flex .job-header {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.taxi-flex .job-header .header-box {
+    display: flex;
+    font-variant-ligatures: none;
+}
+
+.taxi-flex .job-header .header-box .job-title {
+    font-size: 6vh;
+    /* text-transform: uppercase; */
+    letter-spacing: .05em;
+    font-weight: 300;
+    color: hsla(0, 0%, 100%, .9);
+    line-height: 60px;
+    margin-right: 26px;
+}
+
+.taxi-flex .job-header .header-box .job-title p {
+    font-size: 6vh;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .05em;
+}
+
+.taxi-flex .job-header .job-description {
+    margin-top: 10px;
+    color: hsla(0, 0%, 100%, .4);
+    font-size: 2vh;
+    letter-spacing: .025em;
+    line-height: 22px;
+    width: 570px;
+    font-weight: 300;
+}
+
+.taxi-flex .job-header .header-box .job-action {
+    padding: 10px 14px;
+    min-width: 180px;
+    min-height: 50px;
+    height: fit-content;
+    background-color: rgba(var(--clr), .7);
+    border: 2px dashed transparent;
+    border-radius: 6px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsla(0, 0%, 100%, .7);
+    font-size: 18px;
+    letter-spacing: .015em;
+    font-weight: 400;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: .232323s ease-in-out;
+}
+
+.taxi-flex .job-header .header-box .job-action:hover {
+    border: 2px dashed rgb(var(--clr));
+    opacity: .8;
+}
+
+.taxi-flex .job-boxes {
+    margin-top: 102px;
+    display: flex;
+    gap: 3vh;
+}
+
+.taxi-flex .job-boxes > div {
+    position: relative;
+    transition: all 0.33s, border 0s;
+    min-width: 28vh;
+    border-radius: 0.5vh;
+    min-height: 40vh;
+    border: 0.4vh dashed hsla(0, 0%, 100%, 0.125);
+    padding: 20px 22px;
+}
+.taxi-flex .job-boxes > div:first-of-type {
+    border-style: solid;
+}
+.taxi-flex .job-boxes > div:hover {
+    transition: 0.33s, border 0s;
+    border-color: hsla(0, 0%, 100%, 0.188);
+    background: hsla(0, 0%, 100%, 0.02);
+    border-style:dotted;
+}
+
+
+.taxi-flex .job-boxes > div:first-of-type::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 265px;
+    height: 125px;
+    background: url(https://media.discordapp.net/attachments/1041015856446046229/1054000984575197294/vecteezy_taxi-sign-clipart-design-illustration_9384830_371.png?width=1440&height=496) no-repeat;
+    background-size: 100% 100%;
+    transform: translateX(30%) translateY(25%);
+}
+
+.taxi-flex .job-boxes > div .title {
+    font-size: 2vh;
+    font-weight: 600;
+    position: relative;
+}
+
+.taxi-flex .job-boxes > div .title::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(-25%) translateY(-65%);
+    content: "";
+    width: 162px;
+    height: 162px;
+    background: url(https://cdn.armylegends.ro/elements/Mask_Group-2.webp) no-repeat;
+}
+
+.taxi-flex .job-boxes > div .description {
+    max-width: 250px;
+    margin-top: 35px;
+    letter-spacing: .025em;
+    color: hsla(0, 0%, 100%, .5);
+    line-height: 21px;
+}
+

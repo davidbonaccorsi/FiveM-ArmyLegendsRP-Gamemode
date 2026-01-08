@@ -1,0 +1,79 @@
+
+
+.call-display{
+    position: absolute;
+    width: 85%;
+    background: #0b090b99;
+    backdrop-filter: blur(10px);
+    top: 8.5%;
+    z-index: 2;
+
+    display: none;
+    align-items: center;
+    gap: 1vw;
+    padding: 2vh 1vw;
+    padding-left: 2.25vw;
+    border-radius: 10vw;
+    animation: notification 2s;
+}
+
+.call-display.visible{
+    display: flex;
+}
+
+.call-display > .text{
+    display: flex;
+    flex-direction: column;
+    gap: .35vh;
+}
+
+.call-display > .text > p:first-of-type{
+    opacity: .65;
+    font-weight: 600;
+    letter-spacing: .65px;
+}
+
+.call-display > .text > p:last-of-type{
+    font-weight: 600;
+    letter-spacing: .65px;
+}
+
+.call-display > .actions{
+    margin-left: auto;
+
+    display: flex;
+    gap: .85vw;
+}
+
+.call-display > .actions > .action{
+    width: 2.25vw;
+    height: 2.2vw;
+
+    border-radius: 10vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+
+    transition: .33s ease-in-out;
+}
+
+.call-display > .actions > .action.hidden{
+    display: none;
+}
+
+.call-display > .actions > .action:hover{
+    opacity: .65;
+}
+
+.call-display > .actions > .action.end{
+    background: #f65147;
+}
+
+.call-display > .actions > .action.ok{
+    background: #74ce60;
+}
+
+.call-display > .actions > .action > img{
+    width: 20px;
+}

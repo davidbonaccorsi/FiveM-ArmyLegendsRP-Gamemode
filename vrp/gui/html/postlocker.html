@@ -1,0 +1,12 @@
+<div class="main-postlocker" v-if="active">
+    <div class="postlocker-flex" :style="{zoom: zoom}">
+        <div class="welcome">Bine ai revenit, {{username}}!</div>
+
+        <div :class="{'packages-list': true, rtl: getShownItems() > 6}">
+            <div v-bind:count="v.amount" v-for="(v, index) in packages" @click="post('vrp:triggerServerEvent', ['vrp-post:pickupItem', index + 1, v.item])">
+                <img :src="'https://cdn.armylegends.ro/items/' + v.item + '.webp'">
+                <p>{{v.name}}</p>
+            </div>
+        </div>
+    </div>
+</div>

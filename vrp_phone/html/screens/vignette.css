@@ -1,0 +1,213 @@
+
+.phone-layout > .vignette{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1.5vh;
+
+    backdrop-filter: blur(10px);
+    background: #faf9f6;
+}
+
+.phone-layout > .vignette.visible{
+    display: flex;
+    animation: fadeIn 1.5s;
+}
+
+.phone-layout > .vignette header img {
+    width: 70px;
+    height: 25px;
+    margin-left: 10px;
+    margin-top: 5px;
+    opacity: .2;
+    display: none;
+}
+
+.phone-layout > .vignette > header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #0f2443;
+    padding: 12px 18px;
+    box-shadow: 10px 15px 0 0 #faf9f605;
+}
+
+.phone-layout > .vignette > header > p{
+    font-family: "Akrobat Light";
+    font-size: 1.95vh;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.phone-layout > .vignette > header > .actions{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    gap: .5vw;
+}
+
+.phone-layout > .vignette > header > .actions > .btn{
+    padding: 1.45vh .95vw;
+    border-radius: .75vw;
+    background: #ffffff20;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .15s ease-in-out;
+}
+
+.phone-layout > .vignette > header > .actions > .btn.hidden{
+    display: none;
+}
+
+.phone-layout > .vignette > header > .actions > .btn:hover{
+/*     box-shadow: 0 0 0 5.5px #ffffff09; */
+    background: #ffffff35;
+}
+
+
+.phone-layout > .vignette .categories {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 16px;
+}
+
+
+.phone-layout > .vignette .categories > div {
+    width: 140px;
+    height: 140px;
+    border: 1px solid rgb(15, 36, 67);
+    border-radius: 5px;
+    opacity: .6;
+    background-image: url(https://www.e-rovinieta.ro/img/catA.e8c02d1e.svg);
+    background-repeat: no-repeat;
+    background-size: 60% 60%;
+    background-position: center;
+    cursor: pointer;
+    transition: .232323s ease-in-out;
+}
+.phone-layout > .vignette .categories > div:hover {
+    transform: translateY(-3.5px);
+    box-shadow: inset 0 0 0 10px rgba(15, 36, 67, .05);
+}
+
+.phone-layout > .vignette .categories > div:first-of-type:hover, .phone-layout > .vignette .categories > div:first-of-type.selected {
+    background-image: url(https://www.e-rovinieta.ro/img/catA.408f5d1b.svg);
+    opacity: 1;
+}
+
+.phone-layout > .vignette .categories > div:not(:hover):not(.selected) {
+    opacity: .3;
+}
+
+.phone-layout > .vignette .categories > div:nth-of-type(2) {
+    pointer-events: none;
+    background-image: url(https://www.e-rovinieta.ro/img/catF.d85bf594.svg);
+}
+
+
+.phone-layout .vignette > .title {
+    color: #0f2443;
+    font-family: "Akrobat Black";
+    font-size: 42px;
+    height: fit-content;
+    line-height: 1.1;
+}
+
+.phone-layout .vignette > .step {
+    color: #0f2443;
+    font-family: "Akrobat Bold";
+    font-size: 22px;
+    height: fit-content;
+    line-height: 1.1;
+}
+
+
+.phone-layout .vignette select {
+    appearance: none;
+    background-attachment: scroll;
+    background-clip: padding-box;
+    background-color: rgb(255, 255, 255);
+    background: url("https://www.e-rovinieta.ro/img/arrow.03df704f.svg") #faf9f6 no-repeat;
+    background-origin: padding-box;
+    background-position-x: calc(100% - 20px);
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border: 1px solid rgb(206, 212, 218);
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: rgb(73, 80, 87);
+    display: block;
+    font-family: "Akrobat Bold";
+    font-size: 20px;
+    font-weight: 700;
+    height: 60px;
+    line-height: 21px;
+    padding-bottom: 6px;
+    padding-left: 14px;
+    padding-right: 12px;
+    padding-top: 6px;
+    text-align: start;
+    width: 300px;
+    outline: none !important;
+    overflow-wrap: normal;
+}
+
+.phone-layout .vignette select:hover {
+  border-color: #0f2443;
+}
+
+.phone-layout .vignette option {
+    appearance: none !important;
+    box-sizing: border-box;
+    color: #495057;
+    font-family: "Akrobat Bold";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    overflow-wrap: normal;
+    text-align: start;
+    text-transform: none;
+    min-height: 60px;
+    padding: 14px 10px;
+    background: #eee;
+}
+.phone-layout .vignette option:checked {
+    background: #fff;
+    font-size: 22px;
+}
+
+
+.phone-layout .vignette .pay {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: #0f2443;
+    border-radius: 100px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    line-height: 100px;
+/*     place-items: center; */
+    bottom: -65px;
+    font-family: "Akrobat Bold";
+    font-size: 26px;
+    box-shadow: 0 0 0 10px #0f244360;
+    transition: .232323s ease-in-out;
+    cursor: pointer;
+}
+.phone-layout .vignette .pay:not(.available) {
+    pointer-events: none;
+    opacity: .2;
+    color: hsla(0, 0%, 100%, .3);
+}
+
+.phone-layout .vignette .pay:hover {
+    box-shadow: 0 0 0 20px #0f244325;
+    line-height: 90px;
+}

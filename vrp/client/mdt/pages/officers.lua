@@ -1,0 +1,11 @@
+RegisterNUICallback('search:officer', function(data, callback)
+    triggerCallback('searchOfficers', function(data)
+        callback(data)
+    end)
+end)
+
+RegisterNUICallback('search:officer-citizen', function(data, callback)
+    triggerCallback('searchOfficer', function(data)
+        callback(data)
+    end, data.query)
+end)

@@ -1,0 +1,192 @@
+
+.phone-layout > .providers{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1.5vh;
+    
+    padding-top: 2.5vh;
+    padding-right: 1.25vw;
+    padding-left: 1.5vw;
+
+    backdrop-filter: blur(10px);
+    background: url(https://cdn.armylegends.ro/elements/Frame_10.webp) no-repeat;
+    background-size: 100% 100%;
+}
+
+.phone-layout > .providers.visible{
+    display: flex;
+    animation: fadeIn 1.5s;
+}
+
+.phone-layout > .providers > header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.phone-layout > .providers > header > p{
+    font-family: "Akrobat Light";
+    font-size: 2.85vh;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.phone-layout > .providers > header > .actions{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    gap: .5vw;
+}
+
+.phone-layout > .providers > header > .actions > .btn{
+    padding: 1.45vh .95vw;
+    border-radius: .75vw;
+    background: #ffffff20;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .15s ease-in-out;
+}
+
+.phone-layout > .providers > header > .actions > .btn.hidden{
+    display: none;
+}
+
+.phone-layout > .providers > header > .actions > .btn:hover{
+/*     box-shadow: 0 0 0 5.5px #ffffff09; */
+    background: #ffffff30;
+}
+
+
+/* .phone-layout > .providers .orders-list {
+    height: 60%;
+    width: 100%;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    padding-right: 10px;
+} */
+.phone-layout > .providers .orders-list {
+    height: 75%;
+    width: 100%;
+    overflow: hidden auto;
+    padding-right: 10px;
+}
+
+.phone-layout > .providers .orders-list::-webkit-scrollbar {
+    width: 4px;
+}
+.phone-layout > .providers .orders-list::-webkit-scrollbar-track {
+    background: rgb(255 255 255 / 10%);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+.phone-layout > .providers .orders-list::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #DFB58B40;
+}
+
+.phone-layout > .providers .orders-list > div {
+    width: 100%;
+    min-height: 200px;
+    padding: 16px;
+    background-color: hsla(0, 0%, 100%, .1);
+    margin-bottom: 16px;
+    position: relative;
+}
+.phone-layout > .providers .orders-list > div:last-of-type {
+    margin-bottom: 0;
+}
+.phone-layout > .providers .orders-list > div.in-progress {
+    pointer-events: none;
+}
+
+.phone-layout > .providers .orders-list > div.in-progress::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://cdn.armylegends.ro/elements/New-business-buy.png) no-repeat;
+    background-size: 100% 100%;
+    opacity: .75;
+}
+
+.phone-layout > .providers .orders-list > div.in-progress > i {
+    position: absolute;
+    top: 50%;
+    left: 42.5%;
+    font-size: 50px;
+}
+
+
+/* no more accept-order -> just icon */
+.phone-layout > .providers .accept-order {
+    position: absolute;
+    bottom: -2.5px;
+
+    height: 133px;
+    width: 133px;
+
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: .636363s ease-in-out;
+}
+/* .phone-layout > .providers .accept-order:hover::before {
+    font-size: 58px;
+} */
+.phone-layout > .providers .accept-order::before {
+    content: "\f468";
+    font-family: "Font Awesome 6 Pro";
+    font-size: 58px;
+    color: #333;
+    mix-blend-mode: difference;
+    transition: .232323s ease-in-out;
+}
+
+.phone-layout > .providers .accept-order > svg {
+    position: absolute;
+}
+
+.phone-layout > .providers .order-header {
+    padding-bottom: 10px;
+    border-bottom: 2px solid hsla(0, 0%, 100%, .2);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.phone-layout > .providers .order-header span {
+    margin-left: auto;
+    padding: 6px 8px;
+    background: #DFB58B40;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.phone-layout > .providers .order-header i {
+    margin-left: 10px;
+}
+
+.phone-layout > .providers .orders-list i{
+    transition: .232323s ease-in-out;
+    cursor: pointer;
+}
+
+.phone-layout > .providers .orders-list i:hover {
+    color: #DFB58B60;
+}
+
+.phone-layout > .providers ul {
+    margin-left: 16px;
+    margin-top: 16px;
+}

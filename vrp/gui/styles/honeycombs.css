@@ -1,0 +1,84 @@
+
+.honeycombs-layout {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    z-index: 5
+}
+
+.honeycombs-layout > .wrapper {
+    display: flex;
+    margin-bottom: 1.2vh;
+}
+
+/* .honeycombs-layout > .wrapper.not-even {
+    margin-bottom: 1.2vh;
+    margin-top: 2.2vh;
+} */
+
+.honeycombs-layout > .wrapper:last-child {
+    margin-bottom: unset
+}
+
+.honeycombs-layout > .wrapper > li {
+    background: url(https://cdn.armylegends.ro/elements/cbimage5.webp) no-repeat;
+    background-size: 100%;
+    width: 12.6vh;
+    height: 13.8vh;
+    margin-right: 1.4vh;
+    transition: all easy-in-out .23232323s;
+    -webkit-transition: all .23232323s ease-in-out;
+    -moz-transition: all .23232323s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative
+}
+
+.honeycombs-layout > .wrapper > li:hover {
+    background: url(https://cdn.armylegends.ro/elements/cbimage6.webpg) no-repeat;
+    background-size: 100%
+}
+
+.honeycombs-layout > .wrapper > li:last-child {
+    margin-right: unset
+}
+
+.honeycombs-layout > .wrapper > li > img {
+    max-height: 5.6vh;
+    pointer-events: none
+}
+
+.honeycombs-layout > .wrapper > li > p {
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: .015em;
+    font-size: 1.2vh;
+    margin-top: 1.3vh;
+    max-width: 8vh;
+    text-align: center;
+    line-height: 1.3;
+    font-family: "TT Norms";
+}
+
+.honeycombs-layout > .wrapper > .animate {
+    opacity: 1
+}
+
+.honeycombs-layout > .wrapper > .animate:hover {
+    opacity: 1;
+}
+
+.honeycombs-layout > .wrapper > .animate > span {
+    position: absolute;
+    color: #fff;
+    font-size: 1.5vh;
+    top: .2vh;
+    font-weight: 800
+}

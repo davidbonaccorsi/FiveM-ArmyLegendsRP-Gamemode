@@ -1,0 +1,574 @@
+
+.main-player-menu, .player-menu-flex {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.main-player-menu {
+    position: absolute;
+    inset: 0;
+    background: url(https://cdn.armylegends.ro/bg/Frame_2.webp) no-repeat;
+    background-size: 100% 100%;
+    display: grid;
+    place-items: center;
+    font-family: "TT Norms";
+}
+
+.player-menu-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    animation: 2s fadeIn linear;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.player-menu-flex .player-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 90px;
+    width: 1482px;
+    position: absolute;
+    left: 13%;
+}
+
+.player-menu-flex .player-menu-header .left-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.player-menu-flex .player-menu-header .left-data img {
+    width: 10vh;
+    height: 3vh;
+}
+
+.player-menu-flex .player-menu-header .left-data h1 {
+    font-family: "TT Norms";
+}
+
+.player-menu-flex .player-menu-header .left-data h1 span {
+    color: #a1c9ff;
+}
+
+.player-menu-flex .player-menu-header .right-data {
+    margin-top: 3vh;
+    margin-right: 1.5vh;
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+
+.player-menu-flex .player-menu-header .right-data .money-data {
+    display: inline-flex;
+    align-items: center;
+    gap: 1vh;
+}
+
+.player-menu-flex .player-menu-header .right-data .money-data i {
+    width: 4vh;
+    height: 4vh;
+
+    color: #a1c9ff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: .50vw;
+    border: 1px solid #ffffff30;
+}
+
+.player-menu-flex .pause-menu {
+    width: 100%;
+    height: 80%;
+}
+
+.player-menu-flex .pause-menu .one:hover, .player-menu-flex .pause-menu .two:hover, .player-menu-flex .pause-menu .three:hover, .player-menu-flex .pause-menu .four:hover,
+.player-menu-flex .pause-menu .five:hover, .player-menu-flex .pause-menu .six:hover, .player-menu-flex .pause-menu .seven:hover, .player-menu-flex .pause-menu .eight:hover,
+.player-menu-flex .pause-menu .nine:hover
+{
+    opacity: .5;
+}
+
+.player-menu-flex .pause-menu .one {
+    position: absolute;
+    left: 13%;
+    top: 17%;
+
+    transition: 1s all;
+    grid-area: 1 / 1 / 5 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+
+    width: 370px;
+    height: 627px;
+    flex-shrink: 0;
+}
+
+.player-menu-flex .pause-menu .one .title {
+    margin-left: 1.5vh;
+    margin-top: 3vh;
+    width: 89%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-menu-flex .pause-menu .one .title h1 {
+    font-size: 1.6em;
+    /* font-weight: 300; */
+    font-family: 'TT Norms', sans-serif;
+}
+
+.player-menu-flex .pause-menu .one .title p {
+    font-size: 1.2em;
+    font-family: 'TT Norms', sans-serif;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.10);
+    padding: .8vh 1.5vh;
+}
+
+.player-menu-flex .pause-menu .one .title p span {
+    color: #a1c9ff
+}
+
+.player-menu-flex .pause-menu .one .description {
+    margin-top: 1vh;
+    margin-left: 2.5vh;
+    width: 80%;
+    font-size: 14px;
+    font-family: 'TT Norms';
+    color: #ffffff70;
+    text-align: left;
+    font-variant-ligatures: none;
+}
+
+.player-menu-flex .pause-menu .one .list {
+    margin-top: 3vh;
+    margin-left: 1.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vh;
+    align-items: left;
+}
+.player-menu-flex .pause-menu .one .list .item {
+    display: inline-flex;
+    align-items: center;
+    gap: 1vh;
+}
+.player-menu-flex .pause-menu .one .list .item p {
+    font-family: 'TT Norms';
+    color: rgba(255, 255, 255, 0.90);
+}
+.player-menu-flex .pause-menu .one .list .item img {
+    height: 15px;
+    width: 15px;
+}
+
+.player-menu-flex .pause-menu .two {
+    position: absolute;
+    bottom: 10%;
+    left: 13%;
+
+    transition: 1s all;
+
+    display: flex;
+    flex-direction: column;
+    font-weight: 100;
+
+    width: 760px;
+    height: 143px;
+    flex-shrink: 0;
+}
+
+.player-menu-flex .pause-menu .two h1 {
+    font-size: 1.7em;
+    margin-top: 1.85vh;
+    margin-left: 2vh;
+    text-transform: uppercase ;
+    font-weight: 600;
+}
+
+.player-menu-flex .pause-menu .two p {
+    color: #ffffff90;
+    font-size: 1em;
+    margin-top: .3vh;
+    margin-left: 2vh;
+    width: 48.5%;
+}
+
+.player-menu-flex .pause-menu .three { 
+    position: absolute;
+    left: 33%;
+    top: 17.5%;
+
+    transition: 1s all;
+
+
+    display: flex;
+    gap: .8vh;
+    flex-direction: column;
+
+    width: 370px;
+    height: 237px;
+    flex-shrink: 0;
+}
+
+.player-menu-flex .pause-menu .three h1 {
+    margin-top: 2.5vh;
+    margin-left: 1.5vh;
+    text-transform: uppercase;
+    font-size: 1.4em;
+}
+
+.player-menu-flex .pause-menu .three p {
+    width: 70%;
+    margin-left: 1.5vh;
+    color: #ffffff80;
+    font-size: 14px;
+    font-variant-ligatures: none;
+}
+
+.player-menu-flex .pause-menu .three .refferal {
+    margin-top: 5px;
+    margin-left: 1.5vh;
+
+    padding: 1vh 1vh;
+    width: 10vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: .25vw;
+    border: 1px solid #ffffff30;
+}
+
+.player-menu-flex .pause-menu .four { 
+    position: absolute;
+    left: 33%;
+    top: 41%;
+    
+    transition: 1s all;
+
+
+    display: flex;
+    gap: .7vh;
+    flex-direction: column;
+
+    width: 370px;
+    height: 370px;
+    flex-shrink: 0;
+}
+
+.player-menu-flex .pause-menu .four h1 {
+    margin-top: 1.5vh;
+    margin-left: 2vh;
+    font-size: 1.7em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.player-menu-flex .pause-menu .four p {
+    width: 85%;
+    margin-left: 2vh;
+    color: #ffffff80;
+    font-size: .85em;
+}
+
+.player-menu-flex .pause-menu .four .list {
+    margin-top: 4vh;
+    margin-left: 1.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vh;
+    align-items: left;
+}
+
+.player-menu-flex .pause-menu .four .list .item {
+    display: inline-flex;
+    align-items: center;
+    gap: .2vh;
+}
+
+.player-menu-flex .pause-menu .four .list .item p {
+    font-weight: 100;
+    font-family: 'TT Norms';
+    color: rgba(255, 255, 255, 0.90);
+}
+
+.player-menu-flex .pause-menu .four .list .item img {
+    height: .8vh;
+    width: .8vh;
+}
+
+.player-menu-flex .pause-menu .five  {
+    position: absolute;
+    left: 53%;
+    top: 18%;
+
+    transition: 1s all; 
+    grid-area: 1 / 4 / 3 / 6;
+
+    display: flex;
+    gap: .7vh;
+    flex-direction: column;
+
+    width: 705px;
+    height: 237px;
+    flex-shrink: 0;
+}
+
+.player-menu-flex .pause-menu .five  h1 {
+    margin-top: 2.5vh;
+    margin-left: 2.5vh;
+    text-transform: uppercase  ;
+    font-size: 1.7em;
+    letter-spacing: 1px;
+}
+
+.player-menu-flex .pause-menu .five  p {
+    width: 60%;
+    margin-left: 2.5vh;
+    color: #ffffff80;
+    font-size: 1em;
+}
+
+.player-menu-flex .pause-menu .six  {
+    position: absolute;
+    left: 53%;
+    top: 41%;
+
+    transition: 1s all; 
+
+    display: flex;
+    gap: 1vh;
+    flex-direction: column;
+
+    width: 318px;
+    height: 533px;
+    flex-shrink: 0;
+}
+
+.player-menu-flex .pause-menu .six  h1 {
+    margin-top: 2vh;
+    margin-left: 2vh;
+    font-size: 1.55em;
+    letter-spacing: 1px;
+}
+
+.player-menu-flex .pause-menu .six  p {
+    width: 90%;
+    margin-left: 2vh;
+    color: #ffffff80;
+    font-size: .9em;
+}
+
+.player-menu-flex .pause-menu .seven {
+    position: absolute;
+    left: 70.2%;
+    top: 41%;
+
+    transition: 1s all;
+
+    display: flex;
+    flex-direction: column;
+    gap: .8vh;
+
+    height: 211px;
+    width: 370px;
+    flex-shrink: 0;
+}
+
+.player-menu-flex .pause-menu .seven h1 {
+    margin-top: 2.5vh;
+    margin-left: 2.5vh;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.player-menu-flex .pause-menu .seven p {
+    margin-left: 2.5vh;
+    color: #ffffff80;
+    width: 62%;
+}
+
+.player-menu-flex .pause-menu .eight {
+    position: absolute;
+    left: 70.2%;
+    top: 61.8%;
+
+    transition: 1s all; 
+
+    display: flex;
+    flex-direction: column;
+    gap: .8vh;
+
+    width: 370px;
+    height: 167px;
+    flex-shrink: 0;
+}
+
+.player-menu-flex .pause-menu .eight h1 {
+    margin-top: 2.05vh;
+    margin-left: 2.5vh;
+    font-size: 1.7em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.player-menu-flex .pause-menu .eight p {
+    margin-left: 2.5vh;
+    color: #ffffff80;
+    width: 80%;
+}
+
+.player-menu-flex .pause-menu .nine {
+    position: absolute;
+    left: 70.2%;
+    top: 78.5%;
+    transition: 1s all;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .8vh;
+    width: 370px;
+    height: 130px;
+}
+
+.player-menu-flex .pause-menu .nine h1 {
+    /* margin-top: 2.5vh; */
+    margin-left: 3.5vh;
+    font-size: 1.7em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.player-menu-flex .pause-menu .nine p {
+    margin-left: 2vh;
+    color: #ffffff80;
+    width: 80%;
+}
+
+
+/* new bgs */
+.player-menu-flex .pause-menu .one::before {
+    content: "";
+    position: absolute;
+    width: calc(100% );
+    height: 100%;
+    background: url(https://cdn.armylegends.ro/elements/Property_1Variant2.webp) no-repeat;
+    background-size: 100% 100%;
+    right: 15px;
+    bottom: 10px;
+}
+
+
+.player-menu-flex .pause-menu .three::before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    background: url(https://cdn.armylegends.ro/elements/Group_14000.webp) no-repeat;
+    background-size: 100% 100%;
+    right: 15px;
+    bottom: 2px;
+}
+
+.player-menu-flex .pause-menu .five::before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    background: url(https://cdn.armylegends.ro/elements/Group_14001.webp) no-repeat;
+    background-size: 100% 100%;
+    right: 11.5px;
+    bottom: 10px;
+}
+
+
+.player-menu-flex .pause-menu .two::before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 15px);
+    height: calc(100% + 25px);
+    background: url(https://cdn.armylegends.ro/elements/Group_14002.webp) no-repeat;
+    background-size: 100% 100%;
+    right: 2.5px;
+    bottom: .5px;
+}
+
+.player-menu-flex .pause-menu .four::before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 1.5px);
+    height: calc(100% + 10px);
+    background: url(https://cdn.armylegends.ro/elements/Group_14005.webp) no-repeat;
+    background-size: 100% 100%;
+    right: 15px;
+    bottom: 12.5px;
+}
+
+.player-menu-flex .pause-menu .six::before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 1.5px);
+    height: calc(100% + 18px);
+    background: url(https://cdn.armylegends.ro/elements/Group_14006.webp) no-repeat;
+    background-size: 100% 100%;
+    right: 13.5px;
+    bottom: 2.5px;
+}
+
+.player-menu-flex .pause-menu .nine::before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 12px);
+    height: calc(100% + 18px);
+    background: url(https://cdn.armylegends.ro/elements/Group_14007.webp) no-repeat;
+    background-size: 100% 100%;
+    right: .5px;
+    bottom: 2.5px;
+}
+
+
+.player-menu-flex .pause-menu .eight::before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 15px);
+    height: calc(100% + 18px);
+    background: url(https://cdn.armylegends.ro/elements/Group_14008.webp) no-repeat;
+    background-size: 100% 100%;
+    right: .5px;
+    bottom: 2.5px;
+}
+
+.player-menu-flex .pause-menu .seven::before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 15px);
+    height: calc(100% + 18px);
+    background: url(https://cdn.armylegends.ro/elements/Group_14009.webp) no-repeat;
+    background-size: 100% 100%;
+    right: 1.5px;
+    bottom: 2.5px;
+}

@@ -1,0 +1,43 @@
+.prison-jail {
+    position: absolute;
+    top: 10%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    height: 16vh;
+}
+
+.prison-jail .prison-icon {
+    margin-left: 1vh;
+    width: 8vh;
+    height: 8vh;
+}
+
+.prison-jail .prison-icon img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.prison-jail h1 {
+    font-family: 'Akrobat ExtraBold';
+    font-size: 3.5rem;
+    color: rgb(218, 81, 87);
+}
+
+.prison-jail .line {
+    width: 4px;
+    height: 100%;
+    background: rgb(218, 81, 87);
+}
+
+.prison-jail .texts p {
+    font-size: 1.5rem;
+    font-family: 'Akrobat ExtraBold';
+    color: rgb(218, 81, 87);
+}
+
+.prison-jail .texts h1 {
+    font-family: 'Akrobat ExtraBold';
+    color: rgba(255, 255, 255, 0.5);
+}

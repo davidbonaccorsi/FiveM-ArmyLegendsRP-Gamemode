@@ -1,0 +1,89 @@
+@keyframes progressAnim {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes showAnnounce {
+    from {
+        top: -550px;
+    }
+    
+    to {
+        top: 100px;
+    }
+}
+
+.admin-announce {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    transition: 1s all;
+    animation: showAnnounce 4s linear;
+}
+
+.admin-announce .progress-line {
+    width: 506px;
+    height: 2px;
+    flex-shrink: 0;
+    background: rgba(217, 217, 217, 0.20);
+}
+
+.admin-announce .progress-line .progress {
+    width: 0%;
+    height: 2px;
+    flex-shrink: 0;
+
+    animation: progressAnim 10s linear;
+    background: #FFF;
+}
+
+.admin-announce h1 {
+    color: #FFF;
+    font-family: "SF Pro Display";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.5px;
+}
+
+.admin-announce .announce-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-announce .announce-data p {
+    max-width: 405px;
+    color: rgba(255, 255, 255, 0.774);
+    text-align: center;
+    font-family: "SF Pro Display";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.admin-announce .announce-data h1 {
+    max-width: 405px;
+    color: rgba(255, 255, 255, 0.514);
+    text-align: center;
+    font-family: "SF Pro Display";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}

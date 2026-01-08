@@ -1,0 +1,202 @@
+.main-weed, .weed-flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.main-weed {
+    --clr: 94, 106, 89;
+
+    position: absolute;
+    inset: 0;
+    
+    background: url("https://cdn.armylegends.ro/bg/Traficant_de_iarba_new2.webp") no-repeat;
+    background-size: 100% 100%;
+}
+
+
+.weed-flex {
+    padding: 120px;
+    flex-direction: column;
+}
+
+.weed-flex .min-level {
+    position: absolute;
+    right: 0;
+    top: -15px;
+    width: 200px;
+    height: 45px;
+    background-color: #ee4630;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg) translateX(35%);
+}
+
+.weed-flex .job-header {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.weed-flex .job-header .header-box {
+    display: flex;
+    font-variant-ligatures: none;
+}
+
+.weed-flex .job-header .header-box .job-title {
+    font-size: 6vh;
+    /* text-transform: uppercase; */
+    letter-spacing: .05em;
+    font-weight: 300;
+    color: hsla(0, 0%, 100%, .9);
+    line-height: 60px;
+    margin-right: 26px;
+}
+
+.weed-flex .job-header .header-box .job-title p {
+    font-size: 6vh;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .05em;
+}
+
+.weed-flex .job-header .job-description {
+    margin-top: 10px;
+    color: hsla(0, 0%, 100%, .4);
+    font-size: 2vh;
+    letter-spacing: .025em;
+    line-height: 22px;
+    width: 570px;
+    font-weight: 300;
+}
+
+.weed-flex .job-header .header-box .job-action {
+    padding: 10px 14px;
+    min-width: 180px;
+    min-height: 50px;
+    height: fit-content;
+    background-color: rgba(var(--clr), .7);
+    border: 2px dashed transparent;
+    border-radius: 6px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsla(0, 0%, 100%, .7);
+    font-size: 18px;
+    letter-spacing: .015em;
+    font-weight: 400;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: .232323s ease-in-out;
+}
+
+.weed-flex .job-header .header-box .job-action:hover {
+    border: 2px dashed rgb(var(--clr));
+    opacity: .8;
+}
+
+.weed-flex .job-boxes {
+    margin-top: 102px;
+    display: flex;
+    gap: 3vh;
+}
+
+.weed-flex .job-boxes > div {
+    position: relative;
+    transition: all 0.33s, border 0s;
+    min-width: 28vh;
+    border-radius: 0.5vh;
+    min-height: 40vh;
+    border: 0.4vh dashed hsla(0, 0%, 100%, 0.125);
+    padding: 20px 22px;
+}
+.weed-flex .job-boxes > div:first-of-type {
+    border-style: solid;
+}
+.weed-flex .job-boxes > div:hover {
+    transition: 0.33s, border 0s;
+    border-color: hsla(0, 0%, 100%, 0.188);
+    background: hsla(0, 0%, 100%, 0.02);
+    border-style:dotted;
+}
+
+.weed-flex .job-boxes > div .title {
+    font-size: 2vh;
+    font-weight: 600;
+    position: relative;
+}
+
+.weed-flex .job-boxes > div .title::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(-25%) translateY(-65%);
+    content: "";
+    width: 162px;
+    height: 162px;
+    background: url(https://cdn.armylegends.ro/elements/Mask_Group-2.webp) no-repeat;
+}
+
+.weed-flex .job-boxes > div .description {
+    max-width: 250px;
+    margin-top: 35px;
+    letter-spacing: .025em;
+    color: hsla(0, 0%, 100%, .5);
+    line-height: 21px;
+}
+
+
+
+
+.weed-minigame {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+}
+.weed-minigame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://cdn.armylegends.ro/bg/Traficant_de_iarba_Minigame.png) no-repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+}
+
+.weed-minigame .leaf{
+    width: 200px;
+    height: 200px;
+
+    background: url(https://cdn.armylegends.ro/elements/drugs.webp) no-repeat;
+    background-size: 100% 100%;
+
+    position: absolute;
+    z-index: 1000;
+
+}
+
+.weed-game-flex {
+    width: 100%;
+    height: 100%;
+}
+
+.weed-game-flex .spawn-zone {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    width: 725px;
+    height: 940px;
+}
+
+.weed-game-flex .drag-zone {
+    position: absolute;
+    bottom: 0px;
+    right: 55px;
+    width: 850px;
+    height: 575px;
+}

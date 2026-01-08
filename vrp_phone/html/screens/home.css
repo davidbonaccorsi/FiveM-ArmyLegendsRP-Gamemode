@@ -1,0 +1,168 @@
+
+.phone-layout > .home{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1.5vh;
+    
+    padding-top: 3vh;
+    padding-right: .85vw;
+    padding-left: .85vw;
+}
+
+.phone-layout > .home.visible{
+    display: flex;
+    animation: fadeIn 1.5s;
+}
+
+.phone-layout > .home > h1{
+    font-size: 8vh;
+    letter-spacing: 2px;
+}
+
+.phone-layout > .home > .your-number{
+    width: 95%;
+    height: 9vh;
+    background: #ffffff0f;
+    border-radius: 2vw;
+    align-self: flex-start;
+    margin-top: .5%;
+
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    padding: 0 1vw;
+    padding-left: 1.6vw;
+    padding-right: 0;
+}
+
+.phone-layout > .home > .your-number > .text{
+    display: flex;
+    flex-direction: column;
+}
+
+.phone-layout > .home > .your-number > .text > p{
+    font-family: "Akrobat Light";
+    opacity: .3;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 1.2vh;
+}
+
+.phone-layout > .home > .your-number > .number-field{
+    display: flex;
+    gap: .85vw;
+    font-size: 2vh;
+    align-items: center;
+}
+
+.phone-layout > .home > .your-number > .number-field > i{
+    font-size: 2vh;
+}
+
+.phone-layout > .home > .your-number > .number-field > p{
+    font-size: 1.5vh;
+    font-weight: 900;
+}
+
+.phone-layout > .home > .your-number > .suggest-contact{
+    height: 100%;
+    width: 30.5%;
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    justify-content: center;
+    border-left: .17vh solid #ffffff35;
+    margin-left: auto;
+    padding-left: 1.35vw;
+    padding-right: 1.5vw;
+    background: #ffffff15;
+    border-top-right-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    transition: .33s ease-in-out;
+}
+
+.phone-layout > .home > .your-number > .suggest-contact:hover{
+    background: #ffffff20;
+}
+
+.phone-layout > .home > .your-number > .suggest-contact > i{
+    font-size: 2.5vh;
+}
+
+
+.phone-layout > .home > .apps-list{
+    height: 55.5%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.phone-layout > .home > .apps-list > header{
+    height: 75%;
+}
+
+.phone-layout > .home > .apps-list > header > .wrap{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 1vh .85vw;
+    justify-content: center;
+}
+
+.phone-layout > .home > .apps-list > footer{
+    margin-top: auto;
+    height: 6vh;
+    display: flex;
+    gap: .85vw;
+    justify-content: center;
+}
+
+.phone-layout > .home > .apps-list > footer > .app-icon{
+    height: 100%;
+    width: 3.5vw;
+}
+
+.app-icon{
+    width: 3.5vw;
+    height: 3.5vw;
+    
+    background: #ffffff0f;
+    border-radius: 1vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .33s ease-in-out;
+}
+
+.phone-layout > .home > .apps-list > footer > .app-icon:nth-of-type(1){
+    background: #6cff8865;
+}
+
+.phone-layout > .home > .apps-list > footer > .app-icon:nth-of-type(2){
+    background: #6764bd99;
+}
+
+.phone-layout > .home > .apps-list > footer > .app-icon:nth-of-type(3){
+    background: #bd785099;
+}
+
+.phone-layout > .home > .apps-list > footer > .app-icon:nth-of-type(4){
+    background: #45a18399;
+}
+
+.app-icon:hover{
+    background: #ffffff1f;
+}
+
+.app-icon > img{
+    width: 30px;
+}
+
+.app-icon.free{
+    opacity: .5;
+}

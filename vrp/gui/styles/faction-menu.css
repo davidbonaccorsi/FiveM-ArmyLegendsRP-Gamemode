@@ -1,0 +1,1614 @@
+.faction-menu-wrapper {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: url(https://cdn.armylegends.ro/bg/Frame_2.webp) no-repeat;
+    background-size: 100% 100%;
+
+    font-variant-ligatures: none;
+    font-family: "TT Norms";
+}
+
+.faction-menu-wrapper .menu-wrapper {
+    position: absolute;
+    top: 62%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+
+    width: 85%;
+    height: 100%;
+}
+
+.faction-menu-wrapper .menu-wrapper header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faction-menu-wrapper .menu-wrapper header .left-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.faction-menu-wrapper .menu-wrapper header .left-data img {
+    width: 10vh;
+    height: 3vh;
+}
+
+.faction-menu-wrapper .menu-wrapper header .left-data h1 {
+    font-variant-ligatures: none;
+    text-transform: uppercase;
+    margin-top: .4vh;
+    font-family: "TT Norms";
+}
+
+.faction-menu-wrapper .menu-wrapper header .left-data h1 span {
+    color: #a1c9ff;
+}
+
+.faction-menu-wrapper .menu-wrapper header .right-data {
+    margin-top: 3vh;
+    margin-right: 1.5vh;
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+
+.faction-menu-wrapper .menu-wrapper header .right-data .money-data {
+    display: inline-flex;
+    align-items: center;
+    gap: 1vh;
+}
+.faction-menu-wrapper .menu-wrapper header .right-data .money-data i {
+    width: 4vh;
+    height: 4vh;
+
+    color: #a1c9ff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: .50vw;
+    border: 1px solid #ffffff30;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu-selectors-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu-selectors-wrapper .add-player {
+    display: flex;
+    gap: .8vh;
+    align-items: center;
+    transition: 1s all;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu-selectors-wrapper .add-player:hover {
+    opacity: .3;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu-selectors-wrapper .add-player p {
+    font-family: "TT Norms";
+    font-size: 1.5vh;
+    color: #ffffff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu-selectors-wrapper .faction-menu-selectors {
+    display: flex;
+    gap: 2.5vh;
+    align-items: center;
+    
+    font-family: "TT Norms";
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu-selectors-wrapper .faction-menu-selectors .selector {
+    padding: .5vh 0vh;
+    font-family: "TT Norms";
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu-selectors-wrapper .faction-menu-selectors .selector.selected {
+    border-bottom: 3px solid #a1c9ff;
+    /* transition: 1s all; */
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu {
+    width: 100%;
+    height: 60%;
+
+    display: grid;
+    grid-template-columns: 3.5fr 1.5fr 2fr repeat(2, 1fr);
+    grid-template-rows: 1.7fr repeat(4, 1.2fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+}
+    
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-one {
+    border-radius: .25vw;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    grid-area: 1 / 1 / 2 / 3; 
+
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-one .data {
+    width: 80%;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-one .data h1 {
+    margin-left: 1.5vh;
+    font-family: "TT Norms";
+    text-transform: uppercase;
+    font-size: 1.4em;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-one .data p {
+    font-size: .9em;
+    width: 100%;
+    color:#ffffff80;
+    margin-top: .5vh;
+    margin-left: 1.5vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-one .icon {
+    margin-right: 3vh;
+
+    width: 6vh;
+    height: 6vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #a1c9ff;
+
+    border-radius: .30vw;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.03); 
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-one .icon h1 {
+    color: #a1c9ff;
+    font-size: 1.8em;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-one .icon p {
+    color: #a1c9ff;
+    font-size: .8em;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-two {
+    border-radius: .25vw;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    grid-area: 1 / 3 / 2 / 4; 
+
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-two i {
+    margin-left: 2vh;
+    font-size: 1.2em;
+
+    width: 5vh;
+    height: 5vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #a1c9ff;
+
+    border-radius: .30vw;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.03); 
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-two P {
+    font-size: 1em;
+    color: #ffffff80;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-two h1 {
+    font-size: 1.3em;
+    color: #a1c9ff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-three {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 6px; 
+
+    filter: drop-shadow(3px 3px rgb(255, 255, 255)) sepia(100%) drop-shadow(-3pxrgb(255, 255, 255) 0, 0);
+    filter: saturate(80%);
+    background: url(https://cdn.armylegends.ro/elements/faction-banner2.webp) no-repeat;
+    background-size: 100% 100%;
+    grid-area: 1 / 4 / 6 / 6; 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-three.LSPD {
+    background: url(https://cdn.armylegends.ro/elements/faction-banner-police.webp) no-repeat;
+    background-size: 100% 100%;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-three.EMS {
+    filter: drop-shadow(3px 3px rgb(255, 255, 255)) sepia(100%) drop-shadow(-3pxrgb(255, 255, 255) 0, 0);
+    filter: saturate(80%);
+
+    background: url(https://cdn.armylegends.ro/elements/faction-banner-ems.webp) no-repeat;
+    background-size: 100% 100%;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-three .title {
+    margin-left: 62%;
+    margin-top: 1vh;
+    color: #a1c9ff;
+    border-radius: .25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #00000075;
+
+    font-size: 1.2em;
+
+    width: 11vh;
+    padding: .7vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-three .war-desc {
+    margin-left: 1vh;;
+    margin-bottom: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+
+    gap: .6vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-three .war-desc h1 {
+    font-size: 1.7em;
+
+    color: #a1c9ff;
+    letter-spacing: 5px;
+    text-align: left;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-three .war-desc p {
+    font-size: .9em;
+    width: 99%;
+    text-align: left;
+    color: #ffffff99;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-four {
+    border-radius: .25vw;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    grid-area: 2 / 1 / 4 / 2; 
+
+    display: flex;
+    flex-direction: column;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-four .faction-data {
+    margin-top: 4.5vh;
+    margin-left: 5vh;
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-four .faction-data .level {
+    width: 7vh;
+    height: 6vh;
+
+    border-radius: .30vw;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.03); 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-four .faction-data .level h1 {
+    font-size: 1.8em;
+    color: #a1c9ff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-four .faction-data .level p {
+    font-size: .9em;
+    color: #ffffff80
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-four .faction-data .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: .3vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-four .faction-data .text h1 {
+    font-variant-ligatures: none;
+    font-family: "TT Norms";
+    font-size: 1.3em;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-four .faction-data .text p {
+    width: 80%;
+    font-size: 1em;
+    color: #ffffff80
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-four .level-progress-wrapper {
+    width: 80%;
+    margin-top: 3vh;
+    margin-left: 5vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-four .level-progress-wrapper .level-progress{
+    width: 100%;
+    height: 1.5vh;
+
+    background: #263446;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-four .level-progress-wrapper .level-progress .progress {
+    width: 100%;
+    height: 100%;
+
+    transition: 1s all;
+    box-shadow: 10px 2px 30px 0px #a1c9ff;
+    background: #a1c9ff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-four .level-progress-wrapper .progress-data {
+    margin-top: .5vh;
+
+    Width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-four .level-progress-wrapper .progress-data p {
+    font-size: .9em;
+    color: #ffffff80;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-four .level-progress-wrapper .progress-data h1 {
+    color: #a1c9ff;
+    font-size: 1.1em;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-four .level-progress-wrapper .progress-data h1 span {
+    color: #fff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-five {
+    border-radius: .25vw;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    grid-area: 4 / 1 / 6 / 2;
+    
+    display: inline-flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 1vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-five .users-data  {
+    margin-top: 3vh;
+    align-items: center;
+    display: flex;
+    gap: 1vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-five .users-data i {
+    margin-left: 5vh;
+    font-size: 1.2em;
+
+    width: 5vh;
+    height: 5vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #a1c9ff;
+
+    border-radius: .30vw;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.03); 
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-five .users-data .text {
+    display: flex;
+    flex-direction: column;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-five .users-data .text p {
+    letter-spacing: .025em;
+    font-size: 1em;
+    color: #ffffff80;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-five .users-data .text h1 {
+    font-size: 1.6em;
+    color: #a1c9ff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-five .level-progress-wrapper {
+    width: 80%;
+    margin-top: 3vh;
+    margin-left: 5vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-five .level-progress-wrapper .level-progress{
+    width: 100%;
+    height: 1.5vh;
+
+    background: #a1c9ff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-five .level-progress-wrapper .level-progress .progress {
+    width: 1%;
+    height: 100%;
+
+    transition: 1s all;
+    box-shadow: 10px 2px 30px 0px #a1c9ff;
+    background: #a1c9ff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-five .level-progress-wrapper .progress-data {
+    margin-top: .5vh;
+
+    Width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-five .level-progress-wrapper .progress-data p {
+    font-size: .9em;
+    color: #ffffff80;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-five .level-progress-wrapper .progress-data h1 {
+    color: #a1c9ff;
+    font-size: 1.1em;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .faction-five .level-progress-wrapper .progress-data h1 span {
+    color: #fff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .six {
+    border-radius: .25vw;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    grid-area: 2 / 2 / 6 / 4; 
+
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .six header{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 2.5vh;
+    padding: 2vh;
+    border-bottom: 2px solid #ffffff10;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .six header > i{
+    color: #a1c9ff;
+    font-size: 1.850em;
+    margin-left: 1vw;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .six header > .transaction-title > p:nth-child(1){
+    font-family: "TT Norms";
+    font-weight: 100;
+    font-size: 1.1em;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .six header > .transaction-title > p:nth-child(2){
+    width: 98%;
+    margin-top: 3px;
+    font-weight: 100;
+    font-size: .8em;
+    opacity: .5;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .six main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 2vh;
+    padding: 2vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .six main .money {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 4%;
+    margin-top: .6vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .six main .money p {
+    color: #ffffff80;
+    font-size: .9em;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .six main .money h1 {
+    color: #a1c9ff;
+    font-size: 1.7em;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .six main > input{
+    padding: 1.650vh;
+    text-align: center;
+    width: 100%;
+    outline: none;
+    border: none;
+    background: #ffffff10;
+    border-radius: .25vw;
+    text-transform: uppercase;
+    font-family: "TT Norms";
+    letter-spacing: .025em;
+    color: white;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .six main > input.bigger-size{
+    padding: 2.650vh;
+    font-size: 1.150em;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .six main > input:focus{
+    outline: none;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .six main > input::-webkit-outer-spin-button,
+.faction-menu-wrapper .menu-wrapper .faction-menu .six main > input::-webkit-inner-spin-button {
+  margin: 0;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .six main > input::placeholder{
+    color: white;
+    opacity: .5;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .six footer{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
+    padding: 2vh;
+    border-top: 2px solid #ffffff05;
+    margin-top: auto;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .six footer > .btn{
+    border: 2px solid #ffffff10;
+    background: #ffffff05;
+    padding: 2vh 5vw;
+    border-radius: .25vw;
+    transition: 1s;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .six footer > .btn:hover{
+    background: #ffffff15;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-menu .six footer > #btn-transfer-bank{
+    padding: 2vh 10.550vw;
+}
+
+/* Faction Members */
+
+.faction-menu-wrapper .menu-wrapper .faction-members {
+    width: 100%;
+    height: 60%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members .faction-members-header {
+    width: 100%;
+    height: 18%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: .25vw;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members .faction-members-header .left-data {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.2vw;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members .faction-members-header .left-data i {
+    margin-left: 3vh;
+    font-size: 1.5em;
+
+    width: 6vh;
+    height: 6vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #a1c9ff;
+
+    border-radius: .30vw;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.03); 
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members .faction-members-header .left-data .member-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members .faction-members-header .left-data .member-text h1 {
+    margin-top: 3px;
+    font-weight: 100;
+    font-size: 1.4em;
+    color: #ffffff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members .faction-members-header .left-data .member-text h1 span {
+    color: #a1c9ff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members .faction-members-header .left-data .member-text p {
+    width: 70%;
+    font-weight: 100;
+    font-size: .8em;
+    color: #ffffff80;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members .faction-members-header .right-data {
+    margin-right: 3vh;
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members .faction-members-header .right-data .online-count {
+    display: flex;
+    align-items: center;
+    gap: .8vh;
+    margin-left: 5px;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members .faction-members-header .right-data .online-count h1 {
+    letter-spacing: 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: #a1c9ff;
+    margin-left: 5px;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members .faction-members-header .right-data .online-count .circle {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #a1c9ff;
+    box-shadow: 0 0 0 3px #a1caff70;
+}
+
+
+.faction-menu-wrapper .menu-wrapper .faction-members .faction-members-header .right-data .search-input {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: #ffffff20;
+    border-radius: .25vw;
+    padding: 1.2vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members .faction-members-header .right-data .search-input input {
+    margin-right: 3vh;
+    width: 200px;
+    /* padding: 1.2vh; */
+    text-align: left;
+    outline: none;
+    border: none;
+    /* background: #ffffff20; */
+    border-radius: .25vw;
+    background: none;
+    /* text-transform: uppercase; */
+    font-family: "TT Norms";
+    letter-spacing: 0;
+    color: rgba(255, 255, 255, 0.527);
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members .faction-members-header .right-data .search-input input::placeholder{
+    color: white;
+    opacity: .5;
+    font-family: "TT Norms";
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members .faction-members-header .right-data .search-input i {
+    opacity: .4;
+    position: absolute;
+    /* right: 9.3%; */
+    margin-left: auto;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members table {
+    border-collapse: separate; 
+    width: 100%;
+    /* height: 100%; */
+    border-spacing: 0 20px;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members table thead  th{
+    font-family: "TT Norms";
+    font-weight: 100;
+    color: #ffffff80
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members table th,
+.faction-menu-wrapper .menu-wrapper .faction-members table td {
+    border-radius: .25vw;
+    background: rgba(255, 255, 255, 0.05);
+
+    padding: 2vh;
+	color: #fff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members table thead th {
+    background: transparent !important;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members table th {
+	text-align: left;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members table td .online-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 1vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members table td .online-status .circle {
+    width: 1vh;
+    height: 1vh;
+    background: #a1c9ff;
+    border-radius: 50%;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members table td .online-status p {
+    font-size: 1em;
+    font-family: "TT Norms";
+    color: #a1c9ff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members table td .online-status.offline .circle {
+    background: #ffffff80;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members table td .online-status.offline p{
+    color: #ffffff80;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members table td.name {
+    color: #a1c9ff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members table td .settings-icon {
+    margin-left: 65%; 
+    width: 4.2vh;
+    height: 4.2vh;
+
+    color: #ffffff80;
+
+    font-size: 1.5em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: .50vw;
+    border: 1px solid #ffffff30;
+    transition: 1s all;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members table td .settings-icon i {
+    color: #ffffff80;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members table td .settings-icon:hover {
+    opacity: .5;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members table td .member-hours {
+    font-size: 1em;
+    font-family: "TT Norms";
+    font-weight: 100;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members table td .member-hours span {
+    color: #a1c9ff
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members table td .last-activity p:nth-child(1),
+.faction-menu-wrapper .menu-wrapper .faction-members table td .last-activity p:nth-child(2) {
+    font-size: .9em;
+    font-family: "TT Norms";
+    font-weight: 100;
+    color: #ffffff80;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members table td .last-activity p:nth-child(1) span,
+.faction-menu-wrapper .menu-wrapper .faction-members table td .last-activity p:nth-child(2) span  {
+    font-family: "TT Norms";
+    font-weight: 100;
+    color: #fff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members .faction-list .faction-list-overflow {
+    position: absolute;
+
+    padding-right: 1vh;
+
+    height: 55%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members .faction-list .faction-list-overflow::-webkit-scrollbar {
+    width: 4px;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members .faction-list .faction-list-overflow::-webkit-scrollbar-track {
+    margin-top: 1vh;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members .faction-list .faction-list-overflow::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #a1c9ff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-members .faction-list .faction-list-overflow::-webkit-scrollbar-thumb:window-inactive {
+    background: #a1c9ff;
+}
+
+/* Faction Ranks */
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks {
+    width: 100%;
+    height: 72%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-header {
+    width: 100%;
+    height: 18%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: .25vw;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-header .left-data {
+    margin-left: 3vh;
+    display: flex;
+    align-items: center;
+    gap: 1.2vw;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-header .left-data i {
+    font-size: 1.5em;
+
+    width: 6vh;
+    height: 6vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #a1c9ff;
+
+    border-radius: .30vw;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.03); 
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-header .left-data .text {
+    display: flex;
+    flex-direction: column;
+    gap: .1vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-header .left-data .text h1 {
+    font-weight: 100;
+    font-size: 1.4em;
+    font-family: "TT Norms";
+    color: #fff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-header .left-data .text p {
+    width: 75%;
+    font-size: .9em;
+    font-family: "TT Norms";
+    font-weight: 100;
+    color: #ffffff80;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-header .right-data {
+    margin-right: 4vh;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-header .right-data .create-rank {
+    letter-spacing: .025em;
+    font-weight: 100;
+    font-size: 18px;
+    width: 180px;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff70;
+    border-radius: .30vw;
+    background: #80a0cc;
+    transition: 1s all;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-header .right-data .create-rank:hover {
+    opacity: .5;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-header .right-data .ranks-count {
+    display: flex;
+    align-items: center;
+    gap: .8vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-header .right-data .ranks-count h1 {
+    letter-spacing: 2px;
+    font-size: 24px;
+    color: #a1c9ff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-header .right-data .ranks-count .circle {
+    width: 1vh;
+    height: 1vh;
+    border-radius: 50%;
+    background: #a1c9ff;
+    box-shadow: 0 0 0 3px #a1caff70
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-list {
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+
+    padding-right: 1vh;
+
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-list::-webkit-scrollbar-track {
+    margin-top: 1vh;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-list::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #a1c9ff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-list::-webkit-scrollbar-thumb:window-inactive {
+    background: #a1c9ff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-list .faction-rank {
+    width: 100%;
+    padding: 2.5vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: .25vw;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-list .faction-rank .left-data {
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-list .faction-rank .left-data i {
+    font-size: 1.4em;
+
+    width: 5vh;
+    height: 5vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #a1c9ff;
+
+    border-radius: .30vw;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.03); 
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-list .faction-rank .left-data .text {
+    display: flex;
+    flex-direction: column;
+    gap: .1vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-list .faction-rank .left-data .text h1 {
+    font-weight: 100;
+    font-size: 1.4em;
+    font-family: "TT Norms";
+    color: #fff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-list .faction-rank .left-data .text p {
+    font-size: .9em;
+    font-family: "TT Norms";
+    font-weight: 100;
+    color: #ffffff80;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-list .faction-rank .left-data .text p span {
+    color: #a1c9ff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-list .faction-rank i {
+    width: 4.2vh;
+    height: 4.2vh;
+
+    color: #ffffff80;
+
+    font-size: 1.2em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: .50vw;
+    border: 1px solid #ffffff30;
+    transition: 1s all;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-ranks .faction-ranks-list .faction-rank i:hover {
+    opacity: .5;
+}
+
+/* Faction Tasks */
+
+.faction-menu-wrapper .menu-wrapper .faction-tasks {
+    width: 100%;
+    height: 72%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-tasks .faction-tasks-header {
+    width: 100%;
+    height: 18%;
+
+    display: flex;
+    align-items: center;
+    gap: 1.2vw;
+
+    border-radius: .25vw;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-tasks .faction-tasks-header i {
+    margin-left: 3vh;
+    font-size: 1.5em;
+
+    width: 6vh;
+    height: 6vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #a1c9ff;
+
+    border-radius: .30vw;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.03); 
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-tasks .faction-tasks-header .text {
+    display: flex;
+    flex-direction: column;
+    gap: .1vh;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-tasks .faction-tasks-header .text h1 {
+    font-weight: 100;
+    font-size: 1.4em;
+    font-family: "TT Norms";
+    color: #fff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-tasks .faction-tasks-header .text p {
+    font-size: .9em;
+    font-family: "TT Norms";
+    font-weight: 100;
+    color: #ffffff80;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-tasks .faction-tasks-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1vh;
+
+    padding-right: 1vh;
+
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-tasks .faction-tasks-grid::-webkit-scrollbar {
+    width: 4px;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-tasks .faction-tasks-grid::-webkit-scrollbar-track {
+    margin-top: 1vh;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-tasks .faction-tasks-grid::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #a1c9ff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-tasks .faction-tasks-grid::-webkit-scrollbar-thumb:window-inactive {
+    background: #a1c9ff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-tasks .faction-tasks-grid .faction-task {
+    padding: 2vh 1vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 3vh;
+
+    border-radius: .25vw;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-tasks .faction-tasks-grid .faction-task .prize {
+    text-align: center;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-tasks .faction-tasks-grid .faction-task .prize p {
+    font-size: .9em;
+    font-family: "TT Norms";
+    font-weight: 100;
+    color: #ffffff80;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-tasks .faction-tasks-grid .faction-task .prize h1 {
+    font-weight: 600;
+    font-size: 1.4em;
+    font-family: "TT Norms";
+    color: #a1c9ff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-tasks .faction-tasks-grid .faction-task .title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4vh;
+    text-align: center;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-tasks .faction-tasks-grid .faction-task .title h1 {
+    font-weight: 600;
+    font-size: 1.6em;
+    font-family: "TT Norms";
+    color: #fff;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-tasks .faction-tasks-grid .faction-task .title p {
+    font-size: .9em;
+    font-family: "TT Norms";
+    color: #ffffff80;
+}
+
+.faction-menu-wrapper .menu-wrapper .faction-tasks .faction-tasks-grid .faction-task img {
+    width: 8vh;
+    height: 9vh;
+}
+
+/* Create Rank  */
+
+.faction-menu-wrapper .create-rank-wrapper {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.faction-menu-wrapper .create-rank-wrapper .create-rank {
+    background: url(https://cdn.armylegends.ro/elements/green_smoke.webp) no-repeat;
+    background-size: 100% 100%;
+    width: 95%;
+    height: 100%;
+
+    margin-top: 5vh;
+    z-index: 10;
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+.faction-menu-wrapper .create-rank-wrapper .create-rank .rank-title {
+    display: flex;
+    gap: 1vh;
+    align-items: center;
+}
+
+.faction-menu-wrapper .create-rank-wrapper .create-rank .rank-title {
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+}
+
+.faction-menu-wrapper .create-rank-wrapper .create-rank .rank-title i {
+    font-size: 1.5em;
+
+    width: 5vh;
+    height: 5vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #a1c9ff;
+
+    border-radius: .30vw;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.03); 
+}
+
+.faction-menu-wrapper .create-rank-wrapper .create-rank .rank-title h1 {
+    font-weight: 100;
+    font-size: 1.4em;
+    font-family: "TT Norms";
+    color: #fff;
+}
+
+.faction-menu-wrapper .create-rank-wrapper .create-rank .rank-title p {
+    font-size: .9em;
+    font-family: "TT Norms";
+    font-weight: 100;
+    color: #ffffff80;
+}
+
+.faction-menu-wrapper .create-rank-wrapper .create-rank input {
+    width: 27vh;
+    padding: 1.2vh;
+    text-align: left;
+    outline: none;
+    border: none;
+    background: #ffffff20;
+    border-radius: .25vw;
+    text-transform: none;
+    font-weight: 100;
+    font-family: "TT Norms";
+    letter-spacing: .025em;
+    color: #fff;
+}
+
+.faction-menu-wrapper .create-rank-wrapper .create-rank  input::placeholder{
+    color: white;
+    opacity: .8;
+}
+
+.faction-menu-wrapper .create-rank-wrapper .create-rank .button {
+    padding: 1vh 3.2vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: .25vw;
+    background: #3ebb7f;
+    transition: 1s all;
+}
+
+.faction-menu-wrapper .create-rank-wrapper .create-rank .button:hover {
+    opacity: .5;
+}
+
+/* Player Management */
+
+.faction-menu-wrapper .player-management-wrapper {
+    background: url(https://cdn.armylegends.ro/elements/green_smoke.webp) no-repeat;
+    background-size: 100% 100%;
+    
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(15px);
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management {
+    width: 30%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management .player-management-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management .player-management-header .user-data {
+    display: flex;
+    flex-direction: column;
+    gap: .1vh;
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management .player-management-header .user-data p {
+    text-transform: uppercase;
+    font-size: .9em;
+    font-family: "TT Norms";
+    font-weight: 100;
+    color: #ffffff80;
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management .player-management-header .user-data h1 {
+    font-weight: 600;
+    font-size: 1.7em;
+    font-family: "TT Norms";
+    color: #35f098;
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management .player-management-header .user-data h1 span {
+    font-weight: 100;
+    font-size: .6em;
+    font-family: "TT Norms";
+    color: #fff;
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management .player-management-header .user-data .online-status {
+    display: flex;
+    align-items: center;
+    gap: .5vh;
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management .player-management-header .user-data .online-status .circle {
+    width: 1vh;
+    height: 1vh;
+    border-radius: 50%;
+    background: #35f098;
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management .player-management-header .user-data .online-status.offline p{
+    color: #ffffff80
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management .player-management-header .user-data .online-status.offline .circle {
+    background: #ffffff80;
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management .player-management-header .user-data .online-status p {
+    text-transform: none;
+    color: #35f098;
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management .player-management-header .change-rank {
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management .player-management-header .change-rank i {
+    font-size: .9em;
+
+    width: 3vh;
+    height: 3vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: .30vw;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.03); 
+    transition: 1s all;
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management .player-management-header .change-rank i:hover {
+    opacity: .5;
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management .player-management-header .change-rank p {
+    font-size: 1.4em;
+    font-family: "TT Norms";
+    font-weight: 100;
+    color: #ffffff80;
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management .faction-data {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management .faction-data .user-data {
+    display: flex;
+    flex-direction: column;
+    gap: .3vh;
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management .faction-data .user-data h1 {
+    font-weight: 600;
+    font-size: 1em;
+    font-family: "TT Norms";
+    color: #35f098;
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management .faction-data .user-data .datas p {
+    text-transform: uppercase;
+    font-size: .9em;
+    font-family: "TT Norms";
+    font-weight: 100;
+    color: #ffffff80;
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management .faction-data .user-data .datas p span {
+    color: #fff;
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management .faction-data i {
+    font-size: 1.2em;
+
+    width: 4.5vh;
+    height: 4.5vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: .30vw;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.03); 
+    transition: 1s all;
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management .faction-data i:hover {
+    opacity: .5;
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management .confirm-button {
+    padding: 1.2vh 0;
+
+    font-family: "TT Norms";
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: .25vw;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3ebb7f;
+
+    transition: 1s all;
+}
+
+.faction-menu-wrapper .player-management-wrapper .player-management .confirm-button:hover  {
+    opacity: .5;
+}

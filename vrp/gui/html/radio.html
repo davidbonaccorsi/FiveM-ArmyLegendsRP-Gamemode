@@ -1,0 +1,21 @@
+
+<div class="radio-layout">
+    <div class="container">
+        <img class='radio-image' src='https://cdn.armylegends.ro/radio/radio.png'>
+        <div class='button' id='join' @click='toggle(true)' tooltip='Join to frequency'></div>
+        <div class='button' id='preset_set' @click='setPreset()' tooltip='Set preset'></div>
+
+        <div class='button' id='leave' @click='toggle()' tooltip='Turn off'></div>
+        <div class='button' id='volume_mute' @click='changeVolume("mute")' tooltip='Mute'></div>
+
+        <div class='button' id='volume_up' @click='changeVolume("up")' tooltip='Volume up'></div>
+        <div class='button' id='volume_down' @click='changeVolume("down")' tooltip='Volume down'></div>
+
+        <div class='button' id='preset_one' @click='presetChannel(1)' tooltip='Preset #1'></div>
+        <div class='button' id='preset_two' @click='presetChannel(2)' tooltip='Preset #2'></div>
+
+        <div class='channel-input'>
+            <input id='radio-channel' type='number' value='' min='0.01' max='999' step='0.01' placeholder='000.00'>
+        </div>
+    </div>
+</div>    

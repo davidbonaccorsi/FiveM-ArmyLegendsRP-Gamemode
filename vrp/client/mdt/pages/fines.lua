@@ -1,0 +1,23 @@
+RegisterNUICallback('search:fine', function(data, callback)
+    triggerCallback('searchFine', function(data)
+        callback(data)
+    end, data.query)
+end)
+
+RegisterNUICallback('create:fine', function(data, callback)
+    triggerCallback('createFine', function(data)
+        callback(data)
+    end, data.fine)
+end)
+
+RegisterNUICallback('delete:fine', function(data, callback)
+    triggerCallback('deleteFine', function(data)
+        callback(data)
+    end, data.query)
+end)
+
+RegisterNUICallback('update:fine', function(data, callback)
+    triggerCallback('updateFine', function(data)
+        callback(data)
+    end, data.fine, data.query)
+end)

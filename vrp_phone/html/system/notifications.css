@@ -1,0 +1,119 @@
+
+
+@keyframes notification{
+    from{top:3.5%;opacity:0}
+    to{top: 8.5%;opacity:1}
+}
+
+.notification{
+    position: absolute;
+    width: 85%;
+    background: #0b090b99;
+    backdrop-filter: blur(10px);
+    top: 8.5%;
+    z-index: 2;
+
+    display: none;
+    align-items: center;
+    gap: 1vw;
+    padding: 2vh 1vw;
+    padding-left: 1.65vw;
+    border-radius: 10vw;
+    animation: notification 2s;
+}
+
+.notification.visible{
+    display: flex;
+}
+
+.notification > i{
+    font-size: 2vh;
+    background: linear-gradient(35deg, #98989b90, #fff);
+    padding: .7vh .5vw;
+    border-radius: 10vw;
+}
+
+.notification > .text{
+    display: flex;
+    flex-direction: column;
+}
+
+.notification > .text > h1{
+    font-size: 1em;
+    color: #98989b;
+    letter-spacing: .5px;
+}
+
+
+.sms-notify {
+    position: absolute;
+    bottom: 2.5%;
+    left: 26.5%;
+    display: none;
+    animation: smsNotifyAnim 1s;
+}
+
+.sms-notify.map-active{
+    bottom: 9.5%;
+}
+
+.sms-notify.visible{
+    display: flex;
+}
+
+@keyframes smsNotifyAnim{
+    0% {
+        opacity:0;
+        transform:translate3d(0,100%,0)
+    } to {
+        opacity:1;
+        transform:translateZ(0)
+    }
+}
+
+.sms-notify > img{
+    width:3.2vh;
+    height:6vh;
+    margin-right:1.4vh
+}
+
+.sms-notify > .content > .header{
+    color:hsla(0,0%,100%,.4);
+    font-size:1.2vh;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    font-weight:700;
+    margin-bottom:1vh;
+    display:flex;
+    flex-direction:column
+}
+
+.sms-notify > .content > .header:after{
+    content:\"\";
+    height:.2vh;
+    width:10vh;
+    background:hsla(0,0%,100%,.3);
+    margin-top:1vh
+}
+
+.sms-notify > .content > .header > p{
+    margin-bottom:1vh
+}
+
+.sms-notify > .content > .header > span{
+    font-size:1.6vh;
+    color:#fff;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    font-weight:700
+}
+
+.sms-notify > .content > p{
+    max-width:17vh;
+    color:#fff;
+    text-shadow:0 0 .5vh #000,0 0 .5vh #000;
+    letter-spacing:.05em;
+    font-size:1.8vh;
+    font-weight:600;
+    line-height:1.3
+}

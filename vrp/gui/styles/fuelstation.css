@@ -1,0 +1,549 @@
+.fuel-station-layout{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Akrobat";
+	background: radial-gradient(50% 88.89% at 50% 50%, rgba(22, 21, 35, 0) 0%, rgba(22, 21, 35, 0.75) 100%);
+	background-color: rgba(22,21,35,.80);
+    display: none;
+}
+
+
+.fuel-station-layout > div > .wrapper{
+    width: 25%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 2vh;
+}
+
+.fuel-station-layout > div > .wrapper > header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fuel-station-layout > div > .wrapper > header > h1{
+    font-size: 2.5vh;
+    letter-spacing: 1px;
+}
+
+.fuel-station-layout > div > .wrapper > header > p{
+    font-size: 1.85vh;
+    font-family: "Akrobat Light";
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #a1c9ff;
+    opacity: .7;
+}
+
+.fuel-station-layout > div > .wrapper > .data{
+    margin-top: 4vh;
+    
+    display: flex;
+    gap: 1vw;
+
+    width: 100%;
+}
+
+.fuel-station-layout > div > .wrapper > .data > .text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.fuel-station-layout > div > .wrapper > .data > .text > p:first-of-type{
+    color: #a1c9ff;
+    font-family: "Akrobat ExtraBold";
+    font-size: 3vh;
+    letter-spacing: 1px;
+}
+
+.fuel-station-layout > div > .wrapper > .data > .text > p:last-of-type{
+    font-family: "Akrobat ExtraBold";
+    letter-spacing: 1px;
+    opacity: .35;
+}
+
+.fuel-station-layout > div > .wrapper > .data > .text:last-of-type{
+    margin-left: auto;
+    align-items: flex-end;
+}
+
+.fuel-station-layout > div > .wrapper > .selectors{
+    height: 9vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.25vh;
+    
+}
+
+.fuel-station-layout > div > .wrapper > .selectors > .presets{
+    height: 4.5vh;
+
+    display: flex;
+    gap: .5vw;
+}
+
+.fuel-station-layout > div > .wrapper > .selectors > .presets > .preset{
+    width: 50%;
+    background: #ffffff10;
+    border: .2vh solid #ffffff15;
+    border-radius: .25vw;
+    transition: .33s ease-in-out;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fuel-station-layout > div > .wrapper > .selectors > .presets > .preset:hover{
+    background: #ffffff15;
+}
+
+.fuel-station-layout > div > .wrapper > .selectors > .presets > .preset > p{
+    font-family: "Akrobat Light";
+    font-weight: 600;
+    opacity: .3;
+    letter-spacing: 1px;
+}
+
+
+.fuel-station-layout .wrapper .selectors .ui-slider{
+    width: 100%;
+    border: none;
+    background: #ffffff20;
+    border-radius: .25vw;
+    height: 2.5vh;
+}
+
+.fuel-station-layout .wrapper .selectors .ui-slider .ui-slider-handle {
+    background: #a1c9ff;
+    border: none;
+    line-height: 2;
+    border-radius: .5vw;
+    height: 100%;
+    width:1.45em;
+    left:-.6em;
+    top: 0;
+}
+
+.fuel-station-layout .wrapper .selectors .ui-slider .ui-slider-handle:focus{
+    outline: none;
+}
+
+.fuel-station-layout .wrapper .selectors .ui-slider-range{
+    background: #a1c9ff99;
+}
+
+.fuel-station-layout > div > .wrapper > .quick-buy{
+    height: 25vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.fuel-station-layout > div > .wrapper > .quick-buy > header{
+    display: flex;
+    align-items: center;
+    gap: .55vw;
+}
+
+.fuel-station-layout > div > .wrapper > .quick-buy > header > i{
+    font-size: 1.8vh;
+}
+
+.fuel-station-layout > div > .wrapper > .quick-buy > header > p{
+    font-family: "Akrobat ExtraBold";
+    font-size: 1.85vh;
+    letter-spacing: .5px;
+}
+
+.fuel-station-layout > div > .wrapper > .quick-buy > .items-list{
+    height: 100%;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.fuel-station-layout > div > .wrapper > .quick-buy > .items-list > .product{
+    height: 100%;
+    width: 42.5%;
+
+    background-color: #ffffff06;
+    border: .28vh solid #ffffff10;
+
+    border-radius: .25vw;
+
+    transition: .33s ease-in-out;
+
+    padding: 2vh;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.fuel-station-layout > div > .wrapper > .quick-buy > .items-list > .product:hover{
+    background: #a1c9ff20;
+    border-color: #a1c9ff45;
+}
+
+.fuel-station-layout > div > .wrapper > .quick-buy > .items-list > .product > p{
+    font-family: "Akrobat Bold";
+    font-size: 2vh;
+    letter-spacing: .5px;
+    align-self: flex-start;
+    color: #eeeeee30;
+    transition: .33s ease-in-out;
+}
+
+.fuel-station-layout > div > .wrapper > .quick-buy > .items-list > .product:hover > p{
+    color: #eeeeee60;
+}
+
+.fuel-station-layout > div > .wrapper > .quick-buy > .items-list > .product > img{
+    margin-top: auto;
+    width: 145px;
+    z-index: -1;
+}
+
+.fuel-station-layout > div > .wrapper > .payment{
+    display: flex;
+    flex-direction: column;
+    gap: .85vh;
+
+    width: 100%;
+    height: 10vh;
+
+    margin-top: 2vh;
+}
+
+.fuel-station-layout > div > .wrapper > .payment > header{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.fuel-station-layout > div > .wrapper > .payment > header > p{
+    font-family: "Akrobat ExtraBold";
+    font-size: 1.85vh;
+    letter-spacing: .5px;
+}
+
+.fuel-station-layout > div > .wrapper > .payment > header > p:last-of-type{
+    margin-left: auto;
+    color: #a1c9ff;
+    font-size: 2vh;
+}
+
+.fuel-station-layout > div > .wrapper > .payment > .options{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: .5vw;
+}
+
+.fuel-station-layout > div > .wrapper > .payment > .options > .option{
+    width: 100%;
+    height: 90%;
+    background-color: #ffffff06;
+    border: .28vh solid #ffffff10;
+    border-radius: .15vw;
+    display: flex;
+    align-items: center;
+    padding: 0 1.65vw;
+    gap: 1vw;
+}
+
+.fuel-station-layout > div > .wrapper > .payment > .options > .option.selected{
+    background: #a1c9ff;
+    border-color: #ffffff35;
+}
+
+.fuel-station-layout > div > .wrapper > .payment > .options > .option > i{
+    font-size: 1.65vh;
+    color: #eeeeee30;
+}
+
+.fuel-station-layout > div > .wrapper > .payment > .options > .option > p{
+    font-family: "Akrobat Light";
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 1.85vh;
+    color: #eeeeee30;
+}
+
+.fuel-station-layout > div > .wrapper > .payment > .options > .option.selected > i{
+    color: #232323;
+}
+
+.fuel-station-layout > div > .wrapper > .payment > .options > .option.selected > p{
+    color: #232323;
+}
+
+.fuel-station-layout > div > .wrapper > .confirm{
+    height: 6vh;
+    width: 100%;
+    background: #a1c9ff;
+    border-radius: .25vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .33s ease-in-out;
+    box-shadow:0 0 30px #a1caff85;
+}
+
+.fuel-station-layout > div > .wrapper > .confirm > p{
+    font-family: "Akrobat ExtraBold";
+    color: #232323;
+    font-size: 1.9vh;
+    letter-spacing: 1px;
+}
+
+.fuel-station-layout > div > .wrapper > .confirm:hover{
+    box-shadow: 0 0 0 7px #a1c9ff50;
+}
+
+/* Fuel Station Business  */
+
+.fuel-station-layout > .fuelstation-business > .wrapper{
+    width: 25%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 2vh;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > header > h1{
+    font-size: 2.5vh;
+    letter-spacing: 1px;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > header > p{
+    font-size: 1.85vh;
+    font-family: "Akrobat Light";
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #a1c9ff;
+    opacity: .7;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .data{
+    margin-top: 4vh;
+    
+    display: flex;
+    gap: 1vw;
+
+    width: 100%;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .data > .text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .data > .text > p:first-of-type{
+    color: #a1c9ff;
+    font-family: "Akrobat ExtraBold";
+    font-size: 3vh;
+    letter-spacing: 1px;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .data > .text > p:last-of-type{
+    font-family: "Akrobat ExtraBold";
+    letter-spacing: 1px;
+    opacity: .35;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .data > .text:last-of-type{
+    margin-left: auto;
+    align-items: flex-end;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .selectors{
+    height: 9vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.25vh;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .selectors > .presets{
+    height: 4.5vh;
+
+    display: flex;
+    gap: .5vw;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .selectors > .presets > .preset{
+    width: 50%;
+    background: #ffffff10;
+    border: .2vh solid #ffffff15;
+    border-radius: .25vw;
+    transition: .33s ease-in-out;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .selectors > .presets > .preset:hover{
+    background: #ffffff15;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .selectors > .presets > .preset > p{
+    font-family: "Akrobat Light";
+    font-weight: 600;
+    opacity: .3;
+    letter-spacing: 1px;
+}
+
+
+.fuel-station-layout .wrapper .selectors .ui-slider{
+    width: 100%;
+    border: none;
+    background: #ffffff20;
+    border-radius: .25vw;
+    height: 2.5vh;
+}
+
+.fuel-station-layout .wrapper .selectors .ui-slider .ui-slider-handle {
+    background: #a1c9ff;
+    border: none;
+    line-height: 2;
+    border-radius: .5vw;
+    height: 100%;
+    width:1.45em;
+    left:-.6em;
+    top: 0;
+}
+
+.fuel-station-layout .wrapper .selectors .ui-slider .ui-slider-handle:focus{
+    outline: none;
+}
+
+.fuel-station-layout .wrapper .selectors .ui-slider-range{
+    background: #a1c9ff99;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .payment{
+    display: flex;
+    flex-direction: column;
+    gap: .85vh;
+
+    width: 100%;
+    height: 10vh;
+
+    margin-top: 2vh;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .payment > header{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .payment > header > p{
+    font-family: "Akrobat ExtraBold";
+    font-size: 1.85vh;
+    letter-spacing: .5px;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .payment > header > p:last-of-type{
+    margin-left: auto;
+    color: #a1c9ff;
+    font-size: 2vh;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .payment > .options{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: .5vw;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .payment > .options > .option{
+    width: 100%;
+    height: 90%;
+    background-color: #ffffff06;
+    border: .28vh solid #ffffff10;
+    border-radius: .15vw;
+    display: flex;
+    align-items: center;
+    padding: 0 1.65vw;
+    gap: 1vw;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .payment > .options > .option:hover {
+    opacity: .5;
+}
+
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .payment > .options > .option > i{
+    font-size: 1.50vh;
+    color: #eeeeee30;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .payment > .options > .option > p{
+    font-family: "Akrobat Light";
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 1.35vh;
+    color: #eeeeee30;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .payment > .options > .option.selected > i{
+    color: #232323;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .payment > .options > .option.selected > p{
+    color: #232323;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .confirm{
+    height: 6vh;
+    width: 100%;
+    background: #a1c9ff;
+    border-radius: .25vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .33s ease-in-out;
+    box-shadow:0 0 30px #a1caff85;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .confirm > p{
+    font-family: "Akrobat ExtraBold";
+    color: #232323;
+    font-size: 1.9vh;
+    letter-spacing: 1px;
+}
+
+.fuel-station-layout > .fuelstation-business > .wrapper > .confirm:hover{
+    box-shadow: 0 0 0 7px #a1c9ff50;
+}

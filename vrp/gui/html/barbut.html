@@ -1,0 +1,23 @@
+<div class="main-barbut" v-if="active">
+    <div class="barbut-flex" :style="{zoom: zoom}">
+        
+        <div class="bet">${{bet | formatnum}}</div>
+
+        <div v-if="!rolling" :class="{'help-button': true, leave: role != 'creator'}" @click="role == 'creator' ? changeBet() : abortGame()">{{role == 'creator' ? 'SCHIMBA MIZA' : 'RENUNTA'}}</div>
+        <div v-if="!rolling" :class="{'help-button': true, leave: role != 'creator'}" @click="role == 'abortGame()">RENUNTA</div>
+        <div class="leave" v-if="role == 'creator' && !rolling" @click="abortGame()">RENUNTA</div>
+
+        <div class="start-game" v-if="!feedback && !(role == 'creator') && !rolling" @click="startRoll()"></div>
+        <div class="win-feedback" v-if="feedback">{{feedback}}</div>
+
+        <div class="player-tags">{{name}} VS {{enemy}}</div>
+
+        <div class="score score-player" v-if="results">{{results[0] + results[1]}}</div>
+        <div class="score score-enemy" v-if="results">{{results[2] + results[3]}}</div>
+
+        <div class="dice dice-player" id="barbut-dice-0"></div>
+        <div class="dice dice-player dice-two" id="barbut-dice-1"></div>
+        <div class="dice dice-enemy" id="barbut-dice-2"></div>
+        <div class="dice dice-enemy dice-two" id="barbut-dice-3"></div>
+    </div>
+</div>

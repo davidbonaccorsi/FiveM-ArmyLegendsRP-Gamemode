@@ -1,0 +1,80 @@
+<div class="bank-layout" v-if="active">
+    <div class="border center" v-if="type == 'atm'"></div>
+    <header class="center">
+        <div class="title">
+            <p>ATM</p>
+            <p>ACCOUNT {{name}}</p>
+        </div>
+
+        <div class="statistics">
+            <div class="data">
+                <p>BALANCE</p>
+                <p>${{balance | formatnum}}</p>
+            </div>
+    
+            <div class="data" v-if="typeof(faction) == 'boolean'">
+                <p>CASH</p>
+                <p>${{cash | formatnum}}</p>
+            </div>
+                
+            <div class="data">
+                <p>TAX RATE</p>
+                <p>10%</p>
+            </div>
+    
+            <div class="data">
+                <p>ACCOUNT IBAN</p>
+                <p>{{iban}}</p>
+            </div>
+        </div>
+
+        <div class="location">
+            <p>LOCATION</p>
+            <p>{{location}}</p>
+        </div>
+    </header>
+
+    <div class="actions">
+        <div class="grid">
+           <div class="action" @click="transfer()">
+              <img src="https://cdn.rampage-rp.ro/phone/apps/bank/credit-cards.svg">
+              <div class="text">
+                 <p>BANK</p>
+                 <p>TRANSFER</p>
+              </div>
+           </div>
+           <div class="action" @click="deposit()">
+              <div class="text">
+                 <p>REPLENISH</p>
+                 <p>BALANCE</p>
+              </div>
+              <img src="https://cdn.rampage-rp.ro/phone/apps/bank/replenish.svg">
+           </div>
+           <div class="action" @click="withdraw()">
+              <img style="width: 32.5px;" src="https://cdn.rampage-rp.ro/phone/apps/bank/wallet.svg">
+              <div class="text" style="margin-left: .45vw;">
+                 <p>WITHDRAW</p>
+                 <p>MONEY</p>
+              </div>
+           </div>
+           <div class="action" @click="charity()">
+              <div class="text">
+                 <p>CHARITY</p>
+              </div>
+              <img src="https://cdn.rampage-rp.ro/phone/apps/bank/charity.svg">
+           </div>
+           <div class="action" @click="shop()">
+              <img src="https://cdn.rampage-rp.ro/phone/apps/bank/coins.svg">
+              <div class="text">
+                 <p>REFILL YOUR PREMIUM</p>
+                 <p>SHOP BALANCE</p>
+              </div>
+           </div>
+        </div>
+    </div>
+    
+    <div class="bank-notification hidden">
+        <img src="https://cdn.rampage-rp.ro/phone/apps/bank/notification.svg">
+        <p>{{notification}}</p>
+    </div>
+</div>

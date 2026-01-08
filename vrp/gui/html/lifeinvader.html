@@ -1,0 +1,23 @@
+
+<div class="main-lifeinvader" v-if="active">
+    <div class="lifeinvader-flex" :style="{zoom: zoom}">
+        <div class="header">
+            <div class="title">Bun venit la LifeInvader!</div>
+            <div class="subtitle">Costul pentru a posta un anunt este de $1,000. Va rugam sa respectati limita de 200 de caractere.</div>
+        </div>
+        
+        <div class="announce">
+            <div class="header">
+                <div>{{phone}}</div>
+                <div>{{name}}</div>
+
+                <img src="https://cdn.armylegends.ro/elements/announce_icon.png">
+            </div>
+
+            <div class="title">Anunt Comercial</div>
+            <textarea v-model="msg" maxlength="200" class="description" placeholder="Scrie mesajul tau aici..." id="lifeinvader-textarea"></textarea>
+        </div>
+
+        <div class="confirm" @click="add()">PUBLICA ANUNTUL</div>
+    </div>
+</div>

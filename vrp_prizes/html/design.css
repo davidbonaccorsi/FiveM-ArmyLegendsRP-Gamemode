@@ -1,0 +1,264 @@
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+* {
+  color: #fff;
+  font-family: "TT Norms";
+}
+
+body{
+  cursor: none;
+  overflow: hidden;
+  user-select: none;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%) 
+}
+.main-roulette, .roulette-flex {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.main-roulette {
+  position: absolute;
+  inset: 0;
+  display:none;
+  width: 100%;
+  height: 100%;
+  background: url(https://cdn.armylegends.ro/elements/bgroulette.png) no-repeat;
+  background-size: 100% 100%;
+}
+.roulette-flex {
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.roulette-box {
+  display: flex;
+}
+.roulette-box-roulette {
+  width: 1500px;
+}
+.roulette-flex .roulette-box .roulette-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.roulette-flex .roulette-box .roulette-header .title {
+  font-weight: 600;
+  font-size: 36px;
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.roulette-flex .roulette-box .roulette-header .title i {
+  color: hsla(0,0%,100%,.4);
+  font-size: 26px;
+  margin-right: 12px;
+}
+
+.roulette-flex .roulette-box .roulette-header .title span {
+  font-weight: 500;
+}
+
+
+
+.roulette-flex .roulette-box .roulette-header .close {
+    
+  margin-left: auto;
+  
+  display: flex;
+  align-items: center;
+
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+
+  color: hsla(0,0%,100%,.4);
+}
+
+.roulette-flex .roulette-box .roulette-header .close:hover > div {
+  background: hsla(0, 0%, 100%, .2);
+}
+
+.roulette-flex .roulette-box .roulette-header .close > div {
+  margin-left: 15px;
+  padding: 11px 12px;
+
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: .2px;
+
+  background-color: hsla(0,0%,100%,.05);
+  border-radius: 4px;
+
+  transition: .232323s ease-in-out;
+}
+
+
+/* current item line */
+.roulette-flex .roulette-box .roulette-box-roulette .roulette-roulette-line {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/* spin container */
+.roulette-flex .roulette-box .roulette-box-roulette .roulette-roulette{
+  display: flex;
+  position: relative;
+  height: 200px;
+}
+.roulette-flex .roulette-box .roulette-box-roulette .roulette-roulette .wrap {
+  position: absolute;
+  display: flex;
+  left: 50%;
+}
+.roulette-flex .roulette-box .roulette-box-roulette .roulette-roulette .wrap .roulette-roulette-item {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(90deg,rgba(49, 118, 100, 0.10),rgba(34, 56, 97, 0.10),rgba(103, 65, 107, 0.10),rgba(83, 110, 116, 0.10),rgba(183,255,91,0));
+  border-radius: 10px;
+  border: 4px solid;
+  border-image-source: linear-gradient(135deg,rgba(49, 118, 100, 0.89),rgba(34, 56, 97, 0.89),rgba(103, 65, 107, 0.89),rgba(83, 110, 116, 0.89),rgba(183,255,91,0));
+  border-image-slice: 1;
+  margin-right: 15px;
+  transition: 1s;
+}
+.roulette-flex .roulette-box .roulette-box-roulette .roulette-roulette .wrap .roulette-roulette-item .roulette-roulette-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  width: 200px;
+}
+.roulette-flex .roulette-box .roulette-box-roulette .roulette-roulette .wrap .roulette-roulette-item .roulette-roulette-block img {
+  display: flex;
+  width: 105px;
+  height: 105px;
+}
+
+/* spin methods */
+.roulette-flex .roulette-box .roulette-box-roulette .roulette-opens {
+  margin-top: 15px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.roulette-flex .roulette-box .roulette-box-roulette .roulette-opens button:hover {
+  background: #a4d1ff;
+  color: rgb(33, 33, 33);
+}
+.roulette-flex .roulette-box .roulette-box-roulette .roulette-opens button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 26px;
+  background: none;
+  border-radius: 300px;
+  font-weight: 500;
+  font-size: 20px;
+  min-width: 174px;
+  min-height: 84px;
+  border: 2px solid #a4d1ff;
+  color: #a4d1ff;
+  text-transform: uppercase;
+  transition: all 0.161616s ease-in-out 0s;
+  font-family: "TT Norms";
+  margin-right: 20px;
+  margin-left: 335px;
+  outline: none !important;
+}
+
+.roulette-flex .roulette-box .roulette-box-roulette .roulette-opens .spin-dmd {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 6px;
+}
+
+.roulette-flex .roulette-box .roulette-box-roulette .roulette-opens .spin-dmd div {
+  color: hsla(0, 0%, 100%, .9);
+}
+.roulette-flex .roulette-box .roulette-box-roulette .roulette-opens .spin-dmd > span{
+  color: hsla(0, 0%, 100%, .9);
+}
+
+.roulette-flex .roulette-box .roulette-box-roulette .roulette-opens .spin-dmd > div:last-of-type {
+  margin-top: 10px;
+}
+
+.roulette-flex .roulette-box .roulette-box-roulette .roulette-opens .spin-dmd > div:last-of-type > span {
+  background: hsla(0, 0%, 100%, .1);
+  border-radius: 4px;
+  padding: 6px 12px;
+  margin-left: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.roulette-flex .roulette-box .roulette-box-roulette .roulette-opens .spin-dmd > div:last-of-type > span:hover {
+  background: hsla(0, 0%, 100%, .2);
+}
+
+.roulette-flex .roulette-box .roulette-box-roulette .roulette-opens .spin-dmd > div:last-of-type {
+  color: #75ce2f;
+}
+
+/* prizes */
+.roulette-flex .roulette-box .roulette-box-roulette .roulette-prizes {
+  font-weight: 500;
+  font-size: 24px;
+  color: #fff;
+}
+
+.roulette-flex .roulette-box .roulette-box-roulette .roulette-prizes .overflow-list {
+  grid-template-columns: repeat(11,120px);
+  grid-gap: 15px 15px;
+  display: grid;
+  margin-top: 15px;
+}
+
+.roulette-flex .roulette-box .roulette-box-roulette .roulette-prizes .overflow-list .prize-item {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  background: hsla(0,0%,100%,.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  border: 4px solid;
+  border-image-source: linear-gradient(135deg,hsla(0,0%,100%,.5),hsla(0,0%,100%,0));
+  border-image-slice: 1;
+}
+
+.roulette-flex .roulette-box .roulette-box-roulette .roulette-prizes .overflow-list .prize-item img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100px;
+  max-height: 100px;
+}

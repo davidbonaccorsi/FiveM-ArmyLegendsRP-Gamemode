@@ -1,0 +1,446 @@
+
+.phone-layout > .ishare{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    gap: .45vh;
+    
+    padding-top: 2.5vh;
+
+    backdrop-filter: blur(10px);
+    background: #342f50;
+}
+
+.phone-layout > .ishare.visible{
+    display: flex;
+    animation: fadeIn 1.5s;
+}
+
+.phone-layout > .ishare > header{
+    display: flex;
+    align-items: center;
+    gap: .65vw;
+    
+    width: 100%;
+    
+    padding-right: 1.25vw;
+    padding-left: 1.5vw;
+}
+
+.phone-layout > .ishare > header > img{
+    width: 1.7em;
+}
+
+.phone-layout > .ishare > header > p{
+    font-family: "Akrobat Light";
+    font-size: 3vh;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.phone-layout > .ishare > header > .actions{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    gap: .5vw;
+}
+
+.phone-layout > .ishare > header > .actions > .btn{
+    padding: 1.45vh .95vw;
+    border-radius: .75vw;
+    background: #ffffff20;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .15s ease-in-out;
+}
+
+.phone-layout > .ishare > header > .actions > .btn.hidden{
+    display: none;
+}
+
+.phone-layout > .ishare > header > .actions > .btn:hover{
+    background: #ffffff30;
+}
+
+.phone-layout > .ishare > .list{
+    height:-webkit-fill-available;
+    width: 100%;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+    padding-right: 1.25vw;
+    padding-left: 1.5vw;
+    
+    margin-top: 6%;
+
+    display: none;
+    flex-direction: column;
+}
+
+.phone-layout > .ishare > .list.visible{
+    display: flex;
+}
+
+.phone-layout > .ishare > .list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.phone-layout > .ishare > .list::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.phone-layout > .ishare > .list::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #9590a435;
+}
+
+.phone-layout > .ishare > .list::-webkit-scrollbar-thumb:window-inactive {
+    background: #9590a4;
+}
+
+.phone-layout > .ishare > .list > .post{
+    width: 100%;
+    padding: 0;
+    padding-bottom: 2vh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.phone-layout > .ishare > .list > .post > header{
+    display: flex;
+    align-items: center;
+    gap: .65vw;
+}
+
+.phone-layout > .ishare > .list > .post > header > .avatar{
+    width: 1.805vw;
+    height: 3vh;
+    
+    background: #9753db;
+    border-radius: 10vw;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-layout > .ishare > .list > .post > header > .avatar > p{
+    font-size: 1.35vh;
+    font-family: "Akrobat Bold";
+    letter-spacing: .5px;
+    text-transform: uppercase;
+}
+
+.phone-layout > .ishare > .list > .post > header > p{
+    font-family: "Akrobat Light";
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 1.75vh;
+}
+
+.phone-layout > .ishare > .list > .post > .reactions{
+    margin-top: 2.25%;
+    
+    display: flex;
+    align-items: center;
+    gap: .85vw;
+}
+
+.phone-layout > .ishare > .list > .post > .reactions > i{
+    font-size: 2.25vh;
+    transition: .33s ease-in-out;
+}
+
+.phone-layout > .ishare > .list > .post > .reactions > i:hover{
+    opacity: .5;
+}
+
+.phone-layout > .ishare > .list > .post > .reactions.liked > i{
+    color: #ba60ff;
+}
+
+.phone-layout > .ishare > .list > .post > .reactions > .count{
+    background: #1f1b2f;
+    width: 1.75vw;
+    height: 3vh;
+    border-radius: 10vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-layout > .ishare > .list > .post > .reactions > .count > p{
+    font-size: 1.2vh;    
+}
+
+.phone-layout > .ishare > .list > .post > p{
+    font-size: 1.75vh;
+    font-family: "Akrobat";
+    letter-spacing: .5px;
+}
+
+.phone-layout > .ishare > .list > .post > .line{
+    height: .15vh;
+    width: 100%;
+    margin-top: 3%;
+    background: linear-gradient(90deg, #ffffff60, transparent);
+}
+
+.phone-layout > .ishare > .list > .post:last-of-type > .line{
+    display: none;
+}
+
+
+.phone-layout > .ishare > footer{
+    margin-top: auto;
+    
+    height: 7.5vh;
+    width: 100%;
+
+    display: flex;
+    gap: 0;
+}
+
+.phone-layout > .ishare > footer > .content{
+    background: #48435b;
+    padding-top: .25vh;
+    
+    height: 100%;
+    width: 50%;
+    
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    
+    gap: .55vh;
+}
+
+.phone-layout > .ishare > footer > .content:hover, .phone-layout > .ishare > footer > .content.active{
+    background: linear-gradient(to top, #ffffff30, transparent);
+    background-color: #48435b;
+    border-bottom: .2vh solid #fff;
+}
+
+.phone-layout > .ishare > footer > .content > i{
+    font-size: 1.65vh;
+}
+
+.phone-layout > .ishare > footer > .content > p{
+    font-size: 1.35vh;
+    letter-spacing: .5px;
+}
+
+.phone-layout > .ishare > .publish{
+    height:-webkit-fill-available;
+    width: 100%;
+
+    overflow: hidden;
+    
+    margin-top: 6%;
+
+    display: none;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-layout > .ishare > .publish.visible{
+    display: flex;
+}
+
+.phone-layout > .ishare > .publish > .list{
+    height:-webkit-fill-available;
+    width: 100%;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+    padding-right: 1.25vw;
+    padding-left: 1.5vw;
+
+    display: none;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.phone-layout > .ishare > .publish > .list.visible{
+    display: flex;
+}
+
+.phone-layout > .ishare > .publish > .list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.phone-layout > .ishare > .publish > .list::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.phone-layout > .ishare > .publish > .list::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #9590a435;
+}
+
+.phone-layout > .ishare > .publish > .list::-webkit-scrollbar-thumb:window-inactive {
+    background: #9590a4;
+}
+
+.phone-layout > .ishare > .publish > .list > .item{
+    width: 100%;
+    padding-top: 15vh;
+
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+
+    opacity: .75;
+    transition: .33s ease-in-out;
+}
+
+.phone-layout > .ishare > .publish > .list > .item:hover{
+    opacity: 1;
+}
+
+.phone-layout > .ishare > .publish > .list > .item > .actions{
+    height: 4.25vh;
+    width: 100%;
+    
+    opacity: 1;
+    transition: .33s ease-in-out;
+    
+    border-radius: .15vw;
+    backdrop-filter: blur(5px);
+    
+    display: flex;
+    align-items: center;
+    gap: .6vw;
+}
+
+.phone-layout > .ishare > .publish > .list > .item:hover > .actions{
+    opacity: 1;
+    border-radius: .1vw;
+}
+
+.phone-layout > .ishare > .publish > .list > .item > .actions > input{
+    background: linear-gradient(90deg, #ffffff15, transparent);
+    
+    border-radius: .25vw;
+    border: none;
+    
+    height: 100%;
+    width: 81.5%;
+    
+    text-indent: .15vw;
+    font-family: "Akrobat Light";
+    padding: 0 .65vw;
+}
+
+.phone-layout > .ishare > .publish > .list > .item > .actions > input::placeholder{
+    opacity: .65;
+    color: #fff;
+}
+
+.phone-layout > .ishare > .publish > .list > .item > .actions > input:focus{
+    outline: none;
+}
+
+.phone-layout > .ishare > .publish > .list > .item > .actions > i{
+    background: #fff;
+    padding: .8vh .75vh;
+    border-radius: .25vw;
+    color: #232323;
+}
+
+.phone-layout > .ishare > .publish > .list > .item > .actions > i:hover{
+    background: transparent;
+    border: .2vh solid #ffffff15;
+    color: #fff;
+}
+
+.phone-layout > .ishare > .publish > .tutorial{
+    height:-webkit-fill-available;
+    width: 100%;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+    padding-right: 1.25vw;
+    padding-left: 1.5vw;
+
+    display: none;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: flex-start;
+    
+    gap: 4vh;
+}
+
+.phone-layout > .ishare > .publish > .tutorial.visible{
+    display: flex;
+}
+
+.phone-layout > .ishare > .publish > .tutorial > p{
+    text-align: center;
+    font-size: 1.8vh;
+    font-family: "Akrobat";
+    letter-spacing: .25px;
+    margin-top: 15%;
+}
+
+.phone-layout > .ishare > .publish > .tutorial > .the-app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+}
+
+.phone-layout > .ishare > .publish > .tutorial > .the-app > .image{
+    width: 4vw;
+    height: 4vw;
+    
+    background: #ffffff0f;
+    border-radius: 1.25vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .33s ease-in-out;
+}
+
+.phone-layout > .ishare > .publish > .tutorial > .the-app > .image > img{
+    width: 30px;
+}
+
+.phone-layout > .ishare > .publish > .tutorial > .the-app > p{
+    font-size: 1.15vh;
+    font-family: "Akrobat Bold";
+    letter-spacing: 1px;
+}
+
+.phone-layout > .ishare > .publish > .tutorial > p:nth-of-type(2){
+    text-align: center;
+    font-size: 1.85vh;
+    font-family: "Akrobat Bold";
+    margin-top: 0;
+}

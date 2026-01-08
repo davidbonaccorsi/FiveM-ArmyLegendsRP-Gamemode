@@ -1,0 +1,442 @@
+.main-clothing, .main-clothing input, .main-clothing input::placeholder {
+    font-family: "TT Norms";
+    font-variant-ligatures: none;
+}
+
+.main-clothing, .clothing-flex {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+}
+
+.main-clothing {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(90deg, rgba(22, 21, 35, .85), transparent);
+}
+
+.main-clothing .clothing-flex {
+    padding: 0 70px;
+
+    align-items: center;
+}
+
+.clothing-flex .clothing-box {
+    width: 400px;
+}
+
+
+.clothing-flex .clothing-box .clothing-section {
+    max-height: 725px;
+    padding-right: 15px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.clothing-flex .clothing-box .clothing-section::-webkit-scrollbar {
+    width: 3px;
+}
+.clothing-flex .clothing-box .clothing-section::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, .05);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+.clothing-flex .clothing-box .clothing-section::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: hsla(0, 0%, 100%, .05);
+}
+.clothing-flex .clothing-box .clothing-section::-webkit-scrollbar-thumb:window-inactive {
+    background: hsla(0, 0%, 100%, .05);
+}
+
+
+
+.clothing-flex .clothing-box .clothing-section > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.clothing-flex .clothing-box .clothing-section > div:last-of-type {
+    margin-bottom: 0;
+}
+
+.clothing-flex .clothing-box .clothing-section > div .choice-title {
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    letter-spacing: .025em;
+    margin-bottom: 20px;
+}
+
+.clothing-flex .clothing-box .clothing-section > div .choice-title::before {
+    content: "";
+    width: 20px;
+    height: 4px;
+    background-color: #a1c9ff;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+
+.clothing-section .total-number {
+    display: none !important;
+}
+
+.main-clothing .only-skin-data {
+    display: none !important;
+}
+
+.clothing-section .data-box {
+    height: 80px;
+    background: hsla(0, 0%, 100%, .035);
+    border-radius: 3px;
+    margin-bottom: 15px;
+
+    display: flex;
+    align-items: center;
+    padding: 0 26px;
+
+    transition: 1s ease-in-out;
+}
+
+.clothing-section .data-box:last-of-type {
+    margin-bottom: 0;
+}
+
+.clothing-section .data-box {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    width: 100%;
+}
+
+.clothing-section .data-box .input-group {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: fit-content;
+}
+
+.clothing-section .data-box .input-group > .arrow-btn {
+    background: #eee;
+    border-radius: 4px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .586868s ease-in-out;
+    box-shadow: 0px 3.5px 8px 3px #ffffff30;
+}
+
+
+.clothing-section .data-box .input-group > .arrow-btn i {
+    font-size: 12px;
+    color: #232323;
+    transition: .586868s ease-in-out;
+}
+
+.clothing-section .data-box .input-group > .arrow-btn:hover {
+    background: #a1c9ff;
+    box-shadow: 0px 3.5px 8px 3px #a1c9ff30;
+}
+
+.clothing-section .data-box .input-group > .arrow-btn:hover i {
+    color: #5b6f8a;
+}
+
+.clothing-section .data-box .input-group > .arrow-btn:first-of-type {
+    margin-right: 10px;
+}
+
+.clothing-section .data-box .input-group > .arrow-btn:last-of-type {
+    margin-left: 10px;
+}
+
+.clothing-section .data-box.slider .input-group {
+    width: 100%;
+}
+.clothing-section .data-box .input-group.flex {
+    gap: 10px;
+}
+
+.clothing-section .data-box .input-group > input {
+    background: none;
+    border: none !important;
+    outline: none !important;
+    width: 30px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+}
+.clothing-section .data-box .input-group > input.input-text {
+    width: 200px;
+    text-align: right;
+}
+
+.clothing-section .data-box .input-group.multi-choice div {
+    width: 50px;
+    height: 50px;
+    background-color: hsla(0, 0%, 100%, .055);
+    border-radius: 6px;
+    display: grid;
+    place-items: center;
+}
+.clothing-section .data-box .input-group.multi-choice div.active {
+    color: #232323;
+    background-color: #fff;
+}
+.clothing-section .data-box .input-group.multi-choice div.active * {
+    color: #232323;
+}
+
+
+.clothing-section .data-box .input-group > input[type="range"] {
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, transparent, #eee);
+    -webkit-appearance: none;
+}
+
+.clothing-section .data-box .input-group > input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    background: #eee;
+    border-radius: 4px;
+    cursor: pointer;
+/*     backdrop-filter: blur(3px); */
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0;
+}
+
+.clothing-section .data-box.collapsable {
+    width: 100%;
+    height: fit-content;
+    
+    padding: 20px 26px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: padding 1s ease-in-out;
+}
+
+.clothing-section .data-box.collapsable.collapsed .header {
+    margin-bottom: 20px;
+}
+
+.clothing-section .data-box.collapsable .header {
+    width: 100%;
+    position: relative;
+    height: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.clothing-section .data-box.collapsable .header::after {
+    content: "\f077";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #eee;
+    border-radius: 4px;
+    width: 35px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Font Awesome 6 Pro";
+    font-weight: 900;
+    font-size: 12px;
+    color: #232323;
+    transition: .232323s ease-in-out;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.clothing-section .data-box.collapsable .header span {
+    width: fit-content;
+}
+
+.clothing-section .data-box.collapsable .header .line {
+    position: relative;
+    margin-left: auto;
+    width: calc(100px + 20px); /* 100px + 2 elemente */
+}
+
+.clothing-section .data-box.collapsable .header .line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(2px + 2px); /* 2px def size + dublu pt transparenta */
+    background: linear-gradient(90deg, transparent, #eee);
+}
+
+.clothing-section .data-box.collapsable.collapsed .header::after, .clothing-section .data-box.collapsable .header::after:hover {
+    box-shadow: 0px 3.5px 8px 3px #ffffff30;
+}
+
+.clothing-section .data-box.collapsable:not(.collapsed) .header::after {
+    content: "\f078";
+}
+
+.clothing-section .data-box.collapsable:not(.collapsed) .list {
+    display: none;
+}
+.clothing-section .data-box.collapsable .list {
+    display: grid;
+    width: 0;
+    height: fit-content;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 6px;
+}
+.clothing-section .data-box.collapsable .list div {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 4px;
+
+    background: #fff;
+    
+    cursor: pointer;
+    transition: opacity .212121s ease;
+}
+
+.clothing-section .data-box.collapsable .list div:hover, .clothing-section .data-box.collapsable .list div.active {
+    opacity: .65;
+    border: 2px solid hsla(0, 0%, 100%, .2);
+}
+
+
+.clothing-flex .clothing-box .clothing-options {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+/*     padding-right: 15px; */
+    margin-right: 18px;
+    gap: 10px;
+}
+
+.clothing-flex .clothing-box .clothing-options div {
+    width: 100%;
+    height: 100%;
+    background-color: #a1c9ff;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 20px;
+    color: #232323;
+    transition: .232323s ease-in-out;
+    /* text-shadow: 0 0 20px #000; */
+}
+
+.clothing-flex .clothing-box .clothing-options div:hover {
+    background: #eee;
+}
+
+.clothing-flex .clothing-box .clothing-options.save-releated div:last-of-type {
+    margin-left: auto;
+    width: 45%;
+    background: hsla(0, 0%, 100%, .2);
+}
+
+.clothing-flex .clothing-box .clothing-options.save-releated div:last-of-type:hover {
+    background: hsla(0, 0%, 100%, .25);
+}
+
+.clothing-flex .clothing-box .clothing-options div img {
+    width: 30px;
+    height: 30px;
+}
+
+.clothing-flex .tabs {
+    height: 80%;
+    width: 100px;
+    margin-left: 15px;
+    padding-top: 60px;
+}
+.clothing-flex .tabs div {
+    margin-top: 22px;
+    background: hsla(0, 0%, 100%, .035);
+    border-radius: 8px;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .232323s ease-in-out;
+}
+
+.clothing-flex .tabs div:hover {
+    background: hsla(0, 0%, 100%, .055);
+}
+
+.clothing-flex .tabs div img {
+    width: 40px;
+    height: 40px;
+}
+.clothing-flex .tabs div img.smaller-icon {
+    width: 30px;
+    height: 30px;
+}
+
+
+.clothing-flex .camera-list {
+    width: 100px;
+    height: 80%;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.clothing-flex .camera-list div {
+    height: 100px;
+    width: 100%;
+    margin-top: 20px;
+    transition: .232323s ease-in-out;
+    background-color: hsla(0, 0%, 100%, .065);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clothing-flex .camera-list div:hover, .clothing-flex .camera-list div.active {
+    background-color: hsla(0, 0%, 100%, .2);
+}
+
+.clothing-flex .camera-list div:first-of-type {
+    margin-top: 0;
+}
+
+
+.clothing-flex .camera-list div > img {
+    filter: brightness(1000%) invert(100%);
+    width: 50px;
+    height: 50px;
+}
+

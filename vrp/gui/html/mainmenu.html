@@ -1,0 +1,77 @@
+
+<div class="main-player-menu" v-if="active">
+    <div class="player-menu-flex" :style="{zoom: zoom}">
+        <div class="player-menu-header">
+            <div class="left-data">
+                <img src="https://cdn.armylegends.ro/elements/go-back.webp">
+                <h1>MENIU<span> PRINCIPAL</span></h1>
+            </div>
+
+            <div class="right-data">
+               <div class="money-data">
+                    <p>{{ cash | formatnum }}$</p>
+                    <i class="fa-solid fa-wallet"></i>
+               </div>
+
+               <div class="money-data">
+                    <p>{{ username }}</p>
+                    <i class="fa-solid fa-user"></i>
+               </div>
+            </div>
+        </div>
+
+        <div class="pause-menu">
+            <div class="one" @click="open('shop')">
+                <div class="title">
+                    <h1>PREMIUM SHOP</h1>
+                    <p>{{ coins }} <span>FC</span></p>
+                </div>
+
+                <div class="description">
+                    Arata-ne sustinerea ta fata de server si vei fi recompensat cu beneficii premium care te vor ajuta in joc, dar care nu iti vor oferi un avantaj in roleplay in fata altor jucatori.
+                </div>
+            </div>
+
+            <div class="two" @click="open('faction')">
+                <h1>FACTIUNEA TA</h1>
+                <p>Fie ca esti de partea legala, fie ca iti desfasori activitatile in mod ilegal, pazeste-ti spatele!<br>Click pentru a deschide meniul factiunii.</p>
+            </div>
+
+            <div class="three" @click="open('refferal')">
+                <h1>castiga bani impreuna<br>cu prietenii tai</h1>
+                <p>Invita-ti prietenii sa se joace alaturi de tine pentru a descoperi toate sistemele noastre si bucurati-va impreuna de aventurile disponibile, castigand experienta, bonusuri si avantaje speciale.</p>
+                <div class="refferal">{{ refferal }}</div>
+            </div>
+
+            <div class="four" @click="open('achivements')">
+                <h1>REALIZARILE TALE</h1>
+                <p>Depaseste-ti limitele si deblocheaza realizari speciale. Completeaza provocari unice si obtine recompense exclusive, totul in timp ce te vei distra, fie singur, fie alaturi de prietenii tai.</p>
+            </div>
+
+            <div class="five" @click="open('daily-reward')">
+                <h1>RECOMPENSA ZILNICA</h1>
+                <p>Ne bucuram ca esti alaturi de noi in fiecare zi, iar pentru asta, te recompensam zilnic. Intra zilnic pe server timp de 30 de zile si castiga premii garantate, iar astfel vei descoperi serverul si ceea ce iti ofera el!</p>
+            </div>
+
+            <div class="six" @click="open('jobs')">
+                <h1>LOCURI DE MUNCA</h1>
+                <p>Am pregatit pentru tine o gama variata de locuri de munca, fiecare cu beneficiile sale. Cum fara munca nu se poate, trebuie sa muncesti pentru a reusi sa iti dezvolti caracterul si abilitatile pe server. Iti uram distractie placuta si mult succes!</p>
+            </div>
+
+            <div class="seven" @click="open('character-stats')">
+                <h1>INFORMATII CONT</h1>
+                <p>Urmareste activitatea si evolutia contului tau printr-un singur click. Aici poti vedea toate informatiile pe care trebuie sa le cunosti despre contul tau.</p>
+            </div>
+            
+            <div class="eight" @click="open('investments')">
+                <h1>INVESTITII</h1>
+                <p>Stim ca iti place sa te joci, chiar si cateva ore consecutive pe zi. De asta iti oferim posibilitatea de a iti dubla banii in timpul jucat cu o simpla investitie.</p>
+            </div>
+
+            <div class="nine" @click="open('settings')">
+                <h1>SETARI</h1>
+                <!-- <p>Personalizeaza-ti experienta oferita de joc configurandu-l dupa bunul tau plac.</p> -->
+            </div>
+        </div>
+    </div>
+</div>

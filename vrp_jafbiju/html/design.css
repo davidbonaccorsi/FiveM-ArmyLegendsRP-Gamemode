@@ -1,0 +1,76 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+  
+* {
+    color: #fff;
+    font-family: "TT Norms";
+}
+  
+body{
+    cursor: none;
+    overflow: hidden;
+    user-select: none;
+}
+  
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+.vangelico-minigame {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+}
+.vangelico-minigame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://cdn.armylegends.ro/bg/Vangelico.png) no-repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+}
+
+.vangelico-minigame .win{
+    width: 150px;
+    height: 150px;
+
+    background-image: url(https://cdn.armylegends.ro/elements/orange.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    position: absolute;
+    z-index: 1000;
+}
+
+.vangelico-game-flex {
+    width: 100%;
+    height: 100%;
+}
+
+.vangelico-game-flex .spawn-zone {
+    position: absolute;
+    bottom: 250px;
+    left: 50px;
+    width: 1050px;
+    height: 700px;
+}
+
+.vangelico-game-flex .drag-zone {
+    position: absolute;
+    bottom: 0px;
+    right: 205px;
+    width: 900px;
+    height: 400px;
+}

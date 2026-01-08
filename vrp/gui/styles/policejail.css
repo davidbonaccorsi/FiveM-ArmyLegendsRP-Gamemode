@@ -1,0 +1,41 @@
+.hud-top-right .jail-time {
+    width: 310.338px;
+    height: 140.326px;
+    
+    background: url(https://cdn.armylegends.ro/elements/Group_13.webp) no-repeat;
+    background-size: 100% 100%;
+
+    margin-right: 100px;
+
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.hud-top-right .jail-time p {
+    position: relative;
+    text-align: left;
+    font-family: "TT Norms";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background: linear-gradient(180deg, #FFF 27.08%, rgba(255, 255, 255, 0.00) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 45px;
+    margin-left: 55px;
+}
+
+.hud-top-right .jail-time p::after {
+    content: "";
+    width: 25px;
+    height: 18.182px;
+    background: url(https://cdn.armylegends.ro/elements/policejail.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+}

@@ -1,0 +1,89 @@
+
+/* Hud Notifications */
+
+.hud-notifications {
+    position: absolute;
+    left: 25px;
+    bottom: 235px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+
+    font-family: "TT Norms";
+}
+
+.hud-notifications .notification {
+    position: relative;
+    width: 275px;
+    min-height: 80px;
+    padding: 12px;
+    padding-left: 16px;
+    padding-right: 14px;
+
+    background: linear-gradient(90deg, #ffffff75, transparent);
+    border-radius: 8px;
+    line-height: 17px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transition: .232323s ease-in-out;
+    animation: fadeIn .636363s;
+}
+
+.hud-notifications .notification::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 65%;
+    width: 4px;
+    border-radius: 2px;
+    background-color: #ffffff65;
+}
+
+.hud-notifications .notification.info {
+    background: linear-gradient(90deg, #39c5d475, transparent);
+}
+.hud-notifications .notification.info::before {
+    background-color: #39c5d465;
+}
+
+.hud-notifications .notification.success {
+    background: linear-gradient(90deg, #09DD7A, transparent);
+}
+.hud-notifications .notification.success::before {
+    background-color: #09DD7A;
+}
+
+.hud-notifications .notification.error {
+    background: linear-gradient(90deg, #EF4F2B, transparent);
+}
+.hud-notifications .notification.error::before {
+    background-color: #EF4F2B;
+}
+
+.hud-notifications .notification.warning {
+    background: linear-gradient(90deg, #FFDE2A, transparent);
+}
+.hud-notifications .notification.warning::before {
+    background-color: #FFDE2A;
+}
+
+.hud-notifications .notification .title {
+    font-size: 20px;
+    color: hsla(0, 0%, 100%, .8);
+    font-weight: 500;
+    line-height: 20px;
+}
+
+
+.hud-notifications .notification .description {
+    font-size: 16px;
+    font-weight: 400;
+    font-variant-ligatures: none;
+}

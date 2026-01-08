@@ -1,0 +1,84 @@
+.hud-top-right .police-backups {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: calc(320px * 2 + 20px);
+    height: 51px;
+    margin-right: 60px;
+    margin-top: 25px;
+    gap: 10px;
+}
+
+.hud-top-right .police-backups .backup {
+    width: 320px;
+    min-height: 91px;
+    padding-left: 15px;
+    padding-right: 35px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    font-family: "TT Norms";
+    padding-bottom: 12px;
+}
+
+.hud-top-right .police-backups .backup .header {
+    display: flex;
+    align-items: center;
+    margin-top: -5px;
+}
+
+.hud-top-right .police-backups .backup .header div {
+    height: 22px;
+    padding: 0 12px;
+    margin-left: 10px;
+    background: #FFFFFF;
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    font-variant-ligatures: none;
+    line-height: 12px;
+    color: rgba(35, 35, 35, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hud-top-right .police-backups .backup .header img {
+    align-self: flex-start;
+    margin-left: auto;
+    width: 16px;
+    height: 16px;
+}
+
+
+.hud-top-right .police-backups .backup .description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    font-variant-ligatures: none;
+    line-height: 18px;
+    word-break: break-all;
+    margin-top: 8px;
+    margin-left: 10px;
+    font-family: 'TT Norms';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+.hud-top-right .police-backups .backup .description > span {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    letter-spacing: .025em;
+}
+
+.hud-top-right .police-backups .backup .description > span > font {
+    color: #a1c9ff;
+}

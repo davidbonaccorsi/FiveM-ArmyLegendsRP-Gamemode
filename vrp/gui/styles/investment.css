@@ -1,0 +1,252 @@
+.main-investments, .investments-flex {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+
+.main-investments {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(https://cdn.armylegends.ro/bg/investments.webp) no-repeat;
+    background-size: 100% 100%;
+    font-family: "TT Norms";
+}
+
+.investments-flex {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.investments-flex .investments-body {
+    width: 1260px;
+    height: 640px;
+    margin-top: 100px;
+}
+
+.investments-flex .investments-body .wrap {
+    width: fit-content;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 40px 20px;
+    position: relative;
+}
+.investments-flex .investments-body .wrap.cooldown::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: url(https://cdn.armylegends.ro/elements/cd_investments.png) no-repeat;
+    background-size: auto;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.investments-flex .investments-body .wrap > div {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    background: url(https://cdn.armylegends.ro/elements/investmentbody.png);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .35);
+    transition: .232323s ease-in-out;
+    align-items: center;
+}
+
+.investments-flex .investments-body .wrap.cooldown > div {
+    opacity: .25;
+}
+
+.investments-flex .investments-body .wrap > div:hover {
+    transform: translateY(-15px);
+}
+
+.investments-flex .investments-body .wrap > div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-5px) rotate(15deg) scaleX(-1);
+    width: 250px;
+    height: 200px;
+    background-image: url(https://static.wikia.nocookie.net/degta/images/1/1f/Red-Shark-Kreditkarte.png/revision/latest?cb=20201220161247);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.investments-flex .investments-body .wrap > div:nth-of-type(2)::before {
+    background-image: url(https://static.wikia.nocookie.net/degta/images/6/63/Tiger-Shark-Kreditkarte.png/revision/latest?cb=20201220161936);
+}
+
+.investments-flex .investments-body .wrap > div:nth-of-type(3)::before {
+    background-image: url(https://static.wikia.nocookie.net/degta/images/8/83/Bull-Shark-Kreditkarte.png/revision/latest?cb=20201220161412);
+}
+
+.investments-flex .investments-body .wrap > div:nth-of-type(4)::before {
+    background-image: url(https://static.wikia.nocookie.net/degta/images/0/0d/Great-White-Kreditkarte.png/revision/latest?cb=20201220161511);
+}
+
+.investments-flex .investments-body .wrap > div:nth-of-type(5)::before {
+    background-image: url(https://static.wikia.nocookie.net/degta/images/8/8e/Whale-Shark-Kreditkarte.png/revision/latest?cb=20201220161640);
+}
+
+.investments-flex .investments-body .wrap > div:nth-of-type(6)::before {
+    background-image: url(https://static.wikia.nocookie.net/degta/images/a/aa/Megalodon-Shark-Kreditkarte.png/revision/latest?cb=20201220161731);
+}
+
+.investments-flex .investments-body .wrap > div:nth-of-type(7)::before {
+    background-image: url(https://cdn.armylegends.ro/elements/gold-cards.png);
+}
+
+.investments-flex .investments-body .wrap > div:nth-of-type(8)::before {
+    background-image: url(https://static.wikia.nocookie.net/degta/images/3/33/Rainbow_Shark_Card.png/revision/latest?cb=20190724194456);
+    height: 190px;
+}
+
+.investments-flex .investments-body .wrap.cooldown > div .investment-footer {
+    pointer-events: none;
+}
+
+.investments-flex .investments-body .wrap > div .investment-footer {
+    height: 80px;
+    width: 100%;
+    background: linear-gradient(to top right, hsla(0, 0%, 93%, 0.25), hsla(0, 0%, 93%, 0.9));
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.investments-flex .investments-body .wrap > div .investment-footer p{
+    position: relative;
+    margin-left: 55px;
+
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff !important;
+    font-size: 18px !important;
+
+    background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.investments-flex .investments-body .wrap > div .investment-footer p::after {
+    content: "";
+    width: 30px;
+    height: 22.182px;
+    background: url(https://cdn.armylegends.ro/elements/investmentfooter.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: -45px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.investments-flex .investments-body .wrap > div .investment-footer .start-investment {
+    margin-left: auto;
+    font-size: 52px;
+    color: #A27C4C;
+    transition: .161616s ease-in-out;
+}
+
+.investments-flex .investments-body .wrap > div .investment-footer .start-investment:hover {
+    filter: drop-shadow(0px 0px 20px #d1842599);
+}
+
+.investments-flex .investments-body .wrap > div .price {
+    z-index: 2;
+    margin-top: auto;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 32px;
+    text-shadow: 0 0 15px rgba(0, 0, 0, .95);
+}
+
+
+.investments-flex .active-investment {
+    margin-top: 60px;
+    width: 350px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, .15);
+    position: relative;
+    z-index: 2;
+}
+
+.investments-flex .active-investment::before {
+    content: "\e41b";
+    position: absolute;
+    left: -35px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    font-family: "Font Awesome 6 Pro";
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c9985c;
+}
+
+.investments-flex .active-investment .fill {
+    height: 100%;
+    width: 50%;
+    background-color: #d1842599;
+    border-radius: 30px;
+    position: relative;
+    transition: .232323s ease-in-out;
+}
+
+.investments-flex .active-investment .fill.right::after {
+    left: 0;
+}
+
+.investments-flex .active-investment .fill::after {
+    content: "\f81d";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+    width: 60px;
+    height: 60px;
+    background: #e28f28;
+    border: 10px solid #915c1b;
+    border-radius: 100px;
+    font-family: "Font Awesome 6 Pro";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 900;
+    color: hsla(0, 0%, 100%, .5);
+}
+
+.investments-flex .active-investment span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(100% + 25px);
+    width: fit-content;
+    text-align: left;
+    font-weight: 400;
+    color: hsla(0, 0%, 100%, .4);
+    letter-spacing: .2px;
+}
+
+.investments-flex .active-investment span p {
+    display: block;
+    color: hsla(0, 0%, 100%, .45);
+    margin-left: 5px;
+}
