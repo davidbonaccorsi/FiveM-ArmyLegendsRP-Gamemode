@@ -7,8 +7,6 @@ ui_page_preload "yes"
 
 dependency 'vrp'
 
-author "Proxy#3805"
-description "Phone System"
 version "1.0"
 
 client_scripts({
