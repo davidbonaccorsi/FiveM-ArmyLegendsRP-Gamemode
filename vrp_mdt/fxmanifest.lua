@@ -1,11 +1,6 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Redutzu'
-version '2.0.0'
-description '✨ A good looking police MDT'
-github 'https://github.com/redutzu'
-
 ui_page 'dist/index.html'
 
 client_scripts {
