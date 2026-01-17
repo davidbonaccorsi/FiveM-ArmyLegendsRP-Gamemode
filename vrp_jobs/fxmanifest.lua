@@ -5,7 +5,6 @@ lua54 "yes"
 ui_page "html/index.html"
 ui_page_preload "yes"
 
-author "Proxy#3805"
 description "Jobs System"
 version "1.0"
 
