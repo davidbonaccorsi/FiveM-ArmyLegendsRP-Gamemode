@@ -7,10 +7,6 @@ dependency 'vrp'
 ui_page "html/index.html"
 ui_page_preload "yes"
 
-author "@21proxy"
-description "Chat System for ArmyLegend-RP"
-version "b1.0"
-
 client_scripts({
 	"cl_*.lua",
 })
