@@ -1,6 +1,5 @@
 fx_version 'cerulean'
 games { 'gta5' }
-author 'AlexSamurai'
 
 ui_page 'ui/index.html'
 
