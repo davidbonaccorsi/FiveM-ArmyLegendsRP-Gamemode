@@ -19,6 +19,7 @@ function vRPphone.getWebhook()
     return webhook
 end
 
+
 function vRPphone.hasPhone()
     local player = source
     local user_id = vRP.getUserId(player)
